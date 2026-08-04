@@ -162,6 +162,12 @@
       <div class="note">A partir de las habilidades que te faltaron arriba, así se ven en el catálogo ilustrativo "prueba de cursos" (ficticio, no oferta real de instituciones).</div>
       <div id="cursosContenido"></div>
     </div>
+
+    <div class="card" id="empleosCard" style="display:none;">
+      <h2>4. Empleos recomendados para ti</h2>
+      <div class="note">Vacantes reales y verificadas (Etapa 2 del pipeline) que mejor calzan con las habilidades detectadas en tu CV — con link directo a la publicación original.</div>
+      <div id="empleosContenido"></div>
+    </div>
   </section>
 
   <!-- TAB DASHBOARD -->
@@ -381,15 +387,16 @@ function analizarCV(){
     `<p>Se detectaron <strong>${matched.length} de ${todas.length}</strong> habilidades registradas como en demanda en <strong>${sector.nombre}</strong> (corrida ${DATA.meta.corrida}) — ${pct}% de cobertura frente al vocabulario de habilidades de ese sector.</p>
      <p class="note">Este vocabulario viene de menciones explícitas en ${sector.vacantes_con_habilidades} de ${sector.vacantes_verificadas} vacantes verificadas del sector (no es un estándar externo), así que es una brecha relativa a lo que hoy se está publicando en el mercado, no un examen de certificación.</p>`;
 
-  ultimoReporte = {sectorKey, sector, matched, missing, missingTop, pct, fecha: new Date().toISOString().slice(0,10)};
+  ultimoReporte = {sectorKey, sector, matched, missing, missingTop, pct, textoNorm, fecha: new Date().toISOString().slice(0,10)};
   document.getElementById('resultado').style.display = 'block';
   document.getElementById('resultado').scrollIntoView({behavior:'smooth'});
   renderCursos();
+  renderEmpleos();
 }
 
 function descargarReporte(){
   if(!ultimoReporte) return;
-  const {sectorKey, sector, matched, missing, missingTop, pct, fecha} = ultimoReporte;
+  const {sectorKey, sector, matched, missing, missingTop, pct, fecha, textoNorm} = ultimoReporte;
   const total = matched.length + missing.length;
   let md = `# Reporte de brecha de habilidades — ${sector.nombre}\n\n`;
   md += `Generado: ${fecha} · Corrida de datos de referencia: ${DATA.meta.corrida}\n\n`;
@@ -405,7 +412,13 @@ function descargarReporte(){
     ? cursos.map(c=>`- **${c.nombre}** — ${c.institucion}, ${c.modalidad}, ${c.duracion} (${c.nivel}). Cubre: ${c.cubre.join(', ')}`).join('\n')
     : '_No se identificaron cursos adicionales necesarios._';
 
-  md += `\n\n---\n_Este reporte se generó localmente en tu navegador a partir del texto que proporcionaste y de las habilidades más mencionadas en las vacantes verificadas del sector (corrida ${DATA.meta.corrida}). Los cursos son un catálogo ilustrativo/ficticio, no una recomendación real de instituciones. No sustituye asesoría profesional._\n`;
+  const empleos = empleosRecomendados(sectorKey, textoNorm);
+  md += `\n\n## Empleos recomendados para ti\n\n`;
+  md += empleos.length
+    ? empleos.map(v=>`- **${v.titulo}** — ${v.empresa}, ${v.ubicacion}${formatSalarioRango(v.salario_min,v.salario_max) ? ' · ' + formatSalarioRango(v.salario_min,v.salario_max) : ''} (publicada ${v.fecha_publicacion}, vía ${v.fuente}). Coincide en: ${v.matchedSkills.join(', ')}. Ver vacante: ${v.url}`).join('\n')
+    : '_No se encontraron vacantes verificadas cuyas habilidades solicitadas coincidan con las detectadas en tu CV._';
+
+  md += `\n\n---\n_Este reporte se generó localmente en tu navegador a partir del texto que proporcionaste y de las habilidades más mencionadas en las vacantes verificadas del sector (corrida ${DATA.meta.corrida}). Los cursos son un catálogo ilustrativo/ficticio, no una recomendación real de instituciones. Los empleos recomendados sí son vacantes reales verificadas por el pipeline, con link a la publicación original. No sustituye asesoría profesional._\n`;
 
   const blob = new Blob([md], {type:'text/markdown'});
   const a = document.createElement('a');
@@ -454,6 +467,54 @@ function renderCursos(){
         <div style="margin-top:8px;">${c.cubre.map(s=>`<span class="badge missing">${s}</span>`).join('')}</div>
       </div>
     `).join('');
+}
+
+/* ===================== EMPLEOS RECOMENDADOS ===================== */
+function formatSalarioRango(min, max){
+  if(!min && !max) return null;
+  const fmt = n => '$' + Math.round(n).toLocaleString('es-MX');
+  if(min && max && min !== max) return `${fmt(min)} – ${fmt(max)} MXN/mes`;
+  return `${fmt(min || max)} MXN/mes`;
+}
+
+function empleosRecomendados(sectorKey, textoNorm){
+  const vacantes = (DATA.sectores[sectorKey].vacantes_detalle || []);
+  const scored = vacantes.map(v=>{
+    const skills = [...(v.habilidades_tecnicas||[]), ...(v.habilidades_blandas||[])];
+    const matchedSkills = skills.filter(s => skillEnTexto(s, textoNorm));
+    return {...v, matchedSkills, score: matchedSkills.length};
+  }).filter(v => v.score > 0);
+  scored.sort((a,b) => b.score - a.score || new Date(b.fecha_publicacion) - new Date(a.fecha_publicacion));
+  return scored.slice(0, 10);
+}
+
+function renderEmpleos(){
+  const cont = document.getElementById('empleosContenido');
+  const empleosCard = document.getElementById('empleosCard');
+  if(!ultimoReporte){
+    empleosCard.style.display = 'none';
+    return;
+  }
+  empleosCard.style.display = 'block';
+  const {sectorKey, sector, textoNorm} = ultimoReporte;
+  const recomendados = empleosRecomendados(sectorKey, textoNorm);
+  const nota = sector.vacantes_detalle_nota
+    ? `<p class="note">${sector.vacantes_detalle_nota}</p>` : '';
+  if(!recomendados.length){
+    cont.innerHTML = `<p class="note">No encontramos, en la muestra de vacantes verificadas de <strong>${sector.nombre}</strong> (corrida ${DATA.meta.corrida}), empleos cuyas habilidades solicitadas coincidan con las detectadas en tu CV.</p>` + nota;
+    return;
+  }
+  cont.innerHTML = `<p class="note">Vacantes verificadas de <strong>${sector.nombre}</strong> (corrida ${DATA.meta.corrida}), ordenadas por cuántas de las habilidades detectadas en tu CV coinciden con lo que pide cada vacante.</p>` + nota +
+    recomendados.map(v => {
+      const salario = formatSalarioRango(v.salario_min, v.salario_max);
+      return `
+      <div class="card" style="margin-bottom:12px;padding:16px 18px;">
+        <div style="font-weight:600;color:var(--azul-osc);">${v.titulo}</div>
+        <div class="hint">${v.empresa} · ${v.ubicacion}${salario ? ' · ' + salario : ''} · publicada ${v.fecha_publicacion} · vía ${v.fuente}</div>
+        <div style="margin-top:8px;">${v.matchedSkills.map(s=>`<span class="badge match">${s}</span>`).join('')}</div>
+        <div style="margin-top:10px;"><a href="${v.url}" target="_blank" rel="noopener noreferrer" style="display:inline-block;background:#fff;color:var(--azul);border:1.5px solid var(--azul);padding:8px 18px;border-radius:999px;font-size:0.86rem;font-weight:600;text-decoration:none;">Ver vacante original →</a></div>
+      </div>`;
+    }).join('');
 }
 
 /* ===================== DASHBOARD ===================== */
