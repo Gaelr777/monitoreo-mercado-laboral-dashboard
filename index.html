@@ -144,9 +144,9 @@
       <label>Texto del CV</label>
       <textarea id="cvText" placeholder="El texto extraído de tu archivo aparecerá aquí — o pégalo tú directamente."></textarea>
 
-      <div class="note">Este CV se procesa por completo en tu navegador: no se sube a ningún servidor. Al analizarlo confirmas que das tu consentimiento para que este prototipo compare su contenido contra las habilidades en demanda del sector elegido.</div>
+      <div class="note">El texto de tu CV se extrae en tu navegador. Para identificar tus habilidades, ese texto se envía a un servicio propio que a su vez usa el modelo de IA de Anthropic (Claude) para el análisis semántico — no se guarda en ningún lado ni se comparte con terceros distintos a ese servicio. Si el análisis por IA no está disponible, se usa una comparación local por palabras clave como respaldo. Al analizarlo confirmas que das tu consentimiento para que este prototipo compare su contenido contra las habilidades en demanda del sector elegido.</div>
 
-      <button class="primary" onclick="analizarCV()">Analizar CV →</button>
+      <button class="primary" id="btnAnalizarCV" onclick="analizarCV()">Analizar CV →</button>
     </div>
 
     <div class="card" id="resultado">
@@ -357,7 +357,35 @@ function skillEnTexto(skill, textoNorm){
 
 let ultimoReporte = null;
 
-function analizarCV(){
+// Pega aquí la URL de tu Cloudflare Worker una vez desplegado, ej: 'https://cv-analisis.tu-usuario.workers.dev'
+// Si se deja vacío, el sitio usa directamente el análisis local por palabras clave.
+const CV_ANALYSIS_ENDPOINT = '';
+
+async function detectarHabilidadesIA(cvTextoRaw, todas){
+  const resp = await fetch(CV_ANALYSIS_ENDPOINT, {
+    method: 'POST',
+    headers: {'content-type': 'application/json'},
+    body: JSON.stringify({ cvText: cvTextoRaw, habilidades: todas })
+  });
+  if(!resp.ok) throw new Error('El servicio de análisis respondió con error ' + resp.status);
+  const data = await resp.json();
+  if(!data || !Array.isArray(data.matched)) throw new Error('Formato de respuesta inesperado');
+  const matchedSet = new Set(data.matched);
+  return {
+    matched: todas.filter(h=>matchedSet.has(h.skill)),
+    missing: todas.filter(h=>!matchedSet.has(h.skill))
+  };
+}
+
+function detectarHabilidadesLocal(cvTextoRaw, todas){
+  const textoNorm = normalizar(cvTextoRaw);
+  return {
+    matched: todas.filter(h=>skillEnTexto(h.skill, textoNorm)),
+    missing: todas.filter(h=>!skillEnTexto(h.skill, textoNorm))
+  };
+}
+
+async function analizarCV(){
   const sectorKey = document.getElementById('sectorSelect').value;
   const cvTextoRaw = document.getElementById('cvText').value;
   if(!cvTextoRaw || !cvTextoRaw.trim()){
@@ -368,12 +396,25 @@ function analizarCV(){
   const sector = DATA.sectores[sectorKey];
   const todas = [...sector.habilidades_tecnicas.map(h=>({...h,tipo:'técnica'})), ...sector.habilidades_blandas.map(h=>({...h,tipo:'blanda'}))];
 
-  const matched = [];
-  const missing = [];
-  todas.forEach(h=>{
-    if(skillEnTexto(h.skill, textoNorm)) matched.push(h);
-    else missing.push(h);
-  });
+  const btn = document.getElementById('btnAnalizarCV');
+  let matched, missing, origen;
+
+  if(CV_ANALYSIS_ENDPOINT){
+    if(btn){ btn.disabled = true; btn.textContent = 'Analizando con IA…'; }
+    try{
+      ({matched, missing} = await detectarHabilidadesIA(cvTextoRaw, todas));
+      origen = 'ia';
+    }catch(err){
+      console.warn('Análisis por IA no disponible, usando análisis local de respaldo:', err);
+      ({matched, missing} = detectarHabilidadesLocal(cvTextoRaw, todas));
+      origen = 'local-fallback';
+    }
+    if(btn){ btn.disabled = false; btn.textContent = 'Analizar CV →'; }
+  } else {
+    ({matched, missing} = detectarHabilidadesLocal(cvTextoRaw, todas));
+    origen = 'local';
+  }
+
   missing.sort((a,b)=>b.menciones-a.menciones);
   matched.sort((a,b)=>b.menciones-a.menciones);
   const missingTop = missing.slice(0,10);
@@ -388,11 +429,16 @@ function analizarCV(){
     : '<span class="note">Tu CV cubre todas las habilidades registradas para este sector. ¡Buena señal!</span>';
 
   const pct = todas.length ? Math.round((matched.length/todas.length)*100) : 0;
+  const notaOrigen = origen === 'ia'
+    ? 'Habilidades detectadas con análisis semántico por IA (Claude), no solo coincidencia literal de palabras.'
+    : origen === 'local-fallback'
+      ? 'El análisis por IA no estuvo disponible en este momento; se usó como respaldo una comparación local por palabras clave, que puede pasar por alto habilidades descritas con otras palabras.'
+      : 'Análisis por comparación local de palabras clave.';
   document.getElementById('resumenTexto').innerHTML =
     `<p>Se detectaron <strong>${matched.length} de ${todas.length}</strong> habilidades registradas como en demanda en <strong>${sector.nombre}</strong> (corrida ${DATA.meta.corrida}) — ${pct}% de cobertura frente al vocabulario de habilidades de ese sector.</p>
-     <p class="note">Este vocabulario viene de menciones explícitas en ${sector.vacantes_con_habilidades} de ${sector.vacantes_verificadas} vacantes verificadas del sector (no es un estándar externo), así que es una brecha relativa a lo que hoy se está publicando en el mercado, no un examen de certificación.</p>`;
+     <p class="note">Este vocabulario viene de menciones explícitas en ${sector.vacantes_con_habilidades} de ${sector.vacantes_verificadas} vacantes verificadas del sector (no es un estándar externo), así que es una brecha relativa a lo que hoy se está publicando en el mercado, no un examen de certificación. ${notaOrigen}</p>`;
 
-  ultimoReporte = {sectorKey, sector, matched, missing, missingTop, pct, textoNorm, fecha: new Date().toISOString().slice(0,10)};
+  ultimoReporte = {sectorKey, sector, matched, missing, missingTop, pct, textoNorm, origen, fecha: new Date().toISOString().slice(0,10)};
   document.getElementById('resultado').style.display = 'block';
   document.getElementById('resultado').scrollIntoView({behavior:'smooth'});
   renderCursos();
