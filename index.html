@@ -359,7 +359,7 @@ let ultimoReporte = null;
 
 // Pega aquí la URL de tu Cloudflare Worker una vez desplegado, ej: 'https://cv-analisis.tu-usuario.workers.dev'
 // Si se deja vacío, el sitio usa directamente el análisis local por palabras clave.
-const CV_ANALYSIS_ENDPOINT = '';
+const CV_ANALYSIS_ENDPOINT = 'https://cv-analisis.gael-ramav.workers.dev';
 
 async function detectarHabilidadesIA(cvTextoRaw, todas){
   const resp = await fetch(CV_ANALYSIS_ENDPOINT, {
