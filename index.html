@@ -133,7 +133,7 @@
       <label>Sector de interés</label>
       <select id="sectorSelect">
         <option value="automotriz">Automotriz</option>
-        <option value="turismo">Turismo</option>
+        <option value="turismo">Turismo</option><option value="gestion">Gestión y Administración</option>
       </select>
 
       <label>Archivo (PDF, DOCX o TXT)</label>
@@ -182,7 +182,7 @@
       <div class="note">KPIs de mercado laboral (no de operación del pipeline) pensados para orientar a alguien que sube su CV: qué se pide, quién contrata, dónde y a qué sueldo. Datos reales de <span id="dashFechaNote">la corrida más reciente</span> del pipeline — esta página se actualiza sola cada semana con los datos frescos de Drive.</div>
       <div class="pill-toggle">
         <button id="pill-automotriz" class="active" onclick="cambiarSectorDash('automotriz')">Automotriz</button>
-        <button id="pill-turismo" onclick="cambiarSectorDash('turismo')">Turismo</button>
+        <button id="pill-turismo" onclick="cambiarSectorDash('turismo')">Turismo</button><button id="pill-gestion" onclick="cambiarSectorDash('gestion')">Gestión y Administración</button>
       </div>
 
       <div class="statgrid" id="statgrid"></div>
