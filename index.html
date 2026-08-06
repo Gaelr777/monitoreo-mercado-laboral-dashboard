@@ -159,13 +159,13 @@
 
     <div class="card" id="cursosCard" style="display:none;">
       <h2>3. Cursos recomendados</h2>
-      <div class="note">A partir de las habilidades que te faltaron arriba, así se ven en el catálogo ilustrativo "prueba de cursos" (ficticio, no oferta real de instituciones).</div>
+      <div class="note">A partir de las habilidades que te faltaron arriba, así se ven en el catálogo real de cursos del equipo — modalidad, duración e institución tal cual figuran en el catálogo (algunos campos pueden decir "No especificado" si el catálogo no los tiene definidos todavía).</div>
       <div id="cursosContenido"></div>
     </div>
 
     <div class="card" id="empleosCard" style="display:none;">
       <h2>4. Empleos recomendados para ti</h2>
-      <div class="note">Vacantes reales y verificadas (Etapa 2 del pipeline) que mejor calzan con las habilidades detectadas en tu CV — con link directo a la publicación original. Como son avisos reales de portales de empleo (Adzuna, OCC, Indeed), algunos pueden aparecer como vacante cerrada o caducada si la empresa ya cubrió la posición — es normal en agregadores de empleo en tiempo real, no un error del sitio. Usa el link como referencia de la vacante y de la empresa que contrató, y busca posiciones similares directamente en el portal si el aviso ya expiró.</div>
+      <div class="note">Vacantes reales de la corrida más reciente del pipeline, verificadas manualmente como vigentes al momento de publicar esta actualización — con link directo a la publicación original. Como son avisos de portales de empleo en tiempo real (Adzuna, OCC, Indeed), es posible que alguna se cierre entre una actualización y otra si la empresa cubre la posición; no es un error del sitio. El sitio se actualiza automáticamente con cada nueva corrida para mantener esta lista lo más vigente posible.</div>
       <div id="empleosContenido"></div>
     </div>
   </section>
@@ -407,18 +407,21 @@ function descargarReporte(){
   md += missingTop.length ? missingTop.map(h=>`- ${h.skill} (${h.tipo}, ${h.menciones} menciones en vacantes verificadas)`).join('\n') : '_Sin brechas relevantes detectadas._';
 
   const cursos = cursosRecomendados(sectorKey, missing);
-  md += `\n\n## Cursos recomendados (catálogo ilustrativo "prueba de cursos")\n\n`;
+  md += `\n\n## Cursos recomendados (catálogo real de cursos del equipo)\n\n`;
   md += cursos.length
     ? cursos.map(c=>`- **${c.nombre}** — ${c.institucion}, ${c.modalidad}, ${c.duracion} (${c.nivel}). Cubre: ${c.cubre.join(', ')}`).join('\n')
     : '_No se identificaron cursos adicionales necesarios._';
 
-  const empleos = empleosRecomendados(sectorKey, textoNorm);
+  const { items: empleos, fallback: empleosFallback } = empleosRecomendados(sectorKey, textoNorm);
   md += `\n\n## Empleos recomendados para ti\n\n`;
   md += empleos.length
-    ? empleos.map(v=>`- **${v.titulo}** — ${v.empresa}, ${v.ubicacion}${formatSalarioRango(v.salario_min,v.salario_max) ? ' · ' + formatSalarioRango(v.salario_min,v.salario_max) : ''} (publicada ${v.fecha_publicacion}, vía ${v.fuente}). Coincide en: ${v.matchedSkills.join(', ')}. Ver vacante: ${v.url}`).join('\n')
-    : '_No se encontraron vacantes verificadas cuyas habilidades solicitadas coincidan con las detectadas en tu CV._';
+    ? empleos.map(v=>`- **${v.titulo}** — ${v.empresa}, ${v.ubicacion}${formatSalarioRango(v.salario_min,v.salario_max) ? ' · ' + formatSalarioRango(v.salario_min,v.salario_max) : ''} (publicada ${v.fecha_publicacion}, vía ${v.fuente}).${v.matchedSkills.length ? ' Coincide en: ' + v.matchedSkills.join(', ') + '.' : ''} Ver vacante: ${v.url}`).join('\n')
+    : '_No hay vacantes verificadas disponibles en este momento para tu sector._';
+  if(empleosFallback && empleos.length){
+    md += '\n\n_No hubo coincidencia directa de habilidades; se listan las vacantes verificadas más recientes del sector._';
+  }
 
-  md += `\n\n---\n_Este reporte se generó localmente en tu navegador a partir del texto que proporcionaste y de las habilidades más mencionadas en las vacantes verificadas del sector (corrida ${DATA.meta.corrida}). Los cursos son un catálogo ilustrativo/ficticio, no una recomendación real de instituciones. Los empleos recomendados sí son vacantes reales verificadas por el pipeline, con link a la publicación original. No sustituye asesoría profesional._\n`;
+  md += `\n\n---\n_Este reporte se generó localmente en tu navegador a partir del texto que proporcionaste y de las habilidades más mencionadas en las vacantes verificadas del sector (corrida ${DATA.meta.corrida}). Los cursos vienen del catálogo real de cursos del equipo, filtrados por coincidencia con las habilidades detectadas. Los empleos recomendados son vacantes reales verificadas por el pipeline, con link a la publicación original. No sustituye asesoría profesional._\n`;
 
   const blob = new Blob([md], {type:'text/markdown'});
   const a = document.createElement('a');
@@ -456,7 +459,7 @@ function renderCursos(){
   }
   const recomendados = cursosRecomendados(sectorKey, missing);
   if(!recomendados.length){
-    cont.innerHTML = `<p class="note">No hay cursos en el catálogo "prueba de cursos" que cubran tus habilidades faltantes de ${sector.nombre} todavía.</p>`;
+    cont.innerHTML = `<p class="note">No encontramos, en el catálogo real de cursos del equipo, ningún curso que cubra tus habilidades faltantes de ${sector.nombre} todavía.</p>`;
     return;
   }
   cont.innerHTML = `<p class="note">Basado en tu último análisis (${sector.nombre}, ${missing.length} habilidades faltantes) — ordenados por cuántas de esas habilidades cubren.</p>` +
@@ -483,9 +486,15 @@ function empleosRecomendados(sectorKey, textoNorm){
     const skills = [...(v.habilidades_tecnicas||[]), ...(v.habilidades_blandas||[])];
     const matchedSkills = skills.filter(s => skillEnTexto(s, textoNorm));
     return {...v, matchedSkills, score: matchedSkills.length};
-  }).filter(v => v.score > 0);
-  scored.sort((a,b) => b.score - a.score || new Date(b.fecha_publicacion) - new Date(a.fecha_publicacion));
-  return scored.slice(0, 10);
+  });
+  const conMatch = scored.filter(v => v.score > 0);
+  conMatch.sort((a,b) => b.score - a.score || new Date(b.fecha_publicacion) - new Date(a.fecha_publicacion));
+  if(conMatch.length){
+    return {items: conMatch.slice(0, 10), fallback: false};
+  }
+  // Fallback: sin coincidencia léxica de habilidades, mostramos las más recientes del sector.
+  const recientes = [...scored].sort((a,b) => new Date(b.fecha_publicacion) - new Date(a.fecha_publicacion));
+  return {items: recientes.slice(0, 5), fallback: true};
 }
 
 function renderEmpleos(){
@@ -497,14 +506,17 @@ function renderEmpleos(){
   }
   empleosCard.style.display = 'block';
   const {sectorKey, sector, textoNorm} = ultimoReporte;
-  const recomendados = empleosRecomendados(sectorKey, textoNorm);
+  const {items: recomendados, fallback} = empleosRecomendados(sectorKey, textoNorm);
   const nota = sector.vacantes_detalle_nota
     ? `<p class="note">${sector.vacantes_detalle_nota}</p>` : '';
   if(!recomendados.length){
-    cont.innerHTML = `<p class="note">No encontramos, en la muestra de vacantes verificadas de <strong>${sector.nombre}</strong> (corrida ${DATA.meta.corrida}), empleos cuyas habilidades solicitadas coincidan con las detectadas en tu CV.</p>` + nota;
+    cont.innerHTML = `<p class="note">Por el momento no tenemos vacantes verificadas de <strong>${sector.nombre}</strong> para mostrar (corrida ${DATA.meta.corrida}). Vuelve a intentarlo después de la próxima actualización.</p>` + nota;
     return;
   }
-  cont.innerHTML = `<p class="note">Vacantes verificadas de <strong>${sector.nombre}</strong> (corrida ${DATA.meta.corrida}), ordenadas por cuántas de las habilidades detectadas en tu CV coinciden con lo que pide cada vacante.</p>` + nota +
+  const intro = fallback
+    ? `<p class="note">No encontramos coincidencia directa entre las habilidades detectadas en tu CV y las vacantes verificadas de <strong>${sector.nombre}</strong>, así que te mostramos las más recientes (corrida ${DATA.meta.corrida}).</p>`
+    : `<p class="note">Vacantes verificadas de <strong>${sector.nombre}</strong> (corrida ${DATA.meta.corrida}), ordenadas por cuántas de las habilidades detectadas en tu CV coinciden con lo que pide cada vacante.</p>`;
+  cont.innerHTML = intro + nota +
     recomendados.map(v => {
       const salario = formatSalarioRango(v.salario_min, v.salario_max);
       return `
