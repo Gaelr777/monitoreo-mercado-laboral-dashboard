@@ -186,6 +186,7 @@
       </div>
 
       <div class="statgrid" id="statgrid"></div>
+<div id="reporteDescarga"></div>
     </div>
 
     <div class="grid2">
@@ -723,7 +724,15 @@ function renderDashboard(){
     <div class="stat"><div class="num">${sector.ultima_semana_vacantes ?? '—'}</div><div class="lbl">Vacantes la última semana</div></div>
   `;
 
-  dibujarBarra('chartCategoria', sector.categorias_puesto.slice(0,7).map(c=>c.categoria), sector.categorias_puesto.slice(0,7).map(c=>c.vacantes), '#e08424', true);
+  
+const reporteBox = document.getElementById('reporteDescarga');
+if(reporteBox){
+reporteBox.innerHTML = sector.reporte_pdf_url
+? ('<a href="' + sector.reporte_pdf_url + '" target="_blank" rel="noopener noreferrer" style="display:inline-block;margin-top:14px;background:#fff;color:var(--azul-osc);border:1.5px solid var(--azul);padding:9px 20px;border-radius:999px;font-size:0.88rem;font-weight:700;text-decoration:none;font-family:var(--font-sans);">\u{1F4C4} Descargar reporte de ' + sector.nombre + ' (PDF)</a>')
+: '';
+}
+
+dibujarBarra('chartCategoria', sector.categorias_puesto.slice(0,7).map(c=>c.categoria), sector.categorias_puesto.slice(0,7).map(c=>c.vacantes), '#e08424', true);
   dibujarBarra('chartEmpresas', sector.top_empresas.slice(0,8).map(e=>e.empresa), sector.top_empresas.slice(0,8).map(e=>e.vacantes), '#1a4d8f', true);
   dibujarBarra('chartTecnicas', sector.habilidades_tecnicas.slice(0,10).map(h=>h.skill), sector.habilidades_tecnicas.slice(0,10).map(h=>h.menciones), '#2f8a4e', true);
   dibujarBarra('chartBlandas', sector.habilidades_blandas.slice(0,10).map(h=>h.skill), sector.habilidades_blandas.slice(0,10).map(h=>h.menciones), '#8f4fc4', true);
