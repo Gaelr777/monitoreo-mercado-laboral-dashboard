@@ -1,1 +1,776 @@
-undefined
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Análisis de Demanda de Talento y Habilidades — Prototipo</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/mammoth@1.6.0/mammoth.browser.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.0/chart.umd.min.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --azul:#b89a57; --azul-osc:#8b7440; --naranja:#c2703d; --verde:#4f8f5b;
+    --hero-bg:#faf8f2; --hero-bg2:#f3efe5; --hero-sub:#5a5346; --hero-line:rgba(31,31,28,.1);
+    --accent:#b89a57; --gold-light:#d0b06a;
+    --gris-bg:#faf8f2; --gris-borde:#e7ddc9; --texto:#1f1f1c; --texto-suave:#6b6459;
+    --font-serif:'Cormorant Garamond',Georgia,'Times New Roman',serif;
+    --font-sans:'Source Sans 3',ui-sans-serif,system-ui,-apple-system,'Segoe UI',sans-serif;
+    --sombra:rgba(53,42,21,.1) 0px 10px 25px 0px;
+  }
+  *{box-sizing:border-box;}
+  body{font-family:var(--font-sans);margin:0;background:linear-gradient(180deg,var(--hero-bg) 0%,var(--hero-bg2) 100%) fixed;color:var(--texto);}
+  header{background:linear-gradient(180deg,var(--hero-bg) 0%,var(--hero-bg2) 100%);color:var(--texto);padding:46px 32px 0;border-bottom:1px solid var(--hero-line);}
+  header .eyebrow{display:inline-block;font-size:.76rem;letter-spacing:.05em;text-transform:none;color:#fff;background:linear-gradient(135deg,var(--azul),var(--gold-light));padding:6px 16px;border-radius:999px;margin:0 0 16px;font-weight:700;box-shadow:var(--sombra);}
+  header h1{font-family:var(--font-serif);margin:0 0 12px;font-size:2.6rem;line-height:1.14;font-weight:700;max-width:640px;color:var(--texto);}
+  header p{margin:0;font-size:0.98rem;color:var(--hero-sub);max-width:560px;line-height:1.6;}
+  .hero-inner{display:flex;justify-content:space-between;align-items:flex-start;gap:36px;max-width:1080px;margin:0 auto;flex-wrap:wrap;padding-bottom:38px;}
+  .hero-text{flex:1 1 420px;}
+  .hero-cards{flex:0 0 240px;display:flex;flex-direction:column;gap:12px;margin-top:4px;}
+  .hero-card{background:#fff;border:1px solid var(--gris-borde);border-radius:14px;padding:14px 16px;box-shadow:var(--sombra);}
+  .hero-card .lbl{font-size:.7rem;text-transform:uppercase;letter-spacing:.07em;color:var(--texto-suave);font-weight:600;}
+  .hero-card .val{font-family:var(--font-serif);font-size:1.15rem;font-weight:600;margin-top:5px;color:var(--azul-osc);}
+  nav{display:flex;background:var(--hero-bg2);border-top:1px solid var(--hero-line);padding:0 32px;overflow-x:auto;}
+  nav button{flex:0 0 auto;background:none;border:none;color:var(--texto-suave);padding:16px 22px;font-size:0.82rem;letter-spacing:.05em;text-transform:uppercase;font-weight:600;cursor:pointer;border-bottom:3px solid transparent;white-space:nowrap;font-family:var(--font-sans);}
+  nav button.active{color:var(--texto);border-bottom:3px solid var(--accent);}
+  main{max-width:1080px;margin:0 auto;padding:34px 20px 60px;}
+  .tab{display:none;}
+  .tab.active{display:block;}
+  .cat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+  @media(max-width:820px){.cat-grid{grid-template-columns:1fr;} .hero-cards{flex-basis:100%;flex-direction:row;}}
+  .cat-card{background:#fff;border:1px solid var(--gris-borde);border-radius:16px;padding:26px 24px 64px;position:relative;box-shadow:var(--sombra);cursor:pointer;transition:transform .15s ease,box-shadow .15s ease;}
+  .cat-card:hover{transform:translateY(-3px);box-shadow:rgba(53,42,21,.18) 0px 14px 30px 0px;}
+  .cat-card h3{font-family:var(--font-serif);color:var(--texto);margin:0 0 10px;font-size:1.35rem;font-weight:700;}
+  .cat-card p{color:var(--texto-suave);font-size:.9rem;line-height:1.55;margin:0;}
+  .cat-card-static{cursor:default;padding-bottom:26px;}
+  .cat-card-static:hover{transform:none;box-shadow:var(--sombra);}
+  .arrow-btn{position:absolute;left:24px;bottom:22px;width:42px;height:42px;border-radius:50%;background:linear-gradient(135deg,var(--azul),var(--gold-light));color:#fff;border:none;font-size:1.15rem;line-height:1;display:flex;align-items:center;justify-content:center;cursor:pointer;box-shadow:var(--sombra);}
+  .cat-card:hover .arrow-btn{background:linear-gradient(135deg,var(--azul-osc),var(--azul));}
+  .card{background:#fff;border:1px solid var(--gris-borde);border-radius:16px;padding:24px 26px;margin-bottom:20px;box-shadow:var(--sombra);}
+  .card h2{margin-top:0;font-size:1.35rem;font-family:var(--font-serif);color:var(--texto);font-weight:700;}
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+  @media(max-width:720px){.grid2{grid-template-columns:1fr;}}
+  select, textarea, input[type=file]{width:100%;padding:9px 10px;border:1px solid var(--gris-borde);border-radius:8px;font-size:0.92rem;font-family:inherit;background:#fff;}
+  textarea{min-height:160px;resize:vertical;}
+  label{display:block;font-size:0.85rem;font-weight:600;color:var(--texto-suave);margin:14px 0 6px;}
+  button.primary{background:linear-gradient(135deg,var(--azul),var(--gold-light));color:#fff;border:none;padding:12px 28px;border-radius:999px;font-size:0.95rem;font-weight:700;cursor:pointer;margin-top:16px;letter-spacing:.01em;font-family:var(--font-sans);box-shadow:var(--sombra);}
+  button.primary:hover{background:linear-gradient(135deg,var(--azul-osc),var(--azul));}
+  button.secondary{background:#fff;color:var(--azul-osc);border:1.5px solid var(--azul);padding:9px 20px;border-radius:999px;font-size:0.88rem;font-weight:700;cursor:pointer;margin-top:10px;margin-right:8px;font-family:var(--font-sans);}
+  .badge{display:inline-block;padding:4px 12px;border-radius:999px;font-size:0.82rem;margin:3px 5px 3px 0;font-weight:600;}
+  .badge.match{background:#eaf3ec;color:var(--verde);border:1px solid #c9e2cd;}
+  .badge.missing{background:#f8ece2;color:var(--naranja);border:1px solid #edcfb3;}
+  .statgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:12px;margin-top:6px;}
+  .stat{background:var(--hero-bg2);border:1px solid var(--gris-borde);border-radius:12px;padding:14px;text-align:center;}
+  .stat .num{font-size:1.5rem;font-weight:700;color:var(--azul-osc);font-family:var(--font-serif);}
+  .stat .lbl{font-size:0.78rem;color:var(--texto-suave);margin-top:2px;}
+  .chart-wrap{position:relative;height:260px;margin-top:10px;}
+  .note{font-size:0.8rem;color:var(--texto-suave);margin-top:10px;line-height:1.45;}
+  .error{background:#fdecea;color:#a12a2a;border:1px solid #f3bcb9;padding:10px 12px;border-radius:8px;font-size:0.85rem;margin-top:10px;}
+  .hint{font-size:0.8rem;color:var(--texto-suave);margin-top:4px;}
+  .pill-toggle{display:flex;gap:8px;margin-bottom:16px;}
+  .pill-toggle button{padding:7px 16px;border-radius:999px;border:1.5px solid var(--azul);background:#fff;color:var(--azul-osc);font-size:0.86rem;font-weight:600;cursor:pointer;font-family:var(--font-sans);}
+  .pill-toggle button.active{background:linear-gradient(135deg,var(--azul),var(--gold-light));color:#fff;border-color:transparent;}
+  #resultado{display:none;}
+  #loadingOverlay{position:fixed;inset:0;background:var(--hero-bg);color:var(--texto);display:flex;align-items:center;justify-content:center;font-size:.95rem;letter-spacing:.03em;z-index:999;font-family:var(--font-sans);}
+  #loadingOverlay.hidden{display:none;}
+  #loadError{display:none;background:#fdecea;color:#a12a2a;border:1px solid #f3bcb9;padding:14px 18px;border-radius:8px;font-size:0.88rem;margin:20px auto;max-width:640px;}
+  body.data-error #loadError{display:block;}
+</style>
+</head>
+<body>
+
+<div id="loadingOverlay">Cargando datos más recientes…</div>
+<div id="loadError">No se pudieron cargar los datos más recientes (sector_data.json). Mostrando la página sin datos — recarga en unos minutos o avisa a Gael.</div>
+
+<header>
+  <div class="hero-inner">
+    <div class="hero-text">
+      <p class="eyebrow">Análisis de demanda de talento y habilidades</p>
+      <h1>Datos reales de mercado laboral, por sector</h1>
+      <p>Sube tu CV y descubre qué habilidades te faltan frente a las vacantes verificadas de Automotriz y Turismo — o explora el dashboard con cifras y tendencias de <span id="heroFechaTexto">la corrida más reciente</span>.</p>
+    </div>
+    <div class="hero-cards">
+      <div class="hero-card"><div class="lbl">Corrida de datos</div><div class="val" id="heroCorridaVal">—</div></div>
+      <div class="hero-card"><div class="lbl">Sectores cubiertos</div><div class="val">Automotriz · Turismo</div></div>
+    </div>
+  </div>
+</header>
+
+<nav>
+  <button id="nav-home" class="active" onclick="mostrarTab('home')">Inicio</button>
+  <button id="nav-cv" onclick="mostrarTab('cv')" disabled>Subir tu CV</button>
+  <button id="nav-dash" onclick="mostrarTab('dash')" disabled>Dashboard</button>
+</nav>
+
+<main>
+
+  <!-- TAB HOME -->
+  <section id="tab-home" class="tab active">
+    <div class="cat-grid">
+      <div class="cat-card" onclick="mostrarTab('cv')">
+        <h3>Sube tu CV</h3>
+        <p>Compara tu currículum contra las vacantes verificadas del sector y descubre qué habilidades técnicas y blandas te faltan frente a lo que hoy piden los empleadores.</p>
+        <button class="arrow-btn" aria-label="Ir a Subir tu CV">→</button>
+      </div>
+      <div class="cat-card" onclick="mostrarTab('dash')">
+        <h3>Dashboard</h3>
+        <p>Cifras reales de mercado laboral: habilidades más pedidas, empresas que contratan, cobertura geográfica, salarios de referencia y tendencias por sector.</p>
+        <button class="arrow-btn" aria-label="Ir al Dashboard">→</button>
+      </div>
+      <div class="cat-card cat-card-static">
+        <h3>Metodología</h3>
+        <p>Vacantes extraídas de Adzuna, Indeed y OCC, y empresas verificadas contra el padrón DENUE. Corrida de referencia: <span id="metaFechaTexto">—</span>, sectores Automotriz y Turismo.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- TAB CV -->
+  <section id="tab-cv" class="tab">
+    <div class="card">
+      <h2>1. Sube tu CV</h2>
+      <label>Sector de interés</label>
+      <select id="sectorSelect">
+        <option value="automotriz">Automotriz</option>
+        <option value="turismo">Turismo</option><option value="gestion">Gestión y Administración</option>
+      </select>
+
+      <label>Archivo (PDF, DOCX o TXT)</label>
+      <input type="file" id="fileInput" accept=".pdf,.docx,.txt">
+      <div class="hint">También puedes pegar o editar el texto extraído abajo antes de analizar.</div>
+      <div id="extractError"></div>
+
+      <label>Texto del CV</label>
+      <textarea id="cvText" placeholder="El texto extraído de tu archivo aparecerá aquí — o pégalo tú directamente."></textarea>
+
+      <div class="note">El texto de tu CV se extrae en tu navegador. Para identificar tus habilidades, ese texto se envía a un servicio propio que a su vez usa el modelo de IA de Anthropic (Claude) para el análisis semántico — no se guarda en ningún lado ni se comparte con terceros distintos a ese servicio. Si el análisis por IA no está disponible, se usa una comparación local por palabras clave como respaldo. Al analizarlo confirmas que das tu consentimiento para que este prototipo compare su contenido contra las habilidades en demanda del sector elegido.</div>
+
+      <button class="primary" id="btnAnalizarCV" onclick="analizarCV()">Analizar CV →</button>
+    </div>
+
+    <div class="card" id="resultado">
+      <h2>2. Reporte de brecha de habilidades</h2>
+      <div id="resumenTexto"></div>
+
+      <label>Habilidades que ya tienes (detectadas en tu CV)</label>
+      <div id="matchedBox"></div>
+
+      <label>Habilidades más demandadas en el sector que no se detectaron en tu CV</label>
+      <div id="missingBox"></div>
+
+      <button class="secondary" onclick="descargarReporte()">Descargar reporte (.md)</button>
+    </div>
+
+    <div class="card" id="cursosCard" style="display:none;">
+      <h2>3. Cursos recomendados</h2>
+      <div class="note">A partir de las habilidades que te faltaron arriba, así se ven en el catálogo real de cursos del equipo — modalidad, duración e institución tal cual figuran en el catálogo (algunos campos pueden decir "No especificado" si el catálogo no los tiene definidos todavía).</div>
+      <div id="cursosContenido"></div>
+    </div>
+
+    <div class="card" id="empleosCard" style="display:none;">
+      <h2>4. Empleos recomendados para ti</h2>
+      <div class="note">Vacantes reales de la corrida más reciente del pipeline, verificadas manualmente como vigentes al momento de publicar esta actualización — con link directo a la publicación original. Como son avisos de portales de empleo en tiempo real (Adzuna, OCC, Indeed), es posible que alguna se cierre entre una actualización y otra si la empresa cubre la posición; no es un error del sitio. El sitio se actualiza automáticamente con cada nueva corrida para mantener esta lista lo más vigente posible.</div>
+      <div id="empleosContenido"></div>
+    </div>
+  </section>
+
+  <!-- TAB DASHBOARD -->
+  <section id="tab-dash" class="tab">
+    <div class="card">
+      <h2>Dashboard — Lo que le conviene saber a quien busca empleo</h2>
+      <div class="note">KPIs de mercado laboral (no de operación del pipeline) pensados para orientar a alguien que sube su CV: qué se pide, quién contrata, dónde y a qué sueldo. Datos reales de <span id="dashFechaNote">la corrida más reciente</span> del pipeline — esta página se actualiza sola cada semana con los datos frescos de Drive.</div>
+      <div class="pill-toggle">
+        <button id="pill-automotriz" class="active" onclick="cambiarSectorDash('automotriz')">Automotriz</button>
+        <button id="pill-turismo" onclick="cambiarSectorDash('turismo')">Turismo</button><button id="pill-gestion" onclick="cambiarSectorDash('gestion')">Gestión y Administración</button>
+      </div>
+
+      <div class="statgrid" id="statgrid"></div>
+    </div>
+
+    <div class="grid2">
+      <div class="card">
+        <h2>Puestos más publicados</h2>
+        <div class="chart-wrap"><canvas id="chartCategoria"></canvas></div>
+      </div>
+      <div class="card">
+        <h2>Empresas que más contratan</h2>
+        <div class="chart-wrap"><canvas id="chartEmpresas"></canvas></div>
+      </div>
+      <div class="card">
+        <h2>Habilidades técnicas más demandadas</h2>
+        <div class="chart-wrap"><canvas id="chartTecnicas"></canvas></div>
+      </div>
+      <div class="card">
+        <h2>Habilidades blandas más demandadas</h2>
+        <div class="chart-wrap"><canvas id="chartBlandas"></canvas></div>
+      </div>
+      <div class="card">
+        <h2>Dónde están las vacantes</h2>
+        <div class="chart-wrap"><canvas id="chartGeo"></canvas></div>
+      </div>
+      <div class="card">
+        <h2>Vacantes publicadas por semana</h2>
+        <div class="chart-wrap"><canvas id="chartTendencia"></canvas></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>Rango salarial de referencia (mensual, MXN)</h2>
+      <div id="salarioBox"></div>
+    </div>
+  </section>
+
+</main>
+
+<script>
+/* ===================== DATOS (cargados en vivo desde sector_data.json) =====================
+   sector_data.json vive en el mismo repositorio y se regenera cada semana desde Drive
+   por una tarea programada — esta página NUNCA trae los datos hardcodeados. */
+let DATA = null;
+let COURSES = null;
+
+function formatearFecha(iso){
+  if(!iso) return 'fecha no disponible';
+  const meses = ['enero','febrero','marzo','abril','mayo','junio','julio','agosto','septiembre','octubre','noviembre','diciembre'];
+  const [y,m,d] = iso.split('-').map(Number);
+  if(!y || !m || !d) return iso;
+  return `${d} de ${meses[m-1]} de ${y}`;
+}
+
+function pintarMeta(){
+  const fecha = formatearFecha(DATA.meta.corrida);
+  document.getElementById('heroCorridaVal').textContent = fecha;
+  document.getElementById('heroFechaTexto').textContent = `la corrida del ${fecha}`;
+  document.getElementById('metaFechaTexto').textContent = fecha;
+  document.getElementById('dashFechaNote').textContent = `la corrida del ${fecha}`;
+}
+
+async function cargarDatos(){
+  try{
+    const resp = await fetch('sector_data.json', {cache: 'no-store'});
+    if(!resp.ok) throw new Error('HTTP ' + resp.status);
+    const json = await resp.json();
+    DATA = json.DATA;
+    COURSES = json.COURSES;
+    pintarMeta();
+    document.getElementById('nav-cv').disabled = false;
+    document.getElementById('nav-dash').disabled = false;
+    document.getElementById('loadingOverlay').classList.add('hidden');
+    if(document.getElementById('tab-dash').classList.contains('active')) renderDashboard();
+  }catch(err){
+    document.body.classList.add('data-error');
+    document.getElementById('loadingOverlay').classList.add('hidden');
+    console.error('No se pudo cargar sector_data.json', err);
+  }
+}
+cargarDatos();
+
+/* ===================== NAV ===================== */
+function mostrarTab(tab){
+  if((tab==='cv'||tab==='dash') && !DATA) return; // datos aún no cargados o fallaron
+  document.getElementById('tab-home').classList.toggle('active', tab==='home');
+  document.getElementById('tab-cv').classList.toggle('active', tab==='cv');
+  document.getElementById('tab-dash').classList.toggle('active', tab==='dash');
+  document.getElementById('nav-home').classList.toggle('active', tab==='home');
+  document.getElementById('nav-cv').classList.toggle('active', tab==='cv');
+  document.getElementById('nav-dash').classList.toggle('active', tab==='dash');
+  if(tab==='dash') renderDashboard();
+  window.scrollTo({top:0, behavior:'smooth'});
+}
+
+/* ===================== EXTRACCIÓN DE TEXTO DEL ARCHIVO ===================== */
+if(window['pdfjsLib']){
+  pdfjsLib.GlobalWorkerOptions.workerSrc = "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js";
+}
+
+document.getElementById('fileInput').addEventListener('change', async (e)=>{
+  const file = e.target.files[0];
+  const errBox = document.getElementById('extractError');
+  errBox.innerHTML = '';
+  if(!file) return;
+  const nombre = file.name.toLowerCase();
+  try{
+    let texto = '';
+    if(nombre.endsWith('.pdf')){
+      texto = await extraerPDF(file);
+    } else if(nombre.endsWith('.docx')){
+      texto = await extraerDOCX(file);
+    } else {
+      texto = await file.text();
+    }
+    if(!texto || !texto.trim()){
+      throw new Error('No se encontró texto en el archivo (puede ser un PDF escaneado como imagen).');
+    }
+    document.getElementById('cvText').value = texto.trim();
+  }catch(err){
+    errBox.innerHTML = '<div class="error">No se pudo leer el archivo automáticamente (' + err.message + '). Pega el texto de tu CV directamente en el cuadro de abajo.</div>';
+  }
+});
+
+function extraerPDF(file){
+  return new Promise((resolve, reject)=>{
+    const reader = new FileReader();
+    reader.onload = async function(){
+      try{
+        const typedarray = new Uint8Array(this.result);
+        const pdf = await pdfjsLib.getDocument({data: typedarray}).promise;
+        let texto = '';
+        for(let i=1; i<=pdf.numPages; i++){
+          const page = await pdf.getPage(i);
+          const content = await page.getTextContent();
+          texto += content.items.map(it=>it.str).join(' ') + '\n';
+        }
+        resolve(texto);
+      }catch(e){ reject(e); }
+    };
+    reader.onerror = ()=>reject(new Error('error leyendo el archivo'));
+    reader.readAsArrayBuffer(file);
+  });
+}
+
+function extraerDOCX(file){
+  return new Promise((resolve, reject)=>{
+    const reader = new FileReader();
+    reader.onload = async function(){
+      try{
+        const result = await mammoth.extractRawText({arrayBuffer: this.result});
+        resolve(result.value);
+      }catch(e){ reject(e); }
+    };
+    reader.onerror = ()=>reject(new Error('error leyendo el archivo'));
+    reader.readAsArrayBuffer(file);
+  });
+}
+
+/* ===================== ANÁLISIS DE HABILIDADES ===================== */
+function normalizar(s){
+  return s.normalize('NFD').replace(/[̀-ͯ]/g,'').toLowerCase();
+}
+
+function skillEnTexto(skill, textoNorm){
+  const s = normalizar(skill).trim();
+  const escaped = s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&').replace(/\s+/g, '\\s+');
+  const re = new RegExp('(^|[^a-z0-9])' + escaped + '($|[^a-z0-9])', 'i');
+  return re.test(' ' + textoNorm + ' ');
+}
+
+let ultimoReporte = null;
+
+// Pega aquí la URL de tu Cloudflare Worker una vez desplegado, ej: 'https://cv-analisis.tu-usuario.workers.dev'
+// Si se deja vacío, el sitio usa directamente el análisis local por palabras clave.
+const CV_ANALYSIS_ENDPOINT = 'https://cv-analisis.gael-ramav.workers.dev';
+const RECOMENDAR_EMPLEOS_ENDPOINT = CV_ANALYSIS_ENDPOINT + '/recomendar-empleos';
+const MEJORAR_CV_ENDPOINT = CV_ANALYSIS_ENDPOINT + '/mejorar-cv';
+
+async function detectarHabilidadesIA(cvTextoRaw, todas){
+  const resp = await fetch(CV_ANALYSIS_ENDPOINT, {
+    method: 'POST',
+    headers: {'content-type': 'application/json'},
+    body: JSON.stringify({ cvText: cvTextoRaw, habilidades: todas })
+  });
+  if(!resp.ok) throw new Error('El servicio de análisis respondió con error ' + resp.status);
+  const data = await resp.json();
+  if(!data || !Array.isArray(data.matched)) throw new Error('Formato de respuesta inesperado');
+  const matchedSet = new Set(data.matched);
+  return {
+    matched: todas.filter(h=>matchedSet.has(h.skill)),
+    missing: todas.filter(h=>!matchedSet.has(h.skill))
+  };
+}
+
+function detectarHabilidadesLocal(cvTextoRaw, todas){
+  const textoNorm = normalizar(cvTextoRaw);
+  return {
+    matched: todas.filter(h=>skillEnTexto(h.skill, textoNorm)),
+    missing: todas.filter(h=>!skillEnTexto(h.skill, textoNorm))
+  };
+}
+
+async function analizarCV(){
+  const sectorKey = document.getElementById('sectorSelect').value;
+  const cvTextoRaw = document.getElementById('cvText').value;
+  if(!cvTextoRaw || !cvTextoRaw.trim()){
+    alert('Sube un archivo o pega el texto de tu CV antes de analizar.');
+    return;
+  }
+  const textoNorm = normalizar(cvTextoRaw);
+  const sector = DATA.sectores[sectorKey];
+  const todas = [...sector.habilidades_tecnicas.map(h=>({...h,tipo:'técnica'})), ...sector.habilidades_blandas.map(h=>({...h,tipo:'blanda'}))];
+
+  const btn = document.getElementById('btnAnalizarCV');
+  let matched, missing, origen;
+
+  if(CV_ANALYSIS_ENDPOINT){
+    if(btn){ btn.disabled = true; btn.textContent = 'Analizando con IA…'; }
+    try{
+      ({matched, missing} = await detectarHabilidadesIA(cvTextoRaw, todas));
+      origen = 'ia';
+    }catch(err){
+      console.warn('Análisis por IA no disponible, usando análisis local de respaldo:', err);
+      ({matched, missing} = detectarHabilidadesLocal(cvTextoRaw, todas));
+      origen = 'local-fallback';
+    }
+    if(btn){ btn.disabled = false; btn.textContent = 'Analizar CV →'; }
+  } else {
+    ({matched, missing} = detectarHabilidadesLocal(cvTextoRaw, todas));
+    origen = 'local';
+  }
+
+  missing.sort((a,b)=>b.menciones-a.menciones);
+  matched.sort((a,b)=>b.menciones-a.menciones);
+  const missingTop = missing.slice(0,10);
+
+  const matchedBox = document.getElementById('matchedBox');
+  const missingBox = document.getElementById('missingBox');
+  matchedBox.innerHTML = matched.length
+    ? matched.map(h=>`<span class="badge match">${h.skill} <small>(${h.tipo})</small></span>`).join('')
+    : '<span class="note">No se detectó ninguna de las habilidades más frecuentes del sector en el texto analizado.</span>';
+  missingBox.innerHTML = missingTop.length
+    ? missingTop.map(h=>`<span class="badge missing">${h.skill} <small>(${h.tipo}, ${h.menciones} menciones en vacantes)</small></span>`).join('')
+    : '<span class="note">Tu CV cubre todas las habilidades registradas para este sector. ¡Buena señal!</span>';
+
+  const pct = todas.length ? Math.round((matched.length/todas.length)*100) : 0;
+  const notaOrigen = origen === 'ia'
+    ? 'Habilidades detectadas con análisis semántico por IA (Claude), no solo coincidencia literal de palabras.'
+    : origen === 'local-fallback'
+      ? 'El análisis por IA no estuvo disponible en este momento; se usó como respaldo una comparación local por palabras clave, que puede pasar por alto habilidades descritas con otras palabras.'
+      : 'Análisis por comparación local de palabras clave.';
+  document.getElementById('resumenTexto').innerHTML =
+    `<p>Se detectaron <strong>${matched.length} de ${todas.length}</strong> habilidades registradas como en demanda en <strong>${sector.nombre}</strong> (corrida ${DATA.meta.corrida}) — ${pct}% de cobertura frente al vocabulario de habilidades de ese sector.</p>
+     <p class="note">Este vocabulario viene de menciones explícitas en ${sector.vacantes_con_habilidades} de ${sector.vacantes_verificadas} vacantes verificadas del sector (no es un estándar externo), así que es una brecha relativa a lo que hoy se está publicando en el mercado, no un examen de certificación. ${notaOrigen}</p>`;
+
+  ultimoReporte = {sectorKey, sector, matched, missing, missingTop, pct, textoNorm, cvTextoRaw, origen, fecha: new Date().toISOString().slice(0,10)};
+  document.getElementById('resultado').style.display = 'block';
+  document.getElementById('resultado').scrollIntoView({behavior:'smooth'});
+  renderCursos();
+  renderEmpleos();
+}
+
+function descargarReporte(){
+  if(!ultimoReporte) return;
+  const {sectorKey, sector, matched, missing, missingTop, pct, fecha, textoNorm} = ultimoReporte;
+  const total = matched.length + missing.length;
+  let md = `# Reporte de brecha de habilidades — ${sector.nombre}\n\n`;
+  md += `Generado: ${fecha} · Corrida de datos de referencia: ${DATA.meta.corrida}\n\n`;
+  md += `Cobertura: ${matched.length} de ${total} habilidades del sector detectadas en el CV (${pct}%).\n\n`;
+  md += `## Habilidades que ya tienes\n\n`;
+  md += matched.length ? matched.map(h=>`- ${h.skill} (${h.tipo})`).join('\n') : '_Ninguna de las habilidades más frecuentes del sector fue detectada._';
+  md += `\n\n## Habilidades más demandadas que te faltan\n\n`;
+  md += missingTop.length ? missingTop.map(h=>`- ${h.skill} (${h.tipo}, ${h.menciones} menciones en vacantes verificadas)`).join('\n') : '_Sin brechas relevantes detectadas._';
+
+  const cursos = cursosRecomendados(sectorKey, missing);
+  md += `\n\n## Cursos recomendados (catálogo real de cursos del equipo)\n\n`;
+  md += cursos.length
+    ? cursos.map(c=>`- **${c.nombre}** — ${c.institucion}, ${c.modalidad}, ${c.duracion} (${c.nivel}). Cubre: ${c.cubre.join(', ')}`).join('\n')
+    : '_No se identificaron cursos adicionales necesarios._';
+
+  const { items: empleos, fallback: empleosFallback } = empleosRecomendados(sectorKey, textoNorm);
+  md += `\n\n## Empleos recomendados para ti\n\n`;
+  md += empleos.length
+    ? empleos.map(v=>`- **${v.titulo}** — ${v.empresa}, ${v.ubicacion}${formatSalarioRango(v.salario_min,v.salario_max) ? ' · ' + formatSalarioRango(v.salario_min,v.salario_max) : ''} (publicada ${v.fecha_publicacion}, vía ${v.fuente}).${v.matchedSkills.length ? ' Coincide en: ' + v.matchedSkills.join(', ') + '.' : ''} Ver vacante: ${v.url}`).join('\n')
+    : '_No hay vacantes verificadas disponibles en este momento para tu sector._';
+  if(empleosFallback && empleos.length){
+    md += '\n\n_No hubo coincidencia directa de habilidades; se listan las vacantes verificadas más recientes del sector._';
+  }
+
+  md += `\n\n---\n_Este reporte se generó localmente en tu navegador a partir del texto que proporcionaste y de las habilidades más mencionadas en las vacantes verificadas del sector (corrida ${DATA.meta.corrida}). Los cursos vienen del catálogo real de cursos del equipo, filtrados por coincidencia con las habilidades detectadas. Los empleos recomendados son vacantes reales verificadas por el pipeline, con link a la publicación original. No sustituye asesoría profesional._\n`;
+
+  const blob = new Blob([md], {type:'text/markdown'});
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = `brecha_${sector.nombre.toLowerCase()}_${fecha}.md`;
+  a.click();
+}
+
+/* ===================== CURSOS RECOMENDADOS ===================== */
+function cursosRecomendados(sectorKey, missing){
+  const missingNames = new Set(missing.map(h=>h.skill));
+  const catalogo = (COURSES.cursos[sectorKey] || []);
+  const recomendados = catalogo
+    .map(c=>{
+      const cubre = c.habilidades.filter(h=>missingNames.has(h));
+      return {...c, cubre};
+    })
+    .filter(c=>c.cubre.length>0)
+    .sort((a,b)=>b.cubre.length-a.cubre.length);
+  return recomendados;
+}
+
+function renderCursos(){
+  const cont = document.getElementById('cursosContenido');
+  const cursosCard = document.getElementById('cursosCard');
+  if(!ultimoReporte){
+    cursosCard.style.display = 'none';
+    return;
+  }
+  cursosCard.style.display = 'block';
+  const {sectorKey, sector, missing} = ultimoReporte;
+  if(!missing.length){
+    cont.innerHTML = `<p class="note">Tu CV ya cubre todas las habilidades más demandadas de <strong>${sector.nombre}</strong> detectadas en la corrida ${DATA.meta.corrida}. No hay cursos que recomendarte por ahora.</p>`;
+    return;
+  }
+  const recomendados = cursosRecomendados(sectorKey, missing);
+  if(!recomendados.length){
+    cont.innerHTML = `<p class="note">No encontramos, en el catálogo real de cursos del equipo, ningún curso que cubra tus habilidades faltantes de ${sector.nombre} todavía.</p>`;
+    return;
+  }
+  cont.innerHTML = `<p class="note">Basado en tu último análisis (${sector.nombre}, ${missing.length} habilidades faltantes) — ordenados por cuántas de esas habilidades cubren.</p>` +
+    recomendados.map(c => `
+      <div class="card" style="margin-bottom:12px;padding:16px 18px;">
+        <div style="font-weight:600;color:var(--azul-osc);">${c.nombre}</div>
+        <div class="hint">${c.institucion} · ${c.modalidad} · ${c.duracion} · Nivel ${c.nivel}</div>
+        <div style="margin-top:8px;">${c.cubre.map(s=>`<span class="badge missing">${s}</span>`).join('')}</div>
+      </div>
+    `).join('');
+}
+
+/* ===================== EMPLEOS RECOMENDADOS ===================== */
+function formatSalarioRango(min, max){
+  if(!min && !max) return null;
+  const fmt = n => '$' + Math.round(n).toLocaleString('es-MX');
+  if(min && max && min !== max) return `${fmt(min)} – ${fmt(max)} MXN/mes`;
+  return `${fmt(min || max)} MXN/mes`;
+}
+
+function empleosRecomendados(sectorKey, textoNorm){
+  const vacantes = (DATA.sectores[sectorKey].vacantes_detalle || []);
+  const scored = vacantes.map(v=>{
+    const skills = [...(v.habilidades_tecnicas||[]), ...(v.habilidades_blandas||[])];
+    const matchedSkills = skills.filter(s => skillEnTexto(s, textoNorm));
+    return {...v, matchedSkills, score: matchedSkills.length};
+  });
+  const conMatch = scored.filter(v => v.score > 0);
+  conMatch.sort((a,b) => b.score - a.score || new Date(b.fecha_publicacion) - new Date(a.fecha_publicacion));
+  if(conMatch.length){
+    return {items: conMatch.slice(0, 10), fallback: false};
+  }
+  // Fallback: sin coincidencia léxica de habilidades, mostramos las más recientes del sector.
+  const recientes = [...scored].sort((a,b) => new Date(b.fecha_publicacion) - new Date(a.fecha_publicacion));
+  return {items: recientes.slice(0, 5), fallback: true};
+}
+
+let empleosMostrados = [];
+
+async function empleosRecomendadosIA(cvTextoRaw, vacantesDetalle){
+  const vacantesConIndice = vacantesDetalle.map((v,i) => ({
+    indice: i,
+    titulo: v.titulo,
+    empresa: v.empresa,
+    ubicacion: v.ubicacion,
+    habilidades_tecnicas: v.habilidades_tecnicas,
+    habilidades_blandas: v.habilidades_blandas,
+    fecha_publicacion: v.fecha_publicacion
+  }));
+  const resp = await fetch(RECOMENDAR_EMPLEOS_ENDPOINT, {
+    method: 'POST',
+    headers: {'content-type': 'application/json'},
+    body: JSON.stringify({ cvText: cvTextoRaw, vacantes: vacantesConIndice })
+  });
+  if(!resp.ok) throw new Error('El servicio de recomendación respondió con error ' + resp.status);
+  const data = await resp.json();
+  if(!data || !Array.isArray(data.recomendaciones)) throw new Error('Formato de respuesta inesperado');
+  const items = data.recomendaciones
+    .map(r => {
+      const v = vacantesDetalle[r.indice];
+      if(!v) return null;
+      return {...v, razonIA: r.razon, matchedSkills: Array.isArray(r.coincidencias) ? r.coincidencias : []};
+    })
+    .filter(Boolean);
+  return items;
+}
+
+async function mejorarCV(i, evt){
+  const v = empleosMostrados[i];
+  if(!v || !ultimoReporte) return;
+  const box = document.getElementById('cvMejoradoBox-' + i);
+  const btn = evt ? evt.target : null;
+  const textoOriginalBtn = btn ? btn.textContent : '';
+  if(btn){ btn.disabled = true; btn.textContent = 'Mejorando tu CV…'; }
+  box.innerHTML = '<p class="note" style="margin-top:10px;">Generando una versión de tu CV optimizada para esta vacante…</p>';
+  try{
+    const resp = await fetch(MEJORAR_CV_ENDPOINT, {
+      method: 'POST',
+      headers: {'content-type': 'application/json'},
+      body: JSON.stringify({
+        cvText: ultimoReporte.cvTextoRaw,
+        vacante: { titulo: v.titulo, empresa: v.empresa, ubicacion: v.ubicacion, habilidades_tecnicas: v.habilidades_tecnicas, habilidades_blandas: v.habilidades_blandas }
+      })
+    });
+    if(!resp.ok) throw new Error('el servicio respondió con error ' + resp.status);
+    const data = await resp.json();
+    if(!data || typeof data.cvMejorado !== 'string') throw new Error('formato de respuesta inesperado');
+    const cambiosHtml = (data.cambios && data.cambios.length)
+      ? ('<div class="hint" style="margin-top:10px;"><strong>Qué se ajustó:</strong><ul style="margin:6px 0 0 18px;padding:0;">' + data.cambios.map(c => '<li>' + c + '</li>').join('') + '</ul></div>')
+      : '';
+    empleosMostrados[i]._cvMejorado = data.cvMejorado;
+    box.innerHTML = '<div class="card" style="margin-top:12px;background:var(--gris-bg);">' +
+      '<div style="font-weight:600;color:var(--azul-osc);margin-bottom:8px;">Tu CV optimizado para ' + v.titulo + ' en ' + v.empresa + '</div>' +
+      '<div class="note">Revisa que todo siga siendo cierto antes de usarlo — la IA solo reordena y reformula lo que ya está en tu CV, no agrega experiencia nueva.</div>' +
+      '<textarea readonly style="width:100%;min-height:280px;margin-top:10px;padding:10px;font-family:var(--font-sans);font-size:0.86rem;border:1px solid var(--gris-borde);border-radius:8px;">' + data.cvMejorado + '</textarea>' +
+      cambiosHtml +
+      '<button class="secondary" style="margin-top:10px;" onclick="descargarCVMejorado(' + i + ')">Descargar CV mejorado (.md)</button>' +
+      '</div>';
+  }catch(err){
+    box.innerHTML = '<div class="error" style="margin-top:10px;">No se pudo generar el CV mejorado en este momento (' + err.message + '). Intenta de nuevo en unos minutos.</div>';
+  }finally{
+    if(btn){ btn.disabled = false; btn.textContent = textoOriginalBtn || '✨ Mejorar mi CV para esta vacante'; }
+  }
+}
+
+function descargarCVMejorado(i){
+  const v = empleosMostrados[i];
+  if(!v || !v._cvMejorado) return;
+  const blob = new Blob([v._cvMejorado], {type: 'text/markdown'});
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = 'cv_mejorado_' + (v.empresa||'vacante').replace(/[^a-z0-9]+/gi,'_') + '.md';
+  a.click();
+}
+
+async function renderEmpleos(){
+  const cont = document.getElementById('empleosContenido');
+  const empleosCard = document.getElementById('empleosCard');
+  if(!ultimoReporte){
+    empleosCard.style.display = 'none';
+    return;
+  }
+  empleosCard.style.display = 'block';
+  const {sectorKey, sector, textoNorm, cvTextoRaw} = ultimoReporte;
+  const nota = sector.vacantes_detalle_nota
+    ? ('<p class="note">' + sector.vacantes_detalle_nota + '</p>') : '';
+
+  if(!(sector.vacantes_detalle||[]).length){
+    empleosMostrados = [];
+    cont.innerHTML = '<p class="note">Por el momento no tenemos vacantes verificadas de <strong>' + sector.nombre + '</strong> para mostrar (corrida ' + DATA.meta.corrida + '). Vuelve a intentarlo después de la próxima actualización.</p>' + nota;
+    return;
+  }
+
+  cont.innerHTML = '<p class="note">Buscando las mejores vacantes para tu perfil con IA…</p>' + nota;
+
+  let items = [];
+  let introTexto = '';
+  let modoIA = false;
+
+  try{
+    items = await empleosRecomendadosIA(cvTextoRaw, sector.vacantes_detalle);
+    if(items.length){
+      modoIA = true;
+      introTexto = '<p class="note">Vacantes elegidas por IA (Claude) como las que mejor encajan con tu CV, de las vacantes verificadas de <strong>' + sector.nombre + '</strong> (corrida ' + DATA.meta.corrida + ').</p>';
+    }
+  }catch(err){
+    console.warn('Recomendación por IA no disponible, usando respaldo local:', err);
+  }
+
+  if(!modoIA){
+    const resultadoLocal = empleosRecomendados(sectorKey, textoNorm);
+    items = resultadoLocal.items;
+    introTexto = resultadoLocal.fallback
+      ? ('<p class="note">No encontramos coincidencia directa entre las habilidades detectadas en tu CV y las vacantes verificadas de <strong>' + sector.nombre + '</strong>, así que te mostramos las más recientes (corrida ' + DATA.meta.corrida + ').</p>')
+      : ('<p class="note">Vacantes verificadas de <strong>' + sector.nombre + '</strong> (corrida ' + DATA.meta.corrida + '), ordenadas por cuántas de las habilidades detectadas en tu CV coinciden con lo que pide cada vacante.</p>');
+  }
+
+  empleosMostrados = items;
+
+  if(!items.length){
+    cont.innerHTML = '<p class="note">Por el momento no tenemos vacantes verificadas de <strong>' + sector.nombre + '</strong> para mostrar (corrida ' + DATA.meta.corrida + '). Vuelve a intentarlo después de la próxima actualización.</p>' + nota;
+    return;
+  }
+
+  cont.innerHTML = introTexto + nota +
+    items.map((v,i) => {
+      const salario = formatSalarioRango(v.salario_min, v.salario_max);
+      const razonHtml = v.razonIA
+        ? ('<div class="hint" style="margin-top:6px;color:var(--azul-osc);">💡 ' + v.razonIA + '</div>')
+        : '';
+      const skillsHtml = (v.matchedSkills && v.matchedSkills.length)
+        ? ('<div style="margin-top:8px;">' + v.matchedSkills.map(s => '<span class="badge match">' + s + '</span>').join('') + '</div>')
+        : '';
+      return '' +
+      '<div class="card" style="margin-bottom:12px;padding:16px 18px;">' +
+        '<div style="font-weight:600;color:var(--azul-osc);">' + v.titulo + '</div>' +
+        '<div class="hint">' + v.empresa + ' · ' + v.ubicacion + (salario ? (' · ' + salario) : '') + ' · publicada ' + v.fecha_publicacion + ' · vía ' + v.fuente + '</div>' +
+        razonHtml +
+        skillsHtml +
+        '<div style="margin-top:10px;display:flex;gap:10px;flex-wrap:wrap;">' +
+          '<a href="' + v.url + '" target="_blank" rel="noopener noreferrer" style="display:inline-block;background:#fff;color:var(--azul);border:1.5px solid var(--azul);padding:8px 18px;border-radius:999px;font-size:0.86rem;font-weight:600;text-decoration:none;">Ver vacante original →</a>' +
+          '<button class="secondary" style="font-size:0.86rem;padding:8px 18px;" onclick="mejorarCV(' + i + ', event)">✨ Mejorar mi CV para esta vacante</button>' +
+        '</div>' +
+        '<div id="cvMejoradoBox-' + i + '"></div>' +
+      '</div>';
+    }).join('');
+}
+
+  /* ===================== DASHBOARD ===================== */
+let sectorDashActual = 'automotriz';
+let charts = {};
+
+function cambiarSectorDash(key){
+  sectorDashActual = key;
+  document.getElementById('pill-automotriz').classList.toggle('active', key==='automotriz');
+  document.getElementById('pill-turismo').classList.toggle('active', key==='turismo');
+  document.getElementById('pill-gestion').classList.toggle('active', key==='gestion');
+  renderDashboard();
+}
+
+function renderDashboard(){
+  const sector = DATA.sectores[sectorDashActual];
+
+  document.getElementById('statgrid').innerHTML = `
+    <div class="stat"><div class="num">${sector.vacantes_verificadas}</div><div class="lbl">Vacantes verificadas</div></div>
+    <div class="stat"><div class="num">${sector.total_empresas_unicas}</div><div class="lbl">Empresas contratando</div></div>
+    <div class="stat"><div class="num">${sector.cobertura_geografica.estados_unicos}</div><div class="lbl">Estados con vacantes</div></div>
+    <div class="stat"><div class="num">${sector.ultima_semana_vacantes ?? '—'}</div><div class="lbl">Vacantes la última semana</div></div>
+  `;
+
+  dibujarBarra('chartCategoria', sector.categorias_puesto.slice(0,7).map(c=>c.categoria), sector.categorias_puesto.slice(0,7).map(c=>c.vacantes), '#e08424', true);
+  dibujarBarra('chartEmpresas', sector.top_empresas.slice(0,8).map(e=>e.empresa), sector.top_empresas.slice(0,8).map(e=>e.vacantes), '#1a4d8f', true);
+  dibujarBarra('chartTecnicas', sector.habilidades_tecnicas.slice(0,10).map(h=>h.skill), sector.habilidades_tecnicas.slice(0,10).map(h=>h.menciones), '#2f8a4e', true);
+  dibujarBarra('chartBlandas', sector.habilidades_blandas.slice(0,10).map(h=>h.skill), sector.habilidades_blandas.slice(0,10).map(h=>h.menciones), '#8f4fc4', true);
+  dibujarBarra('chartGeo', sector.cobertura_geografica.top_estados.slice(0,8).map(e=>e.estado), sector.cobertura_geografica.top_estados.slice(0,8).map(e=>e.vacantes), '#c4504f', true);
+  dibujarLinea('chartTendencia', sector.evolucion_semanal.map(s=>s.semana), sector.evolucion_semanal.map(s=>s.vacantes), '#0f2f57');
+
+  const s = sector.salario;
+  document.getElementById('salarioBox').innerHTML = s.vacantes_con_dato ? `
+    <div class="statgrid">
+      <div class="stat"><div class="num">$${Math.round(s.p25_mensual_mxn).toLocaleString('es-MX')}</div><div class="lbl">Percentil 25</div></div>
+      <div class="stat"><div class="num">$${Math.round(s.mediana_mensual_mxn).toLocaleString('es-MX')}</div><div class="lbl">Mediana</div></div>
+      <div class="stat"><div class="num">$${Math.round(s.p75_mensual_mxn).toLocaleString('es-MX')}</div><div class="lbl">Percentil 75</div></div>
+    </div>
+    <div class="note">Basado en las ${s.vacantes_con_dato} vacantes (${s.pct_con_dato}% del total de ${sector.nombre}) que reportan salario explícito. Es un rango amplio porque mezcla puestos operativos y gerenciales — úsalo como referencia, no como cotización exacta.</div>
+  ` : '<p class="note">No hay suficientes vacantes con salario reportado en esta corrida para calcular un rango confiable.</p>';
+}
+
+function dibujarBarra(canvasId, labels, valores, color, horizontal){
+  const ctx = document.getElementById(canvasId).getContext('2d');
+  if(charts[canvasId]) charts[canvasId].destroy();
+  charts[canvasId] = new Chart(ctx, {
+    type: 'bar',
+    data: { labels, datasets: [{ data: valores, backgroundColor: color, borderRadius: 4 }] },
+    options: {
+      indexAxis: horizontal ? 'y' : 'x',
+      responsive: true, maintainAspectRatio: false,
+      plugins: { legend: { display: false } },
+      scales: { x: { beginAtZero: true }, y: { ticks: { autoSkip: false, font: {size: 10.5} } } }
+    }
+  });
+}
+
+function dibujarLinea(canvasId, labels, valores, color){
+  const ctx = document.getElementById(canvasId).getContext('2d');
+  if(charts[canvasId]) charts[canvasId].destroy();
+  charts[canvasId] = new Chart(ctx, {
+    type: 'line',
+    data: { labels, datasets: [{ data: valores, borderColor: color, backgroundColor: color, tension: 0.25, fill: false, pointRadius: 3 }] },
+    options: {
+      responsive: true, maintainAspectRatio: false,
+      plugins: { legend: { display: false } },
+      scales: { y: { beginAtZero: true, ticks: { precision: 0 } } }
+    }
+  });
+}
+
+</script>
+
+</body>
+</html>
