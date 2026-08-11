@@ -360,6 +360,8 @@ let ultimoReporte = null;
 // Pega aquí la URL de tu Cloudflare Worker una vez desplegado, ej: 'https://cv-analisis.tu-usuario.workers.dev'
 // Si se deja vacío, el sitio usa directamente el análisis local por palabras clave.
 const CV_ANALYSIS_ENDPOINT = 'https://cv-analisis.gael-ramav.workers.dev';
+const RECOMENDAR_EMPLEOS_ENDPOINT = CV_ANALYSIS_ENDPOINT + '/recomendar-empleos';
+const MEJORAR_CV_ENDPOINT = CV_ANALYSIS_ENDPOINT + '/mejorar-cv';
 
 async function detectarHabilidadesIA(cvTextoRaw, todas){
   const resp = await fetch(CV_ANALYSIS_ENDPOINT, {
@@ -438,7 +440,7 @@ async function analizarCV(){
     `<p>Se detectaron <strong>${matched.length} de ${todas.length}</strong> habilidades registradas como en demanda en <strong>${sector.nombre}</strong> (corrida ${DATA.meta.corrida}) — ${pct}% de cobertura frente al vocabulario de habilidades de ese sector.</p>
      <p class="note">Este vocabulario viene de menciones explícitas en ${sector.vacantes_con_habilidades} de ${sector.vacantes_verificadas} vacantes verificadas del sector (no es un estándar externo), así que es una brecha relativa a lo que hoy se está publicando en el mercado, no un examen de certificación. ${notaOrigen}</p>`;
 
-  ultimoReporte = {sectorKey, sector, matched, missing, missingTop, pct, textoNorm, origen, fecha: new Date().toISOString().slice(0,10)};
+  ultimoReporte = {sectorKey, sector, matched, missing, missingTop, pct, textoNorm, cvTextoRaw, origen, fecha: new Date().toISOString().slice(0,10)};
   document.getElementById('resultado').style.display = 'block';
   document.getElementById('resultado').scrollIntoView({behavior:'smooth'});
   renderCursos();
@@ -548,7 +550,85 @@ function empleosRecomendados(sectorKey, textoNorm){
   return {items: recientes.slice(0, 5), fallback: true};
 }
 
-function renderEmpleos(){
+let empleosMostrados = [];
+
+async function empleosRecomendadosIA(cvTextoRaw, vacantesDetalle){
+  const vacantesConIndice = vacantesDetalle.map((v,i) => ({
+    indice: i,
+    titulo: v.titulo,
+    empresa: v.empresa,
+    ubicacion: v.ubicacion,
+    habilidades_tecnicas: v.habilidades_tecnicas,
+    habilidades_blandas: v.habilidades_blandas,
+    fecha_publicacion: v.fecha_publicacion
+  }));
+  const resp = await fetch(RECOMENDAR_EMPLEOS_ENDPOINT, {
+    method: 'POST',
+    headers: {'content-type': 'application/json'},
+    body: JSON.stringify({ cvText: cvTextoRaw, vacantes: vacantesConIndice })
+  });
+  if(!resp.ok) throw new Error('El servicio de recomendaciÃ³n respondiÃ³ con error ' + resp.status);
+  const data = await resp.json();
+  if(!data || !Array.isArray(data.recomendaciones)) throw new Error('Formato de respuesta inesperado');
+  const items = data.recomendaciones
+    .map(r => {
+      const v = vacantesDetalle[r.indice];
+      if(!v) return null;
+      return {...v, razonIA: r.razon, matchedSkills: []};
+    })
+    .filter(Boolean);
+  return items;
+}
+
+async function mejorarCV(i, evt){
+  const v = empleosMostrados[i];
+  if(!v || !ultimoReporte) return;
+  const box = document.getElementById('cvMejoradoBox-' + i);
+  const btn = evt ? evt.target : null;
+  const textoOriginalBtn = btn ? btn.textContent : '';
+  if(btn){ btn.disabled = true; btn.textContent = 'Mejorando tu CVâ¦'; }
+  box.innerHTML = '<p class="note" style="margin-top:10px;">Generando una versiÃ³n de tu CV optimizada para esta vacanteâ¦</p>';
+  try{
+    const resp = await fetch(MEJORAR_CV_ENDPOINT, {
+      method: 'POST',
+      headers: {'content-type': 'application/json'},
+      body: JSON.stringify({
+        cvText: ultimoReporte.cvTextoRaw,
+        vacante: { titulo: v.titulo, empresa: v.empresa, ubicacion: v.ubicacion, habilidades_tecnicas: v.habilidades_tecnicas, habilidades_blandas: v.habilidades_blandas }
+      })
+    });
+    if(!resp.ok) throw new Error('el servicio respondiÃ³ con error ' + resp.status);
+    const data = await resp.json();
+    if(!data || typeof data.cvMejorado !== 'string') throw new Error('formato de respuesta inesperado');
+    const cambiosHtml = (data.cambios && data.cambios.length)
+      ? ('<div class="hint" style="margin-top:10px;"><strong>QuÃ© se ajustÃ³:</strong><ul style="margin:6px 0 0 18px;padding:0;">' + data.cambios.map(c => '<li>' + c + '</li>').join('') + '</ul></div>')
+      : '';
+    empleosMostrados[i]._cvMejorado = data.cvMejorado;
+    box.innerHTML = '<div class="card" style="margin-top:12px;background:var(--gris-bg);">' +
+      '<div style="font-weight:600;color:var(--azul-osc);margin-bottom:8px;">Tu CV optimizado para ' + v.titulo + ' en ' + v.empresa + '</div>' +
+      '<div class="note">Revisa que todo siga siendo cierto antes de usarlo â la IA solo reordena y reformula lo que ya estÃ¡ en tu CV, no agrega experiencia nueva.</div>' +
+      '<textarea readonly style="width:100%;min-height:280px;margin-top:10px;padding:10px;font-family:var(--font-sans);font-size:0.86rem;border:1px solid var(--gris-borde);border-radius:8px;">' + data.cvMejorado + '</textarea>' +
+      cambiosHtml +
+      '<button class="secondary" style="margin-top:10px;" onclick="descargarCVMejorado(' + i + ')">Descargar CV mejorado (.md)</button>' +
+      '</div>';
+  }catch(err){
+    box.innerHTML = '<div class="error" style="margin-top:10px;">No se pudo generar el CV mejorado en este momento (' + err.message + '). Intenta de nuevo en unos minutos.</div>';
+  }finally{
+    if(btn){ btn.disabled = false; btn.textContent = textoOriginalBtn || 'â¨ Mejorar mi CV para esta vacante'; }
+  }
+}
+
+function descargarCVMejorado(i){
+  const v = empleosMostrados[i];
+  if(!v || !v._cvMejorado) return;
+  const blob = new Blob([v._cvMejorado], {type: 'text/markdown'});
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = 'cv_mejorado_' + (v.empresa||'vacante').replace(/[^a-z0-9]+/gi,'_') + '.md';
+  a.click();
+}
+
+async function renderEmpleos(){
   const cont = document.getElementById('empleosContenido');
   const empleosCard = document.getElementById('empleosCard');
   if(!ultimoReporte){
@@ -556,30 +636,70 @@ function renderEmpleos(){
     return;
   }
   empleosCard.style.display = 'block';
-  const {sectorKey, sector, textoNorm} = ultimoReporte;
-  const {items: recomendados, fallback} = empleosRecomendados(sectorKey, textoNorm);
+  const {sectorKey, sector, textoNorm, cvTextoRaw} = ultimoReporte;
   const nota = sector.vacantes_detalle_nota
-    ? `<p class="note">${sector.vacantes_detalle_nota}</p>` : '';
-  if(!recomendados.length){
-    cont.innerHTML = `<p class="note">Por el momento no tenemos vacantes verificadas de <strong>${sector.nombre}</strong> para mostrar (corrida ${DATA.meta.corrida}). Vuelve a intentarlo después de la próxima actualización.</p>` + nota;
+    ? ('<p class="note">' + sector.vacantes_detalle_nota + '</p>') : '';
+
+  if(!(sector.vacantes_detalle||[]).length){
+    empleosMostrados = [];
+    cont.innerHTML = '<p class="note">Por el momento no tenemos vacantes verificadas de <strong>' + sector.nombre + '</strong> para mostrar (corrida ' + DATA.meta.corrida + '). Vuelve a intentarlo despuÃ©s de la prÃ³xima actualizaciÃ³n.</p>' + nota;
     return;
   }
-  const intro = fallback
-    ? `<p class="note">No encontramos coincidencia directa entre las habilidades detectadas en tu CV y las vacantes verificadas de <strong>${sector.nombre}</strong>, así que te mostramos las más recientes (corrida ${DATA.meta.corrida}).</p>`
-    : `<p class="note">Vacantes verificadas de <strong>${sector.nombre}</strong> (corrida ${DATA.meta.corrida}), ordenadas por cuántas de las habilidades detectadas en tu CV coinciden con lo que pide cada vacante.</p>`;
-  cont.innerHTML = intro + nota +
-    recomendados.map(v => {
+
+  cont.innerHTML = '<p class="note">Buscando las mejores vacantes para tu perfil con IAâ¦</p>' + nota;
+
+  let items = [];
+  let introTexto = '';
+  let modoIA = false;
+
+  try{
+    items = await empleosRecomendadosIA(cvTextoRaw, sector.vacantes_detalle);
+    if(items.length){
+      modoIA = true;
+      introTexto = '<p class="note">Vacantes elegidas por IA (Claude) como las que mejor encajan con tu CV, de las vacantes verificadas de <strong>' + sector.nombre + '</strong> (corrida ' + DATA.meta.corrida + ').</p>';
+    }
+  }catch(err){
+    console.warn('RecomendaciÃ³n por IA no disponible, usando respaldo local:', err);
+  }
+
+  if(!modoIA){
+    const resultadoLocal = empleosRecomendados(sectorKey, textoNorm);
+    items = resultadoLocal.items;
+    introTexto = resultadoLocal.fallback
+      ? ('<p class="note">No encontramos coincidencia directa entre las habilidades detectadas en tu CV y las vacantes verificadas de <strong>' + sector.nombre + '</strong>, asÃ­ que te mostramos las mÃ¡s recientes (corrida ' + DATA.meta.corrida + ').</p>')
+      : ('<p class="note">Vacantes verificadas de <strong>' + sector.nombre + '</strong> (corrida ' + DATA.meta.corrida + '), ordenadas por cuÃ¡ntas de las habilidades detectadas en tu CV coinciden con lo que pide cada vacante.</p>');
+  }
+
+  empleosMostrados = items;
+
+  if(!items.length){
+    cont.innerHTML = '<p class="note">Por el momento no tenemos vacantes verificadas de <strong>' + sector.nombre + '</strong> para mostrar (corrida ' + DATA.meta.corrida + '). Vuelve a intentarlo despuÃ©s de la prÃ³xima actualizaciÃ³n.</p>' + nota;
+    return;
+  }
+
+  cont.innerHTML = introTexto + nota +
+    items.map((v,i) => {
       const salario = formatSalarioRango(v.salario_min, v.salario_max);
-      return `
-      <div class="card" style="margin-bottom:12px;padding:16px 18px;">
-        <div style="font-weight:600;color:var(--azul-osc);">${v.titulo}</div>
-        <div class="hint">${v.empresa} · ${v.ubicacion}${salario ? ' · ' + salario : ''} · publicada ${v.fecha_publicacion} · vía ${v.fuente}</div>
-        <div style="margin-top:8px;">${v.matchedSkills.map(s=>`<span class="badge match">${s}</span>`).join('')}</div>
-        <div style="margin-top:10px;"><a href="${v.url}" target="_blank" rel="noopener noreferrer" style="display:inline-block;background:#fff;color:var(--azul);border:1.5px solid var(--azul);padding:8px 18px;border-radius:999px;font-size:0.86rem;font-weight:600;text-decoration:none;">Ver vacante original →</a></div>
-      </div>`;
+      const razonHtml = v.razonIA
+        ? ('<div class="hint" style="margin-top:6px;color:var(--azul-osc);">ð¡ ' + v.razonIA + '</div>')
+        : '';
+      const skillsHtml = (v.matchedSkills && v.matchedSkills.length)
+        ? ('<div style="margin-top:8px;">' + v.matchedSkills.map(s => '<span class="badge match">' + s + '</span>').join('') + '</div>')
+        : '';
+      return '' +
+      '<div class="card" style="margin-bottom:12px;padding:16px 18px;">' +
+        '<div style="font-weight:600;color:var(--azul-osc);">' + v.titulo + '</div>' +
+        '<div class="hint">' + v.empresa + ' Â· ' + v.ubicacion + (salario ? (' Â· ' + salario) : '') + ' Â· publicada ' + v.fecha_publicacion + ' Â· vÃ­a ' + v.fuente + '</div>' +
+        razonHtml +
+        skillsHtml +
+        '<div style="margin-top:10px;display:flex;gap:10px;flex-wrap:wrap;">' +
+          '<a href="' + v.url + '" target="_blank" rel="noopener noreferrer" style="display:inline-block;background:#fff;color:var(--azul);border:1.5px solid var(--azul);padding:8px 18px;border-radius:999px;font-size:0.86rem;font-weight:600;text-decoration:none;">Ver vacante original â</a>' +
+          '<button class="secondary" style="font-size:0.86rem;padding:8px 18px;" onclick="mejorarCV(' + i + ', event)">â¨ Mejorar mi CV para esta vacante</button>' +
+        '</div>' +
+        '<div id="cvMejoradoBox-' + i + '"></div>' +
+      '</div>';
     }).join('');
 }
-
 /* ===================== DASHBOARD ===================== */
 let sectorDashActual = 'automotriz';
 let charts = {};
