@@ -77,6 +77,26 @@
   #loadingOverlay.hidden{display:none;}
   #loadError{display:none;background:#fdecea;color:#a12a2a;border:1px solid #f3bcb9;padding:14px 18px;border-radius:8px;font-size:0.88rem;margin:20px auto;max-width:640px;}
   body.data-error #loadError{display:block;}
+
+input[type=text], input[type=number]{width:100%;padding:9px 10px;border:1px solid var(--gris-borde);border-radius:8px;font-size:0.92rem;font-family:inherit;background:#fff;}
+.filtros-card{background:#fff;border:1px solid var(--gris-borde);border-radius:16px;padding:20px 22px;margin-bottom:20px;box-shadow:var(--sombra);}
+.filtros-card h3{margin:0 0 4px;font-family:var(--font-serif);font-size:1.1rem;color:var(--texto);font-weight:700;}
+.filtros-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:16px;margin-top:14px;}
+.filtros-grid .campo{display:flex;flex-direction:column;}
+.filtros-grid label{margin:0 0 6px;font-size:0.76rem;font-weight:700;color:var(--texto-suave);text-transform:uppercase;letter-spacing:.04em;}
+.sector-chips{display:flex;gap:6px;flex-wrap:wrap;}
+.sector-chips button{padding:6px 12px;border-radius:999px;border:1.5px solid var(--azul);background:#fff;color:var(--azul-osc);font-size:0.78rem;font-weight:600;cursor:pointer;font-family:var(--font-sans);white-space:nowrap;}
+.sector-chips button.active{background:linear-gradient(135deg,var(--azul),var(--gold-light));color:#fff;border-color:transparent;}
+.filtros-check{display:flex;align-items:center;gap:8px;font-size:0.85rem;color:var(--texto-suave);margin-top:16px;cursor:pointer;}
+.filtros-check input{margin:0;}
+.job-card{background:#fff;border:1px solid var(--gris-borde);border-left:4px solid var(--azul);border-radius:12px;padding:18px 20px;margin-bottom:14px;box-shadow:var(--sombra);}
+.job-card .job-title{font-family:var(--font-serif);font-size:1.18rem;font-weight:700;color:var(--texto);}
+.job-card .job-meta{font-size:0.84rem;color:var(--texto-suave);margin-top:3px;}
+.job-badges{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px;}
+.job-badge{display:inline-block;padding:3px 11px;border-radius:999px;font-size:0.72rem;font-weight:700;background:var(--hero-bg2);color:var(--azul-osc);border:1px solid var(--gris-borde);letter-spacing:.02em;}
+.job-razon{font-size:0.86rem;color:var(--texto);margin-top:10px;padding:10px 12px;background:var(--hero-bg2);border-radius:8px;border-left:3px solid var(--gold-light);line-height:1.45;}
+.job-razon .lbl{display:block;font-size:0.66rem;text-transform:uppercase;letter-spacing:.06em;font-weight:700;color:var(--azul-osc);margin-bottom:4px;}
+.job-actions{margin-top:12px;display:flex;gap:10px;flex-wrap:wrap;align-items:center;}
 </style>
 </head>
 <body>
@@ -171,7 +191,35 @@
     <div class="card" id="empleosCard" style="display:none;">
       <h2>4. Empleos recomendados para ti</h2>
       <div class="note">Vacantes reales de la corrida más reciente del pipeline, verificadas manualmente como vigentes al momento de publicar esta actualización — con link directo a la publicación original. Como son avisos de portales de empleo en tiempo real (Adzuna, OCC, Indeed), es posible que alguna se cierre entre una actualización y otra si la empresa cubre la posición; no es un error del sitio. El sitio se actualiza automáticamente con cada nueva corrida para mantener esta lista lo más vigente posible.</div>
-      <div id="empleosContenido"></div>
+      <div class="filtros-card">
+<h3>Filtros de búsqueda</h3>
+<div class="note" style="margin-top:2px;">Ajusta lo que necesites y presiona "Aplicar filtros" para actualizar las recomendaciones.</div>
+<div class="filtros-grid">
+<div class="campo"><label>Sector</label><div class="sector-chips" id="filtroSectorChips"></div></div>
+<div class="campo"><label>Ubicación (ciudad o estado)</label><input type="text" id="filtroUbicacion" placeholder="Ej. Nuevo León, Guadalajara..."></div>
+<div class="campo"><label>Salario mínimo esperado (MXN/mes)</label><input type="number" id="filtroSalario" placeholder="Ej. 15000" min="0" step="1000"></div>
+<div class="campo"><label>Nivel de puesto</label>
+<select id="filtroNivel">
+<option value="">Cualquiera</option>
+<option value="entrada">Entrada / Becario</option>
+<option value="junior">Junior</option>
+<option value="medio">Medio</option>
+<option value="senior">Senior</option>
+<option value="gerencial">Gerencial / Dirección</option>
+</select>
+</div>
+<div class="campo"><label>Publicada</label>
+<select id="filtroRecencia">
+<option value="">Cualquier fecha</option>
+<option value="7">Última semana</option>
+<option value="30">Último mes</option>
+</select>
+</div>
+</div>
+<label class="filtros-check"><input type="checkbox" id="filtroExcluirConfidencial"> Excluir vacantes de empresa no revelada ("Empresa Confidencial")</label>
+<button class="secondary" style="margin-top:14px;" id="btnAplicarFiltros" onclick="renderEmpleos()">Aplicar filtros</button>
+</div>
+<div id="empleosContenido"></div>
     </div>
   </section>
 
@@ -466,14 +514,10 @@ function descargarReporte(){
     ? cursos.map(c=>`- **${c.nombre}** — ${c.institucion}, ${c.modalidad}, ${c.duracion} (${c.nivel}). Cubre: ${c.cubre.join(', ')}`).join('\n')
     : '_No se identificaron cursos adicionales necesarios._';
 
-  const { items: empleos, fallback: empleosFallback } = empleosRecomendados(sectorKey, textoNorm);
   md += `\n\n## Empleos recomendados para ti\n\n`;
-  md += empleos.length
-    ? empleos.map(v=>`- **${v.titulo}** — ${v.empresa}, ${v.ubicacion}${formatSalarioRango(v.salario_min,v.salario_max) ? ' · ' + formatSalarioRango(v.salario_min,v.salario_max) : ''} (publicada ${v.fecha_publicacion}, vía ${v.fuente}).${v.matchedSkills.length ? ' Coincide en: ' + v.matchedSkills.join(', ') + '.' : ''} Ver vacante: ${v.url}`).join('\n')
-    : '_No hay vacantes verificadas disponibles en este momento para tu sector._';
-  if(empleosFallback && empleos.length){
-    md += '\n\n_No hubo coincidencia directa de habilidades; se listan las vacantes verificadas más recientes del sector._';
-  }
+  md += empleosMostrados.length
+    ? empleosMostrados.map(v=>`- **${v.titulo}**${v._sectorNombre ? ' (' + v._sectorNombre + ')' : ''} — ${v.empresa}, ${v.ubicacion}${formatSalarioRango(v.salario_min,v.salario_max) ? ' · ' + formatSalarioRango(v.salario_min,v.salario_max) : ''} (publicada ${v.fecha_publicacion}, vía ${v.fuente}).${v.matchedSkills && v.matchedSkills.length ? ' Coincide en: ' + v.matchedSkills.join(', ') + '.' : ''} Ver vacante: ${v.url}`).join('\n')
+    : '_No hay vacantes que cumplan los filtros seleccionados en este momento._';
 
   md += `\n\n---\n_Este reporte se generó localmente en tu navegador a partir del texto que proporcionaste y de las habilidades más mencionadas en las vacantes verificadas del sector (corrida ${DATA.meta.corrida}). Los cursos vienen del catálogo real de cursos del equipo, filtrados por coincidencia con las habilidades detectadas. Los empleos recomendados son vacantes reales verificadas por el pipeline, con link a la publicación original. No sustituye asesoría profesional._\n`;
 
@@ -534,9 +578,8 @@ function formatSalarioRango(min, max){
   return `${fmt(min || max)} MXN/mes`;
 }
 
-function empleosRecomendados(sectorKey, textoNorm){
-  const vacantes = (DATA.sectores[sectorKey].vacantes_detalle || []);
-  const scored = vacantes.map(v=>{
+function empleosRecomendados(pool, textoNorm){
+  const scored = pool.map(v=>{
     const skills = [...(v.habilidades_tecnicas||[]), ...(v.habilidades_blandas||[])];
     const matchedSkills = skills.filter(s => skillEnTexto(s, textoNorm));
     return {...v, matchedSkills, score: matchedSkills.length};
@@ -544,14 +587,83 @@ function empleosRecomendados(sectorKey, textoNorm){
   const conMatch = scored.filter(v => v.score > 0);
   conMatch.sort((a,b) => b.score - a.score || new Date(b.fecha_publicacion) - new Date(a.fecha_publicacion));
   if(conMatch.length){
-    return {items: conMatch.slice(0, 10), fallback: false};
+    return {items: conMatch.slice(0, 5), fallback: false};
   }
-  // Fallback: sin coincidencia léxica de habilidades, mostramos las más recientes del sector.
+  // Fallback: sin coincidencia léxica de habilidades, mostramos las más recientes dentro de los filtros.
   const recientes = [...scored].sort((a,b) => new Date(b.fecha_publicacion) - new Date(a.fecha_publicacion));
   return {items: recientes.slice(0, 5), fallback: true};
 }
 
 let empleosMostrados = [];
+
+let filtroSectorActivo = 'todos';
+
+function inferirNivelPuesto(titulo){
+  const t = normalizar(titulo || '');
+  if(/becari|practicante|pr[aá]ctica|trainee|reci[eé]n egresad/i.test(t)) return 'entrada';
+  if(/\bjr\b|junior/i.test(t)) return 'junior';
+  if(/\bsr\b|senior|especialista senior/i.test(t)) return 'senior';
+  if(/director|gerente|gerencial|jefe de|head of|manager|l[ií]der de|subdirector/i.test(t)) return 'gerencial';
+  return 'medio';
+}
+
+const NIVEL_LABEL = {entrada:'Entrada / Becario', junior:'Junior', medio:'Medio', senior:'Senior', gerencial:'Gerencial / Dirección'};
+
+function initFiltroSectorChips(){
+  const cont = document.getElementById('filtroSectorChips');
+  if(!cont || !DATA || cont.dataset.listo) return;
+  const sectores = Object.keys(DATA.sectores);
+  const btns = ['<button type="button" class="active" data-sector="todos">Todos los sectores</button>']
+    .concat(sectores.map(k => '<button type="button" data-sector="' + k + '">' + DATA.sectores[k].nombre + '</button>'));
+  cont.innerHTML = btns.join('');
+  cont.dataset.listo = '1';
+  cont.querySelectorAll('button').forEach(b=>{
+    b.addEventListener('click', ()=>{
+      cont.querySelectorAll('button').forEach(x=>x.classList.remove('active'));
+      b.classList.add('active');
+      filtroSectorActivo = b.dataset.sector;
+    });
+  });
+}
+
+function poolVacantesFiltrado(){
+  const sectoresAConsiderar = filtroSectorActivo === 'todos' ? Object.keys(DATA.sectores) : [filtroSectorActivo];
+  const porSector = sectoresAConsiderar.map(key=>{
+    const sec = DATA.sectores[key];
+    return (sec ? (sec.vacantes_detalle||[]) : []).map(v=>({...v, _sectorKey: key, _sectorNombre: sec.nombre}));
+  });
+  let pool = [];
+  let i = 0, hayMas = true;
+  while(hayMas){
+    hayMas = false;
+    for(const arr of porSector){
+      if(arr[i]){ pool.push(arr[i]); hayMas = true; }
+    }
+    i++;
+  }
+
+  const ubicacionQ = normalizar((document.getElementById('filtroUbicacion')||{}).value || '').trim();
+  const salarioMin = parseFloat((document.getElementById('filtroSalario')||{}).value || '');
+  const nivelQ = (document.getElementById('filtroNivel')||{}).value || '';
+  const diasQ = parseInt((document.getElementById('filtroRecencia')||{}).value || '', 10);
+  const excluirConfidencial = !!(document.getElementById('filtroExcluirConfidencial')||{}).checked;
+
+  return pool.filter(v=>{
+    if(ubicacionQ && !normalizar(v.ubicacion||'').includes(ubicacionQ)) return false;
+    if(!isNaN(salarioMin) && salarioMin > 0){
+      const tope = v.salario_max || v.salario_min;
+      if(tope && tope < salarioMin) return false;
+    }
+    if(nivelQ && inferirNivelPuesto(v.titulo) !== nivelQ) return false;
+    if(!isNaN(diasQ) && v.fecha_publicacion){
+      const dias = (Date.now() - new Date(v.fecha_publicacion).getTime()) / 86400000;
+      if(!(dias >= 0 && dias <= diasQ)) return false;
+    }
+    if(excluirConfidencial && /confidencial/i.test(v.empresa||'')) return false;
+    return true;
+  });
+}
+
 
 async function empleosRecomendadosIA(cvTextoRaw, vacantesDetalle){
   const vacantesConIndice = vacantesDetalle.map((v,i) => ({
@@ -637,68 +749,77 @@ async function renderEmpleos(){
     return;
   }
   empleosCard.style.display = 'block';
-  const {sectorKey, sector, textoNorm, cvTextoRaw} = ultimoReporte;
-  const nota = sector.vacantes_detalle_nota
-    ? ('<p class="note">' + sector.vacantes_detalle_nota + '</p>') : '';
+  initFiltroSectorChips();
+  const {textoNorm, cvTextoRaw} = ultimoReporte;
 
-  if(!(sector.vacantes_detalle||[]).length){
+  const pool = poolVacantesFiltrado();
+
+  if(!pool.length){
     empleosMostrados = [];
-    cont.innerHTML = '<p class="note">Por el momento no tenemos vacantes verificadas de <strong>' + sector.nombre + '</strong> para mostrar (corrida ' + DATA.meta.corrida + '). Vuelve a intentarlo después de la próxima actualización.</p>' + nota;
+    cont.innerHTML = '<p class="note">No hay vacantes que cumplan los filtros seleccionados. Ajusta los filtros de arriba e inténtalo de nuevo.</p>';
     return;
   }
 
-  cont.innerHTML = '<p class="note">Buscando las mejores vacantes para tu perfil con IA…</p>' + nota;
+  cont.innerHTML = '<p class="note">Buscando las mejores vacantes para tu perfil con IA…</p>';
 
   let items = [];
   let introTexto = '';
   let modoIA = false;
 
   try{
-    items = await empleosRecomendadosIA(cvTextoRaw, sector.vacantes_detalle);
+    items = await empleosRecomendadosIA(cvTextoRaw, pool);
     if(items.length){
       modoIA = true;
-      introTexto = '<p class="note">Vacantes elegidas por IA (Claude) como las que mejor encajan con tu CV, de las vacantes verificadas de <strong>' + sector.nombre + '</strong> (corrida ' + DATA.meta.corrida + ').</p>';
+      introTexto = '<p class="note">Las 5 vacantes elegidas por IA (Claude) como las que mejor encajan con tu perfil, dentro de los filtros que elegiste.</p>';
     }
   }catch(err){
     console.warn('Recomendación por IA no disponible, usando respaldo local:', err);
   }
 
   if(!modoIA){
-    const resultadoLocal = empleosRecomendados(sectorKey, textoNorm);
+    const resultadoLocal = empleosRecomendados(pool, textoNorm);
     items = resultadoLocal.items;
     introTexto = resultadoLocal.fallback
-      ? ('<p class="note">No encontramos coincidencia directa entre las habilidades detectadas en tu CV y las vacantes verificadas de <strong>' + sector.nombre + '</strong>, así que te mostramos las más recientes (corrida ' + DATA.meta.corrida + ').</p>')
-      : ('<p class="note">Vacantes verificadas de <strong>' + sector.nombre + '</strong> (corrida ' + DATA.meta.corrida + '), ordenadas por cuántas de las habilidades detectadas en tu CV coinciden con lo que pide cada vacante.</p>');
+      ? '<p class="note">No encontramos coincidencia directa entre las habilidades detectadas en tu CV y las vacantes dentro de tus filtros, así que te mostramos las más recientes.</p>'
+      : '<p class="note">Vacantes dentro de tus filtros, ordenadas por cuántas de las habilidades detectadas en tu CV coinciden con lo que pide cada vacante.</p>';
   }
 
   empleosMostrados = items;
 
   if(!items.length){
-    cont.innerHTML = '<p class="note">Por el momento no tenemos vacantes verificadas de <strong>' + sector.nombre + '</strong> para mostrar (corrida ' + DATA.meta.corrida + '). Vuelve a intentarlo después de la próxima actualización.</p>' + nota;
+    cont.innerHTML = '<p class="note">No hay vacantes que cumplan los filtros seleccionados en este momento. Ajusta los filtros e inténtalo de nuevo.</p>';
     return;
   }
 
-  cont.innerHTML = introTexto + nota +
+  cont.innerHTML = introTexto +
     items.map((v,i) => {
       const salario = formatSalarioRango(v.salario_min, v.salario_max);
+      const nivel = NIVEL_LABEL[inferirNivelPuesto(v.titulo)];
       const razonHtml = v.razonIA
-        ? ('<div class="hint" style="margin-top:6px;color:var(--azul-osc);">💡 ' + v.razonIA + '</div>')
+        ? ('<div class="job-razon"><span class="lbl">Por qué te la recomendamos</span>' + v.razonIA + '</div>')
         : '';
       const skillsHtml = (v.matchedSkills && v.matchedSkills.length)
         ? ('<div style="margin-top:8px;">' + v.matchedSkills.map(s => '<span class="badge match">' + s + '</span>').join('') + '</div>')
         : '';
+      const badges = '<div class="job-badges">' +
+        (v._sectorNombre ? ('<span class="job-badge">' + v._sectorNombre + '</span>') : '') +
+        '<span class="job-badge">' + nivel + '</span>' +
+        (salario ? ('<span class="job-badge">' + salario + '</span>') : '') +
+        '<span class="job-badge">' + v.fuente + '</span>' +
+        '</div>';
       return '' +
-      '<div class="card" style="margin-bottom:12px;padding:16px 18px;">' +
-        '<div style="font-weight:600;color:var(--azul-osc);">' + v.titulo + '</div>' +
-        '<div class="hint">' + v.empresa + ' · ' + v.ubicacion + (salario ? (' · ' + salario) : '') + ' · publicada ' + v.fecha_publicacion + ' · vía ' + v.fuente + '</div>' +
+        '<div class="job-card">' +
+        '<div class="job-title">' + v.titulo + '</div>' +
+        '<div class="job-meta">' + v.empresa + ' · ' + v.ubicacion + ' · publicada ' + v.fecha_publicacion + '</div>' +
+        badges +
         razonHtml +
         skillsHtml +
-        '<div style="margin-top:10px;display:flex;gap:10px;flex-wrap:wrap;">' +
-          '<a href="' + v.url + '" target="_blank" rel="noopener noreferrer" style="display:inline-block;background:#fff;color:var(--azul);border:1.5px solid var(--azul);padding:8px 18px;border-radius:999px;font-size:0.86rem;font-weight:600;text-decoration:none;">Ver vacante original →</a>' +
-          '<button class="secondary" style="font-size:0.86rem;padding:8px 18px;" onclick="mejorarCV(' + i + ', event)">✨ Mejorar mi CV para esta vacante</button>' +
+        '<div class="job-actions">' +
+        '<a href="' + v.url + '" target="_blank" rel="noopener noreferrer" style="display:inline-block;background:#fff;color:var(--azul);border:1.5px solid var(--azul);padding:8px 18px;border-radius:999px;font-size:0.86rem;font-weight:600;text-decoration:none;">Ver vacante original →</a>' +
+        '<button class="secondary" style="font-size:0.86rem;padding:8px 18px;margin:0;" onclick="mejorarCV(' + i + ', event)">Optimizar mi CV para esta vacante</button>' +
         '</div>' +
         '<div id="cvMejoradoBox-' + i + '"></div>' +
-      '</div>';
+        '</div>';
     }).join('');
 }
 
