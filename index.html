@@ -97,9 +97,14 @@ input[type=text], input[type=number]{width:100%;padding:9px 10px;border:1px soli
 .job-razon{font-size:0.86rem;color:var(--texto);margin-top:10px;padding:10px 12px;background:var(--hero-bg2);border-radius:8px;border-left:3px solid var(--gold-light);line-height:1.45;}
 .job-razon .lbl{display:block;font-size:0.66rem;text-transform:uppercase;letter-spacing:.06em;font-weight:700;color:var(--azul-osc);margin-bottom:4px;}
 .job-actions{margin-top:12px;display:flex;gap:10px;flex-wrap:wrap;align-items:center;}
+.back-home-btn{position:fixed;top:16px;left:16px;z-index:1001;display:inline-flex;align-items:center;gap:6px;background:#fff;color:var(--azul-osc);border:1.5px solid var(--azul);padding:8px 16px;border-radius:999px;font-size:0.82rem;font-weight:700;text-decoration:none;font-family:var(--font-sans);box-shadow:var(--sombra);}
+.back-home-btn:hover{background:linear-gradient(135deg,var(--azul),var(--gold-light));color:#fff;border-color:transparent;}
+@media(max-width:480px){.back-home-btn{top:10px;left:10px;padding:7px 12px;font-size:0.76rem;}}
 </style>
 </head>
 <body>
+
+<a href="https://www.clubmentesbrillantes.com.mx/index.html" class="back-home-btn" title="Volver al inicio">&larr; Inicio</a>
 
 <div id="loadingOverlay">Cargando datos más recientes…</div>
 <div id="loadError">No se pudieron cargar los datos más recientes (sector_data.json). Mostrando la página sin datos — recarga en unos minutos o avisa a Gael.</div>
