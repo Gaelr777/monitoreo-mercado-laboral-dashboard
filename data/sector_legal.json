@@ -1,0 +1,1366 @@
+{
+  "nombre": "Legal",
+  "vacantes_verificadas": 176,
+  "vacantes_descartadas": 76,
+  "vacantes_con_habilidades": 119,
+  "pct_con_habilidades": 67.6,
+  "fuentes": {
+    "Adzuna": 91,
+    "OCC": 57,
+    "Indeed": 28
+  },
+  "categorias_puesto": [
+    {
+      "categoria": "Abogado general",
+      "vacantes": 47,
+      "pct": 26.7
+    },
+    {
+      "categoria": "Derecho laboral",
+      "vacantes": 25,
+      "pct": 14.2
+    },
+    {
+      "categoria": "Paralegal / Auxiliar legal",
+      "vacantes": 24,
+      "pct": 13.6
+    },
+    {
+      "categoria": "Derecho corporativo",
+      "vacantes": 22,
+      "pct": 12.5
+    },
+    {
+      "categoria": "Otro",
+      "vacantes": 21,
+      "pct": 11.9
+    },
+    {
+      "categoria": "Litigio",
+      "vacantes": 15,
+      "pct": 8.5
+    },
+    {
+      "categoria": "Cobranza judicial/extrajudicial",
+      "vacantes": 7,
+      "pct": 4.0
+    },
+    {
+      "categoria": "Cumplimiento normativo / Compliance",
+      "vacantes": 6,
+      "pct": 3.4
+    },
+    {
+      "categoria": "Derecho de seguros",
+      "vacantes": 5,
+      "pct": 2.8
+    },
+    {
+      "categoria": "Notariado",
+      "vacantes": 2,
+      "pct": 1.1
+    },
+    {
+      "categoria": "Propiedad intelectual",
+      "vacantes": 1,
+      "pct": 0.6
+    },
+    {
+      "categoria": "Derecho fiscal",
+      "vacantes": 1,
+      "pct": 0.6
+    }
+  ],
+  "habilidades_tecnicas": [
+    {
+      "skill": "Asesoría jurídica",
+      "menciones": 58
+    },
+    {
+      "skill": "Derecho corporativo",
+      "menciones": 29
+    },
+    {
+      "skill": "Derecho laboral",
+      "menciones": 29
+    },
+    {
+      "skill": "Redacción de contratos",
+      "menciones": 27
+    },
+    {
+      "skill": "Relaciones laborales",
+      "menciones": 27
+    },
+    {
+      "skill": "Litigio",
+      "menciones": 15
+    },
+    {
+      "skill": "Apoyo paralegal",
+      "menciones": 14
+    },
+    {
+      "skill": "Gestión documental",
+      "menciones": 14
+    },
+    {
+      "skill": "Derecho procesal",
+      "menciones": 12
+    },
+    {
+      "skill": "Propiedad intelectual",
+      "menciones": 9
+    },
+    {
+      "skill": "Derecho de seguros",
+      "menciones": 7
+    },
+    {
+      "skill": "Cobranza judicial/extrajudicial",
+      "menciones": 6
+    },
+    {
+      "skill": "Derecho administrativo",
+      "menciones": 5
+    },
+    {
+      "skill": "Derecho mercantil",
+      "menciones": 5
+    },
+    {
+      "skill": "Derecho civil",
+      "menciones": 4
+    }
+  ],
+  "habilidades_blandas": [
+    {
+      "skill": "Comunicación",
+      "menciones": 39
+    },
+    {
+      "skill": "Disposición para aprender",
+      "menciones": 30
+    },
+    {
+      "skill": "Manejo de conflictos",
+      "menciones": 28
+    },
+    {
+      "skill": "Visión estratégica",
+      "menciones": 25
+    },
+    {
+      "skill": "Organización",
+      "menciones": 24
+    },
+    {
+      "skill": "Atención al detalle",
+      "menciones": 12
+    },
+    {
+      "skill": "Argumentación oral",
+      "menciones": 12
+    },
+    {
+      "skill": "Análisis",
+      "menciones": 8
+    },
+    {
+      "skill": "Liderazgo",
+      "menciones": 7
+    },
+    {
+      "skill": "Atención al cliente",
+      "menciones": 6
+    }
+  ],
+  "top_empresas": [
+    {
+      "empresa": "Transportes Castores de Baja California S.A. de C.V.",
+      "vacantes": 9
+    },
+    {
+      "empresa": "Soluciones en Cobranza Legal",
+      "vacantes": 6
+    },
+    {
+      "empresa": "Human Quality",
+      "vacantes": 5
+    },
+    {
+      "empresa": "Qualitas Compañía de Seguros",
+      "vacantes": 3
+    },
+    {
+      "empresa": "Job Duck",
+      "vacantes": 3
+    },
+    {
+      "empresa": "Despacho Jurídico DOA",
+      "vacantes": 3
+    },
+    {
+      "empresa": "Pérez-Llorca México",
+      "vacantes": 3
+    },
+    {
+      "empresa": "RHUMANOSFACTORK",
+      "vacantes": 3
+    },
+    {
+      "empresa": "Grupo México",
+      "vacantes": 2
+    },
+    {
+      "empresa": "Masterh People",
+      "vacantes": 2
+    },
+    {
+      "empresa": "Grupo Salinas",
+      "vacantes": 2
+    },
+    {
+      "empresa": "BHERMANOS",
+      "vacantes": 2
+    }
+  ],
+  "cobertura_geografica": {
+    "top_estados": [
+      {
+        "estado": "Ciudad de México",
+        "vacantes": 61
+      },
+      {
+        "estado": "Jalisco",
+        "vacantes": 17
+      },
+      {
+        "estado": "Estado de México",
+        "vacantes": 15
+      },
+      {
+        "estado": "Nuevo León",
+        "vacantes": 10
+      },
+      {
+        "estado": "Guanajuato",
+        "vacantes": 10
+      },
+      {
+        "estado": "Remoto",
+        "vacantes": 7
+      },
+      {
+        "estado": "Yucatán",
+        "vacantes": 6
+      },
+      {
+        "estado": "Puebla",
+        "vacantes": 6
+      },
+      {
+        "estado": "Coahuila de Zaragoza",
+        "vacantes": 5
+      },
+      {
+        "estado": "Querétaro",
+        "vacantes": 5
+      }
+    ],
+    "estados_unicos": 22
+  },
+  "salario": {
+    "vacantes_con_dato": 81,
+    "pct_con_dato": 46.0,
+    "mediana_mensual_mxn": 18000,
+    "p25_mensual_mxn": 13590,
+    "p75_mensual_mxn": 21000
+  },
+  "evolucion_semanal": [
+    {
+      "semana": "02 Feb",
+      "vacantes": 1
+    },
+    {
+      "semana": "23 Feb",
+      "vacantes": 1
+    },
+    {
+      "semana": "23 Mar",
+      "vacantes": 1
+    },
+    {
+      "semana": "20 Abr",
+      "vacantes": 1
+    },
+    {
+      "semana": "11 May",
+      "vacantes": 1
+    },
+    {
+      "semana": "25 May",
+      "vacantes": 4
+    },
+    {
+      "semana": "08 Jun",
+      "vacantes": 1
+    },
+    {
+      "semana": "22 Jun",
+      "vacantes": 1
+    },
+    {
+      "semana": "13 Jul",
+      "vacantes": 1
+    },
+    {
+      "semana": "20 Jul",
+      "vacantes": 2
+    },
+    {
+      "semana": "27 Jul",
+      "vacantes": 6
+    },
+    {
+      "semana": "03 Ago",
+      "vacantes": 7
+    },
+    {
+      "semana": "10 Ago",
+      "vacantes": 112
+    },
+    {
+      "semana": "17 Ago",
+      "vacantes": 20
+    }
+  ],
+  "total_empresas_unicas": 140,
+  "ultima_semana_vacantes": 20,
+  "vacantes_detalle": [
+    {
+      "titulo": "Abogado/a de Derechos de Vias Totalplay Chihuahua - Totalplay Chihuahua",
+      "empresa": "Grupo Salinas",
+      "ubicacion": "México",
+      "habilidades_tecnicas": [
+        "Asesoría jurídica"
+      ],
+      "habilidades_blandas": [
+        "Comunicación"
+      ],
+      "salario_min": null,
+      "salario_max": null,
+      "fecha_publicacion": "2026-08-17",
+      "fuente": "Adzuna",
+      "url": "https://www.adzuna.com.mx/details/5845244987"
+    },
+    {
+      "titulo": "Supervisor Jurídico Corporativo",
+      "empresa": "Strategosincrh",
+      "ubicacion": "México",
+      "habilidades_tecnicas": [
+        "Derecho corporativo",
+        "Redacción de contratos"
+      ],
+      "habilidades_blandas": [
+        "Visión estratégica"
+      ],
+      "salario_min": 16500,
+      "salario_max": 16500,
+      "fecha_publicacion": "2026-08-17",
+      "fuente": "Adzuna",
+      "url": "https://www.adzuna.com.mx/details/5845246645"
+    },
+    {
+      "titulo": "Abogado Regional",
+      "empresa": "Megacable",
+      "ubicacion": "Toluca, Estado de México",
+      "habilidades_tecnicas": [
+        "Asesoría jurídica"
+      ],
+      "habilidades_blandas": [
+        "Comunicación"
+      ],
+      "salario_min": 20000,
+      "salario_max": 20000,
+      "fecha_publicacion": "2026-08-17",
+      "fuente": "Adzuna",
+      "url": "https://www.adzuna.com.mx/details/5845314061"
+    },
+    {
+      "titulo": "Abogado Jr Pasante",
+      "empresa": "Peacock",
+      "ubicacion": "Ciudad de México",
+      "habilidades_tecnicas": [
+        "Asesoría jurídica"
+      ],
+      "habilidades_blandas": [
+        "Disposición para aprender"
+      ],
+      "salario_min": 9250,
+      "salario_max": 9250,
+      "fecha_publicacion": "2026-08-17",
+      "fuente": "OCC",
+      "url": "https://www.occ.com.mx/empleo/oferta/21298276-abogado-jr-pasante/"
+    },
+    {
+      "titulo": "Abogado Jr | Permisos y Licencias",
+      "empresa": "PARKS MANTENIMIENTO",
+      "ubicacion": "Ciudad de México",
+      "habilidades_tecnicas": [
+        "Asesoría jurídica"
+      ],
+      "habilidades_blandas": [
+        "Disposición para aprender"
+      ],
+      "salario_min": null,
+      "salario_max": null,
+      "fecha_publicacion": "2026-08-17",
+      "fuente": "OCC",
+      "url": "https://www.occ.com.mx/empleo/oferta/21298238-abogado-jr-permisos-y-licencias/"
+    },
+    {
+      "titulo": "Abogado Jr. de relaciones laborales",
+      "empresa": "TIENDAS TRES B",
+      "ubicacion": "Ciudad de México",
+      "habilidades_tecnicas": [
+        "Derecho laboral",
+        "Relaciones laborales"
+      ],
+      "habilidades_blandas": [
+        "Manejo de conflictos",
+        "Disposición para aprender"
+      ],
+      "salario_min": 21000,
+      "salario_max": 21000,
+      "fecha_publicacion": "2026-08-17",
+      "fuente": "OCC",
+      "url": "https://www.occ.com.mx/empleo/oferta/21297352-abogado-jr-de-relaciones-laborales/"
+    },
+    {
+      "titulo": "Abogado litigante en materia familiar y civil",
+      "empresa": "MINERVA CEPEDA JIMENEZ",
+      "ubicacion": "Ciudad de México",
+      "habilidades_tecnicas": [
+        "Litigio",
+        "Derecho procesal",
+        "Derecho civil"
+      ],
+      "habilidades_blandas": [
+        "Argumentación oral",
+        "Redacción jurídica"
+      ],
+      "salario_min": 13500,
+      "salario_max": 13500,
+      "fecha_publicacion": "2026-08-17",
+      "fuente": "OCC",
+      "url": "https://www.occ.com.mx/empleo/oferta/21297635-abogado-litigante-en-materia-familiar-y-civil/"
+    },
+    {
+      "titulo": "Abogado/a laboral",
+      "empresa": "SERVICIOS ADMINISTRATIVOS VIÑAGA",
+      "ubicacion": "Miguel Hidalgo, Ciudad de México",
+      "habilidades_tecnicas": [
+        "Derecho laboral",
+        "Relaciones laborales"
+      ],
+      "habilidades_blandas": [
+        "Manejo de conflictos"
+      ],
+      "salario_min": null,
+      "salario_max": null,
+      "fecha_publicacion": "2026-08-17",
+      "fuente": "OCC",
+      "url": "https://www.occ.com.mx/empleo/oferta/21288622-abogado-a-laboral/"
+    },
+    {
+      "titulo": "abogado corporativo litigante",
+      "empresa": "FUENTES DE LAS LOMAS, TORRE II",
+      "ubicacion": "Estado de México",
+      "habilidades_tecnicas": [
+        "Derecho corporativo",
+        "Redacción de contratos",
+        "Litigio",
+        "Derecho procesal"
+      ],
+      "habilidades_blandas": [
+        "Visión estratégica",
+        "Argumentación oral"
+      ],
+      "salario_min": 17500,
+      "salario_max": 17500,
+      "fecha_publicacion": "2026-08-17",
+      "fuente": "OCC",
+      "url": "https://www.occ.com.mx/empleo/oferta/21297358-abogado-corporativo-litigante/"
+    },
+    {
+      "titulo": "Abogado de gobierno corporativo",
+      "empresa": "Agrupación Profesional de Contaduria SAPI de CV",
+      "ubicacion": "Coyoacán, Ciudad de México",
+      "habilidades_tecnicas": [
+        "Derecho corporativo",
+        "Redacción de contratos",
+        "Gobierno corporativo"
+      ],
+      "habilidades_blandas": [
+        "Visión estratégica",
+        "Liderazgo"
+      ],
+      "salario_min": null,
+      "salario_max": null,
+      "fecha_publicacion": "2026-08-17",
+      "fuente": "OCC",
+      "url": "https://www.occ.com.mx/empleo/oferta/21289191-abogado-de-gobierno-corporativo/"
+    },
+    {
+      "titulo": "Auxiliar juridíco",
+      "empresa": "Consol Negocios S.A. de C.V. SOFOM ENR",
+      "ubicacion": "Tlajomulco de Zúñiga, Jalisco",
+      "habilidades_tecnicas": [
+        "Asesoría jurídica"
+      ],
+      "habilidades_blandas": [
+        "Organización"
+      ],
+      "salario_min": 12728,
+      "salario_max": 12728,
+      "fecha_publicacion": "2026-08-17",
+      "fuente": "OCC",
+      "url": "https://www.occ.com.mx/empleo/oferta/21289374-auxiliar-juridico/"
+    },
+    {
+      "titulo": "Patent Paralegal - Remote",
+      "empresa": "Human Quality",
+      "ubicacion": "Ciudad de México",
+      "habilidades_tecnicas": [
+        "Apoyo paralegal",
+        "Gestión documental",
+        "Propiedad intelectual"
+      ],
+      "habilidades_blandas": [
+        "Organización",
+        "Atención al detalle"
+      ],
+      "salario_min": null,
+      "salario_max": null,
+      "fecha_publicacion": "2026-08-17",
+      "fuente": "OCC",
+      "url": "https://www.occ.com.mx/empleo/oferta/21298231-patent-paralegal-remote/"
+    },
+    {
+      "titulo": "Patent Paralegal - Remote",
+      "empresa": "Human Quality",
+      "ubicacion": "Quintana Roo",
+      "habilidades_tecnicas": [
+        "Apoyo paralegal",
+        "Gestión documental",
+        "Propiedad intelectual"
+      ],
+      "habilidades_blandas": [
+        "Organización",
+        "Atención al detalle"
+      ],
+      "salario_min": null,
+      "salario_max": null,
+      "fecha_publicacion": "2026-08-17",
+      "fuente": "OCC",
+      "url": "https://www.occ.com.mx/empleo/oferta/21298245-patent-paralegal-remote/"
+    },
+    {
+      "titulo": "Patent Paralegal - Remote",
+      "empresa": "Human Quality",
+      "ubicacion": "Puebla",
+      "habilidades_tecnicas": [
+        "Apoyo paralegal",
+        "Gestión documental",
+        "Propiedad intelectual"
+      ],
+      "habilidades_blandas": [
+        "Organización",
+        "Atención al detalle"
+      ],
+      "salario_min": null,
+      "salario_max": null,
+      "fecha_publicacion": "2026-08-17",
+      "fuente": "OCC",
+      "url": "https://www.occ.com.mx/empleo/oferta/21298242-patent-paralegal-remote/"
+    },
+    {
+      "titulo": "Patent Paralegal - Remote",
+      "empresa": "Human Quality",
+      "ubicacion": "Querétaro",
+      "habilidades_tecnicas": [
+        "Apoyo paralegal",
+        "Gestión documental",
+        "Propiedad intelectual"
+      ],
+      "habilidades_blandas": [
+        "Organización",
+        "Atención al detalle"
+      ],
+      "salario_min": null,
+      "salario_max": null,
+      "fecha_publicacion": "2026-08-17",
+      "fuente": "OCC",
+      "url": "https://www.occ.com.mx/empleo/oferta/21298236-patent-paralegal-remote/"
+    },
+    {
+      "titulo": "Patent Paralegal - Remote",
+      "empresa": "Human Quality",
+      "ubicacion": "Jalisco",
+      "habilidades_tecnicas": [
+        "Apoyo paralegal",
+        "Gestión documental",
+        "Propiedad intelectual"
+      ],
+      "habilidades_blandas": [
+        "Organización",
+        "Atención al detalle"
+      ],
+      "salario_min": null,
+      "salario_max": null,
+      "fecha_publicacion": "2026-08-17",
+      "fuente": "OCC",
+      "url": "https://www.occ.com.mx/empleo/oferta/21298249-patent-paralegal-remote/"
+    },
+    {
+      "titulo": "abogado para financiamientos especializados",
+      "empresa": "BANCO DEL BAJIO S.A.",
+      "ubicacion": "Guanajuato",
+      "habilidades_tecnicas": [
+        "Asesoría jurídica"
+      ],
+      "habilidades_blandas": [
+        "Comunicación"
+      ],
+      "salario_min": null,
+      "salario_max": null,
+      "fecha_publicacion": "2026-08-17",
+      "fuente": "OCC",
+      "url": "https://www.occ.com.mx/empleo/oferta/21273338-abogado-para-financiamientos-especializados/"
+    },
+    {
+      "titulo": "ESPECIALISTA LEGAL DE SINIESTROS",
+      "empresa": "ZURICH ASEGURADORA MEXICANA",
+      "ubicacion": "Ciudad de México",
+      "habilidades_tecnicas": [
+        "Derecho de seguros"
+      ],
+      "habilidades_blandas": [
+        "Atención al cliente"
+      ],
+      "salario_min": null,
+      "salario_max": null,
+      "fecha_publicacion": "2026-08-17",
+      "fuente": "OCC",
+      "url": "https://www.occ.com.mx/empleo/oferta/21279478-especialista-legal-de-siniestros/"
+    },
+    {
+      "titulo": "Abogado laboral",
+      "empresa": "Centro Legal Mexico",
+      "ubicacion": "Ciudad de México, CDMX",
+      "habilidades_tecnicas": [
+        "Derecho laboral",
+        "Relaciones laborales"
+      ],
+      "habilidades_blandas": [
+        "Manejo de conflictos"
+      ],
+      "salario_min": null,
+      "salario_max": null,
+      "fecha_publicacion": "2026-08-17",
+      "fuente": "Indeed",
+      "url": "https://to.indeed.com/aajqnw9qjqtr"
+    },
+    {
+      "titulo": "Abogad@ Junior",
+      "empresa": "EN & RICH SOLUTIONS, S.C.",
+      "ubicacion": "Guadalajara, Jal.",
+      "habilidades_tecnicas": [
+        "Asesoría jurídica"
+      ],
+      "habilidades_blandas": [
+        "Disposición para aprender"
+      ],
+      "salario_min": null,
+      "salario_max": null,
+      "fecha_publicacion": "2026-08-17",
+      "fuente": "Indeed",
+      "url": "https://to.indeed.com/aagzsjgf494r"
+    },
+    {
+      "titulo": "Abogado/a Litigio, Arbitraje y Mediación",
+      "empresa": "Pérez-Llorca México",
+      "ubicacion": "México",
+      "habilidades_tecnicas": [
+        "Litigio",
+        "Derecho procesal"
+      ],
+      "habilidades_blandas": [
+        "Argumentación oral"
+      ],
+      "salario_min": null,
+      "salario_max": null,
+      "fecha_publicacion": "2026-08-16",
+      "fuente": "Adzuna",
+      "url": "https://www.adzuna.com.mx/details/5844240714"
+    },
+    {
+      "titulo": "Líder de área jurídica",
+      "empresa": "DIHO",
+      "ubicacion": "México",
+      "habilidades_tecnicas": [
+        "Asesoría jurídica"
+      ],
+      "habilidades_blandas": [
+        "Comunicación"
+      ],
+      "salario_min": 21000,
+      "salario_max": 21000,
+      "fecha_publicacion": "2026-08-16",
+      "fuente": "Adzuna",
+      "url": "https://www.adzuna.com.mx/details/5844292929"
+    },
+    {
+      "titulo": "Abogado Laboral",
+      "empresa": "Ecodeli",
+      "ubicacion": "México",
+      "habilidades_tecnicas": [
+        "Derecho laboral",
+        "Relaciones laborales"
+      ],
+      "habilidades_blandas": [
+        "Manejo de conflictos"
+      ],
+      "salario_min": 17500,
+      "salario_max": 17500,
+      "fecha_publicacion": "2026-08-16",
+      "fuente": "Adzuna",
+      "url": "https://www.adzuna.com.mx/details/5844305628"
+    },
+    {
+      "titulo": "Abogado Obra Pública",
+      "empresa": "Pulse HR",
+      "ubicacion": "México",
+      "habilidades_tecnicas": [
+        "Derecho administrativo",
+        "Contratación pública"
+      ],
+      "habilidades_blandas": [
+        "Gestión de proyectos"
+      ],
+      "salario_min": null,
+      "salario_max": null,
+      "fecha_publicacion": "2026-08-16",
+      "fuente": "Adzuna",
+      "url": "https://www.adzuna.com.mx/details/5844306541"
+    },
+    {
+      "titulo": "Pasantes de Derecho para cobranza Extrajudicial domiciliaria Lunes a Viernes sueldo bruto 13,500 Bonos Ingresos de hasta 16,000 brutos",
+      "empresa": "Cacse",
+      "ubicacion": "Gustavo A. Madero, Ciudad de México",
+      "habilidades_tecnicas": [
+        "Cobranza judicial/extrajudicial"
+      ],
+      "habilidades_blandas": [
+        "Orientación a resultados",
+        "Disposición para aprender"
+      ],
+      "salario_min": 13590,
+      "salario_max": 13590,
+      "fecha_publicacion": "2026-08-16",
+      "fuente": "Adzuna",
+      "url": "https://www.adzuna.com.mx/details/5844398302"
+    },
+    {
+      "titulo": "Abogado de Juicios y Litigios Laborales",
+      "empresa": "Transportes Castores de Baja California S.A. de C.V.",
+      "ubicacion": "León, Guanajuato",
+      "habilidades_tecnicas": [
+        "Derecho laboral",
+        "Relaciones laborales",
+        "Litigio",
+        "Derecho procesal"
+      ],
+      "habilidades_blandas": [
+        "Manejo de conflictos",
+        "Argumentación oral"
+      ],
+      "salario_min": 20000,
+      "salario_max": 20000,
+      "fecha_publicacion": "2026-08-16",
+      "fuente": "Adzuna",
+      "url": "https://www.adzuna.com.mx/details/5844398547"
+    },
+    {
+      "titulo": "Abogado Laborista",
+      "empresa": "Transportes Castores de Baja California S.A. de C.V.",
+      "ubicacion": "León, Guanajuato",
+      "habilidades_tecnicas": [
+        "Asesoría jurídica"
+      ],
+      "habilidades_blandas": [
+        "Comunicación"
+      ],
+      "salario_min": 19998,
+      "salario_max": 19998,
+      "fecha_publicacion": "2026-08-16",
+      "fuente": "Adzuna",
+      "url": "https://www.adzuna.com.mx/details/5844398661"
+    },
+    {
+      "titulo": "Asistente Dictaminador Jurídico",
+      "empresa": "Pluxee",
+      "ubicacion": "Ciudad de México, México",
+      "habilidades_tecnicas": [
+        "Asesoría jurídica"
+      ],
+      "habilidades_blandas": [
+        "Organización"
+      ],
+      "salario_min": null,
+      "salario_max": null,
+      "fecha_publicacion": "2026-08-15",
+      "fuente": "Adzuna",
+      "url": "https://www.adzuna.com.mx/details/5843062511"
+    },
+    {
+      "titulo": "Abogado/a Laboral",
+      "empresa": "Pérez-Llorca México",
+      "ubicacion": "México",
+      "habilidades_tecnicas": [
+        "Derecho laboral",
+        "Relaciones laborales"
+      ],
+      "habilidades_blandas": [
+        "Manejo de conflictos"
+      ],
+      "salario_min": null,
+      "salario_max": null,
+      "fecha_publicacion": "2026-08-15",
+      "fuente": "Adzuna",
+      "url": "https://www.adzuna.com.mx/details/5843062768"
+    },
+    {
+      "titulo": "Analista de Estrategia y Controversia Fiscal",
+      "empresa": "Grupo Industrial Durandco",
+      "ubicacion": "México",
+      "habilidades_tecnicas": [
+        "Derecho fiscal",
+        "Controversia fiscal"
+      ],
+      "habilidades_blandas": [
+        "Análisis"
+      ],
+      "salario_min": null,
+      "salario_max": null,
+      "fecha_publicacion": "2026-08-15",
+      "fuente": "Adzuna",
+      "url": "https://www.adzuna.com.mx/details/5843063081"
+    },
+    {
+      "titulo": "Abogado Jr. Licencias y Permisos",
+      "empresa": "Walmart de México y Centroamérica",
+      "ubicacion": "Ciudad de México, México",
+      "habilidades_tecnicas": [
+        "Asesoría jurídica"
+      ],
+      "habilidades_blandas": [
+        "Disposición para aprender"
+      ],
+      "salario_min": null,
+      "salario_max": null,
+      "fecha_publicacion": "2026-08-15",
+      "fuente": "Adzuna",
+      "url": "https://www.adzuna.com.mx/details/5843063090"
+    },
+    {
+      "titulo": "Abogado Normativo de Aperturas",
+      "empresa": "Salud Digna",
+      "ubicacion": "México",
+      "habilidades_tecnicas": [
+        "Derecho regulatorio"
+      ],
+      "habilidades_blandas": [
+        "Análisis"
+      ],
+      "salario_min": 27000,
+      "salario_max": 27000,
+      "fecha_publicacion": "2026-08-15",
+      "fuente": "Adzuna",
+      "url": "https://www.adzuna.com.mx/details/5843160649"
+    },
+    {
+      "titulo": "Abogado Laboral",
+      "empresa": "Partners and Masters",
+      "ubicacion": "México",
+      "habilidades_tecnicas": [
+        "Derecho laboral",
+        "Relaciones laborales"
+      ],
+      "habilidades_blandas": [
+        "Manejo de conflictos"
+      ],
+      "salario_min": null,
+      "salario_max": null,
+      "fecha_publicacion": "2026-08-15",
+      "fuente": "Adzuna",
+      "url": "https://www.adzuna.com.mx/details/5843166927"
+    },
+    {
+      "titulo": "Analista de jurídico",
+      "empresa": "Grupo viso",
+      "ubicacion": "México",
+      "habilidades_tecnicas": [
+        "Asesoría jurídica"
+      ],
+      "habilidades_blandas": [
+        "Comunicación"
+      ],
+      "salario_min": 19500,
+      "salario_max": 19500,
+      "fecha_publicacion": "2026-08-15",
+      "fuente": "Adzuna",
+      "url": "https://www.adzuna.com.mx/details/5843169748"
+    },
+    {
+      "titulo": "Abogado de cobranza para Fco I Madero bbcv",
+      "empresa": "BHERMANOS",
+      "ubicacion": "Francisco I. Madero, Coahuila de Zaragoza",
+      "habilidades_tecnicas": [
+        "Cobranza judicial/extrajudicial"
+      ],
+      "habilidades_blandas": [
+        "Orientación a resultados"
+      ],
+      "salario_min": 14000,
+      "salario_max": 14000,
+      "fecha_publicacion": "2026-08-15",
+      "fuente": "Adzuna",
+      "url": "https://www.adzuna.com.mx/details/5843294645"
+    },
+    {
+      "titulo": "Abogado Corporativo",
+      "empresa": "Transportes Castores de Baja California S.A. de C.V.",
+      "ubicacion": "León, Guanajuato",
+      "habilidades_tecnicas": [
+        "Derecho corporativo",
+        "Redacción de contratos"
+      ],
+      "habilidades_blandas": [
+        "Visión estratégica"
+      ],
+      "salario_min": 19998,
+      "salario_max": 19998,
+      "fecha_publicacion": "2026-08-15",
+      "fuente": "Adzuna",
+      "url": "https://www.adzuna.com.mx/details/5843296062"
+    },
+    {
+      "titulo": "Abogado junior corporativo Disponibilidad de Horario",
+      "empresa": "SOLIDEZ JURIDICA",
+      "ubicacion": "Saltillo, Coahuila de Zaragoza",
+      "habilidades_tecnicas": [
+        "Derecho corporativo",
+        "Redacción de contratos"
+      ],
+      "habilidades_blandas": [
+        "Visión estratégica",
+        "Disposición para aprender"
+      ],
+      "salario_min": 23000,
+      "salario_max": 23000,
+      "fecha_publicacion": "2026-08-15",
+      "fuente": "Adzuna",
+      "url": "https://www.adzuna.com.mx/details/5843296231"
+    },
+    {
+      "titulo": "Abogado laboral jr. Queretaro Jurica",
+      "empresa": "EVOQUE CONSULTING GROUP",
+      "ubicacion": "Querétaro",
+      "habilidades_tecnicas": [
+        "Derecho laboral",
+        "Relaciones laborales"
+      ],
+      "habilidades_blandas": [
+        "Manejo de conflictos",
+        "Disposición para aprender"
+      ],
+      "salario_min": null,
+      "salario_max": null,
+      "fecha_publicacion": "2026-08-15",
+      "fuente": "Adzuna",
+      "url": "https://www.adzuna.com.mx/details/5843296504"
+    },
+    {
+      "titulo": "Abogado Obra Pública",
+      "empresa": "Pulse HR",
+      "ubicacion": "Álvaro Obregón, Ciudad de México",
+      "habilidades_tecnicas": [
+        "Derecho administrativo",
+        "Contratación pública"
+      ],
+      "habilidades_blandas": [
+        "Gestión de proyectos"
+      ],
+      "salario_min": 30000,
+      "salario_max": 30000,
+      "fecha_publicacion": "2026-08-15",
+      "fuente": "Adzuna",
+      "url": "https://www.adzuna.com.mx/details/5843296631"
+    },
+    {
+      "titulo": "Abogado Corporativo y Administrativo",
+      "empresa": "Surtidora Médica de Occidente S.A de C.V",
+      "ubicacion": "Guadalajara, Jalisco",
+      "habilidades_tecnicas": [
+        "Derecho corporativo",
+        "Redacción de contratos",
+        "Derecho administrativo"
+      ],
+      "habilidades_blandas": [
+        "Visión estratégica",
+        "Organización"
+      ],
+      "salario_min": 18000,
+      "salario_max": 18000,
+      "fecha_publicacion": "2026-08-15",
+      "fuente": "Adzuna",
+      "url": "https://www.adzuna.com.mx/details/5843297141"
+    },
+    {
+      "titulo": "ABOGADO PARA JUICIOS MERCANTILES",
+      "empresa": "FISCALIZADORA PENAL DEMANDA Y EMBARGO",
+      "ubicacion": "Ciudad de México",
+      "habilidades_tecnicas": [
+        "Derecho mercantil"
+      ],
+      "habilidades_blandas": [
+        "Negociación"
+      ],
+      "salario_min": 11000,
+      "salario_max": 11000,
+      "fecha_publicacion": "2026-08-15",
+      "fuente": "OCC",
+      "url": "https://www.occ.com.mx/empleo/oferta/21297054-abogado-para-juicios-mercantiles/"
+    },
+    {
+      "titulo": "Abogado Corporativo",
+      "empresa": "Legal & Fixer",
+      "ubicacion": "Puerta de Hierro, Jal.",
+      "habilidades_tecnicas": [
+        "Derecho corporativo",
+        "Redacción de contratos"
+      ],
+      "habilidades_blandas": [
+        "Visión estratégica"
+      ],
+      "salario_min": null,
+      "salario_max": null,
+      "fecha_publicacion": "2026-08-15",
+      "fuente": "Indeed",
+      "url": "https://to.indeed.com/aa4ywtmtdnjn"
+    },
+    {
+      "titulo": "Abogado",
+      "empresa": "Grupo México",
+      "ubicacion": "Monterrey, Nuevo León",
+      "habilidades_tecnicas": [
+        "Asesoría jurídica"
+      ],
+      "habilidades_blandas": [
+        "Comunicación"
+      ],
+      "salario_min": null,
+      "salario_max": null,
+      "fecha_publicacion": "2026-08-14",
+      "fuente": "Adzuna",
+      "url": "https://www.adzuna.com.mx/details/5841831949"
+    },
+    {
+      "titulo": "Abogado/a Laboral",
+      "empresa": "Pérez-Llorca México",
+      "ubicacion": "Monterrey, Nuevo León",
+      "habilidades_tecnicas": [
+        "Derecho laboral",
+        "Relaciones laborales"
+      ],
+      "habilidades_blandas": [
+        "Manejo de conflictos"
+      ],
+      "salario_min": null,
+      "salario_max": null,
+      "fecha_publicacion": "2026-08-14",
+      "fuente": "Adzuna",
+      "url": "https://www.adzuna.com.mx/details/5841832209"
+    },
+    {
+      "titulo": "Oferta de empleo abogado/a de entre 7 y 10 años de experiencia Inmobiliario/Corporativo Querétaro",
+      "empresa": "Garrigues",
+      "ubicacion": "Querétaro",
+      "habilidades_tecnicas": [
+        "Derecho corporativo",
+        "Redacción de contratos",
+        "Derecho inmobiliario"
+      ],
+      "habilidades_blandas": [
+        "Visión estratégica",
+        "Atención al detalle"
+      ],
+      "salario_min": null,
+      "salario_max": null,
+      "fecha_publicacion": "2026-08-14",
+      "fuente": "Adzuna",
+      "url": "https://www.adzuna.com.mx/details/5841941184"
+    },
+    {
+      "titulo": "Abogado Junior Negociador",
+      "empresa": "Despacho Jurídico DOA",
+      "ubicacion": "México",
+      "habilidades_tecnicas": [
+        "Asesoría jurídica"
+      ],
+      "habilidades_blandas": [
+        "Disposición para aprender"
+      ],
+      "salario_min": null,
+      "salario_max": null,
+      "fecha_publicacion": "2026-08-14",
+      "fuente": "Adzuna",
+      "url": "https://www.adzuna.com.mx/details/5841947168"
+    },
+    {
+      "titulo": "Abogado a Laboral Experiencia en Juicios",
+      "empresa": "Transportes Castores de Baja California S.A. de C.V.",
+      "ubicacion": "León, Guanajuato",
+      "habilidades_tecnicas": [
+        "Derecho laboral",
+        "Relaciones laborales"
+      ],
+      "habilidades_blandas": [
+        "Manejo de conflictos"
+      ],
+      "salario_min": 20000,
+      "salario_max": 20000,
+      "fecha_publicacion": "2026-08-14",
+      "fuente": "Adzuna",
+      "url": "https://www.adzuna.com.mx/details/5842037315"
+    },
+    {
+      "titulo": "Abogado a Laboral de Litigio",
+      "empresa": "Transportes Castores de Baja California S.A. de C.V.",
+      "ubicacion": "León, Guanajuato",
+      "habilidades_tecnicas": [
+        "Derecho laboral",
+        "Relaciones laborales",
+        "Litigio",
+        "Derecho procesal"
+      ],
+      "habilidades_blandas": [
+        "Manejo de conflictos",
+        "Argumentación oral"
+      ],
+      "salario_min": 20000,
+      "salario_max": 20000,
+      "fecha_publicacion": "2026-08-14",
+      "fuente": "Adzuna",
+      "url": "https://www.adzuna.com.mx/details/5842037426"
+    },
+    {
+      "titulo": "Abogado Laboral",
+      "empresa": "Partners and Masters",
+      "ubicacion": "Naucalpan de Juárez, Estado de México",
+      "habilidades_tecnicas": [
+        "Derecho laboral",
+        "Relaciones laborales"
+      ],
+      "habilidades_blandas": [
+        "Manejo de conflictos"
+      ],
+      "salario_min": 12000,
+      "salario_max": 12000,
+      "fecha_publicacion": "2026-08-14",
+      "fuente": "Adzuna",
+      "url": "https://www.adzuna.com.mx/details/5842037614"
+    },
+    {
+      "titulo": "Becario Legal Abogado",
+      "empresa": "DISTRIBUIDORA DE EQUIPO MEDICO ESPECIALIZADO SA DE CV",
+      "ubicacion": "Toluca, Estado de México",
+      "habilidades_tecnicas": [
+        "Asesoría jurídica"
+      ],
+      "habilidades_blandas": [
+        "Disposición para aprender"
+      ],
+      "salario_min": 10000,
+      "salario_max": 10000,
+      "fecha_publicacion": "2026-08-14",
+      "fuente": "Adzuna",
+      "url": "https://www.adzuna.com.mx/details/5842037704"
+    },
+    {
+      "titulo": "Abogado de Instrumentación",
+      "empresa": "AP JUSTO",
+      "ubicacion": "Ciudad de México",
+      "habilidades_tecnicas": [
+        "Asesoría jurídica"
+      ],
+      "habilidades_blandas": [
+        "Comunicación"
+      ],
+      "salario_min": 22000,
+      "salario_max": 22000,
+      "fecha_publicacion": "2026-08-14",
+      "fuente": "OCC",
+      "url": "https://www.occ.com.mx/empleo/oferta/21223245-abogado-de-instrumentacion/"
+    },
+    {
+      "titulo": "Abogado CONDUSEF (San Jeronimo)",
+      "empresa": "Qualitas Compañía de Seguros",
+      "ubicacion": "Álvaro Obregón, Ciudad de México",
+      "habilidades_tecnicas": [
+        "Asesoría jurídica"
+      ],
+      "habilidades_blandas": [
+        "Comunicación"
+      ],
+      "salario_min": 20000,
+      "salario_max": 20000,
+      "fecha_publicacion": "2026-08-14",
+      "fuente": "OCC",
+      "url": "https://www.occ.com.mx/empleo/oferta/21295625-abogado-condusef-san-jeronimo/"
+    },
+    {
+      "titulo": "ABOGADO ESPECIALISTA EN LEY ANTILAVADO",
+      "empresa": "OESA",
+      "ubicacion": "Estado de México",
+      "habilidades_tecnicas": [
+        "Prevención de lavado de dinero (PLD)"
+      ],
+      "habilidades_blandas": [
+        "Ética profesional"
+      ],
+      "salario_min": 32500,
+      "salario_max": 32500,
+      "fecha_publicacion": "2026-08-14",
+      "fuente": "OCC",
+      "url": "https://www.occ.com.mx/empleo/oferta/21296023-abogado-especialista-en-ley-antilavado/"
+    },
+    {
+      "titulo": "Asistente de Equipo Legal",
+      "empresa": "NOTARIA 181",
+      "ubicacion": "Cuajimalpa, CDMX",
+      "habilidades_tecnicas": [
+        "Asesoría jurídica"
+      ],
+      "habilidades_blandas": [
+        "Organización"
+      ],
+      "salario_min": null,
+      "salario_max": null,
+      "fecha_publicacion": "2026-08-14",
+      "fuente": "Indeed",
+      "url": "https://to.indeed.com/aa4xctyw9pnp"
+    },
+    {
+      "titulo": "Auxiliar Legal",
+      "empresa": "GRUPO DIAGONAL",
+      "ubicacion": "Guadalajara, Jal.",
+      "habilidades_tecnicas": [
+        "Asesoría jurídica"
+      ],
+      "habilidades_blandas": [
+        "Organización"
+      ],
+      "salario_min": null,
+      "salario_max": null,
+      "fecha_publicacion": "2026-08-12",
+      "fuente": "Indeed",
+      "url": "https://to.indeed.com/aagghrfthnqm"
+    },
+    {
+      "titulo": "Legal Assistant Bilingual (USA Law Firm)",
+      "empresa": "Solvo Global",
+      "ubicacion": "Chihuahua, Chih.",
+      "habilidades_tecnicas": [
+        "Asesoría jurídica"
+      ],
+      "habilidades_blandas": [
+        "Comunicación"
+      ],
+      "salario_min": null,
+      "salario_max": null,
+      "fecha_publicacion": "2026-08-10",
+      "fuente": "Indeed",
+      "url": "https://to.indeed.com/aagj6zxh4rgq"
+    },
+    {
+      "titulo": "Paralegal (Remoto – Trabajo desde Casa, México)",
+      "empresa": "Anequim Mexico SA de CV",
+      "ubicacion": "Desde casa",
+      "habilidades_tecnicas": [
+        "Apoyo paralegal",
+        "Gestión documental"
+      ],
+      "habilidades_blandas": [
+        "Organización"
+      ],
+      "salario_min": null,
+      "salario_max": null,
+      "fecha_publicacion": "2026-08-06",
+      "fuente": "Indeed",
+      "url": "https://to.indeed.com/aad8hwqnnzkj"
+    },
+    {
+      "titulo": "Pasante en Derecho para Financiera Automotriz",
+      "empresa": "RE México Real Estate",
+      "ubicacion": "Roma Sur, CDMX",
+      "habilidades_tecnicas": [
+        "Asesoría jurídica"
+      ],
+      "habilidades_blandas": [
+        "Disposición para aprender"
+      ],
+      "salario_min": null,
+      "salario_max": null,
+      "fecha_publicacion": "2026-08-03",
+      "fuente": "Indeed",
+      "url": "https://to.indeed.com/aaf76fwnmk4g"
+    },
+    {
+      "titulo": "Pasante Legal de Tiempo Completo",
+      "empresa": "Correa Abogados",
+      "ubicacion": "Miguel Hidalgo, CDMX",
+      "habilidades_tecnicas": [
+        "Asesoría jurídica"
+      ],
+      "habilidades_blandas": [
+        "Disposición para aprender"
+      ],
+      "salario_min": null,
+      "salario_max": null,
+      "fecha_publicacion": "2026-07-31",
+      "fuente": "Indeed",
+      "url": "https://to.indeed.com/aa8kqxlg4vn7"
+    },
+    {
+      "titulo": "Personal Injury Paralegal",
+      "empresa": "Regents Remote Services",
+      "ubicacion": "Zona de Los Callejones, N. L.",
+      "habilidades_tecnicas": [
+        "Apoyo paralegal",
+        "Gestión documental"
+      ],
+      "habilidades_blandas": [
+        "Organización"
+      ],
+      "salario_min": null,
+      "salario_max": null,
+      "fecha_publicacion": "2026-07-31",
+      "fuente": "Indeed",
+      "url": "https://to.indeed.com/aa2kpyrn6yf4"
+    }
+  ],
+  "vacantes_detalle_nota": "Corrida 2026-08-17: reconciliacion de dos corridas de Etapa 1 (inicial 2026-08-10, 67 vacantes crudas sin filtro de fecha; incremental 2026-08-17, 185 vacantes netas con fecha_publicacion posterior a 2026-08-10), 252 filas crudas en total. Se aplico primero un filtro de relevancia al sector legal (se descartaron 38 vacantes cuyo titulo no era un rol legal -p.ej. 'SAP PP/DS', 'Jefe de marca', 'Ejecutivo de ventas Servicios Juridicos', 'Analista financiero de proyectos - EY', 'Cobranza Domiciliaria...No Abogados'-, luego deduplicacion (5 vacantes repetidas, mismo titulo+empresa+ubicacion normalizados) y finalmente verificacion de empresa (33 descartadas por nombre confidencial/generico -'Empresa confidencial', 'Importante empresa del sector'- que no permite confirmar existencia real; el resto se verifico contra un catalogo curado de despachos, corporativos y organismos gremiales del sector legal -empresas_confiables_legal.csv-, o por plausibilidad de nombre de empresa registrada cuando no aparecia en el catalogo, dado que no hay revisor humano secundario asignado a este sector). De las 176 vacantes verificadas, 119 (67.6%) tienen una senal real de habilidades (explicita en la fuente o inferida de un titulo especifico de practica legal); el resto recibio una habilidad generica por defecto ('Asesoria juridica' / 'Comunicacion') solo para no dejar el campo vacio, no se debe leer como dato fuerte. Salario: Adzuna reporta el monto en base ANUAL en este dataset y se normalizo dividiendo entre 12 antes de calcular mediana/percentiles; OCC ya reporta mensual. Indeed no trajo datos de salario en ninguna de las dos corridas. Se aplico un filtro de cordura (3,000-250,000 MXN mensual) para excluir valores claramente erroneos antes de calcular la mediana. La cobertura geografica excluye 16 vacantes con ubicacion generica 'Mexico' (sin estado especifico) del conteo de top_estados/estados_unicos. vacantes_detalle es una muestra de 60 filas (de 176), muestreada proporcionalmente por fuente y priorizando las vacantes mas recientes."
+}
