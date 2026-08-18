@@ -113,7 +113,7 @@ input[type=text], input[type=number]{width:100%;padding:9px 10px;border:1px soli
     </div>
     <div class="hero-cards">
       <div class="hero-card"><div class="lbl">Corrida de datos</div><div class="val" id="heroCorridaVal">—</div></div>
-      <div class="hero-card"><div class="lbl">Sectores cubiertos</div><div class="val">Automotriz · Turismo · Gestión y Administración · Ventas · Finanzas · Logística</div></div>
+      <div class="hero-card"><div class="lbl">Sectores cubiertos</div><div class="val">Automotriz · Turismo · Gestión y Administración · Ventas · Finanzas · Logística · Legal</div></div>
     </div>
   </div>
 </header>
@@ -141,7 +141,7 @@ input[type=text], input[type=number]{width:100%;padding:9px 10px;border:1px soli
       </div>
       <div class="cat-card cat-card-static">
         <h3>Metodología</h3>
-        <p>Vacantes extraídas de Adzuna, Indeed y OCC, y empresas verificadas contra el padrón DENUE. Corrida de referencia: <span id="metaFechaTexto">—</span>, sectores Automotriz, Turismo, Gestión y Administración, Ventas, Finanzas y Logística.</p>
+        <p>Vacantes extraídas de Adzuna, Indeed y OCC, y empresas verificadas contra el padrón DENUE. Corrida de referencia: <span id="metaFechaTexto">—</span>, sectores Automotriz, Turismo, Gestión y Administración, Ventas, Finanzas, Logística y Legal.</p>
       </div>
     </div>
   </section>
@@ -153,7 +153,7 @@ input[type=text], input[type=number]{width:100%;padding:9px 10px;border:1px soli
       <label>Sector de interés</label>
       <select id="sectorSelect">
         <option value="automotriz">Automotriz</option>
-        <option value="turismo">Turismo</option><option value="gestion">Gestión y Administración</option><option value="ventas">Ventas</option><option value="finanzas">Finanzas</option><option value="logistica">Logística</option>
+        <option value="turismo">Turismo</option><option value="gestion">Gestión y Administración</option><option value="ventas">Ventas</option><option value="finanzas">Finanzas</option><option value="logistica">Logística</option><option value="legal">Legal</option>
       </select>
 
       <label>Archivo (PDF, DOCX o TXT)</label>
@@ -230,7 +230,7 @@ input[type=text], input[type=number]{width:100%;padding:9px 10px;border:1px soli
       <div class="note">KPIs de mercado laboral (no de operación del pipeline) pensados para orientar a alguien que sube su CV: qué se pide, quién contrata, dónde y a qué sueldo. Datos reales de <span id="dashFechaNote">la corrida más reciente</span> del pipeline — esta página se actualiza sola cada semana con los datos frescos de Drive.</div>
       <div class="pill-toggle">
         <button id="pill-automotriz" class="active" onclick="cambiarSectorDash('automotriz')">Automotriz</button>
-        <button id="pill-turismo" onclick="cambiarSectorDash('turismo')">Turismo</button><button id="pill-gestion" onclick="cambiarSectorDash('gestion')">Gestión y Administración</button><button id="pill-ventas" onclick="cambiarSectorDash('ventas')">Ventas</button><button id="pill-finanzas" onclick="cambiarSectorDash('finanzas')">Finanzas</button><button id="pill-logistica" onclick="cambiarSectorDash('logistica')">Logística</button>
+        <button id="pill-turismo" onclick="cambiarSectorDash('turismo')">Turismo</button><button id="pill-gestion" onclick="cambiarSectorDash('gestion')">Gestión y Administración</button><button id="pill-ventas" onclick="cambiarSectorDash('ventas')">Ventas</button><button id="pill-finanzas" onclick="cambiarSectorDash('finanzas')">Finanzas</button><button id="pill-logistica" onclick="cambiarSectorDash('logistica')">Logística</button><button id="pill-legal" onclick="cambiarSectorDash('legal')">Legal</button>
       </div>
 
       <div class="statgrid" id="statgrid"></div>
