@@ -273,9 +273,11 @@ input[type=text], input[type=number]{width:100%;padding:9px 10px;border:1px soli
 </main>
 
 <script>
-/* ===================== DATOS (cargados en vivo desde sector_data.json) =====================
-   sector_data.json vive en el mismo repositorio y se regenera cada semana desde Drive
-   por una tarea programada — esta página NUNCA trae los datos hardcodeados. */
+/* ===================== DATOS (cargados en vivo desde manifest.json + data/sector_<key>.json) =====================
+   manifest.json vive en el mismo repositorio y se regenera cada semana desde Drive por una tarea
+   programada — esta página NUNCA trae los datos hardcodeados. Desde 2026-08-17 los datos completos de
+   cada sector viven en archivos separados (data/sector_<key>.json) que se cargan bajo demanda (lazy),
+   en vez de un solo sector_data.json gigante que había que descargar entero en cada visita. */
 let DATA = null;
 let COURSES = null;
 
@@ -295,12 +297,22 @@ function pintarMeta(){
   document.getElementById('dashFechaNote').textContent = `la corrida del ${fecha}`;
 }
 
+/* Carga bajo demanda de un sector individual, con caché en memoria para no volver a pedirlo. */
+async function obtenerSector(key){
+  if(!DATA.sectores[key]){
+    const resp = await fetch('data/sector_' + key + '.json', {cache: 'no-store'});
+    if(!resp.ok) throw new Error('No se pudo cargar el sector ' + key + ' (HTTP ' + resp.status + ')');
+    DATA.sectores[key] = await resp.json();
+  }
+  return DATA.sectores[key];
+}
+
 async function cargarDatos(){
   try{
-    const resp = await fetch('sector_data.json', {cache: 'no-store'});
+    const resp = await fetch('manifest.json', {cache: 'no-store'});
     if(!resp.ok) throw new Error('HTTP ' + resp.status);
     const json = await resp.json();
-    DATA = json.DATA;
+    DATA = { meta: json.meta, sectorList: json.sectores, sectores: {} };
     COURSES = json.COURSES;
     pintarMeta();
     document.getElementById('nav-cv').disabled = false;
@@ -310,7 +322,7 @@ async function cargarDatos(){
   }catch(err){
     document.body.classList.add('data-error');
     document.getElementById('loadingOverlay').classList.add('hidden');
-    console.error('No se pudo cargar sector_data.json', err);
+    console.error('No se pudo cargar manifest.json', err);
   }
 }
 cargarDatos();
@@ -444,10 +456,17 @@ async function analizarCV(){
     return;
   }
   const textoNorm = normalizar(cvTextoRaw);
-  const sector = DATA.sectores[sectorKey];
+  const btn = document.getElementById('btnAnalizarCV');
+  let sector;
+  try{
+    sector = await obtenerSector(sectorKey);
+  }catch(err){
+    alert('No se pudieron cargar los datos de este sector en este momento. Intenta de nuevo en unos minutos.');
+    console.error(err);
+    return;
+  }
   const todas = [...sector.habilidades_tecnicas.map(h=>({...h,tipo:'técnica'})), ...sector.habilidades_blandas.map(h=>({...h,tipo:'blanda'}))];
 
-  const btn = document.getElementById('btnAnalizarCV');
   let matched, missing, origen;
 
   if(CV_ANALYSIS_ENDPOINT){
@@ -612,9 +631,8 @@ const NIVEL_LABEL = {entrada:'Entrada / Becario', junior:'Junior', medio:'Medio'
 function initFiltroSectorChips(){
   const cont = document.getElementById('filtroSectorChips');
   if(!cont || !DATA || cont.dataset.listo) return;
-  const sectores = Object.keys(DATA.sectores);
   const btns = ['<button type="button" class="active" data-sector="todos">Todos los sectores</button>']
-    .concat(sectores.map(k => '<button type="button" data-sector="' + k + '">' + DATA.sectores[k].nombre + '</button>'));
+    .concat(DATA.sectorList.map(s => '<button type="button" data-sector="' + s.key + '">' + s.nombre + '</button>'));
   cont.innerHTML = btns.join('');
   cont.dataset.listo = '1';
   cont.querySelectorAll('button').forEach(b=>{
@@ -626,11 +644,12 @@ function initFiltroSectorChips(){
   });
 }
 
-function poolVacantesFiltrado(){
-  const sectoresAConsiderar = filtroSectorActivo === 'todos' ? Object.keys(DATA.sectores) : [filtroSectorActivo];
-  const porSector = sectoresAConsiderar.map(key=>{
-    const sec = DATA.sectores[key];
-    return (sec ? (sec.vacantes_detalle||[]) : []).map(v=>({...v, _sectorKey: key, _sectorNombre: sec.nombre}));
+async function poolVacantesFiltrado(){
+  const sectoresAConsiderar = filtroSectorActivo === 'todos' ? DATA.sectorList.map(s=>s.key) : [filtroSectorActivo];
+  const secsResueltos = await Promise.all(sectoresAConsiderar.map(key => obtenerSector(key).catch(()=>null)));
+  const porSector = sectoresAConsiderar.map((key,idx)=>{
+    const sec = secsResueltos[idx];
+    return (sec ? (sec.vacantes_detalle||[]) : []).map(v=>({...v, _sectorKey: key, _sectorNombre: sec ? sec.nombre : key}));
   });
   let pool = [];
   let i = 0, hayMas = true;
@@ -752,7 +771,7 @@ async function renderEmpleos(){
   initFiltroSectorChips();
   const {textoNorm, cvTextoRaw} = ultimoReporte;
 
-  const pool = poolVacantesFiltrado();
+  const pool = await poolVacantesFiltrado();
 
   if(!pool.length){
     empleosMostrados = [];
@@ -827,17 +846,25 @@ async function renderEmpleos(){
 let sectorDashActual = 'automotriz';
 let charts = {};
 
-function cambiarSectorDash(key){
+async function cambiarSectorDash(key){
   sectorDashActual = key;
-  Object.keys(DATA.sectores).forEach(function(k){
-    var pill = document.getElementById('pill-' + k);
-    if(pill) pill.classList.toggle('active', key === k);
+  DATA.sectorList.forEach(function(s){
+    var pill = document.getElementById('pill-' + s.key);
+    if(pill) pill.classList.toggle('active', key === s.key);
   });
-  renderDashboard();
+  await renderDashboard();
 }
 
-function renderDashboard(){
-  const sector = DATA.sectores[sectorDashActual];
+async function renderDashboard(){
+  document.getElementById('statgrid').innerHTML = '<p class="note">Cargando datos del sector…</p>';
+  let sector;
+  try{
+    sector = await obtenerSector(sectorDashActual);
+  }catch(err){
+    document.getElementById('statgrid').innerHTML = '<p class="note">No se pudieron cargar los datos de este sector. Intenta de nuevo en unos minutos.</p>';
+    console.error(err);
+    return;
+  }
 
   document.getElementById('statgrid').innerHTML = `
     <div class="stat"><div class="num">${sector.vacantes_verificadas}</div><div class="lbl">Vacantes verificadas</div></div>
