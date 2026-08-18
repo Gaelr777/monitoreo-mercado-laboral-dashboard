@@ -1,0 +1,1265 @@
+{
+  "nombre": "Logística",
+  "vacantes_verificadas": 169,
+  "vacantes_descartadas": 5,
+  "vacantes_con_habilidades": 165,
+  "pct_con_habilidades": 97.6,
+  "fuentes": {
+    "Adzuna": 46,
+    "OCC": 96,
+    "Indeed": 27
+  },
+  "categorias_puesto": [
+    {
+      "categoria": "Gerencia/Jefatura/Dirección de logística y almacén",
+      "vacantes": 31,
+      "pct": 18.3
+    },
+    {
+      "categoria": "Mantenimiento de flota",
+      "vacantes": 2,
+      "pct": 1.2
+    },
+    {
+      "categoria": "Otro",
+      "vacantes": 7,
+      "pct": 4.1
+    },
+    {
+      "categoria": "Comercio exterior, aduanas e importación/exportación",
+      "vacantes": 12,
+      "pct": 7.1
+    },
+    {
+      "categoria": "Almacén, CEDIS y manejo de materiales",
+      "vacantes": 19,
+      "pct": 11.2
+    },
+    {
+      "categoria": "Transporte, reparto y distribución",
+      "vacantes": 6,
+      "pct": 3.6
+    },
+    {
+      "categoria": "Ventas y comercial de servicios logísticos",
+      "vacantes": 11,
+      "pct": 6.5
+    },
+    {
+      "categoria": "Practicante/Becario",
+      "vacantes": 7,
+      "pct": 4.1
+    },
+    {
+      "categoria": "Administración y soporte administrativo",
+      "vacantes": 7,
+      "pct": 4.1
+    },
+    {
+      "categoria": "Coordinación y operación logística",
+      "vacantes": 40,
+      "pct": 23.7
+    },
+    {
+      "categoria": "Analista, planeación, compras y supply chain",
+      "vacantes": 27,
+      "pct": 16.0
+    }
+  ],
+  "habilidades_tecnicas": [
+    {
+      "skill": "Coordinación de operaciones logísticas",
+      "menciones": 32
+    },
+    {
+      "skill": "Gestión de almacén y CEDIS",
+      "menciones": 28
+    },
+    {
+      "skill": "Gestión de transporte y distribución de flota",
+      "menciones": 21
+    },
+    {
+      "skill": "Análisis y planeación de supply chain",
+      "menciones": 15
+    },
+    {
+      "skill": "Gestión y dirección de operaciones logísticas",
+      "menciones": 13
+    },
+    {
+      "skill": "Comercio exterior y trámites aduanales",
+      "menciones": 8
+    },
+    {
+      "skill": "Ventas y desarrollo comercial de servicios logísticos",
+      "menciones": 7
+    },
+    {
+      "skill": "Apoyo operativo en logística (nivel entrada)",
+      "menciones": 6
+    },
+    {
+      "skill": "Importación y exportación",
+      "menciones": 6
+    },
+    {
+      "skill": "Gestión de compras y abastecimiento",
+      "menciones": 4
+    },
+    {
+      "skill": "Planeación logística y de rutas",
+      "menciones": 4
+    },
+    {
+      "skill": "Monitoreo y rastreo GPS de unidades",
+      "menciones": 4
+    }
+  ],
+  "habilidades_blandas": [
+    {
+      "skill": "Trabajo en equipo",
+      "menciones": 64
+    },
+    {
+      "skill": "Liderazgo y gestión de equipos",
+      "menciones": 46
+    },
+    {
+      "skill": "Trabajo en equipo y organización",
+      "menciones": 16
+    },
+    {
+      "skill": "Coordinación y organización",
+      "menciones": 14
+    },
+    {
+      "skill": "Negociación y orientación a resultados",
+      "menciones": 14
+    },
+    {
+      "skill": "Análisis y resolución de problemas",
+      "menciones": 11
+    },
+    {
+      "skill": "Capacidad de aprendizaje y adaptabilidad",
+      "menciones": 6
+    },
+    {
+      "skill": "Atención al cliente",
+      "menciones": 2
+    }
+  ],
+  "top_empresas": [
+    {
+      "empresa": "Oñate Willy y Cia. S.C.",
+      "vacantes": 5
+    },
+    {
+      "empresa": "Adecco",
+      "vacantes": 3
+    },
+    {
+      "empresa": "El Palacio de Hierro",
+      "vacantes": 2
+    },
+    {
+      "empresa": "Estafeta Mexicana",
+      "vacantes": 2
+    },
+    {
+      "empresa": "Promex Logistics S. de R.L. de C.V.",
+      "vacantes": 2
+    },
+    {
+      "empresa": "ASPAR CONSULTING GROUP",
+      "vacantes": 2
+    },
+    {
+      "empresa": "NUEVA WAL MART DE MEXICO S DE RL DE CV",
+      "vacantes": 2
+    },
+    {
+      "empresa": "Tradely",
+      "vacantes": 2
+    },
+    {
+      "empresa": "SODIMAC",
+      "vacantes": 2
+    },
+    {
+      "empresa": "SERVICIOS FULTRA SA DE CV",
+      "vacantes": 2
+    },
+    {
+      "empresa": "Aralo Express SA de CV",
+      "vacantes": 2
+    },
+    {
+      "empresa": "Grupo DEACERO",
+      "vacantes": 1
+    },
+    {
+      "empresa": "Transportes Bera",
+      "vacantes": 1
+    },
+    {
+      "empresa": "Liebherr Group",
+      "vacantes": 1
+    },
+    {
+      "empresa": "Coppel",
+      "vacantes": 1
+    }
+  ],
+  "cobertura_geografica": {
+    "top_estados": [
+      {
+        "estado": "Estado de México",
+        "vacantes": 37
+      },
+      {
+        "estado": "Nuevo León",
+        "vacantes": 35
+      },
+      {
+        "estado": "Ciudad de México",
+        "vacantes": 29
+      },
+      {
+        "estado": "Jalisco",
+        "vacantes": 19
+      },
+      {
+        "estado": "Guanajuato",
+        "vacantes": 9
+      },
+      {
+        "estado": "Baja California",
+        "vacantes": 7
+      },
+      {
+        "estado": "Puebla",
+        "vacantes": 4
+      },
+      {
+        "estado": "Veracruz",
+        "vacantes": 4
+      },
+      {
+        "estado": "Morelos",
+        "vacantes": 3
+      }
+    ],
+    "estados_unicos": 23
+  },
+  "salario": {
+    "vacantes_con_dato": 81,
+    "pct_con_dato": 47.9,
+    "mediana_mensual_mxn": 17500,
+    "p25_mensual_mxn": 13770,
+    "p75_mensual_mxn": 22500
+  },
+  "evolucion_semanal": [
+    {
+      "semana": "29 Jun",
+      "vacantes": 1
+    },
+    {
+      "semana": "06 Jul",
+      "vacantes": 1
+    },
+    {
+      "semana": "13 Jul",
+      "vacantes": 2
+    },
+    {
+      "semana": "20 Jul",
+      "vacantes": 4
+    },
+    {
+      "semana": "27 Jul",
+      "vacantes": 17
+    },
+    {
+      "semana": "03 Ago",
+      "vacantes": 14
+    },
+    {
+      "semana": "10 Ago",
+      "vacantes": 93
+    },
+    {
+      "semana": "17 Ago",
+      "vacantes": 27
+    }
+  ],
+  "total_empresas_unicas": 126,
+  "ultima_semana_vacantes": 27,
+  "vacantes_detalle": [
+    {
+      "titulo": "Especialista Logística",
+      "empresa": "SANY Group",
+      "ubicacion": "México",
+      "habilidades_tecnicas": [
+        "Análisis y planeación de supply chain"
+      ],
+      "habilidades_blandas": [
+        "Trabajo en equipo"
+      ],
+      "salario_min": null,
+      "salario_max": null,
+      "fecha_publicacion": "2026-08-16",
+      "fuente": "Adzuna",
+      "url": "https://www.adzuna.com.mx/details/5844240908"
+    },
+    {
+      "titulo": "Jefe de logística y transporte - nivel nacional",
+      "empresa": "Talento Divergente",
+      "ubicacion": "Ciudad de México, México",
+      "habilidades_tecnicas": [
+        "Gestión de transporte y distribución de flota"
+      ],
+      "habilidades_blandas": [
+        "Liderazgo y gestión de equipos"
+      ],
+      "salario_min": null,
+      "salario_max": null,
+      "fecha_publicacion": "2026-08-16",
+      "fuente": "Adzuna",
+      "url": "https://www.adzuna.com.mx/details/5844240700"
+    },
+    {
+      "titulo": "Manager de Transporte y Distribución Logistica",
+      "empresa": "Empresa confidencial",
+      "ubicacion": "México",
+      "habilidades_tecnicas": [
+        "Gestión de transporte y distribución de flota"
+      ],
+      "habilidades_blandas": [
+        "Trabajo en equipo"
+      ],
+      "salario_min": null,
+      "salario_max": null,
+      "fecha_publicacion": "2026-08-15",
+      "fuente": "Adzuna",
+      "url": "https://www.adzuna.com.mx/details/5843062986"
+    },
+    {
+      "titulo": "Practicante de Logistica",
+      "empresa": "Grupo DEACERO",
+      "ubicacion": "San Pedro Garza García, Nuevo León",
+      "habilidades_tecnicas": [
+        "Apoyo operativo en logística (nivel entrada)"
+      ],
+      "habilidades_blandas": [
+        "Capacidad de aprendizaje y adaptabilidad"
+      ],
+      "salario_min": null,
+      "salario_max": null,
+      "fecha_publicacion": "2026-08-14",
+      "fuente": "Adzuna",
+      "url": "https://www.adzuna.com.mx/details/5841832396"
+    },
+    {
+      "titulo": "Ejecutivo Comercial Senior - Servicios Logísticos Internacionales",
+      "empresa": "FLX Logistics Solutions",
+      "ubicacion": "San Pedro Garza García, Nuevo León",
+      "habilidades_tecnicas": [
+        "Ventas y desarrollo comercial de servicios logísticos"
+      ],
+      "habilidades_blandas": [
+        "Negociación y orientación a resultados"
+      ],
+      "salario_min": null,
+      "salario_max": null,
+      "fecha_publicacion": "2026-08-14",
+      "fuente": "Adzuna",
+      "url": "https://www.adzuna.com.mx/details/5841832167"
+    },
+    {
+      "titulo": "Gerente de Logística",
+      "empresa": "El Palacio de Hierro",
+      "ubicacion": "Santa Catarina, Nuevo León",
+      "habilidades_tecnicas": [
+        "Gestión y dirección de operaciones logísticas"
+      ],
+      "habilidades_blandas": [
+        "Liderazgo y gestión de equipos"
+      ],
+      "salario_min": null,
+      "salario_max": null,
+      "fecha_publicacion": "2026-08-13",
+      "fuente": "Adzuna",
+      "url": "https://www.adzuna.com.mx/details/5840286200"
+    },
+    {
+      "titulo": "Gerente de Seguridad CEDIS y Logística",
+      "empresa": "Alsea",
+      "ubicacion": "Tlalnepantla, Morelos",
+      "habilidades_tecnicas": [
+        "Gestión de almacén y CEDIS",
+        "Seguridad patrimonial y operativa"
+      ],
+      "habilidades_blandas": [
+        "Liderazgo y gestión de equipos"
+      ],
+      "salario_min": null,
+      "salario_max": null,
+      "fecha_publicacion": "2026-08-13",
+      "fuente": "Adzuna",
+      "url": "https://www.adzuna.com.mx/details/5840285739"
+    },
+    {
+      "titulo": "Gerente de Operaciones Regional Noreste - Logistica",
+      "empresa": "Estafeta Mexicana",
+      "ubicacion": "Monterrey, Nuevo León",
+      "habilidades_tecnicas": [
+        "Gestión y dirección de operaciones logísticas"
+      ],
+      "habilidades_blandas": [
+        "Liderazgo y gestión de equipos"
+      ],
+      "salario_min": null,
+      "salario_max": null,
+      "fecha_publicacion": "2026-08-13",
+      "fuente": "Adzuna",
+      "url": "https://www.adzuna.com.mx/details/5840286098"
+    },
+    {
+      "titulo": "Coordinador de logística",
+      "empresa": "JIMENEZ TRUCKING",
+      "ubicacion": "Jiutepec, Morelos",
+      "habilidades_tecnicas": [
+        "Coordinación de operaciones logísticas"
+      ],
+      "habilidades_blandas": [
+        "Coordinación y organización"
+      ],
+      "salario_min": null,
+      "salario_max": null,
+      "fecha_publicacion": "2026-08-13",
+      "fuente": "Adzuna",
+      "url": "https://www.adzuna.com.mx/details/5840286490"
+    },
+    {
+      "titulo": "Gerente de Logística",
+      "empresa": "El Palacio de Hierro",
+      "ubicacion": "Zapopan, Jalisco",
+      "habilidades_tecnicas": [
+        "Gestión y dirección de operaciones logísticas"
+      ],
+      "habilidades_blandas": [
+        "Liderazgo y gestión de equipos"
+      ],
+      "salario_min": null,
+      "salario_max": null,
+      "fecha_publicacion": "2026-08-13",
+      "fuente": "Adzuna",
+      "url": "https://www.adzuna.com.mx/details/5840361579"
+    },
+    {
+      "titulo": "Coordinador de logística y embarques",
+      "empresa": "Empresa confidencial",
+      "ubicacion": "Tlalnepantla de Baz, Estado de México",
+      "habilidades_tecnicas": [
+        "Gestión de transporte y distribución de flota"
+      ],
+      "habilidades_blandas": [
+        "Coordinación y organización"
+      ],
+      "salario_min": 14000.0,
+      "salario_max": 16000.0,
+      "fecha_publicacion": "2026-08-17",
+      "fuente": "OCC",
+      "url": "https://www.occ.com.mx/empleo/oferta/21288527-coordinador-de-logistica-y-embarques/"
+    },
+    {
+      "titulo": "Agente de Operaciones Logistica",
+      "empresa": "Empresa confidencial",
+      "ubicacion": "Hermosillo, Sonora",
+      "habilidades_tecnicas": [
+        "Coordinación de operaciones logísticas"
+      ],
+      "habilidades_blandas": [
+        "Trabajo en equipo"
+      ],
+      "salario_min": null,
+      "salario_max": null,
+      "fecha_publicacion": "2026-08-17",
+      "fuente": "OCC",
+      "url": "https://www.occ.com.mx/empleo/oferta/21289361-agente-de-operaciones-logistica/"
+    },
+    {
+      "titulo": "Gestor logístico",
+      "empresa": "Grupo Calidra",
+      "ubicacion": "San Pedro Garza García, Nuevo León",
+      "habilidades_tecnicas": [
+        "Coordinación de operaciones logísticas"
+      ],
+      "habilidades_blandas": [
+        "Trabajo en equipo"
+      ],
+      "salario_min": null,
+      "salario_max": null,
+      "fecha_publicacion": "2026-08-17",
+      "fuente": "OCC",
+      "url": "https://www.occ.com.mx/empleo/oferta/21297417-gestor-logistico/"
+    },
+    {
+      "titulo": "SUPERVISOR LOGISTICO",
+      "empresa": "Estafeta Mexicana",
+      "ubicacion": "Morelia, Michoacán",
+      "habilidades_tecnicas": [
+        "Coordinación de operaciones logísticas"
+      ],
+      "habilidades_blandas": [
+        "Liderazgo y gestión de equipos"
+      ],
+      "salario_min": 20000.0,
+      "salario_max": 22000.0,
+      "fecha_publicacion": "2026-08-17",
+      "fuente": "OCC",
+      "url": "https://www.occ.com.mx/empleo/oferta/21298457-supervisor-logistico/"
+    },
+    {
+      "titulo": "Jefe de almacén y logística",
+      "empresa": "LABORATORIOS SANFER",
+      "ubicacion": "Toluca, Estado de México",
+      "habilidades_tecnicas": [
+        "Gestión de almacén y CEDIS"
+      ],
+      "habilidades_blandas": [
+        "Liderazgo y gestión de equipos"
+      ],
+      "salario_min": null,
+      "salario_max": null,
+      "fecha_publicacion": "2026-08-17",
+      "fuente": "OCC",
+      "url": "https://www.occ.com.mx/empleo/oferta/21298506-jefe-de-almacen-y-logistica/"
+    },
+    {
+      "titulo": "ESPECIALISTA DE PRICING COMERCIO EXTERIOR Y LOGÍSTICA INTEGRAL",
+      "empresa": "UNLIMITED LOGISTIC MEXICO S.A. DE C.V",
+      "ubicacion": "Ciudad de México",
+      "habilidades_tecnicas": [
+        "Comercio exterior y trámites aduanales"
+      ],
+      "habilidades_blandas": [
+        "Trabajo en equipo"
+      ],
+      "salario_min": 15000.0,
+      "salario_max": 17000.0,
+      "fecha_publicacion": "2026-08-17",
+      "fuente": "OCC",
+      "url": "https://www.occ.com.mx/empleo/oferta/21288521-especialista-de-pricing-comercio-exterior-y-logistica-integral/"
+    },
+    {
+      "titulo": "Ejecutivo de Operaciones Logísticas | Forwarder",
+      "empresa": "SENATOR INTERNACIONAL",
+      "ubicacion": "San Pedro Garza García, Nuevo León",
+      "habilidades_tecnicas": [
+        "Freight forwarding y comercio internacional"
+      ],
+      "habilidades_blandas": [
+        "Trabajo en equipo"
+      ],
+      "salario_min": 15000.0,
+      "salario_max": 20000.0,
+      "fecha_publicacion": "2026-08-17",
+      "fuente": "OCC",
+      "url": "https://www.occ.com.mx/empleo/oferta/21288526-ejecutivo-de-operaciones-logisticas-forwarder/"
+    },
+    {
+      "titulo": "Auxiliar de operaciones y logística",
+      "empresa": "multimodal solutions cargo",
+      "ubicacion": "Guanajuato",
+      "habilidades_tecnicas": [
+        "Coordinación de operaciones logísticas"
+      ],
+      "habilidades_blandas": [
+        "Trabajo en equipo y organización"
+      ],
+      "salario_min": 17000.0,
+      "salario_max": 18000.0,
+      "fecha_publicacion": "2026-08-17",
+      "fuente": "OCC",
+      "url": "https://www.occ.com.mx/empleo/oferta/21298327-auxiliar-de-operaciones-y-logistica/"
+    },
+    {
+      "titulo": "Jefe de embarques y logística",
+      "empresa": "TIENDAS TRES B",
+      "ubicacion": "Tepotzotlán, Estado de México",
+      "habilidades_tecnicas": [
+        "Gestión de transporte y distribución de flota"
+      ],
+      "habilidades_blandas": [
+        "Liderazgo y gestión de equipos"
+      ],
+      "salario_min": null,
+      "salario_max": null,
+      "fecha_publicacion": "2026-08-17",
+      "fuente": "OCC",
+      "url": "https://www.occ.com.mx/empleo/oferta/21298111-jefe-de-embarques-y-logistica/"
+    },
+    {
+      "titulo": "Especialista en compras y logística",
+      "empresa": "BAUEN studio proyecto",
+      "ubicacion": "Guadalajara, Jalisco",
+      "habilidades_tecnicas": [
+        "Gestión de compras y abastecimiento"
+      ],
+      "habilidades_blandas": [
+        "Trabajo en equipo"
+      ],
+      "salario_min": 20000.0,
+      "salario_max": 20000.0,
+      "fecha_publicacion": "2026-08-17",
+      "fuente": "OCC",
+      "url": "https://www.occ.com.mx/empleo/oferta/21298322-especialista-en-compras-y-logistica/"
+    },
+    {
+      "titulo": "Ejecutivo de Comercio exterior y logística",
+      "empresa": "H-J EAGLE INTERNATIONAL MEXICO",
+      "ubicacion": "Guanajuato",
+      "habilidades_tecnicas": [
+        "Comercio exterior y trámites aduanales"
+      ],
+      "habilidades_blandas": [
+        "Trabajo en equipo"
+      ],
+      "salario_min": null,
+      "salario_max": null,
+      "fecha_publicacion": "2026-08-17",
+      "fuente": "OCC",
+      "url": "https://www.occ.com.mx/empleo/oferta/21287551-ejecutivo-de-comercio-exterior-y-logistica/"
+    },
+    {
+      "titulo": "Practicante Profesional de Logística y Operaciones| Ing. Industrial, Lic. Administraciión",
+      "empresa": "CEMEX CENTRAL , S.A. DE C.V.",
+      "ubicacion": "Coatzacoalcos, Veracruz",
+      "habilidades_tecnicas": [
+        "Apoyo operativo en logística (nivel entrada)"
+      ],
+      "habilidades_blandas": [
+        "Capacidad de aprendizaje y adaptabilidad"
+      ],
+      "salario_min": 8500.0,
+      "salario_max": 8900.0,
+      "fecha_publicacion": "2026-08-17",
+      "fuente": "OCC",
+      "url": "https://www.occ.com.mx/empleo/oferta/21295021-practicante-profesional-de-logistica-y-operaciones-ing-industrial-lic-administraciion/"
+    },
+    {
+      "titulo": "SUPERVISOR DE EMBARQUES, ALMACÉN Y LOGÍSTICA",
+      "empresa": "FABRICACION DE SEÑALAMIENTOS HORIZONTALES Y VERTICALES",
+      "ubicacion": "San Nicolás de los Garza, Nuevo León",
+      "habilidades_tecnicas": [
+        "Gestión de almacén y CEDIS",
+        "Gestión de transporte y distribución de flota"
+      ],
+      "habilidades_blandas": [
+        "Liderazgo y gestión de equipos"
+      ],
+      "salario_min": 14000.0,
+      "salario_max": 16000.0,
+      "fecha_publicacion": "2026-08-17",
+      "fuente": "OCC",
+      "url": "https://www.occ.com.mx/empleo/oferta/21297347-supervisor-de-embarques-almacen-y-logistica/"
+    },
+    {
+      "titulo": "Especialista SR de Importaciones y Logística Internacional Sector Constructivo",
+      "empresa": "Mota-Engil Mexico, S.A. de C.V.",
+      "ubicacion": "Miguel Hidalgo, Ciudad de México",
+      "habilidades_tecnicas": [
+        "Importación y exportación"
+      ],
+      "habilidades_blandas": [
+        "Trabajo en equipo"
+      ],
+      "salario_min": null,
+      "salario_max": null,
+      "fecha_publicacion": "2026-08-17",
+      "fuente": "OCC",
+      "url": "https://www.occ.com.mx/empleo/oferta/21289127-especialista-sr-de-importaciones-y-logistica-internacional-sector-constructivo/"
+    },
+    {
+      "titulo": "Ejecutivo de Operaciones Terrestre y Marítimo",
+      "empresa": "WBL SA DE CV",
+      "ubicacion": "Apodaca, Nuevo León",
+      "habilidades_tecnicas": [
+        "Coordinación de operaciones logísticas"
+      ],
+      "habilidades_blandas": [
+        "Trabajo en equipo"
+      ],
+      "salario_min": 20000.0,
+      "salario_max": 25000.0,
+      "fecha_publicacion": "2026-08-17",
+      "fuente": "OCC",
+      "url": "https://www.occ.com.mx/empleo/oferta/21297534-ejecutivo-de-operaciones-terrestre-y-maritimo/"
+    },
+    {
+      "titulo": "Monitorista",
+      "empresa": "Empresa confidencial",
+      "ubicacion": "Apodaca, Nuevo León",
+      "habilidades_tecnicas": [
+        "Monitoreo y rastreo GPS de unidades"
+      ],
+      "habilidades_blandas": [
+        "Trabajo en equipo"
+      ],
+      "salario_min": 13500.0,
+      "salario_max": 13500.0,
+      "fecha_publicacion": "2026-08-17",
+      "fuente": "OCC",
+      "url": "https://www.occ.com.mx/empleo/oferta/21287400-monitorista/"
+    },
+    {
+      "titulo": "Vendedor sr",
+      "empresa": "LIDMAN",
+      "ubicacion": "Manzanillo, Colima",
+      "habilidades_tecnicas": [
+        "Ventas y desarrollo comercial de servicios logísticos"
+      ],
+      "habilidades_blandas": [
+        "Negociación y orientación a resultados"
+      ],
+      "salario_min": 30000.0,
+      "salario_max": 35000.0,
+      "fecha_publicacion": "2026-08-17",
+      "fuente": "OCC",
+      "url": "https://www.occ.com.mx/empleo/oferta/21297987-vendedor-sr/"
+    },
+    {
+      "titulo": "COORDINADOR OPERATIVO",
+      "empresa": "Empresa confidencial",
+      "ubicacion": "Progreso, Yucatán",
+      "habilidades_tecnicas": [
+        "Coordinación de operaciones logísticas"
+      ],
+      "habilidades_blandas": [
+        "Coordinación y organización"
+      ],
+      "salario_min": 14000.0,
+      "salario_max": 15000.0,
+      "fecha_publicacion": "2026-08-17",
+      "fuente": "OCC",
+      "url": "https://www.occ.com.mx/empleo/oferta/21287915-coordinador-operativo/"
+    },
+    {
+      "titulo": "Asistente de distribución",
+      "empresa": "Asesores de Reclutamiento MX",
+      "ubicacion": "Acambay de Ruíz Castañeda, Estado de México",
+      "habilidades_tecnicas": [
+        "Gestión de transporte y distribución de flota"
+      ],
+      "habilidades_blandas": [
+        "Trabajo en equipo y organización"
+      ],
+      "salario_min": 10000.0,
+      "salario_max": 13000.0,
+      "fecha_publicacion": "2026-08-17",
+      "fuente": "OCC",
+      "url": "https://www.occ.com.mx/empleo/oferta/21298365-asistente-de-distribucion/"
+    },
+    {
+      "titulo": "REPARTIDOR",
+      "empresa": "Empresa confidencial",
+      "ubicacion": "Puebla, Puebla",
+      "habilidades_tecnicas": [
+        "Gestión de transporte y distribución"
+      ],
+      "habilidades_blandas": [
+        "Trabajo en equipo"
+      ],
+      "salario_min": null,
+      "salario_max": null,
+      "fecha_publicacion": "2026-08-17",
+      "fuente": "OCC",
+      "url": "https://www.occ.com.mx/empleo/oferta/21298061-repartidor/"
+    },
+    {
+      "titulo": "Ejecutivo de Operaciones Aereas – Afterhours | Home Office",
+      "empresa": "Empresa confidencial",
+      "ubicacion": "Querétaro, Querétaro",
+      "habilidades_tecnicas": [
+        "Coordinación de operaciones logísticas"
+      ],
+      "habilidades_blandas": [
+        "Trabajo en equipo"
+      ],
+      "salario_min": 19000.0,
+      "salario_max": 24000.0,
+      "fecha_publicacion": "2026-08-17",
+      "fuente": "OCC",
+      "url": "https://www.occ.com.mx/empleo/oferta/21287395-ejecutivo-de-operaciones-aereas-afterhours-home-office/"
+    },
+    {
+      "titulo": "Jefe de almacén",
+      "empresa": "Empresa confidencial",
+      "ubicacion": "Cosamaloapan de Carpio, Veracruz",
+      "habilidades_tecnicas": [
+        "Gestión de almacén y CEDIS"
+      ],
+      "habilidades_blandas": [
+        "Liderazgo y gestión de equipos"
+      ],
+      "salario_min": 16000.0,
+      "salario_max": 18000.0,
+      "fecha_publicacion": "2026-08-17",
+      "fuente": "OCC",
+      "url": "https://www.occ.com.mx/empleo/oferta/21294499-jefe-de-almacen/"
+    },
+    {
+      "titulo": "Service Agent – FedEx",
+      "empresa": "Adecco",
+      "ubicacion": "San Juan Bautista Tuxtepec, Oaxaca",
+      "habilidades_tecnicas": [
+        "Logística y operaciones (general)"
+      ],
+      "habilidades_blandas": [
+        "Trabajo en equipo"
+      ],
+      "salario_min": 13770.0,
+      "salario_max": 13770.0,
+      "fecha_publicacion": "2026-08-17",
+      "fuente": "OCC",
+      "url": "https://www.occ.com.mx/empleo/oferta/21288726-service-agent-fedex/"
+    },
+    {
+      "titulo": "Supervisor de operaciones",
+      "empresa": "EXTREME MOBILITY",
+      "ubicacion": "San Nicolás de los Garza, Nuevo León",
+      "habilidades_tecnicas": [
+        "Coordinación de operaciones logísticas"
+      ],
+      "habilidades_blandas": [
+        "Liderazgo y gestión de equipos"
+      ],
+      "salario_min": 23000.0,
+      "salario_max": 24960.0,
+      "fecha_publicacion": "2026-08-17",
+      "fuente": "OCC",
+      "url": "https://www.occ.com.mx/empleo/oferta/21298400-supervisor-de-operaciones/"
+    },
+    {
+      "titulo": "Facturacion y Cobranza",
+      "empresa": "Aralo Express SA de CV",
+      "ubicacion": "Salamanca, Guanajuato",
+      "habilidades_tecnicas": [
+        "Administración de cuentas por pagar y facturación"
+      ],
+      "habilidades_blandas": [
+        "Trabajo en equipo"
+      ],
+      "salario_min": 18000.0,
+      "salario_max": 20000.0,
+      "fecha_publicacion": "2026-08-17",
+      "fuente": "OCC",
+      "url": "https://www.occ.com.mx/empleo/oferta/21298053-facturacion-y-cobranza/"
+    },
+    {
+      "titulo": "Operations executive (Import/Export)",
+      "empresa": "Melton Truck Lines",
+      "ubicacion": "Monterrey, Nuevo León",
+      "habilidades_tecnicas": [
+        "Coordinación de operaciones logísticas"
+      ],
+      "habilidades_blandas": [
+        "Trabajo en equipo"
+      ],
+      "salario_min": 27000.0,
+      "salario_max": 28000.0,
+      "fecha_publicacion": "2026-08-17",
+      "fuente": "OCC",
+      "url": "https://www.occ.com.mx/empleo/oferta/21297575-operations-executive-import-export/"
+    },
+    {
+      "titulo": "Planeador logístico",
+      "empresa": "Adecco",
+      "ubicacion": "Cuautitlán Izcalli, Estado de México",
+      "habilidades_tecnicas": [
+        "Planeación logística y de rutas"
+      ],
+      "habilidades_blandas": [
+        "Trabajo en equipo"
+      ],
+      "salario_min": 17000.0,
+      "salario_max": 21000.0,
+      "fecha_publicacion": "2026-08-16",
+      "fuente": "OCC",
+      "url": "https://www.occ.com.mx/empleo/oferta/21297196-planeador-logistico/"
+    },
+    {
+      "titulo": "Director de Materiales y Logística (Automotriz )",
+      "empresa": "PHRAC INTERNATIONAL",
+      "ubicacion": "Aguascalientes",
+      "habilidades_tecnicas": [
+        "Gestión y dirección de operaciones logísticas"
+      ],
+      "habilidades_blandas": [
+        "Liderazgo y gestión de equipos"
+      ],
+      "salario_min": null,
+      "salario_max": null,
+      "fecha_publicacion": "2026-08-16",
+      "fuente": "OCC",
+      "url": "https://www.occ.com.mx/empleo/oferta/21297236-director-de-materiales-y-logistica-automotriz/"
+    },
+    {
+      "titulo": "Almacenista",
+      "empresa": "SERVICIOS FULTRA SA DE CV",
+      "ubicacion": "Guadalupe, Nuevo León",
+      "habilidades_tecnicas": [
+        "Gestión de almacén y CEDIS"
+      ],
+      "habilidades_blandas": [
+        "Trabajo en equipo"
+      ],
+      "salario_min": 14500.0,
+      "salario_max": 14500.0,
+      "fecha_publicacion": "2026-08-16",
+      "fuente": "OCC",
+      "url": "https://www.occ.com.mx/empleo/oferta/21293042-almacenista/"
+    },
+    {
+      "titulo": "Sales Support - Logística - Cadena de Suministro - JALISCO -BILINÜE",
+      "empresa": "PROVEEDORA DE SEGURIDAD INDUSTRIAL DEL GOLFO",
+      "ubicacion": "Tlajomulco de Zúñiga, Jalisco",
+      "habilidades_tecnicas": [
+        "Supply Chain Management"
+      ],
+      "habilidades_blandas": [
+        "Negociación y orientación a resultados"
+      ],
+      "salario_min": 14000.0,
+      "salario_max": 17000.0,
+      "fecha_publicacion": "2026-08-15",
+      "fuente": "OCC",
+      "url": "https://www.occ.com.mx/empleo/oferta/21289983-sales-support-logistica-cadena-de-suministro-jalisco-bilinue/"
+    },
+    {
+      "titulo": "Generalista Recursos Humanos",
+      "empresa": "Aralo Express SA de CV",
+      "ubicacion": "Nuevo Laredo, Tamaulipas",
+      "habilidades_tecnicas": [
+        "Reclutamiento y administración de personal"
+      ],
+      "habilidades_blandas": [
+        "Trabajo en equipo"
+      ],
+      "salario_min": 16000.0,
+      "salario_max": 18000.0,
+      "fecha_publicacion": "2026-08-15",
+      "fuente": "OCC",
+      "url": "https://www.occ.com.mx/empleo/oferta/21290581-generalista-recursos-humanos/"
+    },
+    {
+      "titulo": "Almacenista",
+      "empresa": "POLIMEROS ENVASES Y TAPAS TAPA",
+      "ubicacion": "Guadalajara, Jalisco",
+      "habilidades_tecnicas": [
+        "Gestión de almacén y CEDIS"
+      ],
+      "habilidades_blandas": [
+        "Trabajo en equipo"
+      ],
+      "salario_min": 10500.0,
+      "salario_max": 12000.0,
+      "fecha_publicacion": "2026-08-15",
+      "fuente": "OCC",
+      "url": "https://www.occ.com.mx/empleo/oferta/21296942-almacenista/"
+    },
+    {
+      "titulo": "Operador de Unidad",
+      "empresa": "MOVING ON LOGISTIC SOLUTIONS",
+      "ubicacion": "San Nicolás de los Garza, Nuevo León",
+      "habilidades_tecnicas": [
+        "Gestión de transporte y distribución de flota"
+      ],
+      "habilidades_blandas": [
+        "Trabajo en equipo"
+      ],
+      "salario_min": 13000.0,
+      "salario_max": 15000.0,
+      "fecha_publicacion": "2026-08-15",
+      "fuente": "OCC",
+      "url": "https://www.occ.com.mx/empleo/oferta/21293973-operador-de-unidad/"
+    },
+    {
+      "titulo": "Coordinador Logistico",
+      "empresa": "INGRAM MICRO MÉXICO SA DE CV",
+      "ubicacion": "Cuautitlán Izcalli, Estado de México",
+      "habilidades_tecnicas": [
+        "Coordinación de operaciones logísticas"
+      ],
+      "habilidades_blandas": [
+        "Coordinación y organización"
+      ],
+      "salario_min": 13000.0,
+      "salario_max": 14500.0,
+      "fecha_publicacion": "2026-08-14",
+      "fuente": "OCC",
+      "url": "https://www.occ.com.mx/empleo/oferta/21295467-coordinador-logistico/"
+    },
+    {
+      "titulo": "Supervisor de Despacho Logístico",
+      "empresa": "Empresa confidencial",
+      "ubicacion": "Tijuana, Baja California",
+      "habilidades_tecnicas": [
+        "Coordinación de operaciones logísticas"
+      ],
+      "habilidades_blandas": [
+        "Liderazgo y gestión de equipos"
+      ],
+      "salario_min": null,
+      "salario_max": null,
+      "fecha_publicacion": "2026-08-14",
+      "fuente": "OCC",
+      "url": "https://www.occ.com.mx/empleo/oferta/21295977-supervisor-de-despacho-logistico/"
+    },
+    {
+      "titulo": "Asesor logistico comercial",
+      "empresa": "Operadora de Servicios Paquetexpress, SA de CV.",
+      "ubicacion": "Tuxtla Gutiérrez, Chiapas",
+      "habilidades_tecnicas": [
+        "Ventas y desarrollo comercial de servicios logísticos"
+      ],
+      "habilidades_blandas": [
+        "Negociación y orientación a resultados"
+      ],
+      "salario_min": 11850.0,
+      "salario_max": 11850.0,
+      "fecha_publicacion": "2026-08-14",
+      "fuente": "OCC",
+      "url": "https://www.occ.com.mx/empleo/oferta/21295228-asesor-logistico-comercial/"
+    },
+    {
+      "titulo": "SAP Logístico PM (Plant Maintenance)",
+      "empresa": "Adecco",
+      "ubicacion": "Ciudad de México",
+      "habilidades_tecnicas": [
+        "SAP (módulo logístico)"
+      ],
+      "habilidades_blandas": [
+        "Trabajo en equipo"
+      ],
+      "salario_min": 90000.0,
+      "salario_max": 95000.0,
+      "fecha_publicacion": "2026-08-14",
+      "fuente": "OCC",
+      "url": "https://www.occ.com.mx/empleo/oferta/21295510-sap-logistico-pm-plant-maintenance/"
+    },
+    {
+      "titulo": "JEFE ALMACEN Y LOGISTICA",
+      "empresa": "TW MEXICO PLANTA PUEBLA S DE RL DE CV",
+      "ubicacion": "Apaseo el Grande, Guanajuato",
+      "habilidades_tecnicas": [
+        "Gestión de almacén y CEDIS"
+      ],
+      "habilidades_blandas": [
+        "Liderazgo y gestión de equipos"
+      ],
+      "salario_min": 22000.0,
+      "salario_max": 25000.0,
+      "fecha_publicacion": "2026-08-14",
+      "fuente": "OCC",
+      "url": "https://www.occ.com.mx/empleo/oferta/21296753-jefe-almacen-y-logistica/"
+    },
+    {
+      "titulo": "Auxiliar de distribucion y logistica",
+      "empresa": "Gas express Nieto SUC. CDMX ( DEPTO ADMÓN)",
+      "ubicacion": "Huejotzingo, Puebla",
+      "habilidades_tecnicas": [
+        "Gestión de transporte y distribución de flota"
+      ],
+      "habilidades_blandas": [
+        "Trabajo en equipo y organización"
+      ],
+      "salario_min": 9500.0,
+      "salario_max": 12840.0,
+      "fecha_publicacion": "2026-08-14",
+      "fuente": "OCC",
+      "url": "https://www.occ.com.mx/empleo/oferta/21296150-auxiliar-de-distribucion-y-logistica/"
+    },
+    {
+      "titulo": "Auxiliar de operaciones y logística",
+      "empresa": "ESPECIALISTAS PROFESIONALES DE LEON, S.A. DE C.V.",
+      "ubicacion": "Jalisco",
+      "habilidades_tecnicas": [
+        "Coordinación de operaciones logísticas"
+      ],
+      "habilidades_blandas": [
+        "Trabajo en equipo y organización"
+      ],
+      "salario_min": 14000.0,
+      "salario_max": 15000.0,
+      "fecha_publicacion": "2026-08-14",
+      "fuente": "OCC",
+      "url": "https://www.occ.com.mx/empleo/oferta/21286835-auxiliar-de-operaciones-y-logistica/"
+    },
+    {
+      "titulo": "Especialista Logística",
+      "empresa": "SANYMX EQUIPMENT & TECHNOLOGY SA DE CV",
+      "ubicacion": "Tlalnepantla de Baz, Estado de México",
+      "habilidades_tecnicas": [
+        "Análisis y planeación de supply chain"
+      ],
+      "habilidades_blandas": [
+        "Trabajo en equipo"
+      ],
+      "salario_min": 25000.0,
+      "salario_max": 30000.0,
+      "fecha_publicacion": "2026-08-14",
+      "fuente": "OCC",
+      "url": "https://www.occ.com.mx/empleo/oferta/21296249-especialista-logistica/"
+    },
+    {
+      "titulo": "Coordinador de Atracción de Talento Masivo Nacional | Retail & Logística",
+      "empresa": "ASPAR CONSULTING GROUP",
+      "ubicacion": "Cuautitlán Izcalli, Estado de México",
+      "habilidades_tecnicas": [
+        "Coordinación de operaciones logísticas"
+      ],
+      "habilidades_blandas": [
+        "Coordinación y organización"
+      ],
+      "salario_min": 25000.0,
+      "salario_max": 30000.0,
+      "fecha_publicacion": "2026-08-14",
+      "fuente": "OCC",
+      "url": "https://www.occ.com.mx/empleo/oferta/21285747-coordinador-de-atraccion-de-talento-masivo-nacional-retail-logistica/"
+    },
+    {
+      "titulo": "Logistics Developer",
+      "empresa": "HANSA MEYER GLOBAL TRANSPORT SA DE CV",
+      "ubicacion": "Benito Juárez, Ciudad de México",
+      "habilidades_tecnicas": [
+        "Coordinación de operaciones logísticas"
+      ],
+      "habilidades_blandas": [
+        "Trabajo en equipo"
+      ],
+      "salario_min": null,
+      "salario_max": null,
+      "fecha_publicacion": "2026-08-14",
+      "fuente": "OCC",
+      "url": "https://www.occ.com.mx/empleo/oferta/21286799-logistics-developer/"
+    },
+    {
+      "titulo": "Gerente Comercial Logística (Manzanillo - CDMX)",
+      "empresa": "Empresa confidencial",
+      "ubicacion": "Ciudad de México",
+      "habilidades_tecnicas": [
+        "Gestión y dirección de operaciones logísticas"
+      ],
+      "habilidades_blandas": [
+        "Liderazgo y gestión de equipos",
+        "Negociación y orientación a resultados"
+      ],
+      "salario_min": 60000.0,
+      "salario_max": 65000.0,
+      "fecha_publicacion": "2026-08-14",
+      "fuente": "OCC",
+      "url": "https://www.occ.com.mx/empleo/oferta/21296386-gerente-comercial-logistica-manzanillo-cdmx/"
+    },
+    {
+      "titulo": "Especialista en Logística",
+      "empresa": "Constructora GEIC",
+      "ubicacion": "Los Alpes, CDMX",
+      "habilidades_tecnicas": [
+        "Análisis y planeación de supply chain"
+      ],
+      "habilidades_blandas": [
+        "Trabajo en equipo"
+      ],
+      "salario_min": null,
+      "salario_max": null,
+      "fecha_publicacion": "2026-08-17",
+      "fuente": "Indeed",
+      "url": "https://to.indeed.com/aa9rxflrwvpn"
+    },
+    {
+      "titulo": "Analista de Importaciones",
+      "empresa": "INFINITY MAQ",
+      "ubicacion": "Tabacalera, CDMX",
+      "habilidades_tecnicas": [
+        "Importación y exportación"
+      ],
+      "habilidades_blandas": [
+        "Análisis y resolución de problemas"
+      ],
+      "salario_min": null,
+      "salario_max": null,
+      "fecha_publicacion": "2026-08-14",
+      "fuente": "Indeed",
+      "url": "https://to.indeed.com/aapld2kdg29x"
+    },
+    {
+      "titulo": "Auxiliar de Almacén",
+      "empresa": "Private Advertiser",
+      "ubicacion": "El Capulín, Jal.",
+      "habilidades_tecnicas": [
+        "Gestión de almacén y CEDIS"
+      ],
+      "habilidades_blandas": [
+        "Trabajo en equipo y organización"
+      ],
+      "salario_min": null,
+      "salario_max": null,
+      "fecha_publicacion": "2026-08-13",
+      "fuente": "Indeed",
+      "url": "https://to.indeed.com/aalgvplm4nx2"
+    },
+    {
+      "titulo": "Analista de Logística",
+      "empresa": "SERGNEI",
+      "ubicacion": "Granada, CDMX",
+      "habilidades_tecnicas": [
+        "Análisis y planeación de supply chain"
+      ],
+      "habilidades_blandas": [
+        "Análisis y resolución de problemas"
+      ],
+      "salario_min": null,
+      "salario_max": null,
+      "fecha_publicacion": "2026-08-13",
+      "fuente": "Indeed",
+      "url": "https://to.indeed.com/aajx2gn7v2lf"
+    },
+    {
+      "titulo": "Auxiliar de almacén",
+      "empresa": "Corporativo 15",
+      "ubicacion": "Zapopan, Jal.",
+      "habilidades_tecnicas": [
+        "Gestión de almacén y CEDIS"
+      ],
+      "habilidades_blandas": [
+        "Trabajo en equipo y organización"
+      ],
+      "salario_min": null,
+      "salario_max": null,
+      "fecha_publicacion": "2026-08-11",
+      "fuente": "Indeed",
+      "url": "https://to.indeed.com/aam28gzllf89"
+    },
+    {
+      "titulo": "Auxiliar de Logística",
+      "empresa": "TRABAJADORES ADMINISTRATIVOS MEXICANOS",
+      "ubicacion": "Granada, CDMX",
+      "habilidades_tecnicas": [
+        "Coordinación de operaciones logísticas"
+      ],
+      "habilidades_blandas": [
+        "Trabajo en equipo y organización"
+      ],
+      "salario_min": null,
+      "salario_max": null,
+      "fecha_publicacion": "2026-08-11",
+      "fuente": "Indeed",
+      "url": "https://to.indeed.com/aaswkrg87srz"
+    }
+  ],
+  "vacantes_detalle_nota": "Primera corrida de Etapas 2-4 para Logística (corrida 2026-08-17). Etapa 1 (174 vacantes crudas: 46 Adzuna + 101 OCC + 27 Indeed, ver control_ultima_corrida.md) ya se había ejecutado sin filtro de fecha por ser la primera corrida del sector. En esta corrida: 0 duplicados (por hash_contenido y por titulo+empresa+ubicacion normalizados, ninguna coincidencia entre ni dentro de las 3 fuentes) y 5 vacantes descartadas por baja relevancia/sector-mismatch tras revisión manual (ver descartados_logistica_2026-08-17.csv y auditoría abajo), quedando 169 vacantes verificadas. Clasificación contra empresas_confiables_logistica.csv (47 empresas/organismos curados: paqueterías, transportistas, operadores 3PL/4PL, agentes aduanales, retail y manufactura con logística propia, referenciadas con fuentes públicas — ver el CSV): 34 empresa_confiable, 107 empresa_no_en_lista_curada_pero_fuente_confiable (vacante de fuente confiable con empresa real pero fuera del directorio curado; no se descarta, es la categoría esperada para la mayoría dado que el sector logístico mexicano tiene miles de operadores medianos/pequeños no cubiertos por un directorio corto), 28 fuente_confiable_sin_empresa_identificada (\"Empresa confidencial\"/\"Important Company\"). Habilidades: NINGUNA de las 169 vacantes trajo habilidades_tecnicas/habilidades_blandas explícitas de las fuentes (columna vacía en las 3 fuentes para este sector en esta corrida) — el 100% de las habilidades mostradas aquí son INFERIDAS del título del puesto y, cuando el título es genérico, de la categoría de puesto asignada (9 categorías + Otro). 165 de 169 (97.6%) recibieron una habilidad técnica específica inferida; las 4 restantes solo obtuvieron la etiqueta genérica 'Logística y operaciones (general)'. Esto es una limitación real de datos, no una estimación editorial. Salario: 81 de 169 vacantes (47.9%) traen salario_min/salario_max (6 de Adzuna, 75 de OCC, 0 de Indeed). Adzuna reporta salario ANUAL cuando el valor observado supera 90,000; esos montos se normalizaron dividiendo entre 12 antes de calcular medianas/percentiles (mismo criterio usado en Turismo/Ventas/Finanzas). Un registro (Practicas Logística, POET DE MEXICO PRODUCTS, $1,000-$2,000/mes) es un valor atípico bajo, verificado contra el dato original de OCC — se conserva tal cual porque no hay evidencia de error de captura, es consistente con una práctica sin remuneración competitiva. Ubicación: estado geográfico inferido de 'ubicacion' (texto libre) por coincidencia de nombre de estado o alias común (CDMX, N.L., Jal., Edomex); 23 de 32 estados con al menos 1 vacante, sin casos sin resolver en esta corrida. vacantes_detalle: muestra de 60 filas con muestreo proporcional por fuente (10 Adzuna, 44 OCC, 6 Indeed) sobre el subconjunto que cumple el filtro de recencia obligatorio (Adzuna ≤10 días, Indeed ≤15 días, OCC ≤20 días desde 2026-08-17); 130 de 169 vacantes verificadas cumplieron ese filtro. Auditoría de descartes (baja relevancia / sector mismatch, no fraude): 'Especialista de Nuevos Productos' en Tokai Rica (fabricante de autopartes, rol de ingeniería de producto sin función logística); 'Contador' y 'Analista Cuentas por Pagar' (empresa confidencial, roles contables genéricos sin señal de logística en el título ni empresa identificable); 'Técnico Diagnóstico Automotriz' (taller/dealer, sin función logística evidente); 'Analista de Ticketing' en Grupo AXO (retail de moda, más asociado a punto de venta que a logística). Todas provenían de la categoría /de-logistica/ de OCC, que aparentemente incluye publicaciones tangenciales al sector."
+}
