@@ -6,7 +6,6 @@
 <title>Análisis de Demanda de Talento y Habilidades — Prototipo</title>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/mammoth@1.6.0/mammoth.browser.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.0/chart.umd.min.js"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
@@ -38,7 +37,7 @@
   main{max-width:1080px;margin:0 auto;padding:34px 20px 60px;}
   .tab{display:none;}
   .tab.active{display:block;}
-  .cat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+  .cat-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;}
   @media(max-width:820px){.cat-grid{grid-template-columns:1fr;} .hero-cards{flex-basis:100%;flex-direction:row;}}
   .cat-card{background:#fff;border:1px solid var(--gris-borde);border-radius:16px;padding:26px 24px 64px;position:relative;box-shadow:var(--sombra);cursor:pointer;transition:transform .15s ease,box-shadow .15s ease;}
   .cat-card:hover{transform:translateY(-3px);box-shadow:rgba(53,42,21,.18) 0px 14px 30px 0px;}
@@ -108,11 +107,11 @@ input[type=text], input[type=number]{width:100%;padding:9px 10px;border:1px soli
   <div class="hero-inner">
     <div class="hero-text">
       <p class="eyebrow">Análisis de demanda de talento y habilidades</p>
-      <h1>Datos reales de mercado laboral, por sector</h1>
-      <p>Sube tu CV y descubre qué habilidades te faltan frente a las vacantes verificadas de Automotriz y Turismo — o explora el dashboard con cifras y tendencias de <span id="heroFechaTexto">la corrida más reciente</span>.</p>
+      <h1>Tu CV frente al mercado real</h1>
+      <p>Sube tu CV y descubre en segundos qué habilidades técnicas y blandas te faltan frente a las vacantes verificadas de los 7 sectores que cubrimos, con datos de <span id="heroFechaTexto">la corrida más reciente</span>.</p>
     </div>
     <div class="hero-cards">
-      <div class="hero-card"><div class="lbl">Corrida de datos</div><div class="val" id="heroCorridaVal">—</div></div>
+      <div class="hero-card"><div class="lbl">Datos actualizados</div><div class="val" id="heroCorridaVal">—</div></div>
       <div class="hero-card"><div class="lbl">Sectores cubiertos</div><div class="val">Automotriz · Turismo · Gestión y Administración · Ventas · Finanzas · Logística · Legal</div></div>
     </div>
   </div>
@@ -121,7 +120,6 @@ input[type=text], input[type=number]{width:100%;padding:9px 10px;border:1px soli
 <nav>
   <button id="nav-home" class="active" onclick="mostrarTab('home')">Inicio</button>
   <button id="nav-cv" onclick="mostrarTab('cv')" disabled>Subir tu CV</button>
-  <button id="nav-dash" onclick="mostrarTab('dash')" disabled>Dashboard</button>
 </nav>
 
 <main>
@@ -134,14 +132,9 @@ input[type=text], input[type=number]{width:100%;padding:9px 10px;border:1px soli
         <p>Compara tu currículum contra las vacantes verificadas del sector y descubre qué habilidades técnicas y blandas te faltan frente a lo que hoy piden los empleadores.</p>
         <button class="arrow-btn" aria-label="Ir a Subir tu CV">→</button>
       </div>
-      <div class="cat-card" onclick="mostrarTab('dash')">
-        <h3>Dashboard</h3>
-        <p>Cifras reales de mercado laboral: habilidades más pedidas, empresas que contratan, cobertura geográfica, salarios de referencia y tendencias por sector.</p>
-        <button class="arrow-btn" aria-label="Ir al Dashboard">→</button>
-      </div>
       <div class="cat-card cat-card-static">
         <h3>Metodología</h3>
-        <p>Vacantes extraídas de Adzuna, Indeed y OCC, y empresas verificadas contra el padrón DENUE. Corrida de referencia: <span id="metaFechaTexto">—</span>, sectores Automotriz, Turismo, Gestión y Administración, Ventas, Finanzas, Logística y Legal.</p>
+        <p>Vacantes extraídas de Adzuna, Indeed y OCC, y empresas verificadas contra el padrón público DENUE. Corrida de referencia: <span id="metaFechaTexto">—</span>, sectores Automotriz, Turismo, Gestión y Administración, Ventas, Finanzas, Logística y Legal.</p>
       </div>
     </div>
   </section>
@@ -149,7 +142,9 @@ input[type=text], input[type=number]{width:100%;padding:9px 10px;border:1px soli
   <!-- TAB CV -->
   <section id="tab-cv" class="tab">
     <div class="card">
+      <button class="secondary" style="margin-top:0;" onclick="mostrarTab('home')">← Volver al inicio</button>
       <h2>1. Sube tu CV</h2>
+      <div class="note" style="margin-bottom:14px;">Habilidades y vacantes extraídas de datos reales de Adzuna, Indeed y OCC, con empresas verificadas contra el padrón público DENUE — corrida más reciente: <span id="cvFechaNote">—</span>.</div>
       <label>Sector de interés</label>
       <select id="sectorSelect">
         <option value="automotriz">Automotriz</option>
@@ -223,53 +218,6 @@ input[type=text], input[type=number]{width:100%;padding:9px 10px;border:1px soli
     </div>
   </section>
 
-  <!-- TAB DASHBOARD -->
-  <section id="tab-dash" class="tab">
-    <div class="card">
-      <h2>Dashboard — Lo que le conviene saber a quien busca empleo</h2>
-      <div class="note">KPIs de mercado laboral (no de operación del pipeline) pensados para orientar a alguien que sube su CV: qué se pide, quién contrata, dónde y a qué sueldo. Datos reales de <span id="dashFechaNote">la corrida más reciente</span> del pipeline — esta página se actualiza sola cada semana con los datos frescos de Drive.</div>
-      <div class="pill-toggle">
-        <button id="pill-automotriz" class="active" onclick="cambiarSectorDash('automotriz')">Automotriz</button>
-        <button id="pill-turismo" onclick="cambiarSectorDash('turismo')">Turismo</button><button id="pill-gestion" onclick="cambiarSectorDash('gestion')">Gestión y Administración</button><button id="pill-ventas" onclick="cambiarSectorDash('ventas')">Ventas</button><button id="pill-finanzas" onclick="cambiarSectorDash('finanzas')">Finanzas</button><button id="pill-logistica" onclick="cambiarSectorDash('logistica')">Logística</button><button id="pill-legal" onclick="cambiarSectorDash('legal')">Legal</button>
-      </div>
-
-      <div class="statgrid" id="statgrid"></div>
-<div id="reporteDescarga"></div>
-    </div>
-
-    <div class="grid2">
-      <div class="card">
-        <h2>Puestos más publicados</h2>
-        <div class="chart-wrap"><canvas id="chartCategoria"></canvas></div>
-      </div>
-      <div class="card">
-        <h2>Empresas que más contratan</h2>
-        <div class="chart-wrap"><canvas id="chartEmpresas"></canvas></div>
-      </div>
-      <div class="card">
-        <h2>Habilidades técnicas más demandadas</h2>
-        <div class="chart-wrap"><canvas id="chartTecnicas"></canvas></div>
-      </div>
-      <div class="card">
-        <h2>Habilidades blandas más demandadas</h2>
-        <div class="chart-wrap"><canvas id="chartBlandas"></canvas></div>
-      </div>
-      <div class="card">
-        <h2>Dónde están las vacantes</h2>
-        <div class="chart-wrap"><canvas id="chartGeo"></canvas></div>
-      </div>
-      <div class="card">
-        <h2>Vacantes publicadas por semana</h2>
-        <div class="chart-wrap"><canvas id="chartTendencia"></canvas></div>
-      </div>
-    </div>
-
-    <div class="card">
-      <h2>Rango salarial de referencia (mensual, MXN)</h2>
-      <div id="salarioBox"></div>
-    </div>
-  </section>
-
 </main>
 
 <script>
@@ -294,7 +242,8 @@ function pintarMeta(){
   document.getElementById('heroCorridaVal').textContent = fecha;
   document.getElementById('heroFechaTexto').textContent = `la corrida del ${fecha}`;
   document.getElementById('metaFechaTexto').textContent = fecha;
-  document.getElementById('dashFechaNote').textContent = `la corrida del ${fecha}`;
+  const cvFecha = document.getElementById('cvFechaNote');
+  if(cvFecha) cvFecha.textContent = `la corrida del ${fecha}`;
 }
 
 /* Carga bajo demanda de un sector individual, con caché en memoria para no volver a pedirlo. */
@@ -316,9 +265,7 @@ async function cargarDatos(){
     COURSES = json.COURSES;
     pintarMeta();
     document.getElementById('nav-cv').disabled = false;
-    document.getElementById('nav-dash').disabled = false;
     document.getElementById('loadingOverlay').classList.add('hidden');
-    if(document.getElementById('tab-dash').classList.contains('active')) renderDashboard();
   }catch(err){
     document.body.classList.add('data-error');
     document.getElementById('loadingOverlay').classList.add('hidden');
@@ -329,14 +276,11 @@ cargarDatos();
 
 /* ===================== NAV ===================== */
 function mostrarTab(tab){
-  if((tab==='cv'||tab==='dash') && !DATA) return; // datos aún no cargados o fallaron
+  if(tab==='cv' && !DATA) return; // datos aún no cargados o fallaron
   document.getElementById('tab-home').classList.toggle('active', tab==='home');
   document.getElementById('tab-cv').classList.toggle('active', tab==='cv');
-  document.getElementById('tab-dash').classList.toggle('active', tab==='dash');
   document.getElementById('nav-home').classList.toggle('active', tab==='home');
   document.getElementById('nav-cv').classList.toggle('active', tab==='cv');
-  document.getElementById('nav-dash').classList.toggle('active', tab==='dash');
-  if(tab==='dash') renderDashboard();
   window.scrollTo({top:0, behavior:'smooth'});
 }
 
@@ -840,92 +784,6 @@ async function renderEmpleos(){
         '<div id="cvMejoradoBox-' + i + '"></div>' +
         '</div>';
     }).join('');
-}
-
-  /* ===================== DASHBOARD ===================== */
-let sectorDashActual = 'automotriz';
-let charts = {};
-
-async function cambiarSectorDash(key){
-  sectorDashActual = key;
-  DATA.sectorList.forEach(function(s){
-    var pill = document.getElementById('pill-' + s.key);
-    if(pill) pill.classList.toggle('active', key === s.key);
-  });
-  await renderDashboard();
-}
-
-async function renderDashboard(){
-  document.getElementById('statgrid').innerHTML = '<p class="note">Cargando datos del sector…</p>';
-  let sector;
-  try{
-    sector = await obtenerSector(sectorDashActual);
-  }catch(err){
-    document.getElementById('statgrid').innerHTML = '<p class="note">No se pudieron cargar los datos de este sector. Intenta de nuevo en unos minutos.</p>';
-    console.error(err);
-    return;
-  }
-
-  document.getElementById('statgrid').innerHTML = `
-    <div class="stat"><div class="num">${sector.vacantes_verificadas}</div><div class="lbl">Vacantes verificadas</div></div>
-    <div class="stat"><div class="num">${sector.total_empresas_unicas}</div><div class="lbl">Empresas contratando</div></div>
-    <div class="stat"><div class="num">${sector.cobertura_geografica.estados_unicos}</div><div class="lbl">Estados con vacantes</div></div>
-    <div class="stat"><div class="num">${sector.ultima_semana_vacantes ?? '—'}</div><div class="lbl">Vacantes la última semana</div></div>
-  `;
-
-  
-const reporteBox = document.getElementById('reporteDescarga');
-if(reporteBox){
-reporteBox.innerHTML = sector.reporte_pdf_url
-? ('<a href="' + sector.reporte_pdf_url + '" target="_blank" rel="noopener noreferrer" style="display:inline-block;margin-top:14px;background:#fff;color:var(--azul-osc);border:1.5px solid var(--azul);padding:9px 20px;border-radius:999px;font-size:0.88rem;font-weight:700;text-decoration:none;font-family:var(--font-sans);">\u{1F4C4} Descargar reporte de ' + sector.nombre + ' (PDF)</a>')
-: '';
-}
-
-dibujarBarra('chartCategoria', sector.categorias_puesto.slice(0,7).map(c=>c.categoria), sector.categorias_puesto.slice(0,7).map(c=>c.vacantes), '#e08424', true);
-  dibujarBarra('chartEmpresas', sector.top_empresas.slice(0,8).map(e=>e.empresa), sector.top_empresas.slice(0,8).map(e=>e.vacantes), '#1a4d8f', true);
-  dibujarBarra('chartTecnicas', sector.habilidades_tecnicas.slice(0,10).map(h=>h.skill), sector.habilidades_tecnicas.slice(0,10).map(h=>h.menciones), '#2f8a4e', true);
-  dibujarBarra('chartBlandas', sector.habilidades_blandas.slice(0,10).map(h=>h.skill), sector.habilidades_blandas.slice(0,10).map(h=>h.menciones), '#8f4fc4', true);
-  dibujarBarra('chartGeo', sector.cobertura_geografica.top_estados.slice(0,8).map(e=>e.estado), sector.cobertura_geografica.top_estados.slice(0,8).map(e=>e.vacantes), '#c4504f', true);
-  dibujarLinea('chartTendencia', sector.evolucion_semanal.map(s=>s.semana), sector.evolucion_semanal.map(s=>s.vacantes), '#0f2f57');
-
-  const s = sector.salario;
-  document.getElementById('salarioBox').innerHTML = s.vacantes_con_dato ? `
-    <div class="statgrid">
-      <div class="stat"><div class="num">$${Math.round(s.p25_mensual_mxn).toLocaleString('es-MX')}</div><div class="lbl">Percentil 25</div></div>
-      <div class="stat"><div class="num">$${Math.round(s.mediana_mensual_mxn).toLocaleString('es-MX')}</div><div class="lbl">Mediana</div></div>
-      <div class="stat"><div class="num">$${Math.round(s.p75_mensual_mxn).toLocaleString('es-MX')}</div><div class="lbl">Percentil 75</div></div>
-    </div>
-    <div class="note">Basado en las ${s.vacantes_con_dato} vacantes (${s.pct_con_dato}% del total de ${sector.nombre}) que reportan salario explícito. Es un rango amplio porque mezcla puestos operativos y gerenciales — úsalo como referencia, no como cotización exacta.</div>
-  ` : '<p class="note">No hay suficientes vacantes con salario reportado en esta corrida para calcular un rango confiable.</p>';
-}
-
-function dibujarBarra(canvasId, labels, valores, color, horizontal){
-  const ctx = document.getElementById(canvasId).getContext('2d');
-  if(charts[canvasId]) charts[canvasId].destroy();
-  charts[canvasId] = new Chart(ctx, {
-    type: 'bar',
-    data: { labels, datasets: [{ data: valores, backgroundColor: color, borderRadius: 4 }] },
-    options: {
-      indexAxis: horizontal ? 'y' : 'x',
-      responsive: true, maintainAspectRatio: false,
-      plugins: { legend: { display: false } },
-      scales: { x: { beginAtZero: true }, y: { ticks: { autoSkip: false, font: {size: 10.5} } } }
-    }
-  });
-}
-
-function dibujarLinea(canvasId, labels, valores, color){
-  const ctx = document.getElementById(canvasId).getContext('2d');
-  if(charts[canvasId]) charts[canvasId].destroy();
-  charts[canvasId] = new Chart(ctx, {
-    type: 'line',
-    data: { labels, datasets: [{ data: valores, borderColor: color, backgroundColor: color, tension: 0.25, fill: false, pointRadius: 3 }] },
-    options: {
-      responsive: true, maintainAspectRatio: false,
-      plugins: { legend: { display: false } },
-      scales: { y: { beginAtZero: true, ticks: { precision: 0 } } }
-    }
-  });
 }
 
 </script>
