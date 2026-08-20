@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Comparativo entre sectores — Análisis de Demanda de Talento y Habilidades</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.0/chart.umd.min.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --azul:#b89a57; --azul-osc:#8b7440; --naranja:#c2703d; --verde:#4f8f5b;
+    --hero-bg:#faf8f2; --hero-bg2:#f3efe5; --hero-sub:#5a5346; --hero-line:rgba(31,31,28,.1);
+    --accent:#b89a57; --gold-light:#d0b06a;
+    --gris-bg:#faf8f2; --gris-borde:#e7ddc9; --texto:#1f1f1c; --texto-suave:#6b6459;
+    --font-serif:'Cormorant Garamond',Georgia,'Times New Roman',serif;
+    --font-sans:'Source Sans 3',ui-sans-serif,system-ui,-apple-system,'Segoe UI',sans-serif;
+    --sombra:rgba(53,42,21,.1) 0px 10px 25px 0px;
+  }
+  *{box-sizing:border-box;}
+  body{font-family:var(--font-sans);margin:0;background:linear-gradient(180deg,var(--hero-bg) 0%,var(--hero-bg2) 100%) fixed;color:var(--texto);}
+  header{background:linear-gradient(180deg,var(--hero-bg) 0%,var(--hero-bg2) 100%);color:var(--texto);padding:46px 32px 0;border-bottom:1px solid var(--hero-line);}
+  header .eyebrow{display:inline-block;font-size:.76rem;letter-spacing:.05em;text-transform:none;color:#fff;background:linear-gradient(135deg,var(--azul),var(--gold-light));padding:6px 16px;border-radius:999px;margin:0 0 16px;font-weight:700;box-shadow:var(--sombra);}
+  header h1{font-family:var(--font-serif);margin:0 0 12px;font-size:2.5rem;line-height:1.14;font-weight:700;max-width:660px;color:var(--texto);}
+  header p{margin:0;font-size:0.98rem;color:var(--hero-sub);max-width:600px;line-height:1.6;}
+  header .volver{display:inline-block;margin-top:18px;font-size:0.82rem;color:var(--azul-osc);text-decoration:none;font-weight:600;}
+  header .volver:hover{text-decoration:underline;}
+  .hero-inner{display:flex;justify-content:space-between;align-items:flex-start;gap:36px;max-width:1120px;margin:0 auto;flex-wrap:wrap;padding-bottom:38px;}
+  .hero-text{flex:1 1 420px;}
+  .hero-cards{flex:0 0 240px;display:flex;flex-direction:column;gap:12px;margin-top:4px;}
+  .hero-card{background:#fff;border:1px solid var(--gris-borde);border-radius:14px;padding:14px 16px;box-shadow:var(--sombra);}
+  .hero-card .lbl{font-size:.7rem;text-transform:uppercase;letter-spacing:.07em;color:var(--texto-suave);font-weight:600;}
+  .hero-card .val{font-family:var(--font-serif);font-size:1.1rem;font-weight:600;margin-top:5px;color:var(--azul-osc);}
+  main{max-width:1120px;margin:0 auto;padding:34px 20px 60px;}
+  @media(max-width:820px){.hero-cards{flex-basis:100%;flex-direction:row;flex-wrap:wrap;}}
+  .card{background:#fff;border:1px solid var(--gris-borde);border-radius:16px;padding:24px 26px;margin-bottom:22px;box-shadow:var(--sombra);}
+  .card h2{margin-top:0;margin-bottom:6px;font-size:1.35rem;font-family:var(--font-serif);color:var(--texto);font-weight:700;}
+  .card h3{font-family:var(--font-serif);font-size:1.05rem;color:var(--texto);font-weight:700;margin:22px 0 4px;}
+  .descripcion{font-size:0.86rem;color:var(--texto-suave);line-height:1.55;margin:0 0 16px;max-width:760px;}
+  .descripcion.chica{font-size:0.8rem;margin:6px 0 14px;}
+  .note{font-size:0.8rem;color:var(--texto-suave);margin-top:10px;line-height:1.45;}
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:20px;}
+  @media(max-width:820px){.grid2{grid-template-columns:1fr;}}
+  .chart-wrap{position:relative;height:290px;margin-top:6px;}
+  .chart-wrap.alta{height:380px;}
+  .sector-chips{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;}
+  .sector-chips button{padding:6px 14px;border-radius:999px;border:1.5px solid var(--azul);background:#fff;color:var(--azul-osc);font-size:0.8rem;font-weight:600;cursor:pointer;font-family:var(--font-sans);white-space:nowrap;}
+  .sector-chips button.active{color:#fff;border-color:transparent;}
+  .chips-acciones{display:flex;gap:10px;align-items:center;margin-bottom:14px;}
+  .chips-acciones button{background:none;border:none;color:var(--azul-osc);font-size:0.78rem;font-weight:700;cursor:pointer;text-decoration:underline;padding:0;font-family:var(--font-sans);}
+  .pill-toggle{display:flex;gap:8px;margin-bottom:6px;flex-wrap:wrap;}
+  .pill-toggle button{padding:6px 14px;border-radius:999px;border:1.5px solid var(--azul);background:#fff;color:var(--azul-osc);font-size:0.8rem;font-weight:600;cursor:pointer;font-family:var(--font-sans);}
+  .pill-toggle button.active{background:linear-gradient(135deg,var(--azul),var(--gold-light));color:#fff;border-color:transparent;}
+  .controles-fila{display:flex;flex-wrap:wrap;gap:22px;align-items:flex-end;margin-bottom:4px;}
+  .campo-control{display:flex;flex-direction:column;gap:6px;}
+  .campo-control label{font-size:0.74rem;font-weight:700;color:var(--texto-suave);text-transform:uppercase;letter-spacing:.04em;}
+  select{padding:8px 10px;border:1px solid var(--gris-borde);border-radius:8px;font-size:0.88rem;font-family:inherit;background:#fff;min-width:220px;}
+  .switch-line{display:flex;align-items:center;gap:8px;font-size:0.84rem;color:var(--texto-suave);cursor:pointer;user-select:none;}
+  .switch-line input{margin:0;}
+  table.tabla-comp{width:100%;border-collapse:collapse;margin-top:8px;font-size:0.86rem;}
+  table.tabla-comp th{text-align:left;font-size:0.72rem;text-transform:uppercase;letter-spacing:.04em;color:var(--texto-suave);border-bottom:2px solid var(--gris-borde);padding:8px 10px;font-weight:700;}
+  table.tabla-comp td{padding:9px 10px;border-bottom:1px solid var(--gris-borde);}
+  table.tabla-comp tr:last-child td{border-bottom:none;}
+  table.tabla-comp td.num, table.tabla-comp th.num{text-align:right;font-variant-numeric:tabular-nums;}
+  .dot-sector{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:7px;vertical-align:middle;}
+  .sector-badge{display:inline-flex;align-items:center;padding:2px 10px 2px 6px;border-radius:999px;background:var(--hero-bg2);border:1px solid var(--gris-borde);font-size:0.74rem;font-weight:600;color:var(--texto);margin:2px 4px 2px 0;}
+  .empty-state{font-size:0.86rem;color:var(--texto-suave);padding:18px 4px;text-align:center;}
+  #loadingOverlay{position:fixed;inset:0;background:var(--hero-bg);color:var(--texto);display:flex;align-items:center;justify-content:center;font-size:.95rem;letter-spacing:.03em;z-index:999;font-family:var(--font-sans);}
+  #loadingOverlay.hidden{display:none;}
+  #loadError{display:none;background:#fdecea;color:#a12a2a;border:1px solid #f3bcb9;padding:14px 18px;border-radius:8px;font-size:0.88rem;margin:20px auto;max-width:640px;}
+  body.data-error #loadError{display:block;}
+  main.oculto{display:none;}
+</style>
+</head>
+<body>
+
+<div id="loadingOverlay">Cargando datos de todos los sectores…</div>
+<div id="loadError">No se pudieron cargar los datos (manifest.json o alguno de los archivos por sector). Recarga la página en unos minutos — si el problema sigue, avisa a Gael.</div>
+
+<header>
+  <div class="hero-inner">
+    <div class="hero-text">
+      <p class="eyebrow">Comparativo entre sectores</p>
+      <h1>¿De qué sectores vienen las habilidades más pedidas?</h1>
+      <p>Cruza vacantes, salarios, habilidades y cobertura geográfica entre los sectores del proyecto — pensado para comparar, no solo para ver un sector a la vez. Datos de la corrida <span id="heroFechaTexto">más reciente</span> del pipeline.</p>
+      <a class="volver" href="index.html">← Volver al sitio principal (subir CV y dashboard por sector)</a>
+    </div>
+    <div class="hero-cards">
+      <div class="hero-card"><div class="lbl">Corrida de datos</div><div class="val" id="heroCorridaVal">—</div></div>
+      <div class="hero-card"><div class="lbl">Sectores disponibles</div><div class="val" id="heroSectoresVal">—</div></div>
+    </div>
+  </div>
+</header>
+
+<main id="mainContenido" class="oculto">
+
+  <div class="card">
+    <h2>Sectores a comparar</h2>
+    <p class="descripcion">Elige qué sectores entran en las tablas y gráficas de abajo. Todas las secciones de esta página reaccionan a esta selección — quítalos y agrégalos para ver comparaciones más chicas o más amplias.</p>
+    <div class="chips-acciones">
+      <button onclick="seleccionarTodos()">Seleccionar todos</button>
+      <button onclick="seleccionarNinguno()">Quitar todos</button>
+    </div>
+    <div class="sector-chips" id="sectorChips"></div>
+  </div>
+
+  <div class="card">
+    <h2>KPIs comparados</h2>
+    <p class="descripcion">Cifras principales de cada sector, lado a lado: cuántas vacantes se verificaron en la corrida más reciente, a cuántas empresas distintas pertenecen, qué tan completa está la información de habilidades y cuál es el salario de referencia. Úsalo para ver de un vistazo qué sector tiene más volumen de vacantes o mejor paga — no para comparar la calidad de los datos entre sectores, que varía (ver nota de metodología al final).</p>
+    <table class="tabla-comp" id="tablaKpis"><thead></thead><tbody></tbody></table>
+    <div class="grid2" style="margin-top:22px;">
+      <div>
+        <h3>Vacantes verificadas por sector</h3>
+        <p class="descripcion chica">Total de vacantes que pasaron verificación de empresa en la corrida más reciente de cada sector — no es el volumen real del mercado, es lo que el pipeline logró extraer y verificar.</p>
+        <div class="chart-wrap"><canvas id="chartKpiVacantes"></canvas></div>
+      </div>
+      <div>
+        <h3>Salario mensual de referencia (MXN)</h3>
+        <p class="descripcion chica">Percentil 25, mediana y percentil 75 de las vacantes de cada sector que sí reportan salario (no todas lo hacen — revisa el % en la tabla de arriba). Sectores sin barra no tuvieron suficientes vacantes con dato de salario esta corrida.</p>
+        <div class="chart-wrap"><canvas id="chartKpiSalario"></canvas></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>Habilidades más demandadas — cruce entre sectores</h2>
+    <p class="descripcion">Aquí es donde se responde "¿de qué sectores viene esta habilidad?". Cada barra es una habilidad; los colores dentro de la barra muestran cuánto aporta cada sector a esas menciones. Una habilidad con una sola franja de color es casi exclusiva de ese sector; una con varias franjas es transversal.</p>
+    <div class="controles-fila">
+      <div class="campo-control">
+        <label>Tipo de habilidad</label>
+        <div class="pill-toggle" id="tipoHabilidadToggle">
+          <button data-tipo="todas" class="active">Todas</button>
+          <button data-tipo="tecnicas">Técnicas</button>
+          <button data-tipo="blandas">Blandas</button>
+        </div>
+      </div>
+      <div class="campo-control">
+        <label>¿Cómo medir?</label>
+        <label class="switch-line"><input type="checkbox" id="normalizarCheck"> Normalizar por tamaño del sector (% de sus vacantes que la mencionan, en vez de menciones brutas)</label>
+      </div>
+    </div>
+    <p class="descripcion chica">Sin normalizar, un sector con muchas más vacantes verificadas (ej. Turismo con 366) va a dominar el ranking solo por volumen. Normalizando, cada sector se compara por qué proporción de SUS PROPIAS vacantes piden esa habilidad — más justo entre sectores de tamaño distinto, pero con más ruido si el sector tiene pocas vacantes.</p>
+    <div class="chart-wrap alta"><canvas id="chartSkillsTop"></canvas></div>
+
+    <h3>Buscar una habilidad específica</h3>
+    <p class="descripcion chica">Elige cualquier habilidad (no solo las del top de arriba) y compara en qué sectores aparece y con qué fuerza.</p>
+    <div class="controles-fila">
+      <div class="campo-control" style="flex:1 1 280px;">
+        <label>Habilidad</label>
+        <select id="selectorHabilidad"></select>
+      </div>
+    </div>
+    <div class="chart-wrap"><canvas id="chartSkillDetalle"></canvas></div>
+  </div>
+
+  <div class="card">
+    <h2>Cobertura geográfica comparada</h2>
+    <p class="descripcion">Cuántos estados distintos de México tuvieron al menos una vacante verificada, por sector, en la corrida más reciente. Un número alto sugiere un sector con presencia repartida por el país; uno bajo sugiere concentración (por ejemplo, en CDMX y unas pocas ciudades).</p>
+    <div class="grid2">
+      <div>
+        <div class="chart-wrap"><canvas id="chartGeo"></canvas></div>
+      </div>
+      <div>
+        <h3>Estado con más vacantes, por sector</h3>
+        <table class="tabla-comp" id="tablaGeoTop"><thead><tr><th>Sector</th><th>Estado líder</th><th class="num">Vacantes</th></tr></thead><tbody></tbody></table>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>Empresas presentes en más de un sector</h2>
+    <p class="descripcion">Cruce de los "top empresas que contratan" de cada sector, buscando coincidencias de nombre. Son casi siempre agencias de reclutamiento/staffing o corporativos grandes que contratan en varias industrias a la vez — útil para identificar empleadores que vale la pena seguir sin importar el sector al que te dediques. Nota: la comparación es solo dentro del top de empresas que ya trae cada bloque de sector (hasta 8 por sector), no contra el universo completo de empresas — puede haber más coincidencias fuera de ese top que esta tabla no detecta.</p>
+    <table class="tabla-comp" id="tablaMultisector"><thead><tr><th>Empresa</th><th>Sectores donde aparece</th><th class="num">Vacantes combinadas (en esos sectores)</th></tr></thead><tbody></tbody></table>
+    <div id="multisectorVacio" class="empty-state" style="display:none;">Con los sectores seleccionados no hay coincidencias de empresa entre los top de cada uno.</div>
+  </div>
+
+  <div class="card">
+    <h2>Metodología y limitaciones de esta comparación</h2>
+    <p class="descripcion" id="notaCorridaTexto" style="margin-bottom:10px;"></p>
+    <p class="descripcion chica" style="margin-bottom:6px;">• Cada sector tiene su propia corrida, con fechas y volúmenes de extracción distintos (revisa la nota de arriba) — comparar cifras absolutas entre sectores con corridas muy distintas en el tiempo es menos confiable que comparar sectores actualizados la misma semana.</p>
+    <p class="descripcion chica" style="margin-bottom:6px;">• "Habilidades" viene de lo que cada vacante reporta explícitamente o, cuando la fuente no lo da, de una inferencia por coincidencia de texto con el título del puesto — la proporción de datos inferidos vs. explícitos varía por sector (ver <code>vacantes_detalle_nota</code> de cada sector en el sitio principal).</p>
+    <p class="descripcion chica" style="margin-bottom:0;">• Los datos se cargan directamente de <code>manifest.json</code> y <code>data/sector_&lt;clave&gt;.json</code> del mismo repositorio que el sitio principal — se actualizan automáticamente cada semana junto con él.</p>
+  </div>
+
+</main>
+
+<script>
+const PALETA_SECTORES = ['#1a4d8f','#c4504f','#2f8a4e','#e08424','#8f4fc4','#0f2f57','#b89a57','#4f8f5b','#c2703d','#5a5346'];
+const EMPRESAS_EXCLUIDAS = new Set(['empresa confidencial','confidencial','confidential','empresa privada']);
+
+let MANIFEST = null;
+let SECTORES = {};       // key -> bloque completo del sector
+let SECTOR_LIST = [];    // [{key, nombre}] en el orden del manifest
+let SECTOR_COLOR = {};   // key -> color hex
+let SELECCIONADOS = new Set();
+let TIPO_HABILIDAD = 'todas';
+let CHARTS = {};
+
+async function init(){
+  try{
+    const rManifest = await fetch('./manifest.json', {cache:'no-store'});
+    if(!rManifest.ok) throw new Error('manifest.json ' + rManifest.status);
+    MANIFEST = await rManifest.json();
+    SECTOR_LIST = MANIFEST.sectores || [];
+    SECTOR_LIST.forEach((s, i) => { SECTOR_COLOR[s.key] = PALETA_SECTORES[i % PALETA_SECTORES.length]; });
+
+    const resultados = await Promise.all(SECTOR_LIST.map(async s => {
+      const r = await fetch('./data/sector_' + s.key + '.json', {cache:'no-store'});
+      if(!r.ok) throw new Error('data/sector_' + s.key + '.json ' + r.status);
+      return [s.key, await r.json()];
+    }));
+    resultados.forEach(([key, data]) => { SECTORES[key] = data; });
+
+    SELECCIONADOS = new Set(SECTOR_LIST.map(s => s.key));
+
+    document.getElementById('heroCorridaVal').textContent = formatearFecha(MANIFEST.meta && MANIFEST.meta.corrida);
+    document.getElementById('heroSectoresVal').textContent = SECTOR_LIST.length + (SECTOR_LIST.length === 1 ? ' sector' : ' sectores');
+    document.getElementById('heroFechaTexto').textContent = formatearFecha(MANIFEST.meta && MANIFEST.meta.corrida);
+    document.getElementById('notaCorridaTexto').textContent = (MANIFEST.meta && MANIFEST.meta.nota_corrida) || 'Sin nota de corrida disponible.';
+
+    renderChips();
+    poblarSelectorHabilidad();
+    document.getElementById('tipoHabilidadToggle').addEventListener('click', onTipoHabilidadClick);
+    document.getElementById('normalizarCheck').addEventListener('change', renderTodo);
+    document.getElementById('selectorHabilidad').addEventListener('change', renderSkillDetalle);
+
+    renderTodo();
+
+    document.getElementById('loadingOverlay').classList.add('hidden');
+    document.getElementById('mainContenido').classList.remove('oculto');
+  }catch(err){
+    console.error(err);
+    document.body.classList.add('data-error');
+    document.getElementById('loadingOverlay').classList.add('hidden');
+  }
+}
+
+function formatearFecha(iso){
+  if(!iso) return '—';
+  const partes = iso.split('-');
+  if(partes.length !== 3) return iso;
+  const meses = ['ene','feb','mar','abr','may','jun','jul','ago','sep','oct','nov','dic'];
+  return partes[2] + ' de ' + meses[parseInt(partes[1],10)-1] + ' de ' + partes[0];
+}
+
+function renderChips(){
+  const cont = document.getElementById('sectorChips');
+  cont.innerHTML = SECTOR_LIST.map(s => {
+    const activo = SELECCIONADOS.has(s.key);
+    const color = SECTOR_COLOR[s.key];
+    const estilo = activo ? ('background:' + color + ';border-color:' + color + ';') : '';
+    return '<button data-key="' + s.key + '" class="' + (activo ? 'active' : '') + '" style="' + estilo + '">' + s.nombre + '</button>';
+  }).join('');
+  cont.querySelectorAll('button').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const key = btn.dataset.key;
+      if(SELECCIONADOS.has(key)) SELECCIONADOS.delete(key); else SELECCIONADOS.add(key);
+      renderChips();
+      renderTodo();
+    });
+  });
+}
+
+function seleccionarTodos(){ SELECCIONADOS = new Set(SECTOR_LIST.map(s => s.key)); renderChips(); renderTodo(); }
+function seleccionarNinguno(){ SELECCIONADOS = new Set(); renderChips(); renderTodo(); }
+
+function onTipoHabilidadClick(e){
+  const btn = e.target.closest('button[data-tipo]');
+  if(!btn) return;
+  TIPO_HABILIDAD = btn.dataset.tipo;
+  document.querySelectorAll('#tipoHabilidadToggle button').forEach(b => b.classList.toggle('active', b === btn));
+  renderTodo();
+}
+
+function sectoresActivos(){
+  return SECTOR_LIST.filter(s => SELECCIONADOS.has(s.key));
+}
+
+function renderTodo(){
+  renderTablaKpis();
+  renderChartKpiVacantes();
+  renderChartKpiSalario();
+  renderSkillsTop();
+  renderSkillDetalle();
+  renderGeo();
+  renderMultisector();
+}
+
+function destruirChart(id){
+  if(CHARTS[id]){ CHARTS[id].destroy(); delete CHARTS[id]; }
+}
+
+// ---------- KPIs ----------
+
+function renderTablaKpis(){
+  const activos = sectoresActivos();
+  const thead = document.querySelector('#tablaKpis thead');
+  const tbody = document.querySelector('#tablaKpis tbody');
+  thead.innerHTML = '<tr><th>Sector</th><th class="num">Vacantes verificadas</th><th class="num">Empresas únicas</th><th class="num">% con habilidades</th><th class="num">Salario mediana</th></tr>';
+  if(activos.length === 0){
+    tbody.innerHTML = '<tr><td colspan="5" class="empty-state">Selecciona al menos un sector arriba.</td></tr>';
+    return;
+  }
+  tbody.innerHTML = activos.map(s => {
+    const d = SECTORES[s.key];
+    const salario = (d.salario && d.salario.mediana_mensual_mxn) ? ('$' + Math.round(d.salario.mediana_mensual_mxn).toLocaleString('es-MX')) : 'Sin datos';
+    return '<tr>' +
+      '<td><span class="dot-sector" style="background:' + SECTOR_COLOR[s.key] + ';"></span>' + s.nombre + '</td>' +
+      '<td class="num">' + d.vacantes_verificadas.toLocaleString('es-MX') + '</td>' +
+      '<td class="num">' + d.total_empresas_unicas.toLocaleString('es-MX') + '</td>' +
+      '<td class="num">' + d.pct_con_habilidades + '%</td>' +
+      '<td class="num">' + salario + '</td>' +
+      '</tr>';
+  }).join('');
+}
+
+function renderChartKpiVacantes(){
+  const activos = sectoresActivos();
+  const ctx = document.getElementById('chartKpiVacantes').getContext('2d');
+  destruirChart('chartKpiVacantes');
+  if(activos.length === 0) return;
+  CHARTS['chartKpiVacantes'] = new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: activos.map(s => s.nombre),
+      datasets: [{ data: activos.map(s => SECTORES[s.key].vacantes_verificadas), backgroundColor: activos.map(s => SECTOR_COLOR[s.key]), borderRadius: 4 }]
+    },
+    options: {
+      responsive: true, maintainAspectRatio: false,
+      plugins: { legend: { display: false } },
+      scales: { y: { beginAtZero: true, ticks: { precision: 0 } }, x: { ticks: { font: { size: 10.5 } } } }
+    }
+  });
+}
+
+function renderChartKpiSalario(){
+  const activos = sectoresActivos().filter(s => SECTORES[s.key].salario && SECTORES[s.key].salario.mediana_mensual_mxn);
+  const ctx = document.getElementById('chartKpiSalario').getContext('2d');
+  destruirChart('chartKpiSalario');
+  if(activos.length === 0) return;
+  CHARTS['chartKpiSalario'] = new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: activos.map(s => s.nombre),
+      datasets: [
+        { label: 'P25', data: activos.map(s => SECTORES[s.key].salario.p25_mensual_mxn), backgroundColor: '#d0b06a', borderRadius: 3 },
+        { label: 'Mediana', data: activos.map(s => SECTORES[s.key].salario.mediana_mensual_mxn), backgroundColor: '#b89a57', borderRadius: 3 },
+        { label: 'P75', data: activos.map(s => SECTORES[s.key].salario.p75_mensual_mxn), backgroundColor: '#8b7440', borderRadius: 3 }
+      ]
+    },
+    options: {
+      responsive: true, maintainAspectRatio: false,
+      plugins: { legend: { display: true, position: 'top', labels: { font: { size: 11 } } } },
+      scales: { y: { beginAtZero: true, ticks: { callback: v => '$' + v.toLocaleString('es-MX') } }, x: { ticks: { font: { size: 10.5 } } } }
+    }
+  });
+}
+
+// ---------- Habilidades cruzadas ----------
+
+function agregarHabilidades(activos, tipo, normalizar){
+  const map = new Map(); // skill -> { total, porSector: {key: valor} }
+  activos.forEach(s => {
+    const d = SECTORES[s.key];
+    const listas = [];
+    if(tipo === 'tecnicas' || tipo === 'todas') listas.push(d.habilidades_tecnicas || []);
+    if(tipo === 'blandas' || tipo === 'todas') listas.push(d.habilidades_blandas || []);
+    listas.forEach(lista => lista.forEach(h => {
+      const nombre = h.skill;
+      const valor = normalizar && d.vacantes_verificadas ? (h.menciones / d.vacantes_verificadas * 100) : h.menciones;
+      if(!map.has(nombre)) map.set(nombre, { total: 0, porSector: {} });
+      const entry = map.get(nombre);
+      entry.porSector[s.key] = (entry.porSector[s.key] || 0) + valor;
+      entry.total += valor;
+    }));
+  });
+  return map;
+}
+
+function renderSkillsTop(){
+  const activos = sectoresActivos();
+  const normalizar = document.getElementById('normalizarCheck').checked;
+  const ctx = document.getElementById('chartSkillsTop').getContext('2d');
+  destruirChart('chartSkillsTop');
+  if(activos.length === 0) return;
+
+  const mapa = agregarHabilidades(activos, TIPO_HABILIDAD, normalizar);
+  const top = Array.from(mapa.entries()).sort((a,b) => b[1].total - a[1].total).slice(0, 15).reverse();
+  if(top.length === 0) return;
+
+  const datasets = activos.map(s => ({
+    label: s.nombre,
+    data: top.map(([, entry]) => {
+      const v = entry.porSector[s.key] || 0;
+      return normalizar ? Math.round(v * 10) / 10 : Math.round(v);
+    }),
+    backgroundColor: SECTOR_COLOR[s.key]
+  }));
+
+  CHARTS['chartSkillsTop'] = new Chart(ctx, {
+    type: 'bar',
+    data: { labels: top.map(([nombre]) => nombre), datasets },
+    options: {
+      indexAxis: 'y',
+      responsive: true, maintainAspectRatio: false,
+      plugins: { legend: { display: true, position: 'top', labels: { font: { size: 11 } } } },
+      scales: {
+        x: { stacked: true, beginAtZero: true, title: { display: true, text: normalizar ? '% de vacantes del sector que la mencionan' : 'Menciones' } },
+        y: { stacked: true, ticks: { autoSkip: false, font: { size: 10.5 } } }
+      }
+    }
+  });
+}
+
+function todasLasHabilidades(){
+  const map = new Map(); // nombre -> tipo ('técnica'/'blanda', si aparece en ambas se marca 'mixta')
+  SECTOR_LIST.forEach(s => {
+    const d = SECTORES[s.key];
+    (d.habilidades_tecnicas || []).forEach(h => {
+      const actual = map.get(h.skill);
+      map.set(h.skill, actual && actual !== 'técnica' ? 'mixta' : 'técnica');
+    });
+    (d.habilidades_blandas || []).forEach(h => {
+      const actual = map.get(h.skill);
+      map.set(h.skill, actual && actual !== 'blanda' ? 'mixta' : 'blanda');
+    });
+  });
+  return map;
+}
+
+function poblarSelectorHabilidad(){
+  const mapa = todasLasHabilidades();
+  const nombres = Array.from(mapa.keys()).sort((a,b) => a.localeCompare(b, 'es'));
+  const select = document.getElementById('selectorHabilidad');
+  select.innerHTML = nombres.map(n => '<option value="' + n.replace(/"/g,'&quot;') + '">' + n + ' (' + mapa.get(n) + ')</option>').join('');
+  if(nombres.length) select.value = nombres[0];
+}
+
+function renderSkillDetalle(){
+  const select = document.getElementById('selectorHabilidad');
+  const skill = select.value;
+  const activos = sectoresActivos();
+  const normalizar = document.getElementById('normalizarCheck').checked;
+  const ctx = document.getElementById('chartSkillDetalle').getContext('2d');
+  destruirChart('chartSkillDetalle');
+  if(!skill || activos.length === 0) return;
+
+  const labels = [];
+  const valores = [];
+  const colores = [];
+  activos.forEach(s => {
+    const d = SECTORES[s.key];
+    const enTecnicas = (d.habilidades_tecnicas || []).find(h => h.skill === skill);
+    const enBlandas = (d.habilidades_blandas || []).find(h => h.skill === skill);
+    const item = enTecnicas || enBlandas;
+    if(!item) return;
+    const valor = normalizar && d.vacantes_verificadas ? Math.round((item.menciones / d.vacantes_verificadas * 100) * 10) / 10 : item.menciones;
+    labels.push(s.nombre);
+    valores.push(valor);
+    colores.push(SECTOR_COLOR[s.key]);
+  });
+
+  if(labels.length === 0) return;
+
+  CHARTS['chartSkillDetalle'] = new Chart(ctx, {
+    type: 'bar',
+    data: { labels, datasets: [{ data: valores, backgroundColor: colores, borderRadius: 4 }] },
+    options: {
+      indexAxis: 'y',
+      responsive: true, maintainAspectRatio: false,
+      plugins: { legend: { display: false } },
+      scales: { x: { beginAtZero: true, title: { display: true, text: normalizar ? '% de vacantes del sector' : 'Menciones' } } }
+    }
+  });
+}
+
+// ---------- Geografía ----------
+
+function renderGeo(){
+  const activos = sectoresActivos();
+  const ctx = document.getElementById('chartGeo').getContext('2d');
+  destruirChart('chartGeo');
+  const tbody = document.querySelector('#tablaGeoTop tbody');
+
+  if(activos.length === 0){
+    tbody.innerHTML = '<tr><td colspan="3" class="empty-state">Selecciona al menos un sector arriba.</td></tr>';
+    return;
+  }
+
+  CHARTS['chartGeo'] = new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: activos.map(s => s.nombre),
+      datasets: [{ data: activos.map(s => SECTORES[s.key].cobertura_geografica.estados_unicos), backgroundColor: activos.map(s => SECTOR_COLOR[s.key]), borderRadius: 4 }]
+    },
+    options: {
+      indexAxis: 'y',
+      responsive: true, maintainAspectRatio: false,
+      plugins: { legend: { display: false } },
+      scales: { x: { beginAtZero: true, max: 32, title: { display: true, text: 'Estados distintos con vacantes' } } }
+    }
+  });
+
+  tbody.innerHTML = activos.map(s => {
+    const top = (SECTORES[s.key].cobertura_geografica.top_estados || [])[0];
+    return '<tr>' +
+      '<td><span class="dot-sector" style="background:' + SECTOR_COLOR[s.key] + ';"></span>' + s.nombre + '</td>' +
+      '<td>' + (top ? top.estado : 'Sin datos') + '</td>' +
+      '<td class="num">' + (top ? top.vacantes.toLocaleString('es-MX') : '—') + '</td>' +
+      '</tr>';
+  }).join('');
+}
+
+// ---------- Empresas multisector ----------
+
+function renderMultisector(){
+  const activos = sectoresActivos();
+  const mapa = new Map(); // normalizado -> { display, sectors: [{key,nombre,vacantes}], total }
+
+  activos.forEach(s => {
+    const d = SECTORES[s.key];
+    (d.top_empresas || []).forEach(e => {
+      const norm = (e.empresa || '').trim().toLowerCase();
+      if(!norm || EMPRESAS_EXCLUIDAS.has(norm)) return;
+      if(!mapa.has(norm)) mapa.set(norm, { display: e.empresa.trim(), sectors: [], total: 0 });
+      const entry = mapa.get(norm);
+      entry.sectors.push({ key: s.key, nombre: s.nombre, vacantes: e.vacantes });
+      entry.total += e.vacantes;
+    });
+  });
+
+  const multi = Array.from(mapa.values()).filter(e => e.sectors.length > 1).sort((a,b) => b.sectors.length - a.sectors.length || b.total - a.total);
+  const tbody = document.querySelector('#tablaMultisector tbody');
+  const vacio = document.getElementById('multisectorVacio');
+
+  if(multi.length === 0){
+    tbody.innerHTML = '';
+    vacio.style.display = 'block';
+    return;
+  }
+  vacio.style.display = 'none';
+  tbody.innerHTML = multi.map(e => {
+    const badges = e.sectors.map(sec => '<span class="sector-badge"><span class="dot-sector" style="background:' + SECTOR_COLOR[sec.key] + ';"></span>' + sec.nombre + ' (' + sec.vacantes + ')</span>').join('');
+    return '<tr><td>' + e.display + '</td><td>' + badges + '</td><td class="num">' + e.total.toLocaleString('es-MX') + '</td></tr>';
+  }).join('');
+}
+
+init();
+</script>
+
+</body>
+</html>
