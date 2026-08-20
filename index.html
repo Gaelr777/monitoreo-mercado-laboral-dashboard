@@ -96,6 +96,35 @@ input[type=text], input[type=number]{width:100%;padding:9px 10px;border:1px soli
 .job-razon{font-size:0.86rem;color:var(--texto);margin-top:10px;padding:10px 12px;background:var(--hero-bg2);border-radius:8px;border-left:3px solid var(--gold-light);line-height:1.45;}
 .job-razon .lbl{display:block;font-size:0.66rem;text-transform:uppercase;letter-spacing:.06em;font-weight:700;color:var(--azul-osc);margin-bottom:4px;}
 .job-actions{margin-top:12px;display:flex;gap:10px;flex-wrap:wrap;align-items:center;}
+
+/* ===================== REDISEÑO VISUAL — refuerzos ===================== */
+html{scroll-behavior:smooth;}
+header{position:relative;overflow:hidden;}
+header::before{content:'';position:absolute;top:-140px;right:-90px;width:440px;height:440px;border-radius:50%;background:radial-gradient(circle,rgba(184,154,87,.20),transparent 70%);pointer-events:none;}
+header::after{content:'';position:absolute;bottom:-170px;left:-110px;width:380px;height:380px;border-radius:50%;background:radial-gradient(circle,rgba(79,143,91,.12),transparent 70%);pointer-events:none;}
+.hero-inner{position:relative;z-index:1;}
+@keyframes fadeInUp{from{opacity:0;transform:translateY(16px);}to{opacity:1;transform:translateY(0);}}
+.hero-text, .hero-card{animation:fadeInUp .6s ease both;}
+.hero-cards .hero-card:nth-child(2){animation-delay:.08s;}
+main > .card:first-of-type{animation:fadeInUp .6s ease .05s both;}
+.reveal-in{animation:fadeInUp .5s ease both;}
+select:focus, textarea:focus, input:focus{outline:none;border-color:var(--azul);box-shadow:0 0 0 3px rgba(184,154,87,.16);}
+input[type=file]{border:1.5px dashed var(--gris-borde);background:var(--hero-bg2);padding:16px 14px;border-radius:12px;cursor:pointer;transition:border-color .15s ease,background .15s ease;}
+input[type=file]:hover{border-color:var(--azul);background:#fff;}
+input[type=file]::file-selector-button{background:linear-gradient(135deg,var(--azul),var(--gold-light));color:#fff;border:none;padding:8px 16px;border-radius:999px;font-weight:700;font-size:.85rem;margin-right:12px;cursor:pointer;font-family:var(--font-sans);}
+button.primary{transition:transform .12s ease,box-shadow .12s ease,background .12s ease;}
+button.primary:hover{transform:translateY(-1px);box-shadow:rgba(53,42,21,.22) 0px 12px 22px 0px;}
+button.primary:active{transform:translateY(0);}
+button.secondary:hover, a.secondary:hover{background:var(--hero-bg2);}
+.step-header{display:flex;align-items:center;gap:14px;margin-bottom:14px;}
+.step-header h2{margin:0;}
+.step-icon{width:46px;height:46px;flex:0 0 46px;border-radius:14px;background:linear-gradient(135deg,var(--azul),var(--gold-light));color:#fff;display:flex;align-items:center;justify-content:center;box-shadow:var(--sombra);}
+.step-tag{display:block;font-size:.68rem;text-transform:uppercase;letter-spacing:.09em;color:var(--texto-suave);font-weight:700;margin-bottom:3px;}
+.job-card, .curso-card{transition:transform .15s ease,box-shadow .15s ease;}
+.job-card:hover, .curso-card:hover{transform:translateY(-2px);box-shadow:rgba(53,42,21,.16) 0px 12px 24px 0px;}
+.curso-card{background:#fff;border:1px solid var(--gris-borde);border-left:4px solid var(--verde);border-radius:12px;padding:16px 18px;margin-bottom:12px;box-shadow:var(--sombra);}
+.curso-rank{display:inline-flex;align-items:center;justify-content:center;width:24px;height:24px;border-radius:50%;background:var(--verde);color:#fff;font-size:.74rem;font-weight:700;margin-right:8px;font-family:var(--font-sans);}
+.filtros-actions{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-top:14px;}
 </style>
 </head>
 <body>
@@ -122,7 +151,7 @@ input[type=text], input[type=number]{width:100%;padding:9px 10px;border:1px soli
   <section id="tab-cv">
     <div class="card">
       <a class="secondary" style="margin-top:0;" href="https://www.clubmentesbrillantes.com.mx/index.html">← Volver al inicio</a>
-      <h2>1. Sube tu CV</h2>
+      <div class="step-header"><div class="step-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 14.9A7 7 0 1 1 15.7 8h1.8a4.5 4.5 0 0 1 2.5 8.24"/><path d="M12 12v9"/><path d="m16 16-4-4-4 4"/></svg></div><div><span class="step-tag">Paso 1</span><h2>Sube tu CV</h2></div></div>
       <div class="note" style="margin-bottom:14px;">Habilidades y vacantes extraídas de datos reales de Adzuna, Indeed y OCC, con empresas verificadas contra el padrón público DENUE — corrida más reciente: <span id="cvFechaNote">—</span>.</div>
       <label>Sector de interés</label>
       <select id="sectorSelect">
@@ -144,7 +173,7 @@ input[type=text], input[type=number]{width:100%;padding:9px 10px;border:1px soli
     </div>
 
     <div class="card" id="resultado">
-      <h2>2. Reporte de brecha de habilidades</h2>
+      <div class="step-header"><div class="step-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" x2="18" y1="20" y2="10"/><line x1="12" x2="12" y1="20" y2="4"/><line x1="6" x2="6" y1="20" y2="14"/></svg></div><div><span class="step-tag">Paso 2</span><h2>Reporte de brecha de habilidades</h2></div></div>
       <div id="resumenTexto"></div>
 
       <label>Habilidades que ya tienes (detectadas en tu CV)</label>
@@ -157,13 +186,13 @@ input[type=text], input[type=number]{width:100%;padding:9px 10px;border:1px soli
     </div>
 
     <div class="card" id="cursosCard" style="display:none;">
-      <h2>3. Cursos recomendados</h2>
-      <div class="note">A partir de las habilidades que te faltaron arriba, así se ven en el catálogo real de cursos del equipo — modalidad, duración e institución tal cual figuran en el catálogo (algunos campos pueden decir "No especificado" si el catálogo no los tiene definidos todavía).</div>
+      <div class="step-header"><div class="step-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.4 10.9a1 1 0 0 0 0-1.84L12.8 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.83l8.57 3.9a2 2 0 0 0 1.66 0z"/><path d="M22 10v6"/><path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"/></svg></div><div><span class="step-tag">Paso 3 · Recomendado por IA</span><h2>Cursos recomendados</h2></div></div>
+      <div class="note">A partir de las habilidades que te faltaron arriba, Claude (IA) elige los 5 cursos reales que más te convienen para cerrarlas — priorizando las habilidades más pedidas en las vacantes del sector. Si el servicio de IA no está disponible en este momento, se usa como respaldo el catálogo interno del equipo (hoy solo cubre Automotriz y Turismo).</div>
       <div id="cursosContenido"></div>
     </div>
 
     <div class="card" id="empleosCard" style="display:none;">
-      <h2>4. Empleos recomendados para ti</h2>
+      <div class="step-header"><div class="step-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 20V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/><rect width="20" height="14" x="2" y="6" rx="2"/></svg></div><div><span class="step-tag">Paso 4</span><h2>Empleos recomendados para ti</h2></div></div>
       <div class="note">Vacantes reales de la corrida más reciente del pipeline, verificadas manualmente como vigentes al momento de publicar esta actualización — con link directo a la publicación original. Como son avisos de portales de empleo en tiempo real (Adzuna, OCC, Indeed), es posible que alguna se cierre entre una actualización y otra si la empresa cubre la posición; no es un error del sitio. El sitio se actualiza automáticamente con cada nueva corrida para mantener esta lista lo más vigente posible.</div>
       <div class="filtros-card">
 <h3>Filtros de búsqueda</h3>
@@ -191,7 +220,10 @@ input[type=text], input[type=number]{width:100%;padding:9px 10px;border:1px soli
 </div>
 </div>
 <label class="filtros-check"><input type="checkbox" id="filtroExcluirConfidencial"> Excluir vacantes de empresa no revelada ("Empresa Confidencial")</label>
-<button class="secondary" style="margin-top:14px;" id="btnAplicarFiltros" onclick="renderEmpleos()">Aplicar filtros</button>
+<div class="filtros-actions">
+<button class="primary" style="margin-top:0;" id="btnAplicarFiltros" onclick="renderEmpleos()">Aplicar filtros</button>
+<button class="secondary" style="margin-top:0;" id="btnRestaurarFiltros" onclick="restaurarFiltros()">↺ Restaurar filtros</button>
+</div>
 </div>
 <div id="empleosContenido"></div>
     </div>
@@ -334,6 +366,7 @@ let ultimoReporte = null;
 const CV_ANALYSIS_ENDPOINT = 'https://cv-analisis.gael-ramav.workers.dev';
 const RECOMENDAR_EMPLEOS_ENDPOINT = CV_ANALYSIS_ENDPOINT + '/recomendar-empleos';
 const MEJORAR_CV_ENDPOINT = CV_ANALYSIS_ENDPOINT + '/mejorar-cv';
+const CURSOS_RECOMENDADOS_ENDPOINT = CV_ANALYSIS_ENDPOINT + '/recomendar-cursos';
 
 async function detectarHabilidadesIA(cvTextoRaw, todas){
   const resp = await fetch(CV_ANALYSIS_ENDPOINT, {
@@ -421,6 +454,7 @@ async function analizarCV(){
 
   ultimoReporte = {sectorKey, sector, matched, missing, missingTop, pct, textoNorm, cvTextoRaw, origen, fecha: new Date().toISOString().slice(0,10)};
   document.getElementById('resultado').style.display = 'block';
+  document.getElementById('resultado').classList.add('reveal-in');
   document.getElementById('resultado').scrollIntoView({behavior:'smooth'});
   renderCursos();
   renderEmpleos();
@@ -438,10 +472,10 @@ function descargarReporte(){
   md += `\n\n## Habilidades más demandadas que te faltan\n\n`;
   md += missingTop.length ? missingTop.map(h=>`- ${h.skill} (${h.tipo}, ${h.menciones} menciones en vacantes verificadas)`).join('\n') : '_Sin brechas relevantes detectadas._';
 
-  const cursos = cursosRecomendados(sectorKey, missing);
-  md += `\n\n## Cursos recomendados (catálogo real de cursos del equipo)\n\n`;
+  const cursos = ultimoReporte.cursosRecomendados || cursosRecomendadosLocal(sectorKey, missing);
+  md += `\n\n## Cursos recomendados (mejores 5, por IA — con respaldo local si la IA no está disponible)\n\n`;
   md += cursos.length
-    ? cursos.map(c=>`- **${c.nombre}** — ${c.institucion}, ${c.modalidad}, ${c.duracion} (${c.nivel}). Cubre: ${c.cubre.join(', ')}`).join('\n')
+    ? cursos.map(c=>`- **${c.nombre}** — ${c.fuente || c.institucion || 'fuente no especificada'}, ${c.modalidad}, ${c.duracion} (${c.nivel}). Cubre: ${c.cubre.join(', ')}`).join('\n')
     : '_No se identificaron cursos adicionales necesarios._';
 
   md += `\n\n## Empleos recomendados para ti\n\n`;
@@ -458,21 +492,56 @@ function descargarReporte(){
   a.click();
 }
 
-/* ===================== CURSOS RECOMENDADOS ===================== */
-function cursosRecomendados(sectorKey, missing){
+/* ===================== CURSOS RECOMENDADOS (por IA, top 5, con respaldo local) ===================== */
+
+// Respaldo local: catálogo interno real del equipo (hoy solo cubre Automotriz y Turismo).
+// Se usa únicamente si el servicio de IA no responde. Limitado a los 5 mejores.
+function cursosRecomendadosLocal(sectorKey, missing){
   const missingNames = new Set(missing.map(h=>h.skill));
   const catalogo = (COURSES.cursos[sectorKey] || []);
   const recomendados = catalogo
     .map(c=>{
       const cubre = c.habilidades.filter(h=>missingNames.has(h));
-      return {...c, cubre};
+      return {...c, fuente: c.institucion, cubre, razon: null};
     })
     .filter(c=>c.cubre.length>0)
     .sort((a,b)=>b.cubre.length-a.cubre.length);
-  return recomendados;
+  return recomendados.slice(0,5);
 }
 
-function renderCursos(){
+async function cursosRecomendadosIA(sectorNombre, missing){
+  const habilidades = missing.map(h => ({skill: h.skill, tipo: h.tipo, menciones: h.menciones}));
+  const resp = await fetch(CURSOS_RECOMENDADOS_ENDPOINT, {
+    method: 'POST',
+    headers: {'content-type': 'application/json'},
+    body: JSON.stringify({ sectorNombre, missing: habilidades })
+  });
+  if(!resp.ok) throw new Error('El servicio de recomendación de cursos respondió con error ' + resp.status);
+  const data = await resp.json();
+  if(!data || !Array.isArray(data.cursos)) throw new Error('Formato de respuesta inesperado');
+  return data.cursos.slice(0,5).map(c => ({
+    nombre: c.nombre,
+    fuente: c.plataforma,
+    modalidad: c.modalidad,
+    duracion: c.duracion,
+    nivel: c.nivel,
+    cubre: Array.isArray(c.cubre) ? c.cubre : [],
+    razon: c.razon || null,
+  }));
+}
+
+function renderCursoCard(c, i){
+  return `
+      <div class="curso-card">
+        <div style="font-weight:600;color:var(--azul-osc);"><span class="curso-rank">${i+1}</span>${c.nombre}</div>
+        <div class="hint">${[c.fuente, c.modalidad, c.duracion, c.nivel ? ('Nivel ' + c.nivel) : null].filter(Boolean).join(' · ')}</div>
+        ${c.razon ? `<div class="job-razon" style="margin-top:8px;"><span class="lbl">Por qué te lo recomendamos</span>${c.razon}</div>` : ''}
+        <div style="margin-top:8px;">${c.cubre.map(s=>`<span class="badge missing">${s}</span>`).join('')}</div>
+      </div>
+    `;
+}
+
+async function renderCursos(){
   const cont = document.getElementById('cursosContenido');
   const cursosCard = document.getElementById('cursosCard');
   if(!ultimoReporte){
@@ -480,24 +549,42 @@ function renderCursos(){
     return;
   }
   cursosCard.style.display = 'block';
+  cursosCard.classList.add('reveal-in');
   const {sectorKey, sector, missing} = ultimoReporte;
   if(!missing.length){
     cont.innerHTML = `<p class="note">Tu CV ya cubre todas las habilidades más demandadas de <strong>${sector.nombre}</strong> detectadas en la corrida ${DATA.meta.corrida}. No hay cursos que recomendarte por ahora.</p>`;
     return;
   }
-  const recomendados = cursosRecomendados(sectorKey, missing);
+
+  cont.innerHTML = '<p class="note">Buscando los mejores 5 cursos para cerrar tus brechas con IA…</p>';
+
+  let recomendados = [];
+  let modoIA = false;
+  try{
+    recomendados = await cursosRecomendadosIA(sector.nombre, missing);
+    if(recomendados.length) modoIA = true;
+  }catch(err){
+    console.warn('Recomendación de cursos por IA no disponible, usando respaldo local:', err);
+  }
+
+  if(!modoIA){
+    recomendados = cursosRecomendadosLocal(sectorKey, missing);
+  }
+
+  ultimoReporte.cursosRecomendados = recomendados;
+
   if(!recomendados.length){
-    cont.innerHTML = `<p class="note">No encontramos, en el catálogo real de cursos del equipo, ningún curso que cubra tus habilidades faltantes de ${sector.nombre} todavía.</p>`;
+    cont.innerHTML = modoIA === false && recomendados.length === 0
+      ? `<p class="note">No encontramos cursos que cubran tus habilidades faltantes de ${sector.nombre} en este momento. Intenta de nuevo en unos minutos.</p>`
+      : `<p class="note">No encontramos cursos que cubran tus habilidades faltantes de ${sector.nombre} todavía.</p>`;
     return;
   }
-  cont.innerHTML = `<p class="note">Basado en tu último análisis (${sector.nombre}, ${missing.length} habilidades faltantes) — ordenados por cuántas de esas habilidades cubren.</p>` +
-    recomendados.map(c => `
-      <div class="card" style="margin-bottom:12px;padding:16px 18px;">
-        <div style="font-weight:600;color:var(--azul-osc);">${c.nombre}</div>
-        <div class="hint">${c.institucion} · ${c.modalidad} · ${c.duracion} · Nivel ${c.nivel}</div>
-        <div style="margin-top:8px;">${c.cubre.map(s=>`<span class="badge missing">${s}</span>`).join('')}</div>
-      </div>
-    `).join('');
+
+  const introTexto = modoIA
+    ? `<p class="note">Los 5 cursos elegidos por IA (Claude) como los más útiles para cerrar tus ${missing.length} habilidades faltantes en ${sector.nombre}, priorizando las más pedidas en las vacantes del sector.</p>`
+    : `<p class="note">El servicio de IA no está disponible en este momento — te mostramos, como respaldo, los cursos del catálogo interno del equipo (Basado en tu último análisis: ${sector.nombre}, ${missing.length} habilidades faltantes).</p>`;
+
+  cont.innerHTML = introTexto + recomendados.map((c,i) => renderCursoCard(c,i)).join('');
 }
 
 /* ===================== EMPLEOS RECOMENDADOS ===================== */
@@ -553,6 +640,22 @@ function initFiltroSectorChips(){
       filtroSectorActivo = b.dataset.sector;
     });
   });
+}
+
+function restaurarFiltros(){
+  const ubic = document.getElementById('filtroUbicacion'); if(ubic) ubic.value = '';
+  const sal = document.getElementById('filtroSalario'); if(sal) sal.value = '';
+  const niv = document.getElementById('filtroNivel'); if(niv) niv.value = '';
+  const rec = document.getElementById('filtroRecencia'); if(rec) rec.value = '';
+  const conf = document.getElementById('filtroExcluirConfidencial'); if(conf) conf.checked = false;
+  filtroSectorActivo = 'todos';
+  const cont = document.getElementById('filtroSectorChips');
+  if(cont){
+    cont.querySelectorAll('button').forEach(b=>{
+      b.classList.toggle('active', b.dataset.sector === 'todos');
+    });
+  }
+  renderEmpleos();
 }
 
 async function poolVacantesFiltrado(){
@@ -679,6 +782,7 @@ async function renderEmpleos(){
     return;
   }
   empleosCard.style.display = 'block';
+  empleosCard.classList.add('reveal-in');
   initFiltroSectorChips();
   const {textoNorm, cvTextoRaw} = ultimoReporte;
 
