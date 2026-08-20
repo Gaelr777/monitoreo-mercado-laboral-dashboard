@@ -56,7 +56,7 @@
   label{display:block;font-size:0.85rem;font-weight:600;color:var(--texto-suave);margin:14px 0 6px;}
   button.primary{background:linear-gradient(135deg,var(--azul),var(--gold-light));color:#fff;border:none;padding:12px 28px;border-radius:999px;font-size:0.95rem;font-weight:700;cursor:pointer;margin-top:16px;letter-spacing:.01em;font-family:var(--font-sans);box-shadow:var(--sombra);}
   button.primary:hover{background:linear-gradient(135deg,var(--azul-osc),var(--azul));}
-  button.secondary{background:#fff;color:var(--azul-osc);border:1.5px solid var(--azul);padding:9px 20px;border-radius:999px;font-size:0.88rem;font-weight:700;cursor:pointer;margin-top:10px;margin-right:8px;font-family:var(--font-sans);}
+  button.secondary, a.secondary{background:#fff;color:var(--azul-osc);border:1.5px solid var(--azul);padding:9px 20px;border-radius:999px;font-size:0.88rem;font-weight:700;cursor:pointer;margin-top:10px;margin-right:8px;font-family:var(--font-sans);text-decoration:none;display:inline-block;}
   .badge{display:inline-block;padding:4px 12px;border-radius:999px;font-size:0.82rem;margin:3px 5px 3px 0;font-weight:600;}
   .badge.match{background:#eaf3ec;color:var(--verde);border:1px solid #c9e2cd;}
   .badge.missing{background:#f8ece2;color:var(--naranja);border:1px solid #edcfb3;}
@@ -108,7 +108,7 @@ input[type=text], input[type=number]{width:100%;padding:9px 10px;border:1px soli
     <div class="hero-text">
       <p class="eyebrow">Análisis de demanda de talento y habilidades</p>
       <h1>Tu CV frente al mercado real</h1>
-      <p>Sube tu CV y descubre en segundos qué habilidades técnicas y blandas te faltan frente a las vacantes verificadas de los 7 sectores que cubrimos, con datos de <span id="heroFechaTexto">la corrida más reciente</span>.</p>
+      <p>Sube tu CV y descubre en segundos qué habilidades técnicas y blandas te faltan frente a las vacantes verificadas de los 7 sectores que cubrimos, con datos <span id="heroFechaTexto">actualizados de la corrida más reciente</span>.</p>
     </div>
     <div class="hero-cards">
       <div class="hero-card"><div class="lbl">Datos actualizados</div><div class="val" id="heroCorridaVal">—</div></div>
@@ -117,32 +117,11 @@ input[type=text], input[type=number]{width:100%;padding:9px 10px;border:1px soli
   </div>
 </header>
 
-<nav>
-  <button id="nav-home" class="active" onclick="mostrarTab('home')">Inicio</button>
-  <button id="nav-cv" onclick="mostrarTab('cv')" disabled>Subir tu CV</button>
-</nav>
-
 <main>
 
-  <!-- TAB HOME -->
-  <section id="tab-home" class="tab active">
-    <div class="cat-grid">
-      <div class="cat-card" onclick="mostrarTab('cv')">
-        <h3>Sube tu CV</h3>
-        <p>Compara tu currículum contra las vacantes verificadas del sector y descubre qué habilidades técnicas y blandas te faltan frente a lo que hoy piden los empleadores.</p>
-        <button class="arrow-btn" aria-label="Ir a Subir tu CV">→</button>
-      </div>
-      <div class="cat-card cat-card-static">
-        <h3>Metodología</h3>
-        <p>Vacantes extraídas de Adzuna, Indeed y OCC, y empresas verificadas contra el padrón público DENUE. Corrida de referencia: <span id="metaFechaTexto">—</span>, sectores Automotriz, Turismo, Gestión y Administración, Ventas, Finanzas, Logística y Legal.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- TAB CV -->
-  <section id="tab-cv" class="tab">
+  <section id="tab-cv">
     <div class="card">
-      <button class="secondary" style="margin-top:0;" onclick="mostrarTab('home')">← Volver al inicio</button>
+      <a class="secondary" style="margin-top:0;" href="https://www.clubmentesbrillantes.com.mx/index.html">← Volver al inicio</a>
       <h2>1. Sube tu CV</h2>
       <div class="note" style="margin-bottom:14px;">Habilidades y vacantes extraídas de datos reales de Adzuna, Indeed y OCC, con empresas verificadas contra el padrón público DENUE — corrida más reciente: <span id="cvFechaNote">—</span>.</div>
       <label>Sector de interés</label>
@@ -240,8 +219,7 @@ function formatearFecha(iso){
 function pintarMeta(){
   const fecha = formatearFecha(DATA.meta.corrida);
   document.getElementById('heroCorridaVal').textContent = fecha;
-  document.getElementById('heroFechaTexto').textContent = `la corrida del ${fecha}`;
-  document.getElementById('metaFechaTexto').textContent = fecha;
+  document.getElementById('heroFechaTexto').textContent = `actualizados del ${fecha}`;
   const cvFecha = document.getElementById('cvFechaNote');
   if(cvFecha) cvFecha.textContent = `la corrida del ${fecha}`;
 }
@@ -264,7 +242,6 @@ async function cargarDatos(){
     DATA = { meta: json.meta, sectorList: json.sectores, sectores: {} };
     COURSES = json.COURSES;
     pintarMeta();
-    document.getElementById('nav-cv').disabled = false;
     document.getElementById('loadingOverlay').classList.add('hidden');
   }catch(err){
     document.body.classList.add('data-error');
@@ -273,16 +250,6 @@ async function cargarDatos(){
   }
 }
 cargarDatos();
-
-/* ===================== NAV ===================== */
-function mostrarTab(tab){
-  if(tab==='cv' && !DATA) return; // datos aún no cargados o fallaron
-  document.getElementById('tab-home').classList.toggle('active', tab==='home');
-  document.getElementById('tab-cv').classList.toggle('active', tab==='cv');
-  document.getElementById('nav-home').classList.toggle('active', tab==='home');
-  document.getElementById('nav-cv').classList.toggle('active', tab==='cv');
-  window.scrollTo({top:0, behavior:'smooth'});
-}
 
 /* ===================== EXTRACCIÓN DE TEXTO DEL ARCHIVO ===================== */
 if(window['pdfjsLib']){
