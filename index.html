@@ -125,10 +125,12 @@ button.secondary:hover, a.secondary:hover{background:var(--hero-bg2);}
 .curso-card{background:#fff;border:1px solid var(--gris-borde);border-left:4px solid var(--verde);border-radius:12px;padding:16px 18px;margin-bottom:12px;box-shadow:var(--sombra);}
 .curso-rank{display:inline-flex;align-items:center;justify-content:center;width:24px;height:24px;border-radius:50%;background:var(--verde);color:#fff;font-size:.74rem;font-weight:700;margin-right:8px;font-family:var(--font-sans);}
 .filtros-actions{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-top:14px;}
-.topbar{max-width:1080px;margin:0 auto;padding:14px 32px 0;position:relative;z-index:1;}
-.topbar a{display:inline-flex;align-items:center;gap:6px;color:var(--texto-suave);font-size:0.82rem;font-weight:700;text-decoration:none;letter-spacing:.01em;}
-.topbar a:hover{color:var(--azul-osc);}
-@media(max-width:600px){.topbar{padding:12px 20px 0;}}
+.topbar{max-width:1080px;margin:0 auto;padding:16px 32px 0;position:relative;z-index:1;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;}
+.topbar .logo-link{display:inline-flex;align-items:center;}
+.topbar .logo-link img{height:34px;width:auto;display:block;}
+.topbar a.volver-link{display:inline-flex;align-items:center;gap:6px;color:var(--texto-suave);font-size:0.82rem;font-weight:700;text-decoration:none;letter-spacing:.01em;}
+.topbar a.volver-link:hover{color:var(--azul-osc);}
+@media(max-width:600px){.topbar{padding:14px 20px 0;} .topbar .logo-link img{height:28px;}}
 </style>
 </head>
 <body>
@@ -136,7 +138,7 @@ button.secondary:hover, a.secondary:hover{background:var(--hero-bg2);}
 <div id="loadingOverlay">Cargando datos más recientes…</div>
 <div id="loadError">No se pudieron cargar los datos más recientes (sector_data.json). Mostrando la página sin datos — recarga en unos minutos o avisa a Gael.</div>
 
-<div class="topbar"><a href="https://www.clubmentesbrillantes.com.mx/index.html">← Volver a Mentes Brillantes</a></div>
+<div class="topbar"><a class="logo-link" href="https://www.clubmentesbrillantes.com.mx/index.html" aria-label="Club de Mentes Brillantes"><img src="logo-cmb.svg" alt="Club de Mentes Brillantes"></a><a class="volver-link" href="https://www.clubmentesbrillantes.com.mx/index.html">← Volver a Mentes Brillantes</a></div>
 <header>
   <div class="hero-inner">
     <div class="hero-text">

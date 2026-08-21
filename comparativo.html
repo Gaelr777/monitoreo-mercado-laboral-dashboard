@@ -26,6 +26,12 @@
   header p{margin:0;font-size:0.98rem;color:var(--hero-sub);max-width:600px;line-height:1.6;}
   header .volver{display:inline-block;margin-top:18px;font-size:0.82rem;color:var(--azul-osc);text-decoration:none;font-weight:600;}
   header .volver:hover{text-decoration:underline;}
+  .topbar{max-width:1120px;margin:0 auto;padding:16px 32px 0;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;}
+  .topbar .logo-link{display:inline-flex;align-items:center;}
+  .topbar .logo-link img{height:34px;width:auto;display:block;}
+  .topbar a.volver-link{display:inline-flex;align-items:center;gap:6px;color:var(--texto-suave);font-size:0.82rem;font-weight:700;text-decoration:none;letter-spacing:.01em;}
+  .topbar a.volver-link:hover{color:var(--azul-osc);}
+  @media(max-width:600px){.topbar{padding:14px 20px 0;} .topbar .logo-link img{height:28px;}}
   .hero-inner{display:flex;justify-content:space-between;align-items:flex-start;gap:36px;max-width:1120px;margin:0 auto;flex-wrap:wrap;padding-bottom:38px;}
   .hero-text{flex:1 1 420px;}
   .hero-cards{flex:0 0 240px;display:flex;flex-direction:column;gap:12px;margin-top:4px;}
@@ -78,6 +84,7 @@
 <div id="loadingOverlay">Cargando datos de todos los sectores…</div>
 <div id="loadError">No se pudieron cargar los datos (manifest.json o alguno de los archivos por sector). Recarga la página en unos minutos — si el problema sigue, avisa a Gael.</div>
 
+<div class="topbar"><a class="logo-link" href="https://www.clubmentesbrillantes.com.mx/index.html" aria-label="Club de Mentes Brillantes"><img src="logo-cmb.svg" alt="Club de Mentes Brillantes"></a><a class="volver-link" href="https://www.clubmentesbrillantes.com.mx/index.html">← Volver a Mentes Brillantes</a></div>
 <header>
   <div class="hero-inner">
     <div class="hero-text">
