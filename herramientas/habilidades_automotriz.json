@@ -1,0 +1,44 @@
+{
+  "tecnicas": {
+    "ventas": ["venta", "vende", "bdc", "promotor"],
+    "mecánica": ["mecanic", "mecánic", "taller", "diesel", "automotriz tecnico", "tecnico automotriz", "técnico automotriz"],
+    "mantenimiento": ["mantenimiento"],
+    "calidad": ["calidad", "quality"],
+    "producción": ["produccion", "producción", "production"],
+    "manufactura": ["manufactura", "manufacturing", "maquinado", "machining", "soldadura"],
+    "excel": ["excel"],
+    "refacciones": ["refaccion", "refacción"],
+    "erp": ["erp"],
+    "inglés": ["ingles", "inglés", "bilingue", "bilingüe"],
+    "inventarios": ["inventario"],
+    "sap": ["sap"],
+    "nom": ["nom-", " nom "],
+    "python": ["python"]
+  },
+  "blandas": {
+    "responsabilidad": ["responsab", "chofer", "operador", "lavador"],
+    "organización": ["organiza", "planeador", "administra", "coordinador"],
+    "trabajo en equipo": ["equipo", "ayudante", "auxiliar"],
+    "atención al detalle": ["detalle", "inspeccion", "inspección", "preparador", "pintura"],
+    "negociación": ["negocia", "compras", "buyer", "asesor de ventas", "agente de ventas"],
+    "comunicación": ["comunicacion", "comunicación", "hostess", "recepcionista"],
+    "liderazgo": ["lider", "líder", "gerente", "jefe", "supervisor", "coordinador de ventas"],
+    "atención al cliente": ["atencion al cliente", "atención al cliente", "servicio", "credito", "crédito"],
+    "toma de decisiones": ["director", "gerente"],
+    "resolución de problemas": ["mecanic", "mecánic", "controls", "control"]
+  },
+  "por_categoria": {
+    "Ventas / Comercial": {"tecnicas": ["Ventas"], "blandas": ["Negociación"]},
+    "Mecánica / Técnico automotriz (taller, mantenimiento)": {"tecnicas": ["Mecánica automotriz"], "blandas": ["Resolución de problemas"]},
+    "Ingeniería (calidad, procesos, diseño, manufactura)": {"tecnicas": ["Ingeniería"], "blandas": ["Resolución de problemas"]},
+    "Gerencia / Dirección": {"tecnicas": ["Gestión operativa"], "blandas": ["Liderazgo"]},
+    "Financiamiento / Crédito automotriz": {"tecnicas": ["Análisis de crédito"], "blandas": ["Atención al cliente"]},
+    "Compras / Logística / Almacén": {"tecnicas": ["Compras y logística"], "blandas": ["Organización"]},
+    "Administración": {"tecnicas": ["Administración"], "blandas": ["Organización"]},
+    "Atención a clientes": {"tecnicas": ["Atención a clientes"], "blandas": ["Comunicación"]},
+    "Recursos Humanos": {"tecnicas": ["Reclutamiento"], "blandas": ["Comunicación"]},
+    "Marketing": {"tecnicas": ["Marketing"], "blandas": ["Creatividad"]},
+    "Becarios / Prácticas": {"tecnicas": ["Apoyo operativo"], "blandas": ["Disposición a aprender"]},
+    "Otro": {"tecnicas": ["(inferida del título)"], "blandas": ["Responsabilidad"]}
+  }
+}
