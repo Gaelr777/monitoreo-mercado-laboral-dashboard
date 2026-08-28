@@ -1,0 +1,13 @@
+{
+  "Gerencia / Dirección": ["gerente", "director", "jefe de", "supervisor", "lead "],
+  "Ingeniería (calidad, procesos, diseño, manufactura)": ["ingenier", "engineer", "calidad", "quality", "proceso", "robotic", "maquinado", "machining", "soldadura", "welding"],
+  "Financiamiento / Crédito automotriz": ["credito", "crédito", "financiamiento", "financiera"],
+  "Compras / Logística / Almacén": ["compras", "buyer", "logistic", "logístic", "almacen", "almacén", "materiales", "planeador", "packaging"],
+  "Recursos Humanos": ["recursos humanos", "reclutamiento", "atraccion de talento", "atracción de talento"],
+  "Marketing": ["marketing", "mercadotecnia"],
+  "Becarios / Prácticas": ["becario", "practicante", "trainee", "internship", "prácticas profesionales"],
+  "Mecánica / Técnico automotriz (taller, mantenimiento)": ["mecanic", "mecánic", "tecnico", "técnico", "mantenimiento", "taller", "lavador", "hojalater", "preparador", "diesel", "electricista"],
+  "Ventas / Comercial": ["ventas", "venta", "vendedor", "bdc", "promotor", "asesor comercial", "ejecutivo de cuenta"],
+  "Administración": ["administra", "contable", "contabilidad", "auxiliar", "facturacion", "facturación"],
+  "Atención a clientes": ["atencion a clientes", "atención a clientes", "hostess", "recepcionista", "atencion al cliente", "atención al cliente"]
+}
