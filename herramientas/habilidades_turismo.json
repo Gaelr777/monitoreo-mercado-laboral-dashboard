@@ -1,0 +1,46 @@
+{
+  "tecnicas": {
+    "Preparación de alimentos y bebidas": ["cocin", "chef", "mesero", "barista", "bartender", "aliment", "restaurante", "restaurant", "panader", "parrill", "kfc", "burger", "starbucks", "ihop", "comedor", "gastronom", "capitan", "capitán"],
+    "Estándares de higiene y seguridad alimentaria (A&B)": ["cocin", "chef", "aliment", "restaurante", "restaurant", "comedor", "gastronom"],
+    "Gestión operativa y supervisión de equipos": ["gerente", "subgerente", "supervisor", "jefe", "director", "coordinador"],
+    "Ventas y prospección comercial": ["venta", "vendedor", "comercial", "promotor"],
+    "Sistemas de reservaciones hoteleras (PMS)": ["recepcion", "recepción", "hotel", "concierge", "auditor nocturno", "hostess"],
+    "Sistemas de reservación (GDS/OTA)": ["reserva", "agencia de viajes", "viajes", "travel", "paquetes"],
+    "Gestión administrativa y manejo de Excel": ["administra", "contab", "auxiliar", "pricing", "excel", "compras"],
+    "Armado de paquetes turísticos": ["agencia de viajes", "paquetes", "viajes", "travel"],
+    "Mantenimiento general e instalaciones": ["mantenimiento", "limpieza", "audiovisuales", "instalaciones"],
+    "Coordinación de eventos": ["evento", "banquete"],
+    "Protocolos de seguridad (mantenimiento/vigilancia)": ["seguridad", "vigilante"],
+    "Manejo de CRM y seguimiento comercial": ["crm", "prospeccion", "prospección", "ejecutivo de ventas"],
+    "Control de costos y contabilidad básica": ["costos", "contab", "finanzas"]
+  },
+  "blandas": {
+    "Atención al cliente": ["mesero", "recepcion", "recepción", "hostess", "concierge", "atencion", "atención", "cliente", "reserva", "agente"],
+    "Comunicación": ["recepcion", "recepción", "docente", "ventas", "atencion", "atención", "coordinador", "ejecutivo"],
+    "Trabajo en equipo": ["cocin", "mesero", "ayudante", "auxiliar", "chef", "comedor", "capitan", "capitán", "steward"],
+    "Trabajo bajo presión": ["cocin", "chef", "mesero", "restaurante", "restaurant", "comedor", "kfc", "burger", "banquete"],
+    "Atención al detalle": ["camarista", "housekeeping", "limpieza", "auditor", "pricing", "contab", "compras"],
+    "Adaptabilidad": ["turno", "nocturno", "fines de semana", "rotativo", "temporada"],
+    "Organización": ["coordinador", "administra", "reserva", "evento", "auxiliar", "compras", "almacen", "almacén"],
+    "Liderazgo": ["gerente", "subgerente", "jefe", "supervisor", "director", "chef ejecutivo", "capitan", "capitán"],
+    "Toma de decisiones": ["gerente", "director", "jefe"],
+    "Orientación a resultados": ["ventas", "comercial", "gerente de ventas", "ejecutivo de ventas"],
+    "Negociación": ["ventas", "comercial", "compras"],
+    "Responsabilidad": ["mantenimiento", "seguridad", "vigilante", "supervisor de comedor", "chofer"]
+  },
+  "por_categoria": {
+    "Alimentos y Bebidas": {"tecnicas": ["Preparación de alimentos y bebidas", "Estándares de higiene y seguridad alimentaria (A&B)"], "blandas": ["Trabajo en equipo", "Trabajo bajo presión"]},
+    "Hotelería y Recepción": {"tecnicas": ["Sistemas de reservaciones hoteleras (PMS)"], "blandas": ["Atención al cliente", "Organización"]},
+    "Agencias y Reservaciones": {"tecnicas": ["Sistemas de reservación (GDS/OTA)", "Armado de paquetes turísticos"], "blandas": ["Atención al cliente", "Organización"]},
+    "Ventas y Comercial": {"tecnicas": ["Ventas y prospección comercial"], "blandas": ["Orientación a resultados", "Negociación"]},
+    "Gerencia y Dirección": {"tecnicas": ["Gestión operativa y supervisión de equipos"], "blandas": ["Liderazgo", "Toma de decisiones"]},
+    "Mantenimiento y Operaciones": {"tecnicas": ["Mantenimiento general e instalaciones"], "blandas": ["Responsabilidad", "Trabajo en equipo"]},
+    "Administración y Finanzas": {"tecnicas": ["Gestión administrativa y manejo de Excel"], "blandas": ["Atención al detalle", "Organización"]},
+    "Eventos y Banquetes": {"tecnicas": ["Coordinación de eventos"], "blandas": ["Organización", "Comunicación"]},
+    "Educación y Capacitación": {"tecnicas": ["Gestión administrativa"], "blandas": ["Comunicación", "Organización"]},
+    "Guías y Turismo Receptivo": {"tecnicas": ["Armado de paquetes turísticos"], "blandas": ["Atención al cliente", "Comunicación"]},
+    "Atención al Cliente": {"tecnicas": ["Atención telefónica"], "blandas": ["Comunicación", "Empatía"]},
+    "Becarios y Recién Egresados": {"tecnicas": ["Apoyo administrativo básico"], "blandas": ["Disposición a aprender", "Organización"]},
+    "Otro": {"tecnicas": ["(inferida del título)"], "blandas": ["Adaptabilidad"]}
+  }
+}
