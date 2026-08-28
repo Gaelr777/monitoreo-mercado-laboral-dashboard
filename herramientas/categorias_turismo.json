@@ -1,0 +1,14 @@
+{
+  "Becarios y Recién Egresados": ["becario", "practicante", "trainee", "recien egresado", "recién egresado"],
+  "Educación y Capacitación": ["docente", "profesor", "maestro", "jefe de carrera", "capacitacion", "capacitación", "instructor"],
+  "Eventos y Banquetes": ["evento", "banquete"],
+  "Agencias y Reservaciones": ["reserva", "agencia de viajes", "viajes", "travel", "paquetes vacacionales", "viaticos", "viáticos", "tour operadora"],
+  "Guías y Turismo Receptivo": ["guia", "guía", "tour ", "receptivo"],
+  "Hotelería y Recepción": ["recepcion", "recepción", "camarista", "housekeeping", "concierge", "auditor nocturno", "ama de llaves", "botones", "valet", "hostess", "hotel"],
+  "Alimentos y Bebidas": ["cocin", "chef", "mesero", "barista", "bartender", "barra", "capitan", "capitán", "aliment", "restaurante", "restaurant", "panader", "reposter", "parrill", "kfc", "burger", "starbucks", "ihop", "hooters", "vips", "comedor", "gastronom"],
+  "Mantenimiento y Operaciones": ["mantenimiento", "limpieza", "seguridad", "vigilante", "audiovisuales", "operaciones", "steward", "lavanderia", "lavandería"],
+  "Ventas y Comercial": ["ventas", "venta", "vendedor", "comercial", "promotor"],
+  "Administración y Finanzas": ["administra", "contab", "compras", "pricing", "auxiliar", "finanzas", "nomina", "nómina", "almacen", "almacén"],
+  "Atención al Cliente": ["atencion a clientes", "atención a clientes", "atencion al cliente", "atención al cliente", "call center", "soporte"],
+  "Gerencia y Dirección": ["gerente", "director", "subgerente", "jefe", "supervisor", "coordinador"]
+}
