@@ -1,0 +1,6 @@
+{
+  "Gestión de Proyectos": ["gestion de proyecto", "gestión de proyecto", "gerente de proyecto", "gerente de proyectos", "project manager", "project", "coordinador de proyecto", "coordinador de proyectos", "lider de proyecto", "líder de proyecto", "pmo", "obra", "construccion", "construcción"],
+  "Administración": ["administra", "auxiliar administrativo", "coordinador administrativo", "responsable administrativo", "nomina", "nómina", "compliance", "procesos", "normatividad"],
+  "Finanzas y Contabilidad": ["finanzas", "financiero", "contab", "presupuest", "tesoreria", "tesorería", "auditoria", "auditoría"],
+  "Tecnologías de la Información": ["erp", "sap", "netsuite", "oracle", "sistemas", "inteligencia artificial", "ti "]
+}
