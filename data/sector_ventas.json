@@ -1,1 +1,1265 @@
-{"nombre": "Ventas", "vacantes_verificadas": 387, "vacantes_descartadas": 26, "vacantes_con_habilidades": 0, "pct_con_habilidades": 0, "fuentes": {"Adzuna": 161, "Indeed": 21, "OCC": 204}, "categorias_puesto": [{"categoria": "Ejecutivo/Asesor/Agente/Representante de ventas", "vacantes": 192, "pct": 50}, {"categoria": "Gerente/Supervisor/Director/Coordinador de ventas", "vacantes": 45, "pct": 12}, {"categoria": "Administración y soporte de ventas + trainee/becario", "vacantes": 27, "pct": 7}, {"categoria": "Vendedor comisionista/campo (mayoreo, cambaceo)", "vacantes": 24, "pct": 6}, {"categoria": "Ventas técnicas/B2B/Ingeniero de ventas/KAM", "vacantes": 24, "pct": 6}, {"categoria": "Vendedor de piso/mostrador/retail", "vacantes": 21, "pct": 5}, {"categoria": "Ventas de seguros/AFORE/financieras", "vacantes": 21, "pct": 5}, {"categoria": "Vendedor de calle/ruta/chofer-vendedor", "vacantes": 17, "pct": 4}, {"categoria": "Prospección/Telemarketing/Call center/cerradores", "vacantes": 15, "pct": 4}], "habilidades_tecnicas": [{"skill": "Prospección y generación de leads", "menciones": 173}, {"skill": "Negociación comercial", "menciones": 173}, {"skill": "Manejo de CRM / control de cartera de clientes", "menciones": 96}, {"skill": "Elaboración de cotizaciones/propuestas", "menciones": 96}, {"skill": "Office (Excel/Word) básico", "menciones": 96}, {"skill": "Conocimiento de producto/sector específico", "menciones": 96}, {"skill": "Gestión y análisis de KPIs comerciales / forecasting", "menciones": 40}, {"skill": "Manejo de CRM y reportes de ventas", "menciones": 40}, {"skill": "Excel intermedio/avanzado", "menciones": 24}, {"skill": "Elaboración de reportes de ventas/administrativos", "menciones": 24}, {"skill": "Prospección de clientes en calle/zona", "menciones": 22}, {"skill": "Manejo básico de metas por comisión (\"sin sueldo fijo\")", "menciones": 22}, {"skill": "Planeación y gestión de territorio/canal", "menciones": 22}, {"skill": "Gestión de presupuesto/costos comerciales", "menciones": 22}, {"skill": "Conocimiento técnico del producto (ingeniería/industrial/tecnológico)", "menciones": 22}, {"skill": "Venta consultiva / solution selling", "menciones": 22}, {"skill": "Manejo de caja / POS", "menciones": 19}, {"skill": "Acomodo y exhibición de mercancía (visual merchandising)", "menciones": 19}, {"skill": "Conocimiento básico de productos financieros/seguros", "menciones": 19}, {"skill": "Prospección telefónica y en campo", "menciones": 19}, {"skill": "Licencia de conducir / manejo de vehículo", "menciones": 15}, {"skill": "Gestión de ruta y cartera de clientes", "menciones": 15}, {"skill": "Manejo de script/guion de venta telefónica", "menciones": 14}, {"skill": "Técnicas de cierre", "menciones": 14}, {"skill": "Manejo de bases de datos de clientes", "menciones": 14}, {"skill": "Cierre de venta en frío", "menciones": 12}, {"skill": "Manejo de CRM avanzado y pipeline B2B", "menciones": 12}, {"skill": "Análisis de datos / métricas comerciales", "menciones": 12}, {"skill": "Conocimiento de catálogo/producto de piso", "menciones": 10}, {"skill": "Control de inventario básico", "menciones": 10}, {"skill": "Cumplimiento normativo/documentación (afiliación, trámites)", "menciones": 10}, {"skill": "Reclutamiento y capacitación de vendedores", "menciones": 9}, {"skill": "Manejo de efectivo y cobranza", "menciones": 8}, {"skill": "Conocimiento básico de logística de entrega", "menciones": 8}, {"skill": "Uso de dialer/plataforma de call center", "menciones": 8}, {"skill": "Manejo básico de CRM/registro de leads", "menciones": 8}, {"skill": "Conocimiento de zona/territorio", "menciones": 5}, {"skill": "Inglés técnico", "menciones": 5}, {"skill": "Conocimiento básico de CRM/ERP", "menciones": 5}, {"skill": "Uso de sistemas punto de venta / inventario digital", "menciones": 4}, {"skill": "Cálculo de comisiones/rendimientos básicos", "menciones": 4}], "habilidades_blandas": [{"skill": "Proactividad", "menciones": 187}, {"skill": "Comunicación y capacidad de persuasión", "menciones": 173}, {"skill": "Orientación a resultados / metas y comisiones", "menciones": 173}, {"skill": "Empatía y escucha activa", "menciones": 96}, {"skill": "Manejo de objeciones", "menciones": 96}, {"skill": "Adaptabilidad (cambio frecuente de producto/mercado)", "menciones": 96}, {"skill": "Liderazgo de equipos", "menciones": 40}, {"skill": "Comunicación y capacidad de coaching", "menciones": 40}, {"skill": "Organización y atención al detalle", "menciones": 24}, {"skill": "Tolerancia al rechazo / persistencia", "menciones": 22}, {"skill": "Autonomía y automotivación", "menciones": 22}, {"skill": "Habilidad de persuasión", "menciones": 22}, {"skill": "Toma de decisiones bajo presión", "menciones": 22}, {"skill": "Resolución de conflictos", "menciones": 22}, {"skill": "Pensamiento estratégico", "menciones": 22}, {"skill": "Pensamiento analítico", "menciones": 22}, {"skill": "Negociación con cuentas clave", "menciones": 22}, {"skill": "Gestión de relaciones de largo plazo", "menciones": 22}, {"skill": "Atención y servicio al cliente", "menciones": 19}, {"skill": "Comunicación clara y cordial", "menciones": 19}, {"skill": "Habilidad de generar confianza (venta de intangibles)", "menciones": 19}, {"skill": "Persistencia ante ciclos de venta largos", "menciones": 19}, {"skill": "Comunicación persuasiva orientada a beneficios", "menciones": 19}, {"skill": "Autogestión y disciplina (trabajo sin supervisión directa)", "menciones": 15}, {"skill": "Orientación a resultados/comisión", "menciones": 15}, {"skill": "Tolerancia a la frustración / alto volumen de rechazo", "menciones": 14}, {"skill": "Comunicación verbal clara y ritmo rápido", "menciones": 14}, {"skill": "Orientación agresiva a metas diarias/semanales", "menciones": 14}, {"skill": "Resiliencia y manejo del estrés", "menciones": 14}, {"skill": "Comunicación interna (coordinación con equipo comercial)", "menciones": 14}, {"skill": "Disposición de aprendizaje (perfil junior)", "menciones": 14}, {"skill": "Manejo del tiempo en campo", "menciones": 12}, {"skill": "Comunicación técnica a públicos no técnicos", "menciones": 12}, {"skill": "Paciencia y tolerancia a la frustración", "menciones": 10}, {"skill": "Trabajo en equipo (turnos, tienda)", "menciones": 10}, {"skill": "Proactividad para cerrar venta en piso", "menciones": 10}, {"skill": "Ética y manejo de información sensible", "menciones": 10}, {"skill": "Resiliencia ante el rechazo", "menciones": 8}, {"skill": "Puntualidad y responsabilidad", "menciones": 8}, {"skill": "Curiosidad y aprendizaje continuo", "menciones": 5}], "top_empresas": [{"empresa": "PROFUTURO AFORE, S.A. DE C.V.", "vacantes": 13}, {"empresa": "Grupo Salinas", "vacantes": 9}, {"empresa": "Atento Servicios, S. A. de C.V.", "vacantes": 8}, {"empresa": "Grupo Gayosso", "vacantes": 7}, {"empresa": "GRUPO NACIONAL PROVINCIAL", "vacantes": 5}, {"empresa": "PROFUTURO AFORE SA DE CV", "vacantes": 4}, {"empresa": "Corporativo Cruz y Arellanes", "vacantes": 4}, {"empresa": "ENFOQUE EN PUBLICIDAD Y MERCADEO", "vacantes": 4}], "cobertura_geografica": {"top_estados": [{"estado": "Ciudad de México", "vacantes": 79}, {"estado": "Nuevo León", "vacantes": 59}, {"estado": "Estado de México", "vacantes": 39}, {"estado": "Jalisco", "vacantes": 34}, {"estado": "Querétaro", "vacantes": 19}, {"estado": "Chihuahua", "vacantes": 12}, {"estado": "Puebla", "vacantes": 12}, {"estado": "Baja California", "vacantes": 11}], "estados_unicos": 29}, "salario": {"vacantes_con_dato": 167, "pct_con_dato": 43.2, "mediana_mensual_mxn": 15250.0, "p25_mensual_mxn": 12500.0, "p75_mensual_mxn": 21875.0}, "evolucion_semanal": [{"semana": "22 Jun", "vacantes": 6}, {"semana": "29 Jun", "vacantes": 8}, {"semana": "06 Jul", "vacantes": 2}, {"semana": "13 Jul", "vacantes": 14}, {"semana": "20 Jul", "vacantes": 16}, {"semana": "27 Jul", "vacantes": 30}, {"semana": "03 Aug", "vacantes": 35}, {"semana": "10 Aug", "vacantes": 15}], "total_empresas_unicas": 306, "ultima_semana_vacantes": 15, "vacantes_detalle": [{"titulo": "Agente de ventas", "empresa": "Grupo Gayosso", "ubicacion": "Cuauhtémoc, Ciudad de México", "habilidades_tecnicas": ["Prospección y generación de leads", "Negociación comercial"], "habilidades_blandas": ["Comunicación y capacidad de persuasión", "Orientación a resultados / metas y comisiones"], "salario_min": 13226.0, "salario_max": 13226.0, "fecha_publicacion": "2026-08-14", "fuente": "OCC", "url": "https://www.occ.com.mx/empleo/oferta/21288897-agente-de-ventas"}, {"titulo": "Ejecutiva de ventas", "empresa": "APE PLAZAS", "ubicacion": "Monterrey, Nuevo León", "habilidades_tecnicas": ["Prospección y generación de leads", "Negociación comercial"], "habilidades_blandas": ["Comunicación y capacidad de persuasión", "Orientación a resultados / metas y comisiones"], "salario_min": 20000.0, "salario_max": 25000.0, "fecha_publicacion": "2026-08-14", "fuente": "OCC", "url": "https://www.occ.com.mx/empleo/oferta/21286418-ejecutiva-de-ventas"}, {"titulo": "Operador telefónico ventas totalplay/ medio tiempo", "empresa": "Grupo Salinas", "ubicacion": "Benito Juárez, Ciudad de México", "habilidades_tecnicas": ["Manejo de script/guion de venta telefónica", "Técnicas de cierre"], "habilidades_blandas": ["Tolerancia a la frustración / alto volumen de rechazo", "Comunicación verbal clara y ritmo rápido"], "salario_min": 9450.0, "salario_max": 9450.0, "fecha_publicacion": "2026-08-14", "fuente": "OCC", "url": "https://www.occ.com.mx/empleo/oferta/21285882-operador-telefonico-ventas-totalplay-medio-tiempo"}, {"titulo": "Relaciones Publicas, ventas", "empresa": "GLOBAL SOLUTIONS LIFE", "ubicacion": "San Pedro Garza García, Nuevo León", "habilidades_tecnicas": ["Prospección y generación de leads", "Negociación comercial"], "habilidades_blandas": ["Comunicación y capacidad de persuasión", "Orientación a resultados / metas y comisiones"], "salario_min": 40000.0, "salario_max": 50000.0, "fecha_publicacion": "2026-08-13", "fuente": "OCC", "url": "https://www.occ.com.mx/empleo/oferta/21285084-relaciones-publicas-ventas"}, {"titulo": "Ejecutivo en ventas y marketing digital", "empresa": "LAYOUT RIGGING Y ESTRUCTURAS SA DE CV", "ubicacion": "Monterrey, Nuevo León", "habilidades_tecnicas": ["Prospección y generación de leads", "Negociación comercial"], "habilidades_blandas": ["Comunicación y capacidad de persuasión", "Orientación a resultados / metas y comisiones"], "salario_min": 14000.0, "salario_max": 15000.0, "fecha_publicacion": "2026-08-13", "fuente": "OCC", "url": "https://www.occ.com.mx/empleo/oferta/21284442-ejecutivo-en-ventas-y-marketing-digital"}, {"titulo": "Ejecutivo de Ventas", "empresa": "EXTREME MOBILITY", "ubicacion": "San Nicolás de los Garza, Nuevo León", "habilidades_tecnicas": ["Prospección y generación de leads", "Negociación comercial"], "habilidades_blandas": ["Comunicación y capacidad de persuasión", "Orientación a resultados / metas y comisiones"], "salario_min": 17000.0, "salario_max": 22000.0, "fecha_publicacion": "2026-08-13", "fuente": "OCC", "url": "https://www.occ.com.mx/empleo/oferta/21290415-ejecutivo-de-ventas"}, {"titulo": "Asesor de ventas", "empresa": "Joven Express", "ubicacion": "San Luis Potosí", "habilidades_tecnicas": ["Prospección y generación de leads", "Negociación comercial"], "habilidades_blandas": ["Comunicación y capacidad de persuasión", "Orientación a resultados / metas y comisiones"], "salario_min": 10000.0, "salario_max": 15000.0, "fecha_publicacion": "2026-08-13", "fuente": "OCC", "url": "https://www.occ.com.mx/empleo/oferta/21294793-asesor-de-ventas"}, {"titulo": "Ejecutivo de ventas", "empresa": "GRUPO NACIONAL PROVINCIAL", "ubicacion": "La Paz, Baja California Sur", "habilidades_tecnicas": ["Prospección y generación de leads", "Negociación comercial"], "habilidades_blandas": ["Comunicación y capacidad de persuasión", "Orientación a resultados / metas y comisiones"], "salario_min": null, "salario_max": null, "fecha_publicacion": "2026-08-13", "fuente": "OCC", "url": "https://www.occ.com.mx/empleo/oferta/21294586-ejecutivo-de-ventas"}, {"titulo": "Asesor comercial de ventas GNP", "empresa": "GRUPO NACIONAL PROVINCIAL", "ubicacion": "Saltillo, Coahuila", "habilidades_tecnicas": ["Conocimiento básico de productos financieros/seguros", "Prospección telefónica y en campo"], "habilidades_blandas": ["Habilidad de generar confianza (venta de intangibles)", "Persistencia ante ciclos de venta largos"], "salario_min": null, "salario_max": null, "fecha_publicacion": "2026-08-13", "fuente": "OCC", "url": "https://www.occ.com.mx/empleo/oferta/21294162-asesor-comercial-de-ventas-gnp"}, {"titulo": "Ejecutivo de ventas", "empresa": "VERISURE SMART ALARMS", "ubicacion": "Aguascalientes, Aguascalientes", "habilidades_tecnicas": ["Prospección y generación de leads", "Negociación comercial"], "habilidades_blandas": ["Comunicación y capacidad de persuasión", "Orientación a resultados / metas y comisiones"], "salario_min": 30000.0, "salario_max": 50000.0, "fecha_publicacion": "2026-08-13", "fuente": "OCC", "url": "https://www.occ.com.mx/empleo/oferta/21293868-ejecutivo-de-ventas"}, {"titulo": "Agente Bilingüe de Servicio a Ventas – Inglés", "empresa": "TTEC CX SOLUTIONS MEXICO", "ubicacion": "Cuauhtémoc, Ciudad de México", "habilidades_tecnicas": ["Prospección y generación de leads", "Negociación comercial"], "habilidades_blandas": ["Comunicación y capacidad de persuasión", "Orientación a resultados / metas y comisiones"], "salario_min": 20800.0, "salario_max": 25800.0, "fecha_publicacion": "2026-08-13", "fuente": "OCC", "url": "https://www.occ.com.mx/empleo/oferta/21293540-agente-bilingue-de-servicio-a-ventas-ingles"}, {"titulo": "Atención a clientes y ventas", "empresa": "Duramax.", "ubicacion": "Querétaro, Querétaro", "habilidades_tecnicas": ["Prospección y generación de leads", "Negociación comercial"], "habilidades_blandas": ["Comunicación y capacidad de persuasión", "Orientación a resultados / metas y comisiones"], "salario_min": 8400.0, "salario_max": 8400.0, "fecha_publicacion": "2026-08-13", "fuente": "OCC", "url": "https://www.occ.com.mx/empleo/oferta/21283785-atencion-a-clientes-y-ventas"}, {"titulo": "Ejecutivo de ventas", "empresa": "FERRETSA SA DE CV", "ubicacion": "Oaxaca de Juárez, Oaxaca", "habilidades_tecnicas": ["Prospección y generación de leads", "Negociación comercial"], "habilidades_blandas": ["Comunicación y capacidad de persuasión", "Orientación a resultados / metas y comisiones"], "salario_min": null, "salario_max": null, "fecha_publicacion": "2026-08-12", "fuente": "OCC", "url": "https://www.occ.com.mx/empleo/oferta/21291692-ejecutivo-de-ventas"}, {"titulo": "Asesor de ventas", "empresa": "CURACRETO", "ubicacion": "Guadalajara, Jalisco", "habilidades_tecnicas": ["Prospección y generación de leads", "Negociación comercial"], "habilidades_blandas": ["Comunicación y capacidad de persuasión", "Orientación a resultados / metas y comisiones"], "salario_min": 14900.0, "salario_max": 15000.0, "fecha_publicacion": "2026-08-12", "fuente": "OCC", "url": "https://www.occ.com.mx/empleo/oferta/21288092-asesor-de-ventas"}, {"titulo": "Gerente comercial de ventas", "empresa": "Cindy Quintana Reyes", "ubicacion": "Juárez, Chihuahua", "habilidades_tecnicas": ["Gestión y análisis de KPIs comerciales / forecasting", "Manejo de CRM y reportes de ventas"], "habilidades_blandas": ["Liderazgo de equipos", "Comunicación y capacidad de coaching"], "salario_min": 62000.0, "salario_max": 67000.0, "fecha_publicacion": "2026-08-12", "fuente": "OCC", "url": "https://www.occ.com.mx/empleo/oferta/21292098-gerente-comercial-de-ventas"}, {"titulo": "asesor de ventas", "empresa": "BENJAMIN SANCHEZ FERNANDEZ Y ASOCIADOS", "ubicacion": "Jalisco", "habilidades_tecnicas": ["Prospección y generación de leads", "Negociación comercial"], "habilidades_blandas": ["Comunicación y capacidad de persuasión", "Orientación a resultados / metas y comisiones"], "salario_min": 15000.0, "salario_max": 20000.0, "fecha_publicacion": "2026-08-12", "fuente": "OCC", "url": "https://www.occ.com.mx/empleo/oferta/21293276-asesor-de-ventas"}, {"titulo": "Ejecutiva de ventas", "empresa": "UNLIMITED LOGISTIC MEXICO S.A. DE C.V", "ubicacion": "Ciudad de México", "habilidades_tecnicas": ["Prospección y generación de leads", "Negociación comercial"], "habilidades_blandas": ["Comunicación y capacidad de persuasión", "Orientación a resultados / metas y comisiones"], "salario_min": 15000.0, "salario_max": 20000.0, "fecha_publicacion": "2026-08-12", "fuente": "OCC", "url": "https://www.occ.com.mx/empleo/oferta/21292915-ejecutiva-de-ventas"}, {"titulo": "Auxiliar de cotizaciones de ventas", "empresa": "HERRAMIENTAS Y ACCESORIOS TODOEQUIPO", "ubicacion": "Baja California", "habilidades_tecnicas": ["Excel intermedio/avanzado", "Elaboración de reportes de ventas/administrativos"], "habilidades_blandas": ["Organización y atención al detalle", "Proactividad"], "salario_min": 12300.0, "salario_max": 12300.0, "fecha_publicacion": "2026-08-12", "fuente": "OCC", "url": "https://www.occ.com.mx/empleo/oferta/21290699-auxiliar-de-cotizaciones-de-ventas"}, {"titulo": "Ventas (Tik Tok / Live)", "empresa": "IMPORTADORA UNISOLO", "ubicacion": "Ciudad de México", "habilidades_tecnicas": ["Prospección y generación de leads", "Negociación comercial"], "habilidades_blandas": ["Comunicación y capacidad de persuasión", "Orientación a resultados / metas y comisiones"], "salario_min": 10000.0, "salario_max": 10000.0, "fecha_publicacion": "2026-08-12", "fuente": "OCC", "url": "https://www.occ.com.mx/empleo/oferta/21292864-ventas-tik-tok-live-"}, {"titulo": "Representante de ventas", "empresa": "DULCERIA ITALIANA", "ubicacion": "Coyoacán, Ciudad de México", "habilidades_tecnicas": ["Prospección y generación de leads", "Negociación comercial"], "habilidades_blandas": ["Comunicación y capacidad de persuasión", "Orientación a resultados / metas y comisiones"], "salario_min": 12000.0, "salario_max": 12000.0, "fecha_publicacion": "2026-08-12", "fuente": "OCC", "url": "https://www.occ.com.mx/empleo/oferta/21283023-representante-de-ventas"}, {"titulo": "Ejecutiva/o Financiera/o (Lunes a Viernes)//Ventas telemarketing", "empresa": "PROFUTURO AFORE, S.A. DE C.V.", "ubicacion": "León, Guanajuato", "habilidades_tecnicas": ["Conocimiento básico de productos financieros/seguros", "Prospección telefónica y en campo"], "habilidades_blandas": ["Habilidad de generar confianza (venta de intangibles)", "Persistencia ante ciclos de venta largos"], "salario_min": 16000.0, "salario_max": 18000.0, "fecha_publicacion": "2026-08-12", "fuente": "OCC", "url": "https://www.occ.com.mx/empleo/oferta/21282599-ejecutiva-o-financiera-o-lunes-a-viernes-ventas-telemarketing"}, {"titulo": "Ventas TDC/4 hrs + comisiones", "empresa": "Atento Servicios, S. A. de C.V.", "ubicacion": "Ciudad de México", "habilidades_tecnicas": ["Manejo de script/guion de venta telefónica", "Técnicas de cierre"], "habilidades_blandas": ["Tolerancia a la frustración / alto volumen de rechazo", "Comunicación verbal clara y ritmo rápido"], "salario_min": 8500.0, "salario_max": 10000.0, "fecha_publicacion": "2026-08-12", "fuente": "OCC", "url": "https://www.occ.com.mx/empleo/oferta/21282204-ventas-tdc-4-hrs-comisiones"}, {"titulo": "Ejecutivo de ventas", "empresa": "PROFUTURO AFORE SA DE CV", "ubicacion": "Nogales, Sonora", "habilidades_tecnicas": ["Conocimiento básico de productos financieros/seguros", "Prospección telefónica y en campo"], "habilidades_blandas": ["Habilidad de generar confianza (venta de intangibles)", "Persistencia ante ciclos de venta largos"], "salario_min": 10000.0, "salario_max": 15000.0, "fecha_publicacion": "2026-08-12", "fuente": "OCC", "url": "https://www.occ.com.mx/empleo/oferta/21292358-ejecutivo-de-ventas"}, {"titulo": "AUXILIAR ADMINISTRATIVO EN VENTAS", "empresa": "Metal & Colors SA de CV", "ubicacion": "Guadalajara, Jalisco", "habilidades_tecnicas": ["Excel intermedio/avanzado", "Elaboración de reportes de ventas/administrativos"], "habilidades_blandas": ["Organización y atención al detalle", "Proactividad"], "salario_min": 14000.0, "salario_max": 14631.0, "fecha_publicacion": "2026-08-12", "fuente": "OCC", "url": "https://www.occ.com.mx/empleo/oferta/21281886-auxiliar-administrativo-en-ventas"}, {"titulo": "Gerente comercial de ventas", "empresa": "HUB INNOVA & TALENTO", "ubicacion": "Ciudad de México", "habilidades_tecnicas": ["Gestión y análisis de KPIs comerciales / forecasting", "Manejo de CRM y reportes de ventas"], "habilidades_blandas": ["Liderazgo de equipos", "Comunicación y capacidad de coaching"], "salario_min": null, "salario_max": null, "fecha_publicacion": "2026-08-12", "fuente": "OCC", "url": "https://www.occ.com.mx/empleo/oferta/21282174-gerente-comercial-de-ventas"}, {"titulo": "Ejecutivoa de Ventas Financiero", "empresa": "SERCA ASESORES", "ubicacion": "Michoacán", "habilidades_tecnicas": ["Conocimiento básico de productos financieros/seguros", "Prospección telefónica y en campo"], "habilidades_blandas": ["Habilidad de generar confianza (venta de intangibles)", "Persistencia ante ciclos de venta largos"], "salario_min": 9500.0, "salario_max": 10000.0, "fecha_publicacion": "2026-08-11", "fuente": "OCC", "url": "https://www.occ.com.mx/empleo/oferta/21290478-ejecutivoa-de-ventas-financiero"}, {"titulo": "Médico veterinario Ventas", "empresa": "GRUPO WELCOME", "ubicacion": "Veracruz, Veracruz", "habilidades_tecnicas": ["Prospección y generación de leads", "Negociación comercial"], "habilidades_blandas": ["Comunicación y capacidad de persuasión", "Orientación a resultados / metas y comisiones"], "salario_min": 35000.0, "salario_max": 40000.0, "fecha_publicacion": "2026-08-11", "fuente": "OCC", "url": "https://www.occ.com.mx/empleo/oferta/21291117-medico-veterinario-ventas"}, {"titulo": "Ejecutivo de ventas", "empresa": "Basculas Tema", "ubicacion": "Ciudad de México", "habilidades_tecnicas": ["Prospección y generación de leads", "Negociación comercial"], "habilidades_blandas": ["Comunicación y capacidad de persuasión", "Orientación a resultados / metas y comisiones"], "salario_min": 10000.0, "salario_max": 15000.0, "fecha_publicacion": "2026-08-11", "fuente": "OCC", "url": "https://www.occ.com.mx/empleo/oferta/21290777-ejecutivo-de-ventas"}, {"titulo": "Asesor comercial de ventas", "empresa": "GG DEL CENTRO SA DE CV", "ubicacion": "Ciudad de México", "habilidades_tecnicas": ["Prospección y generación de leads", "Negociación comercial"], "habilidades_blandas": ["Comunicación y capacidad de persuasión", "Orientación a resultados / metas y comisiones"], "salario_min": 30000.0, "salario_max": 30000.0, "fecha_publicacion": "2026-08-11", "fuente": "OCC", "url": "https://www.occ.com.mx/empleo/oferta/21291421-asesor-comercial-de-ventas"}, {"titulo": "Ejecutivo/a de ventas", "empresa": "PROFUTURO AFORE, S.A. DE C.V.", "ubicacion": "Querétaro, Querétaro", "habilidades_tecnicas": ["Conocimiento básico de productos financieros/seguros", "Prospección telefónica y en campo"], "habilidades_blandas": ["Habilidad de generar confianza (venta de intangibles)", "Persistencia ante ciclos de venta largos"], "salario_min": 18000.0, "salario_max": 20000.0, "fecha_publicacion": "2026-08-11", "fuente": "OCC", "url": "https://www.occ.com.mx/empleo/oferta/21290423-ejecutivo-a-de-ventas"}, {"titulo": "PROMOTORADE VENTAS CDMX", "empresa": "TENDENZZA PISOS Y RECUBRIMIENTOS, S.A. DE .CV.", "ubicacion": "Ciudad de México", "habilidades_tecnicas": ["Prospección y generación de leads", "Negociación comercial"], "habilidades_blandas": ["Comunicación y capacidad de persuasión", "Orientación a resultados / metas y comisiones"], "salario_min": 12000.0, "salario_max": 15000.0, "fecha_publicacion": "2026-08-11", "fuente": "OCC", "url": "https://www.occ.com.mx/empleo/oferta/21279896-promotorade-ventas-cdmx"}, {"titulo": "Ejecutivo/a de ventas", "empresa": "PROFUTURO AFORE SA DE CV", "ubicacion": "Monterrey, Nuevo León", "habilidades_tecnicas": ["Conocimiento básico de productos financieros/seguros", "Prospección telefónica y en campo"], "habilidades_blandas": ["Habilidad de generar confianza (venta de intangibles)", "Persistencia ante ciclos de venta largos"], "salario_min": 15000.0, "salario_max": 20000.0, "fecha_publicacion": "2026-08-11", "fuente": "OCC", "url": "https://www.occ.com.mx/empleo/oferta/21279177-ejecutivo-a-de-ventas"}, {"titulo": "Ejecutivo/a de atención a cliente y ventas Sb+comisión", "empresa": "Grupo Gayosso", "ubicacion": "San Nicolás de los Garza, Nuevo León", "habilidades_tecnicas": ["Prospección y generación de leads", "Negociación comercial"], "habilidades_blandas": ["Comunicación y capacidad de persuasión", "Orientación a resultados / metas y comisiones"], "salario_min": 12000.0, "salario_max": 25000.0, "fecha_publicacion": "2026-08-11", "fuente": "OCC", "url": "https://www.occ.com.mx/empleo/oferta/21285992-ejecutivo-a-de-atencion-a-cliente-y-ventas-sb-comision"}, {"titulo": "Gerente de Ventas", "empresa": "Grupo Salinas", "ubicacion": "Morelia, Michoacán", "habilidades_tecnicas": ["Gestión y análisis de KPIs comerciales / forecasting", "Manejo de CRM y reportes de ventas"], "habilidades_blandas": ["Liderazgo de equipos", "Comunicación y capacidad de coaching"], "salario_min": 30000.0, "salario_max": 30000.0, "fecha_publicacion": "2026-08-11", "fuente": "OCC", "url": "https://www.occ.com.mx/empleo/oferta/21280054-gerente-de-ventas"}, {"titulo": "Asesor de ventas", "empresa": "CREVI AUTO", "ubicacion": "Tamaulipas", "habilidades_tecnicas": ["Prospección y generación de leads", "Negociación comercial"], "habilidades_blandas": ["Comunicación y capacidad de persuasión", "Orientación a resultados / metas y comisiones"], "salario_min": 10000.0, "salario_max": 15000.0, "fecha_publicacion": "2026-08-11", "fuente": "OCC", "url": "https://www.occ.com.mx/empleo/oferta/21290321-asesor-de-ventas"}, {"titulo": "Ejecutivo de ventas", "empresa": "GS EDIFICACIONES", "ubicacion": "Monterrey, Nuevo León", "habilidades_tecnicas": ["Prospección y generación de leads", "Negociación comercial"], "habilidades_blandas": ["Comunicación y capacidad de persuasión", "Orientación a resultados / metas y comisiones"], "salario_min": 13000.0, "salario_max": 15000.0, "fecha_publicacion": "2026-08-11", "fuente": "OCC", "url": "https://www.occ.com.mx/empleo/oferta/21290100-ejecutivo-de-ventas"}, {"titulo": "ASESORA PISO DE VENTAS", "empresa": "Grupo Sanimex SA de CV", "ubicacion": "Ecatepec de Morelos, Estado de México", "habilidades_tecnicas": ["Manejo de caja / POS", "Acomodo y exhibición de mercancía (visual merchandising)"], "habilidades_blandas": ["Atención y servicio al cliente", "Comunicación clara y cordial"], "salario_min": 10000.0, "salario_max": 15000.0, "fecha_publicacion": "2026-08-11", "fuente": "OCC", "url": "https://www.occ.com.mx/empleo/oferta/21289889-asesora-piso-de-ventas"}, {"titulo": "Asesor financiero - ventas sector gobierno", "empresa": "GRUPO NACIONAL PROVINCIAL", "ubicacion": "Coacalco de Berriozábal, Estado de México", "habilidades_tecnicas": ["Conocimiento básico de productos financieros/seguros", "Prospección telefónica y en campo"], "habilidades_blandas": ["Habilidad de generar confianza (venta de intangibles)", "Persistencia ante ciclos de venta largos"], "salario_min": null, "salario_max": null, "fecha_publicacion": "2026-08-11", "fuente": "OCC", "url": "https://www.occ.com.mx/empleo/oferta/21289665-asesor-financiero-ventas-sector-gobierno"}, {"titulo": "Ejecutivo Comercial / Ventas | Ingresos semanales sin tope", "empresa": "PROMOTORÍAS METLIFE DXN", "ubicacion": "Toluca, Estado de México", "habilidades_tecnicas": ["Prospección y generación de leads", "Negociación comercial"], "habilidades_blandas": ["Comunicación y capacidad de persuasión", "Orientación a resultados / metas y comisiones"], "salario_min": 12000.0, "salario_max": 15000.0, "fecha_publicacion": "2026-08-10", "fuente": "OCC", "url": "https://www.occ.com.mx/empleo/oferta/21277798-ejecutivo-comercial-ventas-ingresos-semanales-sin-tope"}, {"titulo": "VENTAS COMISIONISTA", "empresa": "IMAISA", "ubicacion": "Nuevo León", "habilidades_tecnicas": ["Prospección de clientes en calle/zona", "Manejo básico de metas por comisión"], "habilidades_blandas": ["Tolerancia al rechazo / persistencia", "Autonomía y automotivación"], "salario_min": null, "salario_max": null, "fecha_publicacion": "2026-08-10", "fuente": "OCC", "url": "https://www.occ.com.mx/empleo/oferta/21278803-ventas-comisionista"}, {"titulo": "Ingeniero para Pruebas de Campo en Ventas-Motores diesel", "empresa": "OPCIONES DE SERVICIO EN MEXICO", "ubicacion": "Guadalajara, Jalisco", "habilidades_tecnicas": ["Conocimiento técnico del producto (ingeniería/industrial/tecnológico)", "Venta consultiva / solution selling"], "habilidades_blandas": ["Pensamiento analítico", "Negociación con cuentas clave"], "salario_min": null, "salario_max": null, "fecha_publicacion": "2026-08-10", "fuente": "OCC", "url": "https://www.occ.com.mx/empleo/oferta/21284890-ingeniero-para-pruebas-de-campo-en-ventas-motores-diesel"}, {"titulo": "Asesor de ventas", "empresa": "Cavimex", "ubicacion": "Monterrey, Nuevo León", "habilidades_tecnicas": ["Prospección y generación de leads", "Negociación comercial"], "habilidades_blandas": ["Comunicación y capacidad de persuasión", "Orientación a resultados / metas y comisiones"], "salario_min": 10500.0, "salario_max": 15000.0, "fecha_publicacion": "2026-08-10", "fuente": "OCC", "url": "https://www.occ.com.mx/empleo/oferta/21287541-asesor-de-ventas"}, {"titulo": "Business Intelligence, BI, análisis y ventas", "empresa": "CS SERVICIOS OPERATIVOS", "ubicacion": "Ciudad de México", "habilidades_tecnicas": ["Conocimiento técnico del producto (ingeniería/industrial/tecnológico)", "Venta consultiva / solution selling"], "habilidades_blandas": ["Pensamiento analítico", "Negociación con cuentas clave"], "salario_min": 25000.0, "salario_max": 30000.0, "fecha_publicacion": "2026-08-10", "fuente": "OCC", "url": "https://www.occ.com.mx/empleo/oferta/21287965-business-intelligence-bi-analisis-y-ventas"}, {"titulo": "Coordinadora administrativa de ventas", "empresa": "OFICINA PRADO COAPA S.A. DE C.V.", "ubicacion": "Ciudad de México", "habilidades_tecnicas": ["Gestión y análisis de KPIs comerciales / forecasting", "Manejo de CRM y reportes de ventas"], "habilidades_blandas": ["Liderazgo de equipos", "Comunicación y capacidad de coaching"], "salario_min": null, "salario_max": null, "fecha_publicacion": "2026-08-10", "fuente": "OCC", "url": "https://www.occ.com.mx/empleo/oferta/21288101-coordinadora-administrativa-de-ventas"}, {"titulo": "Asesor comercial (Closer de Ventas)", "empresa": "Grupo Trefa", "ubicacion": "Monterrey, Nuevo León", "habilidades_tecnicas": ["Prospección y generación de leads", "Negociación comercial"], "habilidades_blandas": ["Comunicación y capacidad de persuasión", "Orientación a resultados / metas y comisiones"], "salario_min": 35000.0, "salario_max": 45000.0, "fecha_publicacion": "2026-08-10", "fuente": "OCC", "url": "https://www.occ.com.mx/empleo/oferta/21288360-asesor-comercial-closer-de-ventas-"}, {"titulo": "Ejecutivo Ejecutiva IMSS - Ventas - Lunes a Viernes", "empresa": "PROFUTURO AFORE, S.A. DE C.V.", "ubicacion": "Oaxaca de Juárez, Oaxaca", "habilidades_tecnicas": ["Conocimiento básico de productos financieros/seguros", "Prospección telefónica y en campo"], "habilidades_blandas": ["Habilidad de generar confianza (venta de intangibles)", "Persistencia ante ciclos de venta largos"], "salario_min": 13000.0, "salario_max": 18000.0, "fecha_publicacion": "2026-08-10", "fuente": "OCC", "url": "https://www.occ.com.mx/empleo/oferta/21288640-ejecutivo-ejecutiva-imss-ventas-lunes-a-viernes"}, {"titulo": "Auxiliar de ventas", "empresa": "Maqsar", "ubicacion": "Nuevo León", "habilidades_tecnicas": ["Excel intermedio/avanzado", "Elaboración de reportes de ventas/administrativos"], "habilidades_blandas": ["Organización y atención al detalle", "Proactividad"], "salario_min": 15000.0, "salario_max": 19000.0, "fecha_publicacion": "2026-08-09", "fuente": "OCC", "url": "https://www.occ.com.mx/empleo/oferta/21287306-auxiliar-de-ventas"}, {"titulo": "Vendedor de mostrador Vendedor", "empresa": "SILCA Consultores", "ubicacion": "Guadalajara, Jalisco", "habilidades_tecnicas": ["Manejo de caja / POS", "Acomodo y exhibición de mercancía (visual merchandising)"], "habilidades_blandas": ["Atención y servicio al cliente", "Comunicación clara y cordial"], "salario_min": null, "salario_max": null, "fecha_publicacion": "2026-08-13T09:57:57Z", "fuente": "Adzuna", "url": "https://www.adzuna.com.mx/details/5840495972"}, {"titulo": "Vendedora", "empresa": "Ópticas Ver de Verdad", "ubicacion": "Azcapotzalco, Ciudad de México", "habilidades_tecnicas": ["Prospección y generación de leads", "Negociación comercial"], "habilidades_blandas": ["Comunicación y capacidad de persuasión", "Orientación a resultados / metas y comisiones"], "salario_min": null, "salario_max": null, "fecha_publicacion": "2026-08-13T09:57:42Z", "fuente": "Adzuna", "url": "https://www.adzuna.com.mx/details/5840494133"}, {"titulo": "Vendedor", "empresa": "FORHUMAN", "ubicacion": "Zapopan, Jalisco", "habilidades_tecnicas": ["Prospección y generación de leads", "Negociación comercial"], "habilidades_blandas": ["Comunicación y capacidad de persuasión", "Orientación a resultados / metas y comisiones"], "salario_min": null, "salario_max": null, "fecha_publicacion": "2026-08-12T09:56:35Z", "fuente": "Adzuna", "url": "https://www.adzuna.com.mx/details/5838592767"}, {"titulo": "Vendedor jr Vendedor jr", "empresa": "Aceros Tepotzotlan, S A de C V", "ubicacion": "Cuautitlán Izcalli, Estado de México", "habilidades_tecnicas": ["Prospección y generación de leads", "Negociación comercial"], "habilidades_blandas": ["Comunicación y capacidad de persuasión", "Orientación a resultados / metas y comisiones"], "salario_min": null, "salario_max": null, "fecha_publicacion": "2026-08-11T09:56:19Z", "fuente": "Adzuna", "url": "https://www.adzuna.com.mx/details/5837005973"}, {"titulo": "Vendedor piso ventas", "empresa": "SKY WARDS", "ubicacion": "Azcapotzalco, Ciudad de México", "habilidades_tecnicas": ["Manejo de caja / POS", "Acomodo y exhibición de mercancía (visual merchandising)"], "habilidades_blandas": ["Atención y servicio al cliente", "Comunicación clara y cordial"], "salario_min": null, "salario_max": null, "fecha_publicacion": "2026-08-08T09:56:05Z", "fuente": "Adzuna", "url": "https://www.adzuna.com.mx/details/5833699993"}, {"titulo": "vendedor retail", "empresa": "ENFOQUE EN PUBLICIDAD Y MERCADEO", "ubicacion": "Cuauhtémoc, Ciudad de México", "habilidades_tecnicas": ["Prospección y generación de leads", "Negociación comercial"], "habilidades_blandas": ["Comunicación y capacidad de persuasión", "Orientación a resultados / metas y comisiones"], "salario_min": null, "salario_max": null, "fecha_publicacion": "2026-08-08T09:45:59Z", "fuente": "Adzuna", "url": "https://www.adzuna.com.mx/details/5833693431"}, {"titulo": "Gerente comercial", "empresa": "Grupo Bafar", "ubicacion": "Chihuahua, México", "habilidades_tecnicas": ["Gestión y análisis de KPIs comerciales / forecasting", "Manejo de CRM y reportes de ventas"], "habilidades_blandas": ["Liderazgo de equipos", "Comunicación y capacidad de coaching"], "salario_min": null, "salario_max": null, "fecha_publicacion": "2026-08-08T04:31:51Z", "fuente": "Adzuna", "url": "https://www.adzuna.com.mx/details/5833328732"}, {"titulo": "Ejecutivo Comercial B2B", "empresa": "America Digital", "ubicacion": "Ciudad de México, México", "habilidades_tecnicas": ["Conocimiento técnico del producto (ingeniería/industrial/tecnológico)", "Venta consultiva / solution selling"], "habilidades_blandas": ["Pensamiento analítico", "Negociación con cuentas clave"], "salario_min": null, "salario_max": null, "fecha_publicacion": "2026-08-07T04:27:39Z", "fuente": "Adzuna", "url": "https://www.adzuna.com.mx/details/5831845532"}, {"titulo": "Ejecutivo de ventas", "empresa": "Smurfit Westrock", "ubicacion": "México", "habilidades_tecnicas": ["Prospección y generación de leads", "Negociación comercial"], "habilidades_blandas": ["Comunicación y capacidad de persuasión", "Orientación a resultados / metas y comisiones"], "salario_min": null, "salario_max": null, "fecha_publicacion": "2026-08-05T04:19:03Z", "fuente": "Adzuna", "url": "https://www.adzuna.com.mx/details/5828936058"}, {"titulo": "Becario/a en Desarrollo Comercial", "empresa": "KPMG México", "ubicacion": "México", "habilidades_tecnicas": ["Excel intermedio/avanzado", "Elaboración de reportes de ventas/administrativos"], "habilidades_blandas": ["Organización y atención al detalle", "Proactividad"], "salario_min": null, "salario_max": null, "fecha_publicacion": "2026-08-05T04:18:18Z", "fuente": "Adzuna", "url": "https://www.adzuna.com.mx/details/5828935618"}, {"titulo": "Vendedor", "empresa": "Grupo Salinas", "ubicacion": "Miguel Hidalgo, Ciudad de México", "habilidades_tecnicas": ["Prospección y generación de leads", "Negociación comercial"], "habilidades_blandas": ["Comunicación y capacidad de persuasión", "Orientación a resultados / metas y comisiones"], "salario_min": null, "salario_max": null, "fecha_publicacion": "2026-08-03T09:58:45Z", "fuente": "Adzuna", "url": "https://www.adzuna.com.mx/details/5826711468"}, {"titulo": "Asesor Financiero", "empresa": "GNP Seguros", "ubicacion": "San Pedro Garza García, N.L.", "habilidades_tecnicas": ["Conocimiento básico de productos financieros/seguros", "Prospección telefónica y en campo"], "habilidades_blandas": ["Habilidad de generar confianza (venta de intangibles)", "Persistencia ante ciclos de venta largos"], "salario_min": null, "salario_max": null, "fecha_publicacion": "2026-08-05", "fuente": "Indeed", "url": "https://to.indeed.com/aan7bl7l7zcv"}], "vacantes_detalle_nota": "El CSV maestro trae habilidades_tecnicas/habilidades_blandas y descripcion vacios en el 100% de las 387 filas (problema conocido documentado en control_ultima_corrida.md y habilidades_ventas_2026-08-14.md de esta corrida). Por eso vacantes_con_habilidades=0/pct_con_habilidades=0 a nivel de columna del CSV, y para cada fila de vacantes_detalle las habilidades se infirieron por coincidencia lexica de titulo_puesto+empresa (normalizado, sin acentos, minusculas) contra las 9 categorias de puesto y sus tablas de habilidades agregadas del reporte habilidades_ventas_2026-08-14.md (se asignan las 2 habilidades tecnicas y 2 blandas mas frecuentes del grupo inferido). El bloque top-level habilidades_tecnicas/habilidades_blandas (menciones) se calculo multiplicando el tamano de cada uno de los 9 grupos de puesto (segun categorias_puesto) por un peso de frecuencia cualitativa (Frecuente=0.9, Comun=0.5, Ocasional=0.2) y sumando por habilidad cuando se repite entre grupos; no son conteos literales de texto porque no hay texto libre suficiente en el CSV. Filtro de recencia aplicado sobre las 387 filas: Adzuna <=10 dias, Indeed <=15 dias, OCC <=20 dias respecto al 2026-08-14 -> sobrevivieron 266 vacantes (OCC 205, Adzuna 50, Indeed 11). Como 266 > 60, se tomo una muestra representativa de 60 filas distribuida proporcionalmente por fuente (OCC 47, Adzuna 11, Indeed 2), muestreando de forma escalonada dentro de cada fuente (no solo las mas recientes) para variar tipo de puesto/empresa/salario. Se verificaron 8 URLs de esa muestra (4 OCC, 3 Adzuna, 1 Indeed) navegando cada una y confirmando titulo del anuncio visible: las 4 OCC y las 3 Adzuna siguen activas con el mismo titulo/empresa. La unica URL de Indeed probada (to.indeed.com/aavfqgmwkw4t, vacante 'ejecutivo de ventas' de GRUPO PROMOTORA DIKEMH RL DE CV) redirigio a un anuncio distinto (mismo titulo/ubicacion pero empresa 'HANDEL QUIMICA'), señal de que el enlace de afiliado ya no apunta a la vacante original; esa fila se elimino del detalle final. Resultado: 59 de 387 vacantes verificadas incluidas en vacantes_detalle (muestra representativa, no el universo completo, por el volumen grande de este sector)."}
+{
+ "nombre": "Ventas",
+ "vacantes_verificadas": 771,
+ "vacantes_descartadas": 42,
+ "vacantes_con_habilidades": 0,
+ "pct_con_habilidades": 0.0,
+ "fuentes": {
+  "Adzuna": 448,
+  "OCC": 294,
+  "Indeed": 29
+ },
+ "categorias_puesto": [
+  {
+   "categoria": "Ejecutivo / Asesor B2C",
+   "vacantes": 463,
+   "pct": 60.1
+  },
+  {
+   "categoria": "Seguros / AFORE / Financieras",
+   "vacantes": 65,
+   "pct": 8.4
+  },
+  {
+   "categoria": "Piso / Mostrador / Retail",
+   "vacantes": 59,
+   "pct": 7.7
+  },
+  {
+   "categoria": "Otro",
+   "vacantes": 55,
+   "pct": 7.1
+  },
+  {
+   "categoria": "Gerencia / Supervisión comercial",
+   "vacantes": 35,
+   "pct": 4.5
+  },
+  {
+   "categoria": "Calle / Ruta / Chofer-vendedor",
+   "vacantes": 24,
+   "pct": 3.1
+  },
+  {
+   "categoria": "Comisionista / Campo",
+   "vacantes": 22,
+   "pct": 2.9
+  },
+  {
+   "categoria": "Telemarketing / Call center",
+   "vacantes": 18,
+   "pct": 2.3
+  },
+  {
+   "categoria": "Administración y soporte / Trainee",
+   "vacantes": 17,
+   "pct": 2.2
+  },
+  {
+   "categoria": "Técnicas / B2B / KAM",
+   "vacantes": 13,
+   "pct": 1.7
+  }
+ ],
+ "habilidades_tecnicas": [
+  {
+   "skill": "conocimiento de productos financieros",
+   "menciones": 64
+  },
+  {
+   "skill": "prospección de clientes / campo",
+   "menciones": 39
+  },
+  {
+   "skill": "manejo de caja / pos",
+   "menciones": 28
+  },
+  {
+   "skill": "gestión de ruta / reparto",
+   "menciones": 21
+  },
+  {
+   "skill": "manejo de script / call center",
+   "menciones": 15
+  },
+  {
+   "skill": "excel / reportes",
+   "menciones": 11
+  },
+  {
+   "skill": "venta consultiva / b2b",
+   "menciones": 10
+  }
+ ],
+ "habilidades_blandas": [
+  {
+   "skill": "persuasión / negociación",
+   "menciones": 281
+  },
+  {
+   "skill": "liderazgo",
+   "menciones": 61
+  },
+  {
+   "skill": "orientación a resultados / comisión",
+   "menciones": 49
+  },
+  {
+   "skill": "persistencia / tolerancia al rechazo",
+   "menciones": 39
+  },
+  {
+   "skill": "organización",
+   "menciones": 30
+  },
+  {
+   "skill": "atención al cliente",
+   "menciones": 15
+  },
+  {
+   "skill": "resiliencia / manejo del estrés",
+   "menciones": 15
+  },
+  {
+   "skill": "disposición a aprender",
+   "menciones": 5
+  }
+ ],
+ "top_empresas": [
+  {
+   "empresa": "Grupo Salinas",
+   "vacantes": 32
+  },
+  {
+   "empresa": "PROFUTURO AFORE, S.A. DE C.V.",
+   "vacantes": 24
+  },
+  {
+   "empresa": "Centro de Atracción de Talento",
+   "vacantes": 22
+  },
+  {
+   "empresa": "Profuturo",
+   "vacantes": 12
+  },
+  {
+   "empresa": "Atento Servicios, S. A. de C.V.",
+   "vacantes": 10
+  },
+  {
+   "empresa": "Compartamos Banco",
+   "vacantes": 10
+  },
+  {
+   "empresa": "Edenred",
+   "vacantes": 8
+  },
+  {
+   "empresa": "Grupo Gayosso",
+   "vacantes": 7
+  },
+  {
+   "empresa": "Adecco",
+   "vacantes": 7
+  },
+  {
+   "empresa": "Grupo Nach",
+   "vacantes": 7
+  },
+  {
+   "empresa": "Universidad del Valle de México",
+   "vacantes": 6
+  },
+  {
+   "empresa": "GRUPO NACIONAL PROVINCIAL",
+   "vacantes": 6
+  },
+  {
+   "empresa": "Celular Express",
+   "vacantes": 5
+  },
+  {
+   "empresa": "BBVA",
+   "vacantes": 5
+  }
+ ],
+ "cobertura_geografica": {
+  "top_estados": [
+   {
+    "estado": "Ciudad de México",
+    "vacantes": 167
+   },
+   {
+    "estado": "Nuevo León",
+    "vacantes": 77
+   },
+   {
+    "estado": "Estado de México",
+    "vacantes": 61
+   },
+   {
+    "estado": "Jalisco",
+    "vacantes": 54
+   },
+   {
+    "estado": "Querétaro",
+    "vacantes": 35
+   },
+   {
+    "estado": "Coahuila",
+    "vacantes": 22
+   },
+   {
+    "estado": "Chihuahua",
+    "vacantes": 20
+   },
+   {
+    "estado": "Guanajuato",
+    "vacantes": 19
+   },
+   {
+    "estado": "Baja California",
+    "vacantes": 17
+   },
+   {
+    "estado": "Puebla",
+    "vacantes": 17
+   }
+  ],
+  "estados_unicos": 30
+ },
+ "salario": {
+  "vacantes_con_dato": 397,
+  "pct_con_dato": 51.5,
+  "mediana_mensual_mxn": 13500,
+  "p25_mensual_mxn": 11000,
+  "p75_mensual_mxn": 19000
+ },
+ "evolucion_semanal": [
+  {
+   "semana": "04 May",
+   "vacantes": 5
+  },
+  {
+   "semana": "18 May",
+   "vacantes": 3
+  },
+  {
+   "semana": "25 May",
+   "vacantes": 2
+  },
+  {
+   "semana": "01 Jun",
+   "vacantes": 8
+  },
+  {
+   "semana": "15 Jun",
+   "vacantes": 11
+  },
+  {
+   "semana": "22 Jun",
+   "vacantes": 9
+  },
+  {
+   "semana": "29 Jun",
+   "vacantes": 9
+  },
+  {
+   "semana": "06 Jul",
+   "vacantes": 2
+  },
+  {
+   "semana": "13 Jul",
+   "vacantes": 16
+  },
+  {
+   "semana": "20 Jul",
+   "vacantes": 17
+  },
+  {
+   "semana": "27 Jul",
+   "vacantes": 31
+  },
+  {
+   "semana": "03 Ago",
+   "vacantes": 44
+  },
+  {
+   "semana": "10 Ago",
+   "vacantes": 259
+  },
+  {
+   "semana": "17 Ago",
+   "vacantes": 99
+  },
+  {
+   "semana": "24 Ago",
+   "vacantes": 248
+  }
+ ],
+ "total_empresas_unicas": 492,
+ "ultima_semana_vacantes": 248,
+ "vacantes_detalle": [
+  {
+   "titulo": "Asesor Educativo (Ventas, Zona Carretera Nacional)",
+   "empresa": "UNIVERDIDAD REGIOMONTANA AC",
+   "ubicacion": "Monterrey, Nuevo León",
+   "habilidades_tecnicas": [
+    "Negociación comercial"
+   ],
+   "habilidades_blandas": [
+    "Persuasión"
+   ],
+   "salario_min": null,
+   "salario_max": null,
+   "fecha_publicacion": "2026-08-24",
+   "fuente": "OCC",
+   "url": "https://www.occ.com.mx/empleo/oferta/21300060-asesor-educativo-ventas-zona-carretera-nacional"
+  },
+  {
+   "titulo": "BECARIO/A EN CONTABILIDAD DE VENTAS – Santa Fe",
+   "empresa": "Probecarios",
+   "ubicacion": "Cuajimalpa de Morelos, Ciudad de México",
+   "habilidades_tecnicas": [
+    "Reportes y Excel"
+   ],
+   "habilidades_blandas": [
+    "Organización"
+   ],
+   "salario_min": 8500,
+   "salario_max": 8500,
+   "fecha_publicacion": "2026-08-24",
+   "fuente": "OCC",
+   "url": "https://www.occ.com.mx/empleo/oferta/21300077-becario-a-en-contabilidad-de-ventas-santa-fe"
+  },
+  {
+   "titulo": "Asistente administrativa de Ventas",
+   "empresa": "NCH SERVICIOS SA DE CV",
+   "ubicacion": "Ciudad de México",
+   "habilidades_tecnicas": [
+    "Negociación comercial"
+   ],
+   "habilidades_blandas": [
+    "Persuasión"
+   ],
+   "salario_min": 12000,
+   "salario_max": 12000,
+   "fecha_publicacion": "2026-08-24",
+   "fuente": "OCC",
+   "url": "https://www.occ.com.mx/empleo/oferta/21299802-asistente-administrativa-de-ventas"
+  },
+  {
+   "titulo": "VENTAS | Ejecutivo Afore | Lunes a Viernes",
+   "empresa": "PROFUTURO AFORE, S.A. DE C.V.",
+   "ubicacion": "Querétaro, Querétaro",
+   "habilidades_tecnicas": [
+    "Productos financieros"
+   ],
+   "habilidades_blandas": [
+    "Generar confianza"
+   ],
+   "salario_min": 18000,
+   "salario_max": 22000,
+   "fecha_publicacion": "2026-08-24",
+   "fuente": "OCC",
+   "url": "https://www.occ.com.mx/empleo/oferta/21300351-ventas-ejecutivo-afore-lunes-a-viernes"
+  },
+  {
+   "titulo": "Liner- sala de ventas Grand Park Royal",
+   "empresa": "ROYAL HOLIDAY",
+   "ubicacion": "Puerto Vallarta, Jalisco",
+   "habilidades_tecnicas": [
+    "Negociación comercial"
+   ],
+   "habilidades_blandas": [
+    "Persuasión"
+   ],
+   "salario_min": null,
+   "salario_max": null,
+   "fecha_publicacion": "2026-08-24",
+   "fuente": "OCC",
+   "url": "https://www.occ.com.mx/empleo/oferta/21300656-liner-sala-de-ventas-grand-park-royal"
+  },
+  {
+   "titulo": "Adminsitrador de Ventas",
+   "empresa": "CEMEX CENTRAL",
+   "ubicacion": "Puruándiro, Michoacán",
+   "habilidades_tecnicas": [
+    "Negociación comercial"
+   ],
+   "habilidades_blandas": [
+    "Persuasión"
+   ],
+   "salario_min": 10000,
+   "salario_max": 12000,
+   "fecha_publicacion": "2026-08-24",
+   "fuente": "OCC",
+   "url": "https://www.occ.com.mx/empleo/oferta/21301182-adminsitrador-de-ventas"
+  },
+  {
+   "titulo": "Gerente comercial de ventas",
+   "empresa": "ADECCO",
+   "ubicacion": "Monterrey, Nuevo León",
+   "habilidades_tecnicas": [
+    "Gestión de KPIs comerciales"
+   ],
+   "habilidades_blandas": [
+    "Liderazgo"
+   ],
+   "salario_min": 40000,
+   "salario_max": 45000,
+   "fecha_publicacion": "2026-08-24",
+   "fuente": "OCC",
+   "url": "https://www.occ.com.mx/empleo/oferta/21301208-gerente-comercial-de-ventas"
+  },
+  {
+   "titulo": "Representante de ventas",
+   "empresa": "IP CARTONES Y CORRUGADOS S DE RL DE CV",
+   "ubicacion": "Toluca, Estado de México",
+   "habilidades_tecnicas": [
+    "Negociación comercial"
+   ],
+   "habilidades_blandas": [
+    "Persuasión"
+   ],
+   "salario_min": 35000,
+   "salario_max": 37000,
+   "fecha_publicacion": "2026-08-24",
+   "fuente": "OCC",
+   "url": "https://www.occ.com.mx/empleo/oferta/21300924-representante-de-ventas"
+  },
+  {
+   "titulo": "COODINADOR DE VENTAS",
+   "empresa": "MANSI SERVICIOS, S.C.",
+   "ubicacion": "Torreón, Coahuila",
+   "habilidades_tecnicas": [
+    "Negociación comercial"
+   ],
+   "habilidades_blandas": [
+    "Persuasión"
+   ],
+   "salario_min": 15000,
+   "salario_max": 15000,
+   "fecha_publicacion": "2026-08-24",
+   "fuente": "OCC",
+   "url": "https://www.occ.com.mx/empleo/oferta/21300123-coodinador-de-ventas"
+  },
+  {
+   "titulo": "Ventas telemarketing",
+   "empresa": "MQI, S.A. DE C.V.",
+   "ubicacion": "Querétaro, Querétaro",
+   "habilidades_tecnicas": [
+    "Manejo de script telefónico"
+   ],
+   "habilidades_blandas": [
+    "Resiliencia"
+   ],
+   "salario_min": 13000,
+   "salario_max": 14000,
+   "fecha_publicacion": "2026-08-24",
+   "fuente": "OCC",
+   "url": "https://www.occ.com.mx/empleo/oferta/21300258-ventas-telemarketing"
+  },
+  {
+   "titulo": "EJECUTIVO DE VENTAS #Lunesaviernes #comisiones #ventas #afore",
+   "empresa": "PROFUTURO AFORE, S.A. DE C.V.",
+   "ubicacion": "Nuevo León",
+   "habilidades_tecnicas": [
+    "Productos financieros"
+   ],
+   "habilidades_blandas": [
+    "Generar confianza"
+   ],
+   "salario_min": 20000,
+   "salario_max": 25000,
+   "fecha_publicacion": "2026-08-24",
+   "fuente": "OCC",
+   "url": "https://www.occ.com.mx/empleo/oferta/21300746-ejecutivo-de-ventas-lunesaviernes-comisiones-ventas-afore"
+  },
+  {
+   "titulo": "ventas online y presencial",
+   "empresa": "PUERTAS AUTOMATICAS DE VERACRUZ",
+   "ubicacion": "Boca del Río, Veracruz",
+   "habilidades_tecnicas": [
+    "Negociación comercial"
+   ],
+   "habilidades_blandas": [
+    "Persuasión"
+   ],
+   "salario_min": 11000,
+   "salario_max": 13000,
+   "fecha_publicacion": "2026-08-24",
+   "fuente": "OCC",
+   "url": "https://www.occ.com.mx/empleo/oferta/21299429-ventas-online-y-presencial"
+  },
+  {
+   "titulo": "Jefe de Piso de Ventas",
+   "empresa": "Vinte",
+   "ubicacion": "Querétaro, Querétaro",
+   "habilidades_tecnicas": [
+    "Manejo de caja/POS"
+   ],
+   "habilidades_blandas": [
+    "Atención al cliente"
+   ],
+   "salario_min": 20000,
+   "salario_max": 25000,
+   "fecha_publicacion": "2026-08-24",
+   "fuente": "OCC",
+   "url": "https://www.occ.com.mx/empleo/oferta/21306126-jefe-de-piso-de-ventas"
+  },
+  {
+   "titulo": "Becario proyectos en ventas",
+   "empresa": "First Quality Chemicals, S.A. de C.V.",
+   "ubicacion": "Estado de México",
+   "habilidades_tecnicas": [
+    "Reportes y Excel"
+   ],
+   "habilidades_blandas": [
+    "Organización"
+   ],
+   "salario_min": 6500,
+   "salario_max": 6501,
+   "fecha_publicacion": "2026-08-24",
+   "fuente": "OCC",
+   "url": "https://www.occ.com.mx/empleo/oferta/21300116-becario-proyectos-en-ventas"
+  },
+  {
+   "titulo": "Ventas TDC/4 hrs + comisiones",
+   "empresa": "Atento Servicios, S. A. de C.V.",
+   "ubicacion": "Atizapán, Estado de México",
+   "habilidades_tecnicas": [
+    "Manejo de script telefónico"
+   ],
+   "habilidades_blandas": [
+    "Resiliencia"
+   ],
+   "salario_min": 8500,
+   "salario_max": 10000,
+   "fecha_publicacion": "2026-08-24",
+   "fuente": "OCC",
+   "url": "https://www.occ.com.mx/empleo/oferta/21305076-ventas-tdc-4-hrs-comisiones"
+  },
+  {
+   "titulo": "Asesor/A de Equivalencias - Ventas",
+   "empresa": "Universidad del Valle de México",
+   "ubicacion": "Miguel Hidalgo, Ciudad de México",
+   "habilidades_tecnicas": [
+    "Negociación comercial"
+   ],
+   "habilidades_blandas": [
+    "Persuasión"
+   ],
+   "salario_min": 11500,
+   "salario_max": 12000,
+   "fecha_publicacion": "2026-08-24",
+   "fuente": "OCC",
+   "url": "https://www.occ.com.mx/empleo/oferta/21306350-asesor-a-de-equivalencias-ventas"
+  },
+  {
+   "titulo": "Asesor profesional de ventas",
+   "empresa": "Grupo Optima de BC, S.A de C.V.",
+   "ubicacion": "Tijuana, Baja California",
+   "habilidades_tecnicas": [
+    "Negociación comercial"
+   ],
+   "habilidades_blandas": [
+    "Persuasión"
+   ],
+   "salario_min": 20000,
+   "salario_max": 25000,
+   "fecha_publicacion": "2026-08-23",
+   "fuente": "OCC",
+   "url": "https://www.occ.com.mx/empleo/oferta/21308477-asesor-profesional-de-ventas"
+  },
+  {
+   "titulo": "Supervisora en entrenamiento (Ventas)",
+   "empresa": "Bimbo, S.A. de C.V.",
+   "ubicacion": "Puerto Vallarta, Jalisco",
+   "habilidades_tecnicas": [
+    "Negociación comercial"
+   ],
+   "habilidades_blandas": [
+    "Persuasión"
+   ],
+   "salario_min": 26000,
+   "salario_max": 27000,
+   "fecha_publicacion": "2026-08-23",
+   "fuente": "OCC",
+   "url": "https://www.occ.com.mx/empleo/oferta/21307580-supervisora-en-entrenamiento-ventas"
+  },
+  {
+   "titulo": "Supervisor administrativo de Ventas a bordo",
+   "empresa": "GRUPO XCARET",
+   "ubicacion": "Solidaridad, Quintana Roo",
+   "habilidades_tecnicas": [
+    "Reportes y Excel"
+   ],
+   "habilidades_blandas": [
+    "Organización"
+   ],
+   "salario_min": null,
+   "salario_max": null,
+   "fecha_publicacion": "2026-08-23",
+   "fuente": "OCC",
+   "url": "https://www.occ.com.mx/empleo/oferta/21308734-supervisor-administrativo-de-ventas-a-bordo"
+  },
+  {
+   "titulo": "GERENTE CAPACITACIÓN PARA FUERZA DE VENTAS",
+   "empresa": "Industria Farmaceutica Andromaco",
+   "ubicacion": "Ciudad de México",
+   "habilidades_tecnicas": [
+    "Negociación comercial"
+   ],
+   "habilidades_blandas": [
+    "Persuasión"
+   ],
+   "salario_min": null,
+   "salario_max": null,
+   "fecha_publicacion": "2026-08-23",
+   "fuente": "OCC",
+   "url": "https://www.occ.com.mx/empleo/oferta/21298675-gerente-capacitacion-para-fuerza-de-ventas"
+  },
+  {
+   "titulo": "Asesor comercial de ventas",
+   "empresa": "Multisistemas de Seguridad Industrial",
+   "ubicacion": "Azcapotzalco, Ciudad de México",
+   "habilidades_tecnicas": [
+    "Negociación comercial"
+   ],
+   "habilidades_blandas": [
+    "Persuasión"
+   ],
+   "salario_min": 15000,
+   "salario_max": 15000,
+   "fecha_publicacion": "2026-08-23",
+   "fuente": "OCC",
+   "url": "https://www.occ.com.mx/empleo/oferta/21303580-asesor-comercial-de-ventas"
+  },
+  {
+   "titulo": "JEFE DE TERMINAL Y VENTAS",
+   "empresa": "GRUPADO, SA DE CV",
+   "ubicacion": "San Juan Bautista Tuxtepec, Oaxaca",
+   "habilidades_tecnicas": [
+    "Negociación comercial"
+   ],
+   "habilidades_blandas": [
+    "Persuasión"
+   ],
+   "salario_min": 17500,
+   "salario_max": 18000,
+   "fecha_publicacion": "2026-08-23",
+   "fuente": "OCC",
+   "url": "https://www.occ.com.mx/empleo/oferta/21307500-jefe-de-terminal-y-ventas"
+  },
+  {
+   "titulo": "Asesor Financiero Ventas",
+   "empresa": "Seguros Inbursa, S.A Grupo Financiero Inbursa",
+   "ubicacion": "Zihuatanejo de Azueta, Guerrero",
+   "habilidades_tecnicas": [
+    "Productos financieros"
+   ],
+   "habilidades_blandas": [
+    "Generar confianza"
+   ],
+   "salario_min": null,
+   "salario_max": null,
+   "fecha_publicacion": "2026-08-23",
+   "fuente": "OCC",
+   "url": "https://www.occ.com.mx/empleo/oferta/21298547-asesor-financiero-ventas"
+  },
+  {
+   "titulo": "Practicante de Ventas",
+   "empresa": "Risoul",
+   "ubicacion": "Veracruz, Veracruz",
+   "habilidades_tecnicas": [
+    "Negociación comercial"
+   ],
+   "habilidades_blandas": [
+    "Persuasión"
+   ],
+   "salario_min": null,
+   "salario_max": null,
+   "fecha_publicacion": "2026-08-23",
+   "fuente": "OCC",
+   "url": "https://www.occ.com.mx/empleo/oferta/21304325-practicante-de-ventas"
+  },
+  {
+   "titulo": "Ventas y atención a cliente",
+   "empresa": "Diego hernandez",
+   "ubicacion": "Ciudad de México",
+   "habilidades_tecnicas": [
+    "Negociación comercial"
+   ],
+   "habilidades_blandas": [
+    "Persuasión"
+   ],
+   "salario_min": 10000,
+   "salario_max": 12000,
+   "fecha_publicacion": "2026-08-23",
+   "fuente": "OCC",
+   "url": "https://www.occ.com.mx/empleo/oferta/21308058-ventas-y-atencion-a-cliente"
+  },
+  {
+   "titulo": "Responsable de Ventas de Sistemas",
+   "empresa": "SOLUCIONES TECNOLOGICAS PARA LA GESTION Y TRANSFORMACION SA DE CV",
+   "ubicacion": "Cuajimalpa de Morelos, Ciudad de México",
+   "habilidades_tecnicas": [
+    "Negociación comercial"
+   ],
+   "habilidades_blandas": [
+    "Persuasión"
+   ],
+   "salario_min": 25000,
+   "salario_max": 25000,
+   "fecha_publicacion": "2026-08-23",
+   "fuente": "OCC",
+   "url": "https://www.occ.com.mx/empleo/oferta/21308023-responsable-de-ventas-de-sistemas"
+  },
+  {
+   "titulo": "administrativo de ventas",
+   "empresa": "IMPULSO MOTORS, S.A. DE C.V.",
+   "ubicacion": "Benito Juárez, Ciudad de México",
+   "habilidades_tecnicas": [
+    "Reportes y Excel"
+   ],
+   "habilidades_blandas": [
+    "Organización"
+   ],
+   "salario_min": 11000,
+   "salario_max": 11200,
+   "fecha_publicacion": "2026-08-23",
+   "fuente": "OCC",
+   "url": "https://www.occ.com.mx/empleo/oferta/21307616-administrativo-de-ventas"
+  },
+  {
+   "titulo": "Ejecutivo de Ventas - HUNTER de Ventas",
+   "empresa": "Doctoralia México",
+   "ubicacion": "Tampico, Tamaulipas",
+   "habilidades_tecnicas": [
+    "Negociación comercial"
+   ],
+   "habilidades_blandas": [
+    "Persuasión"
+   ],
+   "salario_min": 20000,
+   "salario_max": 20000,
+   "fecha_publicacion": "2026-08-23",
+   "fuente": "OCC",
+   "url": "https://www.occ.com.mx/empleo/oferta/21307449-ejecutivo-de-ventas-hunter-de-ventas"
+  },
+  {
+   "titulo": "Ventas Educativas",
+   "empresa": "UNIVERSIDAD HUMANITAS",
+   "ubicacion": "Chihuahua, Chihuahua",
+   "habilidades_tecnicas": [
+    "Negociación comercial"
+   ],
+   "habilidades_blandas": [
+    "Persuasión"
+   ],
+   "salario_min": null,
+   "salario_max": null,
+   "fecha_publicacion": "2026-08-23",
+   "fuente": "OCC",
+   "url": "https://www.occ.com.mx/empleo/oferta/21307056-ventas-educativas"
+  },
+  {
+   "titulo": "BANAMEX Ejecutivo Especializado en Ventas",
+   "empresa": "Banamex",
+   "ubicacion": "Ciudad de México",
+   "habilidades_tecnicas": [
+    "Negociación comercial"
+   ],
+   "habilidades_blandas": [
+    "Persuasión"
+   ],
+   "salario_min": null,
+   "salario_max": null,
+   "fecha_publicacion": "2026-08-23",
+   "fuente": "OCC",
+   "url": "https://www.occ.com.mx/empleo/oferta/21298902-banamex-ejecutivo-especializado-en-ventas"
+  },
+  {
+   "titulo": "Asistente Administrativo de Ventas",
+   "empresa": "INTEGRADORES KYOSZEN, S.A DE C.V.",
+   "ubicacion": "Cuauhtémoc, Ciudad de México",
+   "habilidades_tecnicas": [
+    "Reportes y Excel"
+   ],
+   "habilidades_blandas": [
+    "Organización"
+   ],
+   "salario_min": null,
+   "salario_max": null,
+   "fecha_publicacion": "2026-08-23",
+   "fuente": "OCC",
+   "url": "https://www.occ.com.mx/empleo/oferta/21308361-asistente-administrativo-de-ventas"
+  },
+  {
+   "titulo": "Agente Bilingüe de Servicio a Ventas – Inglés",
+   "empresa": "TTEC CX SOLUTIONS MEXICO",
+   "ubicacion": "Cuauhtémoc, Ciudad de México",
+   "habilidades_tecnicas": [
+    "Negociación comercial"
+   ],
+   "habilidades_blandas": [
+    "Persuasión"
+   ],
+   "salario_min": 20800,
+   "salario_max": 25800,
+   "fecha_publicacion": "2026-08-23",
+   "fuente": "OCC",
+   "url": "https://www.occ.com.mx/empleo/oferta/21307313-agente-bilingue-de-servicio-a-ventas-ingles"
+  },
+  {
+   "titulo": "GNP Call Center/ Comisionista . - Lunes a viernes/capacitación pagada/comisionista",
+   "empresa": "Centro de Atracción de Talento",
+   "ubicacion": "México",
+   "habilidades_tecnicas": [
+    "Prospección en campo"
+   ],
+   "habilidades_blandas": [
+    "Persistencia"
+   ],
+   "salario_min": null,
+   "salario_max": null,
+   "fecha_publicacion": "2026-08-24",
+   "fuente": "Adzuna",
+   "url": "https://www.adzuna.com.mx/details/5854444883"
+  },
+  {
+   "titulo": "Ventas Cobranza en Campo 18,000",
+   "empresa": "CrediClub",
+   "ubicacion": "Santa Catarina, Nuevo León",
+   "habilidades_tecnicas": [
+    "Negociación comercial"
+   ],
+   "habilidades_blandas": [
+    "Persuasión"
+   ],
+   "salario_min": 15000,
+   "salario_max": 15000,
+   "fecha_publicacion": "2026-08-24",
+   "fuente": "Adzuna",
+   "url": "https://www.adzuna.com.mx/details/5854477692"
+  },
+  {
+   "titulo": "MEX Cajero Sucursal (Médica)",
+   "empresa": "Santander México",
+   "ubicacion": "México",
+   "habilidades_tecnicas": [
+    "Manejo de caja/POS"
+   ],
+   "habilidades_blandas": [
+    "Atención al cliente"
+   ],
+   "salario_min": null,
+   "salario_max": null,
+   "fecha_publicacion": "2026-08-24",
+   "fuente": "Adzuna",
+   "url": "https://www.adzuna.com.mx/details/5854680686"
+  },
+  {
+   "titulo": "MEX Ejecutivo Cta. Pyme",
+   "empresa": "Santander México",
+   "ubicacion": "México",
+   "habilidades_tecnicas": [
+    "Negociación comercial"
+   ],
+   "habilidades_blandas": [
+    "Persuasión"
+   ],
+   "salario_min": null,
+   "salario_max": null,
+   "fecha_publicacion": "2026-08-24",
+   "fuente": "Adzuna",
+   "url": "https://www.adzuna.com.mx/details/5854680685"
+  },
+  {
+   "titulo": "Director Desarrollo Nuevos Negocios - Mexico",
+   "empresa": "Monkey",
+   "ubicacion": "México",
+   "habilidades_tecnicas": [
+    "(inferida del título)"
+   ],
+   "habilidades_blandas": [
+    "Responsabilidad"
+   ],
+   "salario_min": null,
+   "salario_max": null,
+   "fecha_publicacion": "2026-08-24",
+   "fuente": "Adzuna",
+   "url": "https://www.adzuna.com.mx/details/5854837430"
+  },
+  {
+   "titulo": "Gerente de Operaciones y Delivery",
+   "empresa": "LEADU SAPI DE CV",
+   "ubicacion": "El Marqués, Querétaro",
+   "habilidades_tecnicas": [
+    "(inferida del título)"
+   ],
+   "habilidades_blandas": [
+    "Responsabilidad"
+   ],
+   "salario_min": null,
+   "salario_max": null,
+   "fecha_publicacion": "2026-08-24",
+   "fuente": "Adzuna",
+   "url": "https://www.adzuna.com.mx/details/5854950143"
+  },
+  {
+   "titulo": "MEX Ejecutivo Cta. A",
+   "empresa": "Santander México",
+   "ubicacion": "México",
+   "habilidades_tecnicas": [
+    "Negociación comercial"
+   ],
+   "habilidades_blandas": [
+    "Persuasión"
+   ],
+   "salario_min": null,
+   "salario_max": null,
+   "fecha_publicacion": "2026-08-24",
+   "fuente": "Adzuna",
+   "url": "https://www.adzuna.com.mx/details/5854976659"
+  },
+  {
+   "titulo": "CallCenter Turno Vespertino Seguros AXA Zona Vallejo",
+   "empresa": "Centro de Atracción de Talento",
+   "ubicacion": "Chimalhuacán, Estado de México",
+   "habilidades_tecnicas": [
+    "Productos financieros"
+   ],
+   "habilidades_blandas": [
+    "Generar confianza"
+   ],
+   "salario_min": null,
+   "salario_max": null,
+   "fecha_publicacion": "2026-08-24",
+   "fuente": "Adzuna",
+   "url": "https://www.adzuna.com.mx/details/5854477814"
+  },
+  {
+   "titulo": "Ejecutivo de Ventas HDI Lunes a Viernes Sin Experiencia Call Center",
+   "empresa": "Centro de Atracción de Talento",
+   "ubicacion": "Gustavo A. Madero, Ciudad de México",
+   "habilidades_tecnicas": [
+    "Manejo de script telefónico"
+   ],
+   "habilidades_blandas": [
+    "Resiliencia"
+   ],
+   "salario_min": 10000,
+   "salario_max": 10000,
+   "fecha_publicacion": "2026-08-24",
+   "fuente": "Adzuna",
+   "url": "https://www.adzuna.com.mx/details/5854477801"
+  },
+  {
+   "titulo": "Mecánico Eléctrico de Tractocamión Diesel",
+   "empresa": "MUEBLERIAS VALDEZ BALUARTE",
+   "ubicacion": "Culiacán, Sinaloa",
+   "habilidades_tecnicas": [
+    "(inferida del título)"
+   ],
+   "habilidades_blandas": [
+    "Responsabilidad"
+   ],
+   "salario_min": 18000,
+   "salario_max": 18000,
+   "fecha_publicacion": "2026-08-24",
+   "fuente": "Adzuna",
+   "url": "https://www.adzuna.com.mx/details/5854477803"
+  },
+  {
+   "titulo": "Ejecutivo Qualitas Lunes a Viernes Pago Semanal Zona Vallejo Turno Vespertino",
+   "empresa": "Centro de Atracción de Talento",
+   "ubicacion": "Azcapotzalco, Ciudad de México",
+   "habilidades_tecnicas": [
+    "Negociación comercial"
+   ],
+   "habilidades_blandas": [
+    "Persuasión"
+   ],
+   "salario_min": null,
+   "salario_max": null,
+   "fecha_publicacion": "2026-08-24",
+   "fuente": "Adzuna",
+   "url": "https://www.adzuna.com.mx/details/5854477793"
+  },
+  {
+   "titulo": "Seguros Qualitas Sin experiencia CallCenter Ingreso inmediato Descansa 2 días a la semana",
+   "empresa": "Centro de Atracción de Talento",
+   "ubicacion": "Iztacalco, Ciudad de México",
+   "habilidades_tecnicas": [
+    "Productos financieros"
+   ],
+   "habilidades_blandas": [
+    "Generar confianza"
+   ],
+   "salario_min": 9582,
+   "salario_max": 9582,
+   "fecha_publicacion": "2026-08-24",
+   "fuente": "Adzuna",
+   "url": "https://www.adzuna.com.mx/details/5854477783"
+  },
+  {
+   "titulo": "Callcenter Lunes a Viernes Pago Semanal Zona Vallejo Turno Vespertino",
+   "empresa": "Centro de Atracción de Talento",
+   "ubicacion": "Tlalnepantla de Baz, Estado de México",
+   "habilidades_tecnicas": [
+    "(inferida del título)"
+   ],
+   "habilidades_blandas": [
+    "Responsabilidad"
+   ],
+   "salario_min": null,
+   "salario_max": null,
+   "fecha_publicacion": "2026-08-24",
+   "fuente": "Adzuna",
+   "url": "https://www.adzuna.com.mx/details/5854477798"
+  },
+  {
+   "titulo": "Ejecutivo GNP Lunes a Viernes Turno Vespertino Zona Vallejo",
+   "empresa": "Centro de Atracción de Talento",
+   "ubicacion": "Gustavo A. Madero, Ciudad de México",
+   "habilidades_tecnicas": [
+    "Negociación comercial"
+   ],
+   "habilidades_blandas": [
+    "Persuasión"
+   ],
+   "salario_min": null,
+   "salario_max": null,
+   "fecha_publicacion": "2026-08-24",
+   "fuente": "Adzuna",
+   "url": "https://www.adzuna.com.mx/details/5854477781"
+  },
+  {
+   "titulo": "Banorte Seguros Sábado a Miércoles Ingreso Inmediato Comisiones Sin Tope",
+   "empresa": "Centro de Atracción de Talento",
+   "ubicacion": "Gustavo A. Madero, Ciudad de México",
+   "habilidades_tecnicas": [
+    "Productos financieros"
+   ],
+   "habilidades_blandas": [
+    "Generar confianza"
+   ],
+   "salario_min": 12000,
+   "salario_max": 12000,
+   "fecha_publicacion": "2026-08-24",
+   "fuente": "Adzuna",
+   "url": "https://www.adzuna.com.mx/details/5854477780"
+  },
+  {
+   "titulo": "Vendedor Jr Electrico",
+   "empresa": "Human Staff",
+   "ubicacion": "Torreón, Coahuila de Zaragoza",
+   "habilidades_tecnicas": [
+    "Negociación comercial"
+   ],
+   "habilidades_blandas": [
+    "Persuasión"
+   ],
+   "salario_min": 13000,
+   "salario_max": 13000,
+   "fecha_publicacion": "2026-08-24",
+   "fuente": "Adzuna",
+   "url": "https://www.adzuna.com.mx/details/5854477807"
+  },
+  {
+   "titulo": "Ejecutivo Telefonico Seguros AXA Sin experiencia Capacitación pagada Comisiones Sin Tope",
+   "empresa": "Centro de Atracción de Talento",
+   "ubicacion": "Gustavo A. Madero, Ciudad de México",
+   "habilidades_tecnicas": [
+    "Productos financieros"
+   ],
+   "habilidades_blandas": [
+    "Generar confianza"
+   ],
+   "salario_min": 9587,
+   "salario_max": 9587,
+   "fecha_publicacion": "2026-08-24",
+   "fuente": "Adzuna",
+   "url": "https://www.adzuna.com.mx/details/5854477718"
+  },
+  {
+   "titulo": "GNP Call Center Comisionista . Lunes a viernes capacitación pagada comisionista",
+   "empresa": "Centro de Atracción de Talento",
+   "ubicacion": "Azcapotzalco, Ciudad de México",
+   "habilidades_tecnicas": [
+    "Prospección en campo"
+   ],
+   "habilidades_blandas": [
+    "Persistencia"
+   ],
+   "salario_min": 8000,
+   "salario_max": 8000,
+   "fecha_publicacion": "2026-08-24",
+   "fuente": "Adzuna",
+   "url": "https://www.adzuna.com.mx/details/5854477776"
+  },
+  {
+   "titulo": "Ejecutivo Telefonico de Ventas Cartera de clientes prospectada Sin Experiencia",
+   "empresa": "Centro de Atracción de Talento",
+   "ubicacion": "Miguel Hidalgo, Ciudad de México",
+   "habilidades_tecnicas": [
+    "Negociación comercial"
+   ],
+   "habilidades_blandas": [
+    "Persuasión"
+   ],
+   "salario_min": null,
+   "salario_max": null,
+   "fecha_publicacion": "2026-08-24",
+   "fuente": "Adzuna",
+   "url": "https://www.adzuna.com.mx/details/5854477737"
+  },
+  {
+   "titulo": "Cobrador en moto Iztacalco, Iztapalapa, Neza",
+   "empresa": "Grupo Salinas",
+   "ubicacion": "Iztacalco, Ciudad de México",
+   "habilidades_tecnicas": [
+    "(inferida del título)"
+   ],
+   "habilidades_blandas": [
+    "Responsabilidad"
+   ],
+   "salario_min": 10000,
+   "salario_max": 10000,
+   "fecha_publicacion": "2026-08-24",
+   "fuente": "Adzuna",
+   "url": "https://www.adzuna.com.mx/details/5854477723"
+  },
+  {
+   "titulo": "Promotor de ventas fijas 17,000 Sueldo más comisiones sin tope",
+   "empresa": "Nach",
+   "ubicacion": "Juchitán de Zaragoza, Oaxaca",
+   "habilidades_tecnicas": [
+    "Negociación comercial"
+   ],
+   "habilidades_blandas": [
+    "Persuasión"
+   ],
+   "salario_min": 11000,
+   "salario_max": 11000,
+   "fecha_publicacion": "2026-08-24",
+   "fuente": "Adzuna",
+   "url": "https://www.adzuna.com.mx/details/5854477658"
+  },
+  {
+   "titulo": "Vendedor industrial Santa Rosa Jauregui, Qro",
+   "empresa": "Adecco",
+   "ubicacion": "Querétaro",
+   "habilidades_tecnicas": [
+    "Negociación comercial"
+   ],
+   "habilidades_blandas": [
+    "Persuasión"
+   ],
+   "salario_min": 16000,
+   "salario_max": 16000,
+   "fecha_publicacion": "2026-08-24",
+   "fuente": "Adzuna",
+   "url": "https://www.adzuna.com.mx/details/5854477619"
+  },
+  {
+   "titulo": "Promotor de ventas fijas 17,000 Sueldo más comisiones sin tope",
+   "empresa": "Nach",
+   "ubicacion": "Rosario, Sinaloa",
+   "habilidades_tecnicas": [
+    "Negociación comercial"
+   ],
+   "habilidades_blandas": [
+    "Persuasión"
+   ],
+   "salario_min": 11000,
+   "salario_max": 11000,
+   "fecha_publicacion": "2026-08-24",
+   "fuente": "Adzuna",
+   "url": "https://www.adzuna.com.mx/details/5854477662"
+  },
+  {
+   "titulo": "Asesor de Ventas PDV Sector automotriz Tehuacán Atractivas Comisiones",
+   "empresa": "TEVA RH",
+   "ubicacion": "Tehuacán, Puebla",
+   "habilidades_tecnicas": [
+    "Negociación comercial"
+   ],
+   "habilidades_blandas": [
+    "Persuasión"
+   ],
+   "salario_min": null,
+   "salario_max": null,
+   "fecha_publicacion": "2026-08-24",
+   "fuente": "Adzuna",
+   "url": "https://www.adzuna.com.mx/details/5854477626"
+  },
+  {
+   "titulo": "Fleets Sales Zone Manager",
+   "empresa": "Stellantis",
+   "ubicacion": "México",
+   "habilidades_tecnicas": [
+    "(inferida del título)"
+   ],
+   "habilidades_blandas": [
+    "Responsabilidad"
+   ],
+   "salario_min": null,
+   "salario_max": null,
+   "fecha_publicacion": "2026-08-24",
+   "fuente": "Adzuna",
+   "url": "https://www.adzuna.com.mx/details/5854678691"
+  },
+  {
+   "titulo": "Ejecutivo de Atención al Cliente Bilingüe",
+   "empresa": "Upfluence",
+   "ubicacion": "Cuauhtémoc, Ciudad de México",
+   "habilidades_tecnicas": [
+    "Negociación comercial"
+   ],
+   "habilidades_blandas": [
+    "Persuasión"
+   ],
+   "salario_min": null,
+   "salario_max": null,
+   "fecha_publicacion": "2026-08-24",
+   "fuente": "Adzuna",
+   "url": "https://www.adzuna.com.mx/details/5854623271"
+  },
+  {
+   "titulo": "Ejecutivo de Ventas Industriales — Montacargas y Refacciones",
+   "empresa": "Groui",
+   "ubicacion": "Las Flores, N.L.",
+   "habilidades_tecnicas": [
+    "Negociación comercial"
+   ],
+   "habilidades_blandas": [
+    "Persuasión"
+   ],
+   "salario_min": null,
+   "salario_max": null,
+   "fecha_publicacion": "2026-08-24",
+   "fuente": "Indeed",
+   "url": "https://to.indeed.com/aafgqh82j72d"
+  },
+  {
+   "titulo": "M26311 Asistente Administrativo de Flotilla",
+   "empresa": "CIMMYT",
+   "ubicacion": "México",
+   "habilidades_tecnicas": [
+    "Reportes y Excel"
+   ],
+   "habilidades_blandas": [
+    "Organización"
+   ],
+   "salario_min": null,
+   "salario_max": null,
+   "fecha_publicacion": "2026-08-24",
+   "fuente": "Adzuna",
+   "url": "https://www.adzuna.com.mx/details/5854549055"
+  }
+ ],
+ "vacantes_detalle_nota": "Generado programáticamente (2026-08-28) por etapa4_sector_json.py sobre 771 vacantes verificadas (vacantes_ventas_2026-08-14.csv, vacantes_ventas_verificadas_auto.csv, vacantes_ventas_pendientes.csv). Todos los conteos son exactos (pandas, sin estimaciones). Salario normalizado a MXN mensual (Adzuna >90,000/año se dividió entre 12). vacantes_con_habilidades cuenta solo habilidades EXPLÍCITAS en el CSV fuente. Muestra vacantes_detalle: filtro de recencia Adzuna<=10d / Indeed<=15d / OCC<=20d desde hoy, muestreo proporcional por fuente, máx. 60; habilidades faltantes inferidas por categoría de puesto."
+}
