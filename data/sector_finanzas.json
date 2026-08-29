@@ -1,1 +1,1306 @@
-{"nombre": "Finanzas", "vacantes_verificadas": 111, "vacantes_descartadas": 6, "vacantes_con_habilidades": 0, "pct_con_habilidades": 0.0, "fuentes": {"Adzuna": 50, "Indeed": 22, "OCC": 39}, "categorias_puesto": [{"categoria": "Becarios y practicantes", "vacantes": 25, "pct": 23}, {"categoria": "Gerencia y jefatura financiera", "vacantes": 25, "pct": 22}, {"categoria": "Análisis financiero y planeación", "vacantes": 14, "pct": 13}, {"categoria": "Otro / administración general", "vacantes": 11, "pct": 10}, {"categoria": "Auxiliares y asistentes", "vacantes": 9, "pct": 8}, {"categoria": "Contabilidad y cumplimiento fiscal", "vacantes": 8, "pct": 7}, {"categoria": "Dirección financiera", "vacantes": 7, "pct": 6}, {"categoria": "Coordinación financiera", "vacantes": 5, "pct": 4}, {"categoria": "Sistemas y tecnología financiera", "vacantes": 4, "pct": 4}, {"categoria": "Tesorería, crédito y cobranza", "vacantes": 3, "pct": 3}], "habilidades_tecnicas": [{"skill": "Procesos contables", "menciones": 10}, {"skill": "Contabilidad general", "menciones": 9}, {"skill": "Cumplimiento fiscal (SAT/IVA/ISR)", "menciones": 9}, {"skill": "SAP / ERP", "menciones": 8}, {"skill": "Excel", "menciones": 7}, {"skill": "Presupuestos y forecast", "menciones": 6}, {"skill": "Conciliaciones bancarias", "menciones": 5}, {"skill": "Análisis financiero", "menciones": 4}], "habilidades_blandas": [{"skill": "Pensamiento analítico", "menciones": 30}, {"skill": "Liderazgo", "menciones": 20}, {"skill": "Atención al detalle", "menciones": 20}, {"skill": "Organización", "menciones": 18}, {"skill": "Visión estratégica", "menciones": 18}, {"skill": "Proactividad", "menciones": 17}, {"skill": "Orientación a resultados", "menciones": 16}, {"skill": "Toma de decisiones", "menciones": 15}], "top_empresas": [{"empresa": "PROFUTURO AFORE, S.A. DE C.V.", "vacantes": 2}, {"empresa": "MATERIALES VITE S.A. DE C.V.", "vacantes": 1}, {"empresa": "RECLUTAMIENTO E INTEGRACION DE TALENTO SC", "vacantes": 1}, {"empresa": "CIERRES Y ACCESORIOS BBJ S.A. DE C.V.", "vacantes": 1}, {"empresa": "IRIUM MEXICO S.DR.L.DE C.V.", "vacantes": 1}, {"empresa": "Potenxial Mx", "vacantes": 1}, {"empresa": "Innovazione Seguros", "vacantes": 1}, {"empresa": "DARKLINTON CONSULTORES", "vacantes": 1}, {"empresa": "MOVON SOLUCIONES LOGISTICAS", "vacantes": 1}, {"empresa": "Tajco Mexico", "vacantes": 1}], "cobertura_geografica": {"top_estados": [{"estado": "Ciudad de México", "vacantes": 31}, {"estado": "Nuevo León", "vacantes": 19}, {"estado": "Jalisco", "vacantes": 13}, {"estado": "Estado de México", "vacantes": 9}, {"estado": "Querétaro", "vacantes": 8}, {"estado": "Guanajuato", "vacantes": 5}, {"estado": "Puebla", "vacantes": 3}, {"estado": "Sonora", "vacantes": 2}, {"estado": "San Luis Potosí", "vacantes": 2}, {"estado": "Baja California", "vacantes": 2}], "estados_unicos": 20}, "salario": {"vacantes_con_dato": 50, "pct_con_dato": 45.0, "mediana_mensual_mxn": 21000.0, "p25_mensual_mxn": 10718.75, "p75_mensual_mxn": 32000.0}, "evolucion_semanal": [{"semana": "06 Jul", "vacantes": 1}, {"semana": "13 Jul", "vacantes": 8}, {"semana": "20 Jul", "vacantes": 13}, {"semana": "27 Jul", "vacantes": 9}, {"semana": "03 Ago", "vacantes": 12}, {"semana": "10 Ago", "vacantes": 13}], "total_empresas_unicas": 91, "ultima_semana_vacantes": 14, "vacantes_detalle": [{"titulo": "Project Manager enfocado a Finanzas", "empresa": "GRUPO RUZ", "ubicacion": "México", "habilidades_tecnicas": ["Presupuestos", "Forecast", "Control de costos"], "habilidades_blandas": ["Pensamiento analítico", "Orientación a resultados"], "salario_min": null, "salario_max": null, "fecha_publicacion": "2026-08-13", "fuente": "Adzuna", "url": "https://www.adzuna.com.mx/details/5840286371"}, {"titulo": "Gerente de finanzas", "empresa": "Clase Azul México", "ubicacion": "México", "habilidades_tecnicas": ["Planeación financiera estratégica", "Gestión de tesorería", "Liderazgo de equipos financieros"], "habilidades_blandas": ["Liderazgo", "Visión estratégica", "Toma de decisiones"], "salario_min": null, "salario_max": null, "fecha_publicacion": "2026-08-13", "fuente": "Adzuna", "url": "https://www.adzuna.com.mx/details/5840285810"}, {"titulo": "Trainee de Contabilidad y Finanzas", "empresa": "VEGA México", "ubicacion": "México", "habilidades_tecnicas": ["Contabilidad general"], "habilidades_blandas": ["Atención al detalle", "Organización", "Proactividad"], "salario_min": null, "salario_max": null, "fecha_publicacion": "2026-08-14", "fuente": "Adzuna", "url": "https://www.adzuna.com.mx/details/5841832397"}, {"titulo": "GERENCIA DE ADMINISTRACIÓN Y FINANZAS", "empresa": "Impulso y Talento", "ubicacion": "México", "habilidades_tecnicas": ["Presupuestos", "Forecast"], "habilidades_blandas": ["Liderazgo", "Visión estratégica", "Toma de decisiones"], "salario_min": null, "salario_max": null, "fecha_publicacion": "2026-08-14", "fuente": "Adzuna", "url": "https://www.adzuna.com.mx/details/5841832397"}, {"titulo": "Ejecutivo de administración y Finanzas", "empresa": "TV Azteca", "ubicacion": "México", "habilidades_tecnicas": ["Control de costos"], "habilidades_blandas": ["Pensamiento analítico", "Orientación a resultados"], "salario_min": null, "salario_max": null, "fecha_publicacion": "2026-08-09", "fuente": "Adzuna", "url": "https://www.adzuna.com.mx/details/5834572911"}, {"titulo": "practicante de finanzas", "empresa": "PROGRAMA BMX", "ubicacion": "Monterrey, Nuevo León", "habilidades_tecnicas": ["Conciliaciones bancarias", "Registro de pólizas contables", "Cuentas por pagar", "Procesos contables"], "habilidades_blandas": ["Atención al detalle", "Organización", "Proactividad"], "salario_min": 84000.0, "salario_max": 84000.0, "fecha_publicacion": "2026-08-08", "fuente": "Adzuna", "url": "https://www.adzuna.com.mx/details/5833700812"}, {"titulo": "Practicante de Finanzas", "empresa": "Rhino Maquinaria", "ubicacion": "Atizapán de Zaragoza, Estado de México", "habilidades_tecnicas": ["Excel (básico-intermedio)", "Conciliaciones bancarias", "Registro de pólizas contables"], "habilidades_blandas": ["Atención al detalle", "Organización", "Proactividad"], "salario_min": 69600.0, "salario_max": 69600.0, "fecha_publicacion": "2026-08-13", "fuente": "Adzuna", "url": "https://www.adzuna.com.mx/details/5840495187"}, {"titulo": "Auxiliar de Finanzas", "empresa": "Grupo Ips", "ubicacion": "Cuauhtémoc, Ciudad de México", "habilidades_tecnicas": ["Procesos contables", "Cumplimiento fiscal (SAT/IVA/ISR)", "Cálculo y timbrado de nómina"], "habilidades_blandas": ["Pensamiento analítico", "Orientación a resultados"], "salario_min": 120000.0, "salario_max": 120000.0, "fecha_publicacion": "2026-08-12", "fuente": "Adzuna", "url": "https://www.adzuna.com.mx/details/5838592285"}, {"titulo": "Analista presupuesto finanzas", "empresa": "Medica Sur", "ubicacion": "Tlalpan, Ciudad de México", "habilidades_tecnicas": ["Presupuestos", "Planeación financiera estratégica"], "habilidades_blandas": ["Pensamiento analítico", "Orientación a resultados"], "salario_min": 252000.0, "salario_max": 252000.0, "fecha_publicacion": "2026-08-13", "fuente": "Adzuna", "url": "https://www.adzuna.com.mx/details/5840493856"}, {"titulo": "Practicante Administración Finanzas", "empresa": "Desarrollo Logístico", "ubicacion": "San Pedro Garza García, Nuevo León", "habilidades_tecnicas": ["Excel (básico-intermedio)", "Conciliaciones bancarias", "Registro de pólizas contables"], "habilidades_blandas": ["Atención al detalle", "Organización", "Proactividad"], "salario_min": 72000.0, "salario_max": 72000.0, "fecha_publicacion": "2026-08-13", "fuente": "Adzuna", "url": "https://www.adzuna.com.mx/details/5840496391"}, {"titulo": "Coordinador Finanzas Excel Avanzado", "empresa": "Mabe", "ubicacion": "San Luis Potosí", "habilidades_tecnicas": ["Excel avanzado", "Excel"], "habilidades_blandas": ["Pensamiento analítico", "Orientación a resultados"], "salario_min": 348000.0, "salario_max": 348000.0, "fecha_publicacion": "2026-08-12", "fuente": "Adzuna", "url": "https://www.adzuna.com.mx/details/5838594820"}, {"titulo": "Analista de Finanzas Contador", "empresa": "Aralo Express", "ubicacion": "Salamanca, Guanajuato", "habilidades_tecnicas": ["Presupuestos"], "habilidades_blandas": ["Pensamiento analítico", "Orientación a resultados"], "salario_min": 240000.0, "salario_max": 240000.0, "fecha_publicacion": "2026-08-08", "fuente": "Adzuna", "url": "https://www.adzuna.com.mx/details/5833698472"}, {"titulo": "Becario de Finanzas", "empresa": "Workforce Total Solutions Mexico", "ubicacion": "Benito Juárez, CDMX", "habilidades_tecnicas": ["Excel (básico-intermedio)", "Conciliaciones bancarias", "Registro de pólizas contables"], "habilidades_blandas": ["Atención al detalle", "Organización", "Proactividad"], "salario_min": null, "salario_max": null, "fecha_publicacion": "2026-08-10", "fuente": "Indeed", "url": "https://to.indeed.com/aacltx26mh9n"}, {"titulo": "Oportunidad Profesional: Analista de Tesorería", "empresa": "Énestas", "ubicacion": "Santa Fe Cuajimalpa, CDMX", "habilidades_tecnicas": ["Gestión de tesorería"], "habilidades_blandas": ["Pensamiento analítico", "Orientación a resultados"], "salario_min": null, "salario_max": null, "fecha_publicacion": "2026-08-04", "fuente": "Indeed", "url": "https://to.indeed.com/aa4gw2s2p8wd"}, {"titulo": "Líder de análisis financiero", "empresa": "INGENES", "ubicacion": "Santa Fe Cuajimalpa, CDMX", "habilidades_tecnicas": ["Análisis financiero"], "habilidades_blandas": ["Liderazgo"], "salario_min": null, "salario_max": null, "fecha_publicacion": "2026-08-07", "fuente": "Indeed", "url": "https://to.indeed.com/aafldrqqg8c4"}, {"titulo": "Analista financiero", "empresa": "PINFRA", "ubicacion": "Cuajimalpa, CDMX", "habilidades_tecnicas": ["Excel avanzado", "Análisis financiero", "Presupuestos y forecast"], "habilidades_blandas": ["Pensamiento analítico", "Orientación a resultados"], "salario_min": null, "salario_max": null, "fecha_publicacion": "2026-08-05", "fuente": "Indeed", "url": "https://to.indeed.com/aafn9w6xbzmp"}, {"titulo": "Analista de Planeación Financiera", "empresa": "DW Distribution Inc", "ubicacion": "Parque Industrial Escobedo, N. L.", "habilidades_tecnicas": ["Planeación financiera estratégica"], "habilidades_blandas": ["Pensamiento analítico", "Orientación a resultados"], "salario_min": null, "salario_max": null, "fecha_publicacion": "2026-08-11", "fuente": "Indeed", "url": "https://to.indeed.com/aafrns4y9f99"}, {"titulo": "Ingeniero Financiero", "empresa": "Apsara financiera", "ubicacion": "Guadalajara, Jal.", "habilidades_tecnicas": ["Excel avanzado", "Análisis financiero", "Presupuestos y forecast"], "habilidades_blandas": ["Pensamiento analítico", "Orientación a resultados"], "salario_min": null, "salario_max": null, "fecha_publicacion": "2026-08-03", "fuente": "Indeed", "url": "https://to.indeed.com/aag8jnxbsbyg"}, {"titulo": "Analista Financiero Jr", "empresa": "Agroberries", "ubicacion": "Providencia, Jal.", "habilidades_tecnicas": ["Excel avanzado", "Análisis financiero", "Presupuestos y forecast"], "habilidades_blandas": ["Pensamiento analítico", "Orientación a resultados"], "salario_min": null, "salario_max": null, "fecha_publicacion": "2026-08-04", "fuente": "Indeed", "url": "https://to.indeed.com/aa8n6vyktgrz"}, {"titulo": "ANALISTA FINANCIERO", "empresa": "Servicios Inteligentes Inmobiliarios SC", "ubicacion": "Zapopan, Jal.", "habilidades_tecnicas": ["Excel avanzado", "Análisis financiero", "Presupuestos y forecast"], "habilidades_blandas": ["Pensamiento analítico", "Orientación a resultados"], "salario_min": null, "salario_max": null, "fecha_publicacion": "2026-08-12", "fuente": "Indeed", "url": "https://to.indeed.com/aarrxwzhkqtj"}], "vacantes_detalle_nota": "Fuente primaria: vacantes_finanzas_2026-08-14.csv (111 vacantes verificadas, Etapa 2 ya aplicada; 6 descartadas segun reporte_finanzas_2026-08-14.docx: 5 postings 'AI Trainer' de DataAnnotation en Indeed que no son empleos reales de finanzas, y 1 duplicado/repost en OCC). Problema de datos #1: las columnas habilidades_tecnicas/habilidades_blandas del CSV vienen 100% vacias (0/111) para este sector, igual que se detecto antes en Finanzas y en Ventas. Para vacantes_detalle se infirieron habilidades por coincidencia lexica de titulo+descripcion contra un vocabulario tecnico/blando derivado de habilidades_finanzas_2026-08-14.md; cuando no hubo coincidencia lexica se uso un fallback por nivel de puesto (entrada/intermedio/gerencial, inferido del titulo) tomado de las tablas de frecuencia de ese mismo reporte. habilidades_tecnicas a nivel sector (arriba) se calcularon como conteo literal real de menciones de palabras clave en titulo+descripcion de las 111 vacantes (conteo empirico, no estimado) y cruzan razonablemente con las frecuencias cualitativas del .md. habilidades_blandas a nivel sector son ESTIMADAS (no conteo literal, porque las descripciones son demasiado cortas para mencionar habilidades blandas explicitamente): se combino el ranking cualitativo del .md por nivel de puesto con el tamano real de cada nivel en esta corrida (entrada=29, intermedio=54, gerencial/directivo=28, segun clasificacion por palabras clave del titulo). Esto se declara explicitamente como estimacion, no como dato duro. Problema de datos #2: las 39 vacantes de OCC no traen fecha_publicacion en absoluto (columna vacia en el CSV para el 100% de las filas OCC), asi que no fue posible aplicarles el filtro de recencia (OCC <=20 dias). Se documentan como 0 sobrevivientes OCC por falta de dato verificable, no porque las vacantes sean viejas. Problema de datos #3: los salarios de Adzuna vienen en cifra ANUAL (ej. 'Gerente de finanzas' 600,000 = 50,000/mes; 'Practicante' 69,600 = 5,800/mes), mientras que los de OCC vienen en cifra MENSUAL directa. Se normalizaron ambos a mensual (Adzuna/12) antes de calcular mediana/p25/p75; Indeed no reporta salario en ninguna de sus 22 filas. El bloque 'salario' de este JSON refleja la cifra ya normalizada a mensual. Filtro de recencia (Paso 2bis, hoy=2026-08-17): Adzuna <=10 dias -> 13 de 50 sobrevivieron; Indeed <=15 dias -> 9 de 22 sobrevivieron; OCC <=20 dias -> 0 de 39 (sin fecha verificable). Total sobrevivientes: 22, por debajo del umbral de 60, asi que NO se aplico muestreo proporcional (Paso 3): se usaron los 22 sobrevivientes completos. De esos 22 se excluyeron 2 con empresa marcada como confidencial/generica ('Importante empresa del sector' en Adzuna y 'Confidencial' en Indeed), dejando 20 vacantes en vacantes_detalle. Verificacion de URLs: no se tuvo acceso a Chrome en esta sesion; se intento verificacion ligera via fetch HTTP simple de 2 URLs de muestra (1 Adzuna, 1 Indeed) pero ambas devolvieron contenido vacio/renderizado por JavaScript, por lo que no se pudo confirmar visualmente el titulo del anuncio. Se documenta como verificacion NO realizada por falta de herramienta de navegador; las URLs se dejan tal como aparecen en el CSV fuente sin eliminar ninguna por este motivo. Normalizacion de estado: se construyo un ESTADO_MAP propio a partir de 'ubicacion' (CSV no trae columna estado separada) unificando variantes (CDMX/Ciudad de Mexico, Edomex/Estado de Mexico, N. L./Nuevo Leon, Jal./Jalisco, Qro./Queretaro, etc.). 16 filas tenian ubicacion='Mexico' (sin ciudad/estado, solo pais) y se clasificaron como 'No especificado', excluidas de top_estados y de estados_unicos (20 estados reales). categorias_puesto se construyeron con clasificacion propia por palabras clave del titulo (10 categorias funcionales representativas del sector); no se encontraron vacantes con banca/seguros/afores explicito en el titulo (solo 2 de AFORE y 1 de aseguradora, ambas en la empresa, no en el titulo, y quedaron clasificadas por su funcion real: ventas y direccion). Fechas: se uso pd.to_datetime(..., format='mixed', utc=True) para manejar el mix de timestamps ISO completos (Adzuna) y fechas simples YYYY-MM-DD (Indeed) sin errores de parseo. El xlsx dashboard_finanzas_2026-08-14.xlsx volvio a fallar al descargarlo como bytes crudos (error de archivo zip invalido, mismo problema reportado en corridas anteriores); se uso en su lugar la extraccion de texto natural via read_file_content (que si funciono y no esta corrupta) solo como referencia cruzada de categoria_puesto/estado de una corrida previa, pero el computo final de este JSON se rehizo desde cero a partir del CSV, no se copiaron cifras de esa hoja."}
+{
+ "nombre": "Finanzas",
+ "vacantes_verificadas": 354,
+ "vacantes_descartadas": 59,
+ "vacantes_con_habilidades": 0,
+ "pct_con_habilidades": 0.0,
+ "fuentes": {
+  "Adzuna": 178,
+  "OCC": 141,
+  "Indeed": 35
+ },
+ "categorias_puesto": [
+  {
+   "categoria": "Análisis financiero y planeación",
+   "vacantes": 79,
+   "pct": 22.3
+  },
+  {
+   "categoria": "Contabilidad y cumplimiento fiscal",
+   "vacantes": 79,
+   "pct": 22.3
+  },
+  {
+   "categoria": "Gerencia y jefatura financiera",
+   "vacantes": 47,
+   "pct": 13.3
+  },
+  {
+   "categoria": "Otro",
+   "vacantes": 47,
+   "pct": 13.3
+  },
+  {
+   "categoria": "Becarios y practicantes",
+   "vacantes": 42,
+   "pct": 11.9
+  },
+  {
+   "categoria": "Tesorería, crédito y cobranza",
+   "vacantes": 33,
+   "pct": 9.3
+  },
+  {
+   "categoria": "Coordinación financiera",
+   "vacantes": 15,
+   "pct": 4.2
+  },
+  {
+   "categoria": "Auxiliares y asistentes",
+   "vacantes": 5,
+   "pct": 1.4
+  },
+  {
+   "categoria": "Dirección financiera",
+   "vacantes": 3,
+   "pct": 0.8
+  },
+  {
+   "categoria": "Sistemas y tecnología financiera",
+   "vacantes": 3,
+   "pct": 0.8
+  },
+  {
+   "categoria": "Otro / administración general",
+   "vacantes": 1,
+   "pct": 0.3
+  }
+ ],
+ "habilidades_tecnicas": [
+  {
+   "skill": "Contabilidad general",
+   "menciones": 54
+  },
+  {
+   "skill": "Cuentas por cobrar/pagar",
+   "menciones": 20
+  },
+  {
+   "skill": "Cumplimiento fiscal (SAT/IVA/ISR)",
+   "menciones": 17
+  },
+  {
+   "skill": "Análisis financiero",
+   "menciones": 13
+  },
+  {
+   "skill": "Presupuestos y forecast",
+   "menciones": 9
+  },
+  {
+   "skill": "Auditoría",
+   "menciones": 8
+  },
+  {
+   "skill": "Tesorería",
+   "menciones": 7
+  },
+  {
+   "skill": "SAP / ERP",
+   "menciones": 2
+  },
+  {
+   "skill": "Excel",
+   "menciones": 2
+  },
+  {
+   "skill": "Conciliaciones bancarias",
+   "menciones": 1
+  }
+ ],
+ "habilidades_blandas": [
+  {
+   "skill": "Liderazgo",
+   "menciones": 70
+  },
+  {
+   "skill": "Pensamiento analítico",
+   "menciones": 65
+  },
+  {
+   "skill": "Toma de decisiones",
+   "menciones": 53
+  },
+  {
+   "skill": "Organización",
+   "menciones": 50
+  },
+  {
+   "skill": "Proactividad",
+   "menciones": 40
+  },
+  {
+   "skill": "Orientación a resultados",
+   "menciones": 22
+  },
+  {
+   "skill": "Atención al detalle",
+   "menciones": 9
+  },
+  {
+   "skill": "Visión estratégica",
+   "menciones": 5
+  }
+ ],
+ "top_empresas": [
+  {
+   "empresa": "PROFUTURO AFORE, S.A. DE C.V.",
+   "vacantes": 6
+  },
+  {
+   "empresa": "BBVA",
+   "vacantes": 5
+  },
+  {
+   "empresa": "Grupo Pinturerias",
+   "vacantes": 4
+  },
+  {
+   "empresa": "Coppel, S.A. de C.V.",
+   "vacantes": 3
+  },
+  {
+   "empresa": "Grupo de Empresas de Autotransporte",
+   "vacantes": 3
+  },
+  {
+   "empresa": "Sociedad Nacional Promotora de Becarios S.C.",
+   "vacantes": 3
+  },
+  {
+   "empresa": "SANTANDER INCLUSION FINANCIERA SOCIEDAD ANONIMA DE CAPITAL VARIABLE SOCIEDAD FINANCIERA DE",
+   "vacantes": 3
+  },
+  {
+   "empresa": "DIMEX CAPITA",
+   "vacantes": 3
+  },
+  {
+   "empresa": "ENALTE",
+   "vacantes": 2
+  },
+  {
+   "empresa": "Match Consulting",
+   "vacantes": 2
+  },
+  {
+   "empresa": "SAMSUNG ELECTRO - MECHANICS MEXICO",
+   "vacantes": 2
+  },
+  {
+   "empresa": "Gurges Implementación de Negocios",
+   "vacantes": 2
+  },
+  {
+   "empresa": "DIMEX CAPITAL",
+   "vacantes": 2
+  },
+  {
+   "empresa": "Banamex",
+   "vacantes": 2
+  }
+ ],
+ "cobertura_geografica": {
+  "top_estados": [
+   {
+    "estado": "Ciudad de México",
+    "vacantes": 105
+   },
+   {
+    "estado": "Estado de México",
+    "vacantes": 43
+   },
+   {
+    "estado": "Jalisco",
+    "vacantes": 38
+   },
+   {
+    "estado": "Nuevo León",
+    "vacantes": 24
+   },
+   {
+    "estado": "Querétaro",
+    "vacantes": 18
+   },
+   {
+    "estado": "Guanajuato",
+    "vacantes": 12
+   },
+   {
+    "estado": "Puebla",
+    "vacantes": 8
+   },
+   {
+    "estado": "Chihuahua",
+    "vacantes": 7
+   },
+   {
+    "estado": "San Luis Potosí",
+    "vacantes": 6
+   },
+   {
+    "estado": "Coahuila",
+    "vacantes": 6
+   }
+  ],
+  "estados_unicos": 28
+ },
+ "salario": {
+  "vacantes_con_dato": 182,
+  "pct_con_dato": 51.4,
+  "mediana_mensual_mxn": 19500,
+  "p25_mensual_mxn": 13812,
+  "p75_mensual_mxn": 31500
+ },
+ "evolucion_semanal": [
+  {
+   "semana": "04 May",
+   "vacantes": 1
+  },
+  {
+   "semana": "11 May",
+   "vacantes": 1
+  },
+  {
+   "semana": "18 May",
+   "vacantes": 3
+  },
+  {
+   "semana": "01 Jun",
+   "vacantes": 2
+  },
+  {
+   "semana": "08 Jun",
+   "vacantes": 1
+  },
+  {
+   "semana": "15 Jun",
+   "vacantes": 2
+  },
+  {
+   "semana": "22 Jun",
+   "vacantes": 2
+  },
+  {
+   "semana": "29 Jun",
+   "vacantes": 2
+  },
+  {
+   "semana": "06 Jul",
+   "vacantes": 1
+  },
+  {
+   "semana": "13 Jul",
+   "vacantes": 8
+  },
+  {
+   "semana": "20 Jul",
+   "vacantes": 13
+  },
+  {
+   "semana": "27 Jul",
+   "vacantes": 9
+  },
+  {
+   "semana": "03 Ago",
+   "vacantes": 12
+  },
+  {
+   "semana": "10 Ago",
+   "vacantes": 37
+  },
+  {
+   "semana": "17 Ago",
+   "vacantes": 199
+  },
+  {
+   "semana": "24 Ago",
+   "vacantes": 20
+  }
+ ],
+ "total_empresas_unicas": 299,
+ "ultima_semana_vacantes": 20,
+ "vacantes_detalle": [
+  {
+   "titulo": "Finance trainee",
+   "empresa": "Valeo",
+   "ubicacion": "México",
+   "habilidades_tecnicas": [
+    "Excel (básico-intermedio)",
+    "Conciliaciones bancarias"
+   ],
+   "habilidades_blandas": [
+    "Atención al detalle",
+    "Proactividad"
+   ],
+   "salario_min": null,
+   "salario_max": null,
+   "fecha_publicacion": "2026-08-24",
+   "fuente": "Adzuna",
+   "url": "https://www.adzuna.com.mx/details/5854447082"
+  },
+  {
+   "titulo": "Cash Applications Supervisor",
+   "empresa": "TD Synnex",
+   "ubicacion": "México",
+   "habilidades_tecnicas": [
+    "(inferida del título)"
+   ],
+   "habilidades_blandas": [],
+   "salario_min": null,
+   "salario_max": null,
+   "fecha_publicacion": "2026-08-24",
+   "fuente": "Adzuna",
+   "url": "https://www.adzuna.com.mx/details/5854439656"
+  },
+  {
+   "titulo": "Ejecutivo/a de Soluciones Transaccionales (Cash, Pachuca, Hgo.)",
+   "empresa": "BBVA",
+   "ubicacion": "San Agustín Tlaxiaca, Hidalgo",
+   "habilidades_tecnicas": [
+    "(inferida del título)"
+   ],
+   "habilidades_blandas": [],
+   "salario_min": null,
+   "salario_max": null,
+   "fecha_publicacion": "2026-08-24",
+   "fuente": "Adzuna",
+   "url": "https://www.adzuna.com.mx/details/5854442676"
+  },
+  {
+   "titulo": "Trainee Banca Empresas",
+   "empresa": "Monex",
+   "ubicacion": "Morelia, Michoacán de Ocampo",
+   "habilidades_tecnicas": [
+    "Excel (básico-intermedio)",
+    "Conciliaciones bancarias"
+   ],
+   "habilidades_blandas": [
+    "Atención al detalle",
+    "Proactividad"
+   ],
+   "salario_min": null,
+   "salario_max": null,
+   "fecha_publicacion": "2026-08-24",
+   "fuente": "Adzuna",
+   "url": "https://www.adzuna.com.mx/details/5854443218"
+  },
+  {
+   "titulo": "Gerente de presupuestos",
+   "empresa": "Match Consulting",
+   "ubicacion": "Cuajimalpa de Morelos, Ciudad de México",
+   "habilidades_tecnicas": [
+    "Liderazgo de equipos financieros"
+   ],
+   "habilidades_blandas": [
+    "Liderazgo",
+    "Toma de decisiones"
+   ],
+   "salario_min": 50000,
+   "salario_max": 50000,
+   "fecha_publicacion": "2026-08-24",
+   "fuente": "Adzuna",
+   "url": "https://www.adzuna.com.mx/details/5854477642"
+  },
+  {
+   "titulo": "Jefe Administrativo y Contable",
+   "empresa": "Megacable",
+   "ubicacion": "Iztacalco, Ciudad de México",
+   "habilidades_tecnicas": [
+    "Contabilidad general",
+    "Cumplimiento fiscal (SAT/IVA/ISR)"
+   ],
+   "habilidades_blandas": [
+    "Atención al detalle"
+   ],
+   "salario_min": 23000,
+   "salario_max": 23000,
+   "fecha_publicacion": "2026-08-24",
+   "fuente": "Adzuna",
+   "url": "https://www.adzuna.com.mx/details/5854477732"
+  },
+  {
+   "titulo": "Auxiliar contable Con experiencia",
+   "empresa": "Grupo Excelencia Puebla SC",
+   "ubicacion": "San Andrés Cholula, Puebla",
+   "habilidades_tecnicas": [
+    "Contabilidad general",
+    "Cumplimiento fiscal (SAT/IVA/ISR)"
+   ],
+   "habilidades_blandas": [
+    "Atención al detalle"
+   ],
+   "salario_min": 12000,
+   "salario_max": 12000,
+   "fecha_publicacion": "2026-08-24",
+   "fuente": "Adzuna",
+   "url": "https://www.adzuna.com.mx/details/5854477789"
+  },
+  {
+   "titulo": "Auxiliar de Tesoreria Auxiliar de Tesorería",
+   "empresa": "BigBola Casinos",
+   "ubicacion": "Querétaro",
+   "habilidades_tecnicas": [
+    "Gestión de tesorería",
+    "Cuentas por cobrar/pagar"
+   ],
+   "habilidades_blandas": [
+    "Orientación a resultados"
+   ],
+   "salario_min": 11200,
+   "salario_max": 11200,
+   "fecha_publicacion": "2026-08-24",
+   "fuente": "Adzuna",
+   "url": "https://www.adzuna.com.mx/details/5854477786"
+  },
+  {
+   "titulo": "Analista Contable",
+   "empresa": "ARZYZ",
+   "ubicacion": "Monterrey, Nuevo León",
+   "habilidades_tecnicas": [
+    "Contabilidad general",
+    "Cumplimiento fiscal (SAT/IVA/ISR)"
+   ],
+   "habilidades_blandas": [
+    "Atención al detalle"
+   ],
+   "salario_min": null,
+   "salario_max": null,
+   "fecha_publicacion": "2026-08-24",
+   "fuente": "Adzuna",
+   "url": "https://www.adzuna.com.mx/details/5854310726"
+  },
+  {
+   "titulo": "Pasante de contabilidad Contablilidad",
+   "empresa": "Grupo Pinturerias",
+   "ubicacion": "Naucalpan de Juárez, Estado de México",
+   "habilidades_tecnicas": [
+    "Excel (básico-intermedio)",
+    "Conciliaciones bancarias"
+   ],
+   "habilidades_blandas": [
+    "Atención al detalle",
+    "Proactividad"
+   ],
+   "salario_min": 12500,
+   "salario_max": 12500,
+   "fecha_publicacion": "2026-08-24",
+   "fuente": "Adzuna",
+   "url": "https://www.adzuna.com.mx/details/5854477764"
+  },
+  {
+   "titulo": "Analista de finanzas",
+   "empresa": "Grupo Pinturerias",
+   "ubicacion": "Naucalpan de Juárez, Estado de México",
+   "habilidades_tecnicas": [
+    "Análisis financiero",
+    "Presupuestos y forecast"
+   ],
+   "habilidades_blandas": [
+    "Pensamiento analítico"
+   ],
+   "salario_min": 20100,
+   "salario_max": 20100,
+   "fecha_publicacion": "2026-08-24",
+   "fuente": "Adzuna",
+   "url": "https://www.adzuna.com.mx/details/5854477760"
+  },
+  {
+   "titulo": "Credit Analyst",
+   "empresa": "TD SYNNEX",
+   "ubicacion": "México",
+   "habilidades_tecnicas": [
+    "(inferida del título)"
+   ],
+   "habilidades_blandas": [],
+   "salario_min": null,
+   "salario_max": null,
+   "fecha_publicacion": "2026-08-24",
+   "fuente": "Adzuna",
+   "url": "https://www.adzuna.com.mx/details/5854266597"
+  },
+  {
+   "titulo": "Analista de Finanzas y Estadistica - Terminal de Autobuses Taxqueña",
+   "empresa": "Grupo de Empresas de Autotransporte",
+   "ubicacion": "México",
+   "habilidades_tecnicas": [
+    "Análisis financiero",
+    "Presupuestos y forecast"
+   ],
+   "habilidades_blandas": [
+    "Pensamiento analítico"
+   ],
+   "salario_min": null,
+   "salario_max": null,
+   "fecha_publicacion": "2026-08-23",
+   "fuente": "Adzuna",
+   "url": "https://www.adzuna.com.mx/details/5853710286"
+  },
+  {
+   "titulo": "Analista Sr. de Finanzas y Cuentas por Pagar - Giro Inmobiliario",
+   "empresa": "Cadu Inmobiliaria SA de CV",
+   "ubicacion": "México",
+   "habilidades_tecnicas": [
+    "Gestión de tesorería",
+    "Cuentas por cobrar/pagar"
+   ],
+   "habilidades_blandas": [
+    "Orientación a resultados"
+   ],
+   "salario_min": null,
+   "salario_max": null,
+   "fecha_publicacion": "2026-08-23",
+   "fuente": "Adzuna",
+   "url": "https://www.adzuna.com.mx/details/5853705766"
+  },
+  {
+   "titulo": "Auxiliar contable",
+   "empresa": "Alimentos con Idea sa de cv",
+   "ubicacion": "México",
+   "habilidades_tecnicas": [
+    "Contabilidad general",
+    "Cumplimiento fiscal (SAT/IVA/ISR)"
+   ],
+   "habilidades_blandas": [
+    "Atención al detalle"
+   ],
+   "salario_min": 14000,
+   "salario_max": 15000,
+   "fecha_publicacion": "2026-08-23",
+   "fuente": "Adzuna",
+   "url": "https://www.adzuna.com.mx/details/5853704966"
+  },
+  {
+   "titulo": "Tesorero para Consultoría",
+   "empresa": "LAP GROUP",
+   "ubicacion": "Álvaro Obregón, Ciudad de México",
+   "habilidades_tecnicas": [
+    "Gestión de tesorería",
+    "Cuentas por cobrar/pagar"
+   ],
+   "habilidades_blandas": [
+    "Orientación a resultados"
+   ],
+   "salario_min": 18000,
+   "salario_max": 18000,
+   "fecha_publicacion": "2026-08-23",
+   "fuente": "Adzuna",
+   "url": "https://www.adzuna.com.mx/details/5853764656"
+  },
+  {
+   "titulo": "Senior FinOps Engineer",
+   "empresa": "unosquare",
+   "ubicacion": "México",
+   "habilidades_tecnicas": [
+    "(inferida del título)"
+   ],
+   "habilidades_blandas": [],
+   "salario_min": null,
+   "salario_max": null,
+   "fecha_publicacion": "2026-08-23",
+   "fuente": "Adzuna",
+   "url": "https://www.adzuna.com.mx/details/5853531183"
+  },
+  {
+   "titulo": "Auxiliar contable bilingue",
+   "empresa": "Net2Source",
+   "ubicacion": "Ciudad de México, México",
+   "habilidades_tecnicas": [
+    "Contabilidad general",
+    "Cumplimiento fiscal (SAT/IVA/ISR)"
+   ],
+   "habilidades_blandas": [
+    "Atención al detalle"
+   ],
+   "salario_min": null,
+   "salario_max": null,
+   "fecha_publicacion": "2026-08-23",
+   "fuente": "Adzuna",
+   "url": "https://www.adzuna.com.mx/details/5853530886"
+  },
+  {
+   "titulo": "Analista de Planeación Financiera",
+   "empresa": "Styropek",
+   "ubicacion": "México",
+   "habilidades_tecnicas": [
+    "Análisis financiero",
+    "Presupuestos y forecast"
+   ],
+   "habilidades_blandas": [
+    "Pensamiento analítico"
+   ],
+   "salario_min": null,
+   "salario_max": null,
+   "fecha_publicacion": "2026-08-23",
+   "fuente": "Adzuna",
+   "url": "https://www.adzuna.com.mx/details/5853530911"
+  },
+  {
+   "titulo": "PRACTICANTE DE COBRANZA (EXCEL)",
+   "empresa": "Cemex México",
+   "ubicacion": "México",
+   "habilidades_tecnicas": [
+    "Excel (básico-intermedio)",
+    "Conciliaciones bancarias"
+   ],
+   "habilidades_blandas": [
+    "Atención al detalle",
+    "Proactividad"
+   ],
+   "salario_min": null,
+   "salario_max": null,
+   "fecha_publicacion": "2026-08-23",
+   "fuente": "Adzuna",
+   "url": "https://www.adzuna.com.mx/details/5853530922"
+  },
+  {
+   "titulo": "Director of Finance",
+   "empresa": "Hyatt Inclusive Collection LAC",
+   "ubicacion": "Cancún, Quintana Roo",
+   "habilidades_tecnicas": [
+    "(inferida del título)"
+   ],
+   "habilidades_blandas": [],
+   "salario_min": null,
+   "salario_max": null,
+   "fecha_publicacion": "2026-08-23",
+   "fuente": "Adzuna",
+   "url": "https://www.adzuna.com.mx/details/5853531024"
+  },
+  {
+   "titulo": "Ejecutivo/a de Soluciones Transaccionales (Cash) (Pachuca, Hgo.)",
+   "empresa": "BBVA en México",
+   "ubicacion": "Pachuca de Soto, Hidalgo",
+   "habilidades_tecnicas": [
+    "(inferida del título)"
+   ],
+   "habilidades_blandas": [],
+   "salario_min": null,
+   "salario_max": null,
+   "fecha_publicacion": "2026-08-23",
+   "fuente": "Adzuna",
+   "url": "https://www.adzuna.com.mx/details/5853531005"
+  },
+  {
+   "titulo": "Analista de Administración de Riesgos",
+   "empresa": "Autlán",
+   "ubicacion": "San Pedro Garza García, Nuevo León",
+   "habilidades_tecnicas": [
+    "Análisis financiero",
+    "Presupuestos y forecast"
+   ],
+   "habilidades_blandas": [
+    "Pensamiento analítico"
+   ],
+   "salario_min": null,
+   "salario_max": null,
+   "fecha_publicacion": "2026-08-23",
+   "fuente": "Adzuna",
+   "url": "https://www.adzuna.com.mx/details/5853531085"
+  },
+  {
+   "titulo": "Director de Fusiones y Adquisiciones",
+   "empresa": "Multiva",
+   "ubicacion": "Ciudad de México, México",
+   "habilidades_tecnicas": [
+    "(inferida del título)"
+   ],
+   "habilidades_blandas": [],
+   "salario_min": null,
+   "salario_max": null,
+   "fecha_publicacion": "2026-08-23",
+   "fuente": "Adzuna",
+   "url": "https://www.adzuna.com.mx/details/5853531132"
+  },
+  {
+   "titulo": "Especialista en Disputas Bilingüe | Accounts Receivable",
+   "empresa": "FedEx",
+   "ubicacion": "México",
+   "habilidades_tecnicas": [
+    "(inferida del título)"
+   ],
+   "habilidades_blandas": [],
+   "salario_min": null,
+   "salario_max": null,
+   "fecha_publicacion": "2026-08-23",
+   "fuente": "Adzuna",
+   "url": "https://www.adzuna.com.mx/details/5853531300"
+  },
+  {
+   "titulo": "Becario de Finanzas",
+   "empresa": "Abbott",
+   "ubicacion": "México",
+   "habilidades_tecnicas": [
+    "Excel (básico-intermedio)",
+    "Conciliaciones bancarias"
+   ],
+   "habilidades_blandas": [
+    "Atención al detalle",
+    "Proactividad"
+   ],
+   "salario_min": null,
+   "salario_max": null,
+   "fecha_publicacion": "2026-08-23",
+   "fuente": "Adzuna",
+   "url": "https://www.adzuna.com.mx/details/5853704475"
+  },
+  {
+   "titulo": "Coordinador(A) De Control Interno",
+   "empresa": "Bepensa",
+   "ubicacion": "San Juan del Río, Querétaro",
+   "habilidades_tecnicas": [
+    "Presupuestos y forecast"
+   ],
+   "habilidades_blandas": [
+    "Organización"
+   ],
+   "salario_min": null,
+   "salario_max": null,
+   "fecha_publicacion": "2026-08-23",
+   "fuente": "Adzuna",
+   "url": "https://www.adzuna.com.mx/details/5853695787"
+  },
+  {
+   "titulo": "Gerente Senior de Finanzas",
+   "empresa": "Capital Empresarial Horizonte",
+   "ubicacion": "México",
+   "habilidades_tecnicas": [
+    "Liderazgo de equipos financieros"
+   ],
+   "habilidades_blandas": [
+    "Liderazgo",
+    "Toma de decisiones"
+   ],
+   "salario_min": 80000,
+   "salario_max": 250000,
+   "fecha_publicacion": "2026-08-23",
+   "fuente": "Adzuna",
+   "url": "https://www.adzuna.com.mx/details/5853697687"
+  },
+  {
+   "titulo": "Analista de Presupuesto",
+   "empresa": "Grupo de Empresas de Autotransporte",
+   "ubicacion": "México",
+   "habilidades_tecnicas": [
+    "Análisis financiero",
+    "Presupuestos y forecast"
+   ],
+   "habilidades_blandas": [
+    "Pensamiento analítico"
+   ],
+   "salario_min": 22000,
+   "salario_max": 24000,
+   "fecha_publicacion": "2026-08-23",
+   "fuente": "Adzuna",
+   "url": "https://www.adzuna.com.mx/details/5853699116"
+  },
+  {
+   "titulo": "Supervisor de Cumplimiento | Servicios de Inversión",
+   "empresa": "Grupo Bursatil Mexicano",
+   "ubicacion": "Álvaro Obregón, Ciudad de México",
+   "habilidades_tecnicas": [
+    "(inferida del título)"
+   ],
+   "habilidades_blandas": [],
+   "salario_min": null,
+   "salario_max": null,
+   "fecha_publicacion": "2026-08-23",
+   "fuente": "Adzuna",
+   "url": "https://www.adzuna.com.mx/details/5853703629"
+  },
+  {
+   "titulo": "Líder de administración y finanzas",
+   "empresa": "RAAD INGENIEROS S.A. DE C.V.",
+   "ubicacion": "Guadalupe, Nuevo León",
+   "habilidades_tecnicas": [
+    "Análisis financiero",
+    "Presupuestos y forecast"
+   ],
+   "habilidades_blandas": [
+    "Pensamiento analítico"
+   ],
+   "salario_min": 20000,
+   "salario_max": 25000,
+   "fecha_publicacion": "2026-08-24",
+   "fuente": "OCC",
+   "url": "https://www.occ.com.mx/empleo/oferta/21299872-lider-de-administracion-y-finanzas/"
+  },
+  {
+   "titulo": "Analista de tesorería",
+   "empresa": "SINERXIA HUMAN CAPITAL SA DE CV",
+   "ubicacion": "San Pedro Garza García, Nuevo León",
+   "habilidades_tecnicas": [
+    "Gestión de tesorería",
+    "Cuentas por cobrar/pagar"
+   ],
+   "habilidades_blandas": [
+    "Orientación a resultados"
+   ],
+   "salario_min": 13000,
+   "salario_max": 15000,
+   "fecha_publicacion": "2026-08-24",
+   "fuente": "OCC",
+   "url": "https://www.occ.com.mx/empleo/oferta/21300326-analista-de-tesoreria/"
+  },
+  {
+   "titulo": "Coordinador Administrativo Capturista para Financiera",
+   "empresa": "DIMEX CAPITA",
+   "ubicacion": "Nuevo León",
+   "habilidades_tecnicas": [
+    "Presupuestos y forecast"
+   ],
+   "habilidades_blandas": [
+    "Organización"
+   ],
+   "salario_min": 12000,
+   "salario_max": 12100,
+   "fecha_publicacion": "2026-08-24",
+   "fuente": "OCC",
+   "url": "https://www.occ.com.mx/empleo/oferta/21300147-coordinador-administrativo-capturista-para-financiera/"
+  },
+  {
+   "titulo": "Gerente de finanzas y contabilidad",
+   "empresa": "Grupo Nacional Provincial",
+   "ubicacion": "Ciudad de México",
+   "habilidades_tecnicas": [
+    "Contabilidad general",
+    "Cumplimiento fiscal (SAT/IVA/ISR)"
+   ],
+   "habilidades_blandas": [
+    "Atención al detalle"
+   ],
+   "salario_min": 40000,
+   "salario_max": 40000,
+   "fecha_publicacion": "2026-08-24",
+   "fuente": "OCC",
+   "url": "https://www.occ.com.mx/empleo/oferta/21299329-gerente-de-finanzas-y-contabilidad/"
+  },
+  {
+   "titulo": "Asesor de ventas Financieras",
+   "empresa": "PROFUTURO AFORE, S.A. DE C.V.",
+   "ubicacion": "Pachuca de Soto, Hidalgo",
+   "habilidades_tecnicas": [
+    "(inferida del título)"
+   ],
+   "habilidades_blandas": [],
+   "salario_min": 9000,
+   "salario_max": 14000,
+   "fecha_publicacion": "2026-08-24",
+   "fuente": "OCC",
+   "url": "https://www.occ.com.mx/empleo/oferta/21299368-asesor-de-ventas-financieras/"
+  },
+  {
+   "titulo": "Asesor/a Empresarial y Financiero/a para PyMEs – Pesca y Acuacultura",
+   "empresa": "Plataforma Nuup",
+   "ubicacion": "Baja California Sur",
+   "habilidades_tecnicas": [
+    "Análisis financiero",
+    "Presupuestos y forecast"
+   ],
+   "habilidades_blandas": [
+    "Pensamiento analítico"
+   ],
+   "salario_min": 40000,
+   "salario_max": 40000,
+   "fecha_publicacion": "2026-08-24",
+   "fuente": "OCC",
+   "url": "https://www.occ.com.mx/empleo/oferta/21299880-asesor-a-empresarial-y-financiero-a-para-pymes-pesca-y-acuacultura/"
+  },
+  {
+   "titulo": "Especialista de Sustentabilidad/ Educación financiera",
+   "empresa": "Financiera Sustentable de México, S.A. de C.V.",
+   "ubicacion": "Benito Juárez, Ciudad de México",
+   "habilidades_tecnicas": [
+    "(inferida del título)"
+   ],
+   "habilidades_blandas": [],
+   "salario_min": null,
+   "salario_max": null,
+   "fecha_publicacion": "2026-08-23",
+   "fuente": "OCC",
+   "url": "https://www.occ.com.mx/empleo/oferta/21304146-especialista-de-sustentabilidad-educacion-financiera/"
+  },
+  {
+   "titulo": "Administrativo financiero",
+   "empresa": "Emsur México S.A. de C.V.",
+   "ubicacion": "Querétaro",
+   "habilidades_tecnicas": [
+    "Análisis financiero",
+    "Presupuestos y forecast"
+   ],
+   "habilidades_blandas": [
+    "Pensamiento analítico"
+   ],
+   "salario_min": null,
+   "salario_max": null,
+   "fecha_publicacion": "2026-08-23",
+   "fuente": "OCC",
+   "url": "https://www.occ.com.mx/empleo/oferta/21307464-administrativo-financiero/"
+  },
+  {
+   "titulo": "ANALISTA FINANCIERO - MERIDA",
+   "empresa": "Banorte",
+   "ubicacion": "Mérida, Yucatán",
+   "habilidades_tecnicas": [
+    "Análisis financiero",
+    "Presupuestos y forecast"
+   ],
+   "habilidades_blandas": [
+    "Pensamiento analítico"
+   ],
+   "salario_min": 23000,
+   "salario_max": 23000,
+   "fecha_publicacion": "2026-08-23",
+   "fuente": "OCC",
+   "url": "https://www.occ.com.mx/empleo/oferta/21306842-analista-financiero-merida/"
+  },
+  {
+   "titulo": "Gerente financiero",
+   "empresa": "Coppel, S.A. de C.V.",
+   "ubicacion": "Guadalupe, Nuevo León",
+   "habilidades_tecnicas": [
+    "Liderazgo de equipos financieros"
+   ],
+   "habilidades_blandas": [
+    "Liderazgo",
+    "Toma de decisiones"
+   ],
+   "salario_min": null,
+   "salario_max": null,
+   "fecha_publicacion": "2026-08-23",
+   "fuente": "OCC",
+   "url": "https://www.occ.com.mx/empleo/oferta/21308607-gerente-financiero/"
+  },
+  {
+   "titulo": "Gerente de Desarrollo de Negocios Financieros - Monterrey",
+   "empresa": "TALENTO STARTUP",
+   "ubicacion": "Monterrey, Nuevo León",
+   "habilidades_tecnicas": [
+    "Liderazgo de equipos financieros"
+   ],
+   "habilidades_blandas": [
+    "Liderazgo",
+    "Toma de decisiones"
+   ],
+   "salario_min": null,
+   "salario_max": null,
+   "fecha_publicacion": "2026-08-23",
+   "fuente": "OCC",
+   "url": "https://www.occ.com.mx/empleo/oferta/21306908-gerente-de-desarrollo-de-negocios-financieros-monterrey/"
+  },
+  {
+   "titulo": "Analista Acceso Banca Digital (Sector Financiero)",
+   "empresa": "BANCO MONEX S.A. INSTITUCION DE BANCA MULTIPLE, MONEX GRUPO FINANCIERO",
+   "ubicacion": "Ciudad de México",
+   "habilidades_tecnicas": [
+    "Análisis financiero",
+    "Presupuestos y forecast"
+   ],
+   "habilidades_blandas": [
+    "Pensamiento analítico"
+   ],
+   "salario_min": 17000,
+   "salario_max": 17500,
+   "fecha_publicacion": "2026-08-23",
+   "fuente": "OCC",
+   "url": "https://www.occ.com.mx/empleo/oferta/21307629-analista-acceso-banca-digital-sector-financiero/"
+  },
+  {
+   "titulo": "Coordinador de planeación financiera",
+   "empresa": "REGIOMONTANA DE CONSTRUCCION Y SERVICIOS",
+   "ubicacion": "Cuajimalpa de Morelos, Ciudad de México",
+   "habilidades_tecnicas": [
+    "Presupuestos y forecast"
+   ],
+   "habilidades_blandas": [
+    "Organización"
+   ],
+   "salario_min": 65000,
+   "salario_max": 75000,
+   "fecha_publicacion": "2026-08-23",
+   "fuente": "OCC",
+   "url": "https://www.occ.com.mx/empleo/oferta/21307075-coordinador-de-planeacion-financiera/"
+  },
+  {
+   "titulo": "Analista Administrativo / Financiero",
+   "empresa": "CAPACIDADES HUMANAS Y ORGANIZACIONALES",
+   "ubicacion": "Ciudad de México",
+   "habilidades_tecnicas": [
+    "Análisis financiero",
+    "Presupuestos y forecast"
+   ],
+   "habilidades_blandas": [
+    "Pensamiento analítico"
+   ],
+   "salario_min": 19000,
+   "salario_max": 19000,
+   "fecha_publicacion": "2026-08-23",
+   "fuente": "OCC",
+   "url": "https://www.occ.com.mx/empleo/oferta/21307737-analista-administrativo-financiero/"
+  },
+  {
+   "titulo": "Gerente de Sucursal Financiera",
+   "empresa": "IMPULSO ECONOMICO ACTIVO, SA DE CV SOFOM ENR",
+   "ubicacion": "Saltillo, Coahuila",
+   "habilidades_tecnicas": [
+    "Liderazgo de equipos financieros"
+   ],
+   "habilidades_blandas": [
+    "Liderazgo",
+    "Toma de decisiones"
+   ],
+   "salario_min": 18000,
+   "salario_max": 20000,
+   "fecha_publicacion": "2026-08-23",
+   "fuente": "OCC",
+   "url": "https://www.occ.com.mx/empleo/oferta/21303662-gerente-de-sucursal-financiera/"
+  },
+  {
+   "titulo": "GERENTE DE CAPACITACION Y D0 - (Financiera en microcréditos)",
+   "empresa": "Selección Talento",
+   "ubicacion": "Zapopan, Jalisco",
+   "habilidades_tecnicas": [
+    "Gestión de tesorería",
+    "Cuentas por cobrar/pagar"
+   ],
+   "habilidades_blandas": [
+    "Orientación a resultados"
+   ],
+   "salario_min": 40000,
+   "salario_max": 50000,
+   "fecha_publicacion": "2026-08-23",
+   "fuente": "OCC",
+   "url": "https://www.occ.com.mx/empleo/oferta/21306996-gerente-de-capacitacion-y-d0-financiera-en-microcreditos/"
+  },
+  {
+   "titulo": "Gerente financiero",
+   "empresa": "Coppel, S.A. de C.V.",
+   "ubicacion": "Victoria, Tamaulipas",
+   "habilidades_tecnicas": [
+    "Liderazgo de equipos financieros"
+   ],
+   "habilidades_blandas": [
+    "Liderazgo",
+    "Toma de decisiones"
+   ],
+   "salario_min": null,
+   "salario_max": null,
+   "fecha_publicacion": "2026-08-23",
+   "fuente": "OCC",
+   "url": "https://www.occ.com.mx/empleo/oferta/21308618-gerente-financiero/"
+  },
+  {
+   "titulo": "Gerente de Administración y Finanzas",
+   "empresa": "IRL SOLUCIONES Y SERVICIOS EMPRESARIALES",
+   "ubicacion": "Tultitlán, Estado de México",
+   "habilidades_tecnicas": [
+    "Liderazgo de equipos financieros"
+   ],
+   "habilidades_blandas": [
+    "Liderazgo",
+    "Toma de decisiones"
+   ],
+   "salario_min": 45000,
+   "salario_max": 50000,
+   "fecha_publicacion": "2026-08-23",
+   "fuente": "OCC",
+   "url": "https://www.occ.com.mx/empleo/oferta/21307613-gerente-de-administracion-y-finanzas/"
+  },
+  {
+   "titulo": "Asistente dirección de administración y finanzas",
+   "empresa": "MURO VELASCO MIRIAM EUNICE",
+   "ubicacion": "Guadalajara, Jalisco",
+   "habilidades_tecnicas": [
+    "Análisis financiero",
+    "Presupuestos y forecast"
+   ],
+   "habilidades_blandas": [
+    "Pensamiento analítico"
+   ],
+   "salario_min": 14000,
+   "salario_max": 15000,
+   "fecha_publicacion": "2026-08-23",
+   "fuente": "OCC",
+   "url": "https://www.occ.com.mx/empleo/oferta/21307455-asistente-direccion-de-administracion-y-finanzas/"
+  },
+  {
+   "titulo": "FP&A Jr Manager (Supply Finance)",
+   "empresa": "WALDO'S DOLAR MART DE MEXICO, S DE RL DE CV (Sucursal)",
+   "ubicacion": "Ciudad de México",
+   "habilidades_tecnicas": [
+    "(inferida del título)"
+   ],
+   "habilidades_blandas": [],
+   "salario_min": 45000,
+   "salario_max": 50000,
+   "fecha_publicacion": "2026-08-23",
+   "fuente": "OCC",
+   "url": "https://www.occ.com.mx/empleo/oferta/21307858-fp-a-jr-manager-supply-finance/"
+  },
+  {
+   "titulo": "Senior Accountant",
+   "empresa": "BUCKLAND GLOBAL MEXICO SERVICES",
+   "ubicacion": "Ciudad de México",
+   "habilidades_tecnicas": [
+    "(inferida del título)"
+   ],
+   "habilidades_blandas": [],
+   "salario_min": null,
+   "salario_max": null,
+   "fecha_publicacion": "2026-08-23",
+   "fuente": "OCC",
+   "url": "https://www.occ.com.mx/empleo/oferta/21308701-senior-accountant/"
+  },
+  {
+   "titulo": "Gerente de información financiera",
+   "empresa": "FUJIFILM DE MEXICO SA DE CV",
+   "ubicacion": "Miguel Hidalgo, Ciudad de México",
+   "habilidades_tecnicas": [
+    "Liderazgo de equipos financieros"
+   ],
+   "habilidades_blandas": [
+    "Liderazgo",
+    "Toma de decisiones"
+   ],
+   "salario_min": 48000,
+   "salario_max": 50000,
+   "fecha_publicacion": "2026-08-23",
+   "fuente": "OCC",
+   "url": "https://www.occ.com.mx/empleo/oferta/21308609-gerente-de-informacion-financiera/"
+  },
+  {
+   "titulo": "Crédito y cobranza en financiera",
+   "empresa": "Desarrollo de Inmuebles de Occidente",
+   "ubicacion": "Puebla, Puebla",
+   "habilidades_tecnicas": [
+    "Gestión de tesorería",
+    "Cuentas por cobrar/pagar"
+   ],
+   "habilidades_blandas": [
+    "Orientación a resultados"
+   ],
+   "salario_min": 10000,
+   "salario_max": 12000,
+   "fecha_publicacion": "2026-08-23",
+   "fuente": "OCC",
+   "url": "https://www.occ.com.mx/empleo/oferta/21303564-credito-y-cobranza-en-financiera/"
+  },
+  {
+   "titulo": "Analista financiero",
+   "empresa": "Envases Papeleros de México",
+   "ubicacion": "Tultitlán, Estado de México",
+   "habilidades_tecnicas": [
+    "Análisis financiero",
+    "Presupuestos y forecast"
+   ],
+   "habilidades_blandas": [
+    "Pensamiento analítico"
+   ],
+   "salario_min": 15000,
+   "salario_max": 18000,
+   "fecha_publicacion": "2026-08-23",
+   "fuente": "OCC",
+   "url": "https://www.occ.com.mx/empleo/oferta/21297837-analista-financiero/"
+  },
+  {
+   "titulo": "Especialista en contraloria (TEMPORAL)",
+   "empresa": "ANDRITZ HYDRO, S.A. DE C.V.",
+   "ubicacion": "Morelia, Michoacán",
+   "habilidades_tecnicas": [
+    "(inferida del título)"
+   ],
+   "habilidades_blandas": [],
+   "salario_min": null,
+   "salario_max": null,
+   "fecha_publicacion": "2026-08-23",
+   "fuente": "OCC",
+   "url": "https://www.occ.com.mx/empleo/oferta/21308267-especialista-en-contraloria-temporal/"
+  },
+  {
+   "titulo": "Gerente administración y finanzas",
+   "empresa": "Pullsale Btl SA de CV",
+   "ubicacion": "Guadalajara, Jalisco",
+   "habilidades_tecnicas": [
+    "Liderazgo de equipos financieros"
+   ],
+   "habilidades_blandas": [
+    "Liderazgo",
+    "Toma de decisiones"
+   ],
+   "salario_min": 50000,
+   "salario_max": 50000,
+   "fecha_publicacion": "2026-08-23",
+   "fuente": "OCC",
+   "url": "https://www.occ.com.mx/empleo/oferta/21306852-gerente-administracion-y-finanzas/"
+  },
+  {
+   "titulo": "Analista de Control de Crédito - Sector Financiero SOFOM",
+   "empresa": "Management Natural",
+   "ubicacion": "Santa Fe, CDMX",
+   "habilidades_tecnicas": [
+    "Gestión de tesorería",
+    "Cuentas por cobrar/pagar"
+   ],
+   "habilidades_blandas": [
+    "Orientación a resultados"
+   ],
+   "salario_min": null,
+   "salario_max": null,
+   "fecha_publicacion": "2026-08-24",
+   "fuente": "Indeed",
+   "url": "https://to.indeed.com/aa44lv87knnr"
+  },
+  {
+   "titulo": "Analista de Ingresos",
+   "empresa": "Tori-Tori",
+   "ubicacion": "Polanco III Sección, CDMX",
+   "habilidades_tecnicas": [
+    "Análisis financiero",
+    "Presupuestos y forecast"
+   ],
+   "habilidades_blandas": [
+    "Pensamiento analítico"
+   ],
+   "salario_min": null,
+   "salario_max": null,
+   "fecha_publicacion": "2026-08-24",
+   "fuente": "Indeed",
+   "url": "https://to.indeed.com/aa9dh26wp6v2"
+  },
+  {
+   "titulo": "Especialista en Riesgos - Sector Financiero SOFOM",
+   "empresa": "Management Natural",
+   "ubicacion": "Santa Fe, CDMX",
+   "habilidades_tecnicas": [
+    "Análisis financiero",
+    "Presupuestos y forecast"
+   ],
+   "habilidades_blandas": [
+    "Pensamiento analítico"
+   ],
+   "salario_min": null,
+   "salario_max": null,
+   "fecha_publicacion": "2026-08-22",
+   "fuente": "Indeed",
+   "url": "https://to.indeed.com/aaskbq8w4sh7"
+  },
+  {
+   "titulo": "Contador de conciliaciones",
+   "empresa": "Casa Cravioto",
+   "ubicacion": "Cuauhtémoc, Ciudad de México",
+   "habilidades_tecnicas": [
+    "Contabilidad general",
+    "Cumplimiento fiscal (SAT/IVA/ISR)"
+   ],
+   "habilidades_blandas": [
+    "Atención al detalle"
+   ],
+   "salario_min": 16300,
+   "salario_max": 16300,
+   "fecha_publicacion": "2026-08-23",
+   "fuente": "Adzuna",
+   "url": "https://www.adzuna.com.mx/details/5853764870"
+  }
+ ],
+ "vacantes_detalle_nota": "Generado programáticamente (2026-08-29) por etapa4_sector_json.py sobre 354 vacantes verificadas (vacantes_finanzas_2026-08-14.csv, vacantes_finanzas_VERIFICADAS_FINAL_incremental.csv). Todos los conteos son exactos (pandas, sin estimaciones). Salario normalizado a MXN mensual (Adzuna >90,000/año se dividió entre 12). vacantes_con_habilidades cuenta solo habilidades EXPLÍCITAS en el CSV fuente. Muestra vacantes_detalle: filtro de recencia Adzuna<=10d / Indeed<=15d / OCC<=20d desde hoy, muestreo proporcional por fuente, máx. 60; habilidades faltantes inferidas por categoría de puesto."
+}
