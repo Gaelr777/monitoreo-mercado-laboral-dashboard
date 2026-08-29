@@ -1,0 +1,25 @@
+{
+  "tecnicas": {
+    "gestión administrativa": ["administra", "nomina", "nómina", "compliance", "procesos"],
+    "gestión de proyectos": ["proyecto", "pmo", "planeacion", "planeación", "metodolog", "obra", "construccion", "construcción"],
+    "finanzas / control presupuestal": ["finanzas", "financier", "presupuest", "tesoreria", "tesorería"],
+    "contabilidad": ["contab"],
+    "sistemas / erp": ["erp", "sap", "netsuite", "oracle", "sistemas"],
+    "logística y cadena de suministro": ["logistic", "logístic", "cadena de suministro", "almacen", "almacén"],
+    "certificaciones pmp / agile": ["pmp", "pmi", "agile", "scrum"],
+    "auditoría y normatividad": ["auditoria", "auditoría", "normativ"]
+  },
+  "blandas": {
+    "liderazgo": ["gerente", "director", "jefe de", "lider", "líder", "gerencia"],
+    "comunicación bilingüe": ["ingles", "inglés", "bilingue", "bilingüe"],
+    "coordinación de equipos": ["coordinador", "equipo"],
+    "atención al detalle / control": ["control", "detalle", "auditor"]
+  },
+  "por_categoria": {
+    "Gestión de Proyectos": {"tecnicas": ["Gestión de proyectos"], "blandas": ["Liderazgo"]},
+    "Administración": {"tecnicas": ["Gestión administrativa y operativa"], "blandas": ["Coordinación de equipos"]},
+    "Finanzas y Contabilidad": {"tecnicas": ["Finanzas / control presupuestal"], "blandas": ["Atención al detalle"]},
+    "Tecnologías de la Información": {"tecnicas": ["Sistemas / ERP"], "blandas": ["Resolución de problemas"]},
+    "Otro": {"tecnicas": ["(inferida del título)"], "blandas": ["Responsabilidad"]}
+  }
+}
