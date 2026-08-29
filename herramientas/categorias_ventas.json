@@ -1,0 +1,11 @@
+{
+  "Piso / Mostrador / Retail": ["piso", "mostrador", "cajero", "caja", "retail", "tienda"],
+  "Calle / Ruta / Chofer-vendedor": ["ruta", "chofer vendedor", "chofer-vendedor", "chofer  vendedor", "reparto", "preventista", "mayoreo"],
+  "Comisionista / Campo": ["comisionista", "cambaceo", "vendedor de campo", "puerta a puerta"],
+  "Gerencia / Supervisión comercial": ["gerente de ventas", "gerente comercial", "director comercial", "director de ventas", "supervisor de ventas", "supervision de ventas", "supervisión de ventas", "coordinador de ventas", "subdirector comercial", "gerencia de ventas", "gerente de tienda"],
+  "Técnicas / B2B / KAM": ["b2b", "kam", "ingeniero de ventas", "ventas tecnicas", "ventas técnicas", "consultiv", "cuentas clave", "key account", "business intelligence"],
+  "Seguros / AFORE / Financieras": ["seguros", "afore", "credito", "crédito", "financiamiento", "banca", "promotor de divisas", "asesor financiero", "ejecutivo financiero"],
+  "Telemarketing / Call center": ["telemarketing", "call center", "cerrador", "prospectador", "televentas", "tdc"],
+  "Administración y soporte / Trainee": ["administrativo de ventas", "asistente administrativo", "asistente de ventas", "becario", "trainee", "analista de efectividad", "analista comercial"],
+  "Ejecutivo / Asesor B2C": ["ejecutivo", "asesor", "representante de ventas", "agente de ventas", "agente", "vendedor", "vendedora", "ventas", "venta", "comercial", "promotor"]
+}
