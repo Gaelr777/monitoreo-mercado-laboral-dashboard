@@ -1,0 +1,36 @@
+{
+  "tecnicas": {
+    "manejo de caja / pos": ["caja", "pos", "cajero", "mostrador"],
+    "gestión de ruta / reparto": ["ruta", "reparto", "chofer"],
+    "prospección de clientes / campo": ["prospeccion", "prospección", "cambaceo", "campo", "comisionista"],
+    "manejo de crm": ["crm"],
+    "negociación comercial": ["negocia"],
+    "gestión de kpis / forecasting": ["kpi", "forecast", "presupuesto comercial"],
+    "venta consultiva / b2b": ["consultiv", "b2b", "kam", "cuentas clave"],
+    "conocimiento de productos financieros": ["seguros", "afore", "financier", "credito", "crédito"],
+    "manejo de script / call center": ["telemarketing", "call center", "cerrador", "prospectador"],
+    "excel / reportes": ["excel", "reportes", "analista"]
+  },
+  "blandas": {
+    "atención al cliente": ["atencion al cliente", "atención al cliente", "servicio al cliente", "atencion a clientes", "atención a clientes"],
+    "orientación a resultados / comisión": ["comision", "comisión", "meta"],
+    "persistencia / tolerancia al rechazo": ["campo", "comisionista", "cambaceo"],
+    "liderazgo": ["gerente", "director", "supervisor", "coordinador"],
+    "persuasión / negociación": ["asesor", "ejecutivo", "representante", "agente"],
+    "resiliencia / manejo del estrés": ["telemarketing", "call center", "cerrador", "prospectador"],
+    "organización": ["administrativo", "asistente", "analista"],
+    "disposición a aprender": ["becario", "trainee"]
+  },
+  "por_categoria": {
+    "Piso / Mostrador / Retail": {"tecnicas": ["Manejo de caja/POS"], "blandas": ["Atención al cliente"]},
+    "Calle / Ruta / Chofer-vendedor": {"tecnicas": ["Gestión de ruta"], "blandas": ["Autogestión y disciplina"]},
+    "Comisionista / Campo": {"tecnicas": ["Prospección en campo"], "blandas": ["Persistencia"]},
+    "Ejecutivo / Asesor B2C": {"tecnicas": ["Negociación comercial"], "blandas": ["Persuasión"]},
+    "Gerencia / Supervisión comercial": {"tecnicas": ["Gestión de KPIs comerciales"], "blandas": ["Liderazgo"]},
+    "Técnicas / B2B / KAM": {"tecnicas": ["Venta consultiva"], "blandas": ["Pensamiento analítico"]},
+    "Seguros / AFORE / Financieras": {"tecnicas": ["Productos financieros"], "blandas": ["Generar confianza"]},
+    "Telemarketing / Call center": {"tecnicas": ["Manejo de script telefónico"], "blandas": ["Resiliencia"]},
+    "Administración y soporte / Trainee": {"tecnicas": ["Reportes y Excel"], "blandas": ["Organización"]},
+    "Otro": {"tecnicas": ["(inferida del título)"], "blandas": ["Responsabilidad"]}
+  }
+}
