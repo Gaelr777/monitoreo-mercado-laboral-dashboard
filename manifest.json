@@ -1,300 +1,308 @@
 {
- "meta": {
-  "corrida": "2026-08-28",
-  "fuente": "Dashboards y reportes de Etapa 4 (03 Sectores/[Sector]/Reportes) en la carpeta de Drive del proyecto",
-  "nota_corrida": "Automotriz y Turismo: corrida 2026-08-24 (refresco completo, Etapas 1-4), recalculados el 2026-08-28 con procesamiento tabular exacto (pandas) sobre los CSVs verificados — todos los conteos, percentiles de salario y agregados son exactos, sin estimaciones. Automotriz acumulado 583 vacantes verificadas (345 de la corrida 2026-08-24 + 238 de la corrida 2026-08-04, cero traslape por hash). Turismo acumulado 694 vacantes verificadas (328 de la corrida 2026-08-24 + 366 de la corrida 2026-08-17, cero traslape por hash). Nota: pct_con_habilidades ahora cuenta solo habilidades EXPLÍCITAS en el CSV fuente (mismo criterio que el resto de los sectores); por eso Turismo pasa de 100% (convención anterior explícitas+inferidas) a 7.8%. Legal: sector nuevo, corrida completa 2026-08-17 (176 vacantes verificadas de 252 crudas). Logística: sector nuevo, primera corrida completa 2026-08-17 (169 vacantes verificadas de 174 crudas). Gestión y Administración: recorrida 2026-08-28 con etapa2_verificar.py + etapa4_sector_json.py (procesamiento tabular exacto) — acumulado 254 vacantes verificadas (160 de la corrida 2026-08-14 + 94 nuevas de las corridas 2026-08-17/2026-08-24, cero traslape por hash). Ventas: recorrida 2026-08-28 con el mismo método — acumulado 771 vacantes verificadas (387 de la corrida 2026-08-14 + 384 nuevas de las corridas 2026-08-17/2026-08-24, cero traslape por hash); categorías de puesto rediseñadas a 9 grupos propios del sector comercial (antes reutilizaba categorías genéricas). Finanzas: corrida 2026-08-14 (sin cambios en esta actualización)."
- },
- "sectores": [
-  {
-   "key": "automotriz",
-   "nombre": "Automotriz"
-  },
-  {
-   "key": "turismo",
-   "nombre": "Turismo"
-  },
-  {
-   "key": "gestion",
-   "nombre": "Gestión y Administración"
-  },
-  {
-   "key": "ventas",
-   "nombre": "Ventas"
-  },
-  {
-   "key": "finanzas",
-   "nombre": "Finanzas"
-  },
-  {
-   "key": "logistica",
-   "nombre": "Logística"
-  },
-  {
-   "key": "legal",
-   "nombre": "Legal"
-  }
- ],
- "COURSES": {
   "meta": {
-   "nombre": "prueba de cursos",
-   "nota": "Catálogo ILUSTRATIVO/FICTICIO, inventado como ejercicio de prototipo — no corresponde a oferta real de ninguna institución. Diseñado para cubrir, entre todos los cursos de cada sector, la lista completa de habilidades más demandadas detectada en la corrida del pipeline (ver DATA.meta.corrida)."
+    "corrida": "2026-08-28",
+    "fuente": "Dashboards y reportes de Etapa 4 (03 Sectores/[Sector]/Reportes) en la carpeta de Drive del proyecto",
+    "nota_corrida": "Automotriz y Turismo: corrida 2026-08-24 (refresco completo, Etapas 1-4), recalculados el 2026-08-28 con procesamiento tabular exacto (pandas) sobre los CSVs verificados — todos los conteos, percentiles de salario y agregados son exactos, sin estimaciones. Automotriz acumulado 583 vacantes verificadas (345 de la corrida 2026-08-24 + 238 de la corrida 2026-08-04, cero traslape por hash). Turismo acumulado 694 vacantes verificadas (328 de la corrida 2026-08-24 + 366 de la corrida 2026-08-17, cero traslape por hash). Nota: pct_con_habilidades ahora cuenta solo habilidades EXPLÍCITAS en el CSV fuente (mismo criterio que el resto de los sectores); por eso Turismo pasa de 100% (convención anterior explícitas+inferidas) a 7.8%. Legal: sector nuevo, corrida completa 2026-08-17 (176 vacantes verificadas de 252 crudas). Logística: sector nuevo, primera corrida completa 2026-08-17 (169 vacantes verificadas de 174 crudas). Gestión y Administración: recorrida 2026-08-28 con etapa2_verificar.py + etapa4_sector_json.py (procesamiento tabular exacto) — acumulado 254 vacantes verificadas (160 de la corrida 2026-08-14 + 94 nuevas de las corridas 2026-08-17/2026-08-24, cero traslape por hash). Ventas: recorrida 2026-08-28 con el mismo método — acumulado 771 vacantes verificadas (387 de la corrida 2026-08-14 + 384 nuevas de las corridas 2026-08-17/2026-08-24, cero traslape por hash); categorías de puesto rediseñadas a 9 grupos propios del sector comercial (antes reutilizaba categorías genéricas). Finanzas: corrida 2026-08-14 (sin cambios en esta actualización)."
   },
-  "cursos": {
-   "automotriz": [
+  "sectores": [
     {
-     "id": "auto-01",
-     "nombre": "Control de Calidad y Normas NOM/IATF en Manufactura Automotriz",
-     "institucion": "AutoSkills Academy (ficticia)",
-     "modalidad": "Mixta",
-     "duracion": "24 horas",
-     "nivel": "Intermedio",
-     "habilidades": [
-      "calidad",
-      "nom"
-     ]
+      "key": "automotriz",
+      "nombre": "Automotriz"
     },
     {
-     "id": "auto-02",
-     "nombre": "Mantenimiento Industrial Preventivo y Control de Refacciones",
-     "institucion": "AutoSkills Academy (ficticia)",
-     "modalidad": "Presencial",
-     "duracion": "30 horas",
-     "nivel": "Básico",
-     "habilidades": [
-      "mantenimiento",
-      "refacciones",
-      "inventarios"
-     ]
+      "key": "turismo",
+      "nombre": "Turismo"
     },
     {
-     "id": "auto-03",
-     "nombre": "Excel Avanzado para Producción y Manufactura",
-     "institucion": "Capacita+ (ficticia)",
-     "modalidad": "En línea",
-     "duracion": "16 horas",
-     "nivel": "Intermedio",
-     "habilidades": [
-      "excel",
-      "producción",
-      "manufactura"
-     ]
+      "key": "gestion",
+      "nombre": "Gestión y Administración"
     },
     {
-     "id": "auto-04",
-     "nombre": "Fundamentos de ERP y SAP para la Industria Automotriz",
-     "institucion": "Capacita+ (ficticia)",
-     "modalidad": "En línea",
-     "duracion": "20 horas",
-     "nivel": "Básico",
-     "habilidades": [
-      "erp",
-      "sap"
-     ]
+      "key": "ventas",
+      "nombre": "Ventas"
     },
     {
-     "id": "auto-05",
-     "nombre": "Mecánica Automotriz General y Diagnóstico de Fallas",
-     "institucion": "Instituto Técnico Motriz (ficticio)",
-     "modalidad": "Presencial",
-     "duracion": "40 horas",
-     "nivel": "Básico",
-     "habilidades": [
-      "mecánica",
-      "mecánica automotriz"
-     ]
+      "key": "finanzas",
+      "nombre": "Finanzas"
     },
     {
-     "id": "auto-06",
-     "nombre": "Introducción a Python para Análisis de Datos Industriales",
-     "institucion": "Capacita+ (ficticia)",
-     "modalidad": "En línea",
-     "duracion": "18 horas",
-     "nivel": "Básico",
-     "habilidades": [
-      "python"
-     ]
+      "key": "logistica",
+      "nombre": "Logística"
     },
     {
-     "id": "auto-07",
-     "nombre": "Inglés Técnico para el Piso de Manufactura",
-     "institucion": "AutoSkills Academy (ficticia)",
-     "modalidad": "En línea",
-     "duracion": "40 horas",
-     "nivel": "Básico-Intermedio",
-     "habilidades": [
-      "inglés"
-     ]
+      "key": "legal",
+      "nombre": "Legal"
     },
     {
-     "id": "auto-08",
-     "nombre": "Técnicas de Ventas y Atención a Cliente en el Sector Automotriz",
-     "institucion": "Instituto Técnico Motriz (ficticio)",
-     "modalidad": "Mixta",
-     "duracion": "16 horas",
-     "nivel": "Intermedio",
-     "habilidades": [
-      "ventas",
-      "atención al cliente"
-     ]
+      "key": "metalmecanica",
+      "nombre": "Metalmecánica"
     },
     {
-     "id": "auto-09",
-     "nombre": "Comunicación, Responsabilidad y Trabajo en Equipo en Entornos Industriales",
-     "institucion": "Capacita+ (ficticia)",
-     "modalidad": "En línea",
-     "duracion": "12 horas",
-     "nivel": "Básico",
-     "habilidades": [
-      "comunicación",
-      "responsabilidad",
-      "trabajo en equipo",
-      "compromiso"
-     ]
-    },
-    {
-     "id": "auto-10",
-     "nombre": "Liderazgo, Negociación y Resolución de Problemas para Supervisores de Planta",
-     "institucion": "Instituto Técnico Motriz (ficticio)",
-     "modalidad": "Presencial",
-     "duracion": "24 horas",
-     "nivel": "Avanzado",
-     "habilidades": [
-      "liderazgo",
-      "negociación",
-      "resolución de problemas",
-      "organización",
-      "iniciativa"
-     ]
+      "key": "ti",
+      "nombre": "TI"
     }
-   ],
-   "turismo": [
-    {
-     "id": "tur-01",
-     "nombre": "Inglés Conversacional Avanzado para Turismo y Hospitalidad",
-     "institucion": "TurismoPro Training (ficticia)",
-     "modalidad": "En línea",
-     "duracion": "40 horas",
-     "nivel": "Intermedio-Avanzado",
-     "habilidades": [
-      "inglés intermedio-avanzado",
-      "inglés avanzado"
-     ]
+  ],
+  "COURSES": {
+    "meta": {
+      "nombre": "prueba de cursos",
+      "nota": "Catálogo ILUSTRATIVO/FICTICIO, inventado como ejercicio de prototipo — no corresponde a oferta real de ninguna institución. Diseñado para cubrir, entre todos los cursos de cada sector, la lista completa de habilidades más demandadas detectada en la corrida del pipeline (ver DATA.meta.corrida)."
     },
-    {
-     "id": "tur-02",
-     "nombre": "Reclutamiento, Selección y Supervisión de Equipos en Hospitalidad",
-     "institucion": "Escuela de Hospitalidad Litoral (ficticia)",
-     "modalidad": "Mixta",
-     "duracion": "20 horas",
-     "nivel": "Intermedio",
-     "habilidades": [
-      "reclutamiento y selección",
-      "supervisión de equipos"
-     ]
-    },
-    {
-     "id": "tur-03",
-     "nombre": "Desarrollo de Negocio y Gestión Comercial en Turismo",
-     "institucion": "TurismoPro Training (ficticia)",
-     "modalidad": "En línea",
-     "duracion": "18 horas",
-     "nivel": "Intermedio",
-     "habilidades": [
-      "desarrollo de negocio",
-      "gestión comercial",
-      "ventas"
-     ]
-    },
-    {
-     "id": "tur-04",
-     "nombre": "Operaciones Administrativas y Back Office para Agencias de Viaje",
-     "institucion": "Escuela de Hospitalidad Litoral (ficticia)",
-     "modalidad": "En línea",
-     "duracion": "16 horas",
-     "nivel": "Básico",
-     "habilidades": [
-      "operaciones administrativas",
-      "procesos back office",
-      "soporte administrativo",
-      "gestión de información"
-     ]
-    },
-    {
-     "id": "tur-05",
-     "nombre": "Sales Operations y Ventas Consultivas en el Sector Turístico",
-     "institucion": "TurismoPro Training (ficticia)",
-     "modalidad": "En línea",
-     "duracion": "14 horas",
-     "nivel": "Intermedio",
-     "habilidades": [
-      "sales operations",
-      "ventas"
-     ]
-    },
-    {
-     "id": "tur-06",
-     "nombre": "Sistemas de Reservaciones y Planificación de Viajes",
-     "institucion": "Escuela de Hospitalidad Litoral (ficticia)",
-     "modalidad": "Presencial",
-     "duracion": "20 horas",
-     "nivel": "Básico",
-     "habilidades": [
-      "reservaciones de viajes",
-      "planificación de viajes"
-     ]
-    },
-    {
-     "id": "tur-07",
-     "nombre": "Coordinación y Producción de Eventos Turísticos",
-     "institucion": "Escuela de Hospitalidad Litoral (ficticia)",
-     "modalidad": "Presencial",
-     "duracion": "22 horas",
-     "nivel": "Intermedio",
-     "habilidades": [
-      "coordinación de eventos"
-     ]
-    },
-    {
-     "id": "tur-08",
-     "nombre": "Comunicación, Trabajo en Equipo y Relaciones Interpersonales en Servicio al Huésped",
-     "institucion": "TurismoPro Training (ficticia)",
-     "modalidad": "En línea",
-     "duracion": "12 horas",
-     "nivel": "Básico",
-     "habilidades": [
-      "comunicación",
-      "relaciones interpersonales",
-      "trabajo en equipo",
-      "atención al cliente",
-      "atención al detalle"
-     ]
-    },
-    {
-     "id": "tur-09",
-     "nombre": "Liderazgo, Organización y Negociación para Mandos Medios en Turismo",
-     "institucion": "Escuela de Hospitalidad Litoral (ficticia)",
-     "modalidad": "Mixta",
-     "duracion": "24 horas",
-     "nivel": "Avanzado",
-     "habilidades": [
-      "liderazgo",
-      "organización",
-      "negociación"
-     ]
-    },
-    {
-     "id": "tur-10",
-     "nombre": "Análisis Comercial y Prospección de Clientes",
-     "institucion": "TurismoPro Training (ficticia)",
-     "modalidad": "En línea",
-     "duracion": "14 horas",
-     "nivel": "Intermedio",
-     "habilidades": [
-      "análisis",
-      "prospección"
-     ]
+    "cursos": {
+      "automotriz": [
+        {
+          "id": "auto-01",
+          "nombre": "Control de Calidad y Normas NOM/IATF en Manufactura Automotriz",
+          "institucion": "AutoSkills Academy (ficticia)",
+          "modalidad": "Mixta",
+          "duracion": "24 horas",
+          "nivel": "Intermedio",
+          "habilidades": [
+            "calidad",
+            "nom"
+          ]
+        },
+        {
+          "id": "auto-02",
+          "nombre": "Mantenimiento Industrial Preventivo y Control de Refacciones",
+          "institucion": "AutoSkills Academy (ficticia)",
+          "modalidad": "Presencial",
+          "duracion": "30 horas",
+          "nivel": "Básico",
+          "habilidades": [
+            "mantenimiento",
+            "refacciones",
+            "inventarios"
+          ]
+        },
+        {
+          "id": "auto-03",
+          "nombre": "Excel Avanzado para Producción y Manufactura",
+          "institucion": "Capacita+ (ficticia)",
+          "modalidad": "En línea",
+          "duracion": "16 horas",
+          "nivel": "Intermedio",
+          "habilidades": [
+            "excel",
+            "producción",
+            "manufactura"
+          ]
+        },
+        {
+          "id": "auto-04",
+          "nombre": "Fundamentos de ERP y SAP para la Industria Automotriz",
+          "institucion": "Capacita+ (ficticia)",
+          "modalidad": "En línea",
+          "duracion": "20 horas",
+          "nivel": "Básico",
+          "habilidades": [
+            "erp",
+            "sap"
+          ]
+        },
+        {
+          "id": "auto-05",
+          "nombre": "Mecánica Automotriz General y Diagnóstico de Fallas",
+          "institucion": "Instituto Técnico Motriz (ficticio)",
+          "modalidad": "Presencial",
+          "duracion": "40 horas",
+          "nivel": "Básico",
+          "habilidades": [
+            "mecánica",
+            "mecánica automotriz"
+          ]
+        },
+        {
+          "id": "auto-06",
+          "nombre": "Introducción a Python para Análisis de Datos Industriales",
+          "institucion": "Capacita+ (ficticia)",
+          "modalidad": "En línea",
+          "duracion": "18 horas",
+          "nivel": "Básico",
+          "habilidades": [
+            "python"
+          ]
+        },
+        {
+          "id": "auto-07",
+          "nombre": "Inglés Técnico para el Piso de Manufactura",
+          "institucion": "AutoSkills Academy (ficticia)",
+          "modalidad": "En línea",
+          "duracion": "40 horas",
+          "nivel": "Básico-Intermedio",
+          "habilidades": [
+            "inglés"
+          ]
+        },
+        {
+          "id": "auto-08",
+          "nombre": "Técnicas de Ventas y Atención a Cliente en el Sector Automotriz",
+          "institucion": "Instituto Técnico Motriz (ficticio)",
+          "modalidad": "Mixta",
+          "duracion": "16 horas",
+          "nivel": "Intermedio",
+          "habilidades": [
+            "ventas",
+            "atención al cliente"
+          ]
+        },
+        {
+          "id": "auto-09",
+          "nombre": "Comunicación, Responsabilidad y Trabajo en Equipo en Entornos Industriales",
+          "institucion": "Capacita+ (ficticia)",
+          "modalidad": "En línea",
+          "duracion": "12 horas",
+          "nivel": "Básico",
+          "habilidades": [
+            "comunicación",
+            "responsabilidad",
+            "trabajo en equipo",
+            "compromiso"
+          ]
+        },
+        {
+          "id": "auto-10",
+          "nombre": "Liderazgo, Negociación y Resolución de Problemas para Supervisores de Planta",
+          "institucion": "Instituto Técnico Motriz (ficticio)",
+          "modalidad": "Presencial",
+          "duracion": "24 horas",
+          "nivel": "Avanzado",
+          "habilidades": [
+            "liderazgo",
+            "negociación",
+            "resolución de problemas",
+            "organización",
+            "iniciativa"
+          ]
+        }
+      ],
+      "turismo": [
+        {
+          "id": "tur-01",
+          "nombre": "Inglés Conversacional Avanzado para Turismo y Hospitalidad",
+          "institucion": "TurismoPro Training (ficticia)",
+          "modalidad": "En línea",
+          "duracion": "40 horas",
+          "nivel": "Intermedio-Avanzado",
+          "habilidades": [
+            "inglés intermedio-avanzado",
+            "inglés avanzado"
+          ]
+        },
+        {
+          "id": "tur-02",
+          "nombre": "Reclutamiento, Selección y Supervisión de Equipos en Hospitalidad",
+          "institucion": "Escuela de Hospitalidad Litoral (ficticia)",
+          "modalidad": "Mixta",
+          "duracion": "20 horas",
+          "nivel": "Intermedio",
+          "habilidades": [
+            "reclutamiento y selección",
+            "supervisión de equipos"
+          ]
+        },
+        {
+          "id": "tur-03",
+          "nombre": "Desarrollo de Negocio y Gestión Comercial en Turismo",
+          "institucion": "TurismoPro Training (ficticia)",
+          "modalidad": "En línea",
+          "duracion": "18 horas",
+          "nivel": "Intermedio",
+          "habilidades": [
+            "desarrollo de negocio",
+            "gestión comercial",
+            "ventas"
+          ]
+        },
+        {
+          "id": "tur-04",
+          "nombre": "Operaciones Administrativas y Back Office para Agencias de Viaje",
+          "institucion": "Escuela de Hospitalidad Litoral (ficticia)",
+          "modalidad": "En línea",
+          "duracion": "16 horas",
+          "nivel": "Básico",
+          "habilidades": [
+            "operaciones administrativas",
+            "procesos back office",
+            "soporte administrativo",
+            "gestión de información"
+          ]
+        },
+        {
+          "id": "tur-05",
+          "nombre": "Sales Operations y Ventas Consultivas en el Sector Turístico",
+          "institucion": "TurismoPro Training (ficticia)",
+          "modalidad": "En línea",
+          "duracion": "14 horas",
+          "nivel": "Intermedio",
+          "habilidades": [
+            "sales operations",
+            "ventas"
+          ]
+        },
+        {
+          "id": "tur-06",
+          "nombre": "Sistemas de Reservaciones y Planificación de Viajes",
+          "institucion": "Escuela de Hospitalidad Litoral (ficticia)",
+          "modalidad": "Presencial",
+          "duracion": "20 horas",
+          "nivel": "Básico",
+          "habilidades": [
+            "reservaciones de viajes",
+            "planificación de viajes"
+          ]
+        },
+        {
+          "id": "tur-07",
+          "nombre": "Coordinación y Producción de Eventos Turísticos",
+          "institucion": "Escuela de Hospitalidad Litoral (ficticia)",
+          "modalidad": "Presencial",
+          "duracion": "22 horas",
+          "nivel": "Intermedio",
+          "habilidades": [
+            "coordinación de eventos"
+          ]
+        },
+        {
+          "id": "tur-08",
+          "nombre": "Comunicación, Trabajo en Equipo y Relaciones Interpersonales en Servicio al Huésped",
+          "institucion": "TurismoPro Training (ficticia)",
+          "modalidad": "En línea",
+          "duracion": "12 horas",
+          "nivel": "Básico",
+          "habilidades": [
+            "comunicación",
+            "relaciones interpersonales",
+            "trabajo en equipo",
+            "atención al cliente",
+            "atención al detalle"
+          ]
+        },
+        {
+          "id": "tur-09",
+          "nombre": "Liderazgo, Organización y Negociación para Mandos Medios en Turismo",
+          "institucion": "Escuela de Hospitalidad Litoral (ficticia)",
+          "modalidad": "Mixta",
+          "duracion": "24 horas",
+          "nivel": "Avanzado",
+          "habilidades": [
+            "liderazgo",
+            "organización",
+            "negociación"
+          ]
+        },
+        {
+          "id": "tur-10",
+          "nombre": "Análisis Comercial y Prospección de Clientes",
+          "institucion": "TurismoPro Training (ficticia)",
+          "modalidad": "En línea",
+          "duracion": "14 horas",
+          "nivel": "Intermedio",
+          "habilidades": [
+            "análisis",
+            "prospección"
+          ]
+        }
+      ]
     }
-   ]
   }
- }
 }
