@@ -1,0 +1,1310 @@
+{
+ "nombre": "Metalmecánica",
+ "vacantes_verificadas": 856,
+ "vacantes_descartadas": 426,
+ "vacantes_con_habilidades": 18,
+ "pct_con_habilidades": 2.1,
+ "fuentes": {
+  "Adzuna": 670,
+  "OCC": 127,
+  "Indeed": 59
+ },
+ "categorias_puesto": [
+  {
+   "categoria": "Otro",
+   "vacantes": 272,
+   "pct": 31.8
+  },
+  {
+   "categoria": "Soldadura y maquinado",
+   "vacantes": 188,
+   "pct": 22.0
+  },
+  {
+   "categoria": "Ingeniería industrial y de manufactura",
+   "vacantes": 103,
+   "pct": 12.0
+  },
+  {
+   "categoria": "Producción y operación",
+   "vacantes": 91,
+   "pct": 10.6
+  },
+  {
+   "categoria": "Mantenimiento industrial",
+   "vacantes": 80,
+   "pct": 9.3
+  },
+  {
+   "categoria": "Ventas técnicas / comercial industrial",
+   "vacantes": 46,
+   "pct": 5.4
+  },
+  {
+   "categoria": "Gerencia y dirección industrial",
+   "vacantes": 26,
+   "pct": 3.0
+  },
+  {
+   "categoria": "Calidad",
+   "vacantes": 20,
+   "pct": 2.3
+  },
+  {
+   "categoria": "Diseño y CAD",
+   "vacantes": 9,
+   "pct": 1.1
+  },
+  {
+   "categoria": "Logística y almacén",
+   "vacantes": 7,
+   "pct": 0.8
+  },
+  {
+   "categoria": "Becarios y practicantes",
+   "vacantes": 5,
+   "pct": 0.6
+  },
+  {
+   "categoria": "Recursos Humanos",
+   "vacantes": 4,
+   "pct": 0.5
+  },
+  {
+   "categoria": "Administración",
+   "vacantes": 2,
+   "pct": 0.2
+  },
+  {
+   "categoria": "Compras y cadena de suministro",
+   "vacantes": 2,
+   "pct": 0.2
+  },
+  {
+   "categoria": "Seguridad industrial (EHS)",
+   "vacantes": 1,
+   "pct": 0.1
+  }
+ ],
+ "habilidades_tecnicas": [
+  {
+   "skill": "maquinado cnc",
+   "menciones": 124
+  },
+  {
+   "skill": "mantenimiento industrial",
+   "menciones": 95
+  },
+  {
+   "skill": "manufactura / producción",
+   "menciones": 90
+  },
+  {
+   "skill": "soldadura",
+   "menciones": 82
+  },
+  {
+   "skill": "control de calidad",
+   "menciones": 33
+  },
+  {
+   "skill": "diseño CAD/CAM",
+   "menciones": 22
+  },
+  {
+   "skill": "logistica",
+   "menciones": 9
+  },
+  {
+   "skill": "ingles",
+   "menciones": 2
+  },
+  {
+   "skill": "lectura de planos",
+   "menciones": 1
+  },
+  {
+   "skill": "seguridad industrial",
+   "menciones": 1
+  },
+  {
+   "skill": "excel",
+   "menciones": 1
+  }
+ ],
+ "habilidades_blandas": [
+  {
+   "skill": "trabajo en equipo",
+   "menciones": 178
+  },
+  {
+   "skill": "seguridad y disciplina",
+   "menciones": 159
+  },
+  {
+   "skill": "resolucion de problemas",
+   "menciones": 158
+  },
+  {
+   "skill": "responsabilidad",
+   "menciones": 117
+  },
+  {
+   "skill": "liderazgo",
+   "menciones": 93
+  },
+  {
+   "skill": "negociacion",
+   "menciones": 35
+  },
+  {
+   "skill": "atencion al detalle",
+   "menciones": 28
+  },
+  {
+   "skill": "toma de decisiones",
+   "menciones": 23
+  },
+  {
+   "skill": "organizacion",
+   "menciones": 13
+  },
+  {
+   "skill": "comunicacion",
+   "menciones": 5
+  }
+ ],
+ "top_empresas": [
+  {
+   "empresa": "Magna International, Inc",
+   "vacantes": 36
+  },
+  {
+   "empresa": "WURTH MEXICO, SA DE CV",
+   "vacantes": 18
+  },
+  {
+   "empresa": "Grupo Truper",
+   "vacantes": 15
+  },
+  {
+   "empresa": "Cummins Inc.",
+   "vacantes": 13
+  },
+  {
+   "empresa": "ManpowerGroup",
+   "vacantes": 13
+  },
+  {
+   "empresa": "Caterpillar",
+   "vacantes": 12
+  },
+  {
+   "empresa": "Dimasur",
+   "vacantes": 12
+  },
+  {
+   "empresa": "Neolpharma",
+   "vacantes": 10
+  },
+  {
+   "empresa": "Casa Diaz de Maquinas de Coser",
+   "vacantes": 9
+  },
+  {
+   "empresa": "Becton Dickinson Medical Devices",
+   "vacantes": 8
+  },
+  {
+   "empresa": "Safran",
+   "vacantes": 7
+  },
+  {
+   "empresa": "ContiTech",
+   "vacantes": 7
+  },
+  {
+   "empresa": "Human Quality",
+   "vacantes": 7
+  },
+  {
+   "empresa": "Aumovio",
+   "vacantes": 6
+  }
+ ],
+ "cobertura_geografica": {
+  "top_estados": [
+   {
+    "estado": "Estado de México",
+    "vacantes": 102
+   },
+   {
+    "estado": "Nuevo León",
+    "vacantes": 88
+   },
+   {
+    "estado": "Jalisco",
+    "vacantes": 72
+   },
+   {
+    "estado": "Ciudad de México",
+    "vacantes": 60
+   },
+   {
+    "estado": "Coahuila",
+    "vacantes": 48
+   },
+   {
+    "estado": "Querétaro",
+    "vacantes": 39
+   },
+   {
+    "estado": "Guanajuato",
+    "vacantes": 29
+   },
+   {
+    "estado": "Puebla",
+    "vacantes": 22
+   },
+   {
+    "estado": "San Luis Potosí",
+    "vacantes": 17
+   },
+   {
+    "estado": "Sonora",
+    "vacantes": 14
+   }
+  ],
+  "estados_unicos": 30
+ },
+ "salario": {
+  "vacantes_con_dato": 298,
+  "pct_con_dato": 34.8,
+  "mediana_mensual_mxn": 14814,
+  "p25_mensual_mxn": 11500,
+  "p75_mensual_mxn": 18930
+ },
+ "evolucion_semanal": [
+  {
+   "semana": "11 May",
+   "vacantes": 1
+  },
+  {
+   "semana": "18 May",
+   "vacantes": 1
+  },
+  {
+   "semana": "22 Jun",
+   "vacantes": 2
+  },
+  {
+   "semana": "29 Jun",
+   "vacantes": 1
+  },
+  {
+   "semana": "06 Jul",
+   "vacantes": 1
+  },
+  {
+   "semana": "13 Jul",
+   "vacantes": 10
+  },
+  {
+   "semana": "20 Jul",
+   "vacantes": 3
+  },
+  {
+   "semana": "27 Jul",
+   "vacantes": 7
+  },
+  {
+   "semana": "03 Ago",
+   "vacantes": 2
+  },
+  {
+   "semana": "10 Ago",
+   "vacantes": 78
+  },
+  {
+   "semana": "17 Ago",
+   "vacantes": 296
+  },
+  {
+   "semana": "24 Ago",
+   "vacantes": 331
+  },
+  {
+   "semana": "31 Ago",
+   "vacantes": 8
+  }
+ ],
+ "total_empresas_unicas": 516,
+ "ultima_semana_vacantes": 8,
+ "vacantes_detalle": [
+  {
+   "titulo": "Medico Laboral - Giro Metalmecánica",
+   "empresa": "Grupo Constructor Industrial",
+   "ubicacion": "México",
+   "habilidades_tecnicas": [
+    "(inferida del título)"
+   ],
+   "habilidades_blandas": [
+    "Responsabilidad"
+   ],
+   "salario_min": 20000,
+   "salario_max": 28000,
+   "fecha_publicacion": "2026-08-31",
+   "fuente": "Adzuna",
+   "url": "https://www.adzuna.com.mx/details/5862987005"
+  },
+  {
+   "titulo": "Técnico producción tratamiento de agua Tratamiento de agua",
+   "empresa": "CocaCola FEMSA",
+   "ubicacion": "Coatepec, Veracruz",
+   "habilidades_tecnicas": [
+    "Operación de línea de producción"
+   ],
+   "habilidades_blandas": [
+    "Trabajo en equipo"
+   ],
+   "salario_min": 17000,
+   "salario_max": 17000,
+   "fecha_publicacion": "2026-08-31",
+   "fuente": "Adzuna",
+   "url": "https://www.adzuna.com.mx/details/5863053142"
+  },
+  {
+   "titulo": "APQP Engineer",
+   "empresa": "AAM",
+   "ubicacion": "México",
+   "habilidades_tecnicas": [
+    "Ingeniería de manufactura"
+   ],
+   "habilidades_blandas": [
+    "Resolución de problemas"
+   ],
+   "salario_min": null,
+   "salario_max": null,
+   "fecha_publicacion": "2026-08-31",
+   "fuente": "Adzuna",
+   "url": "https://www.adzuna.com.mx/details/5862988977"
+  },
+  {
+   "titulo": "Jefe Calidad Plantas - Procesos Metalúrgicos",
+   "empresa": "Grupo Truper",
+   "ubicacion": "México",
+   "habilidades_tecnicas": [
+    "Ingeniería de manufactura"
+   ],
+   "habilidades_blandas": [
+    "Resolución de problemas"
+   ],
+   "salario_min": null,
+   "salario_max": null,
+   "fecha_publicacion": "2026-08-30",
+   "fuente": "Adzuna",
+   "url": "https://www.adzuna.com.mx/details/5862276998"
+  },
+  {
+   "titulo": "Mecánico CNC",
+   "empresa": "Grupo MC",
+   "ubicacion": "México",
+   "habilidades_tecnicas": [
+    "Soldadura y maquinado CNC"
+   ],
+   "habilidades_blandas": [
+    "Atención al detalle"
+   ],
+   "salario_min": null,
+   "salario_max": null,
+   "fecha_publicacion": "2026-08-30",
+   "fuente": "Adzuna",
+   "url": "https://www.adzuna.com.mx/details/5862278695"
+  },
+  {
+   "titulo": "Manufacturing Engineer",
+   "empresa": "Emerson",
+   "ubicacion": "Apodaca, Nuevo León",
+   "habilidades_tecnicas": [
+    "Ingeniería de manufactura"
+   ],
+   "habilidades_blandas": [
+    "Resolución de problemas"
+   ],
+   "salario_min": null,
+   "salario_max": null,
+   "fecha_publicacion": "2026-08-30",
+   "fuente": "Adzuna",
+   "url": "https://www.adzuna.com.mx/details/5862284286"
+  },
+  {
+   "titulo": "EHS Supervisor",
+   "empresa": "AAM",
+   "ubicacion": "México",
+   "habilidades_tecnicas": [
+    "Seguridad industrial"
+   ],
+   "habilidades_blandas": [
+    "Responsabilidad"
+   ],
+   "salario_min": null,
+   "salario_max": null,
+   "fecha_publicacion": "2026-08-30",
+   "fuente": "Adzuna",
+   "url": "https://www.adzuna.com.mx/details/5862284433"
+  },
+  {
+   "titulo": "Sr. CNC Tool Technician",
+   "empresa": "Becton Dickinson Medical Devices",
+   "ubicacion": "México",
+   "habilidades_tecnicas": [
+    "Soldadura y maquinado CNC"
+   ],
+   "habilidades_blandas": [
+    "Atención al detalle"
+   ],
+   "salario_min": null,
+   "salario_max": null,
+   "fecha_publicacion": "2026-08-30",
+   "fuente": "Adzuna",
+   "url": "https://www.adzuna.com.mx/details/5862288019"
+  },
+  {
+   "titulo": "Mfg.Production Associate - Level I",
+   "empresa": "Atmus",
+   "ubicacion": "San Luis Potosí, México",
+   "habilidades_tecnicas": [
+    "Operación de línea de producción"
+   ],
+   "habilidades_blandas": [
+    "Trabajo en equipo"
+   ],
+   "salario_min": null,
+   "salario_max": null,
+   "fecha_publicacion": "2026-08-30",
+   "fuente": "Adzuna",
+   "url": "https://www.adzuna.com.mx/details/5862288045"
+  },
+  {
+   "titulo": "Operador CNC",
+   "empresa": "Airbus",
+   "ubicacion": "México",
+   "habilidades_tecnicas": [
+    "Soldadura y maquinado CNC"
+   ],
+   "habilidades_blandas": [
+    "Atención al detalle"
+   ],
+   "salario_min": null,
+   "salario_max": null,
+   "fecha_publicacion": "2026-08-30",
+   "fuente": "Adzuna",
+   "url": "https://www.adzuna.com.mx/details/5862292077"
+  },
+  {
+   "titulo": "Ingniero de Proceso (Maquinado CNC) H/M",
+   "empresa": "Safran",
+   "ubicacion": "México",
+   "habilidades_tecnicas": [
+    "Soldadura y maquinado CNC"
+   ],
+   "habilidades_blandas": [
+    "Atención al detalle"
+   ],
+   "salario_min": null,
+   "salario_max": null,
+   "fecha_publicacion": "2026-08-30",
+   "fuente": "Adzuna",
+   "url": "https://www.adzuna.com.mx/details/5862791190"
+  },
+  {
+   "titulo": "Líder de Diseño Mecánico de Automatización - Irapuato",
+   "empresa": "P&G",
+   "ubicacion": "México",
+   "habilidades_tecnicas": [
+    "Diseño CAD/CAM"
+   ],
+   "habilidades_blandas": [
+    "Creatividad técnica"
+   ],
+   "salario_min": null,
+   "salario_max": null,
+   "fecha_publicacion": "2026-08-30",
+   "fuente": "Adzuna",
+   "url": "https://www.adzuna.com.mx/details/5862276356"
+  },
+  {
+   "titulo": "Inspector/a de Calidad. - Aeronáutica",
+   "empresa": "ITP Aero",
+   "ubicacion": "México",
+   "habilidades_tecnicas": [
+    "Control de calidad / ISO"
+   ],
+   "habilidades_blandas": [
+    "Atención al detalle"
+   ],
+   "salario_min": null,
+   "salario_max": null,
+   "fecha_publicacion": "2026-08-30",
+   "fuente": "Adzuna",
+   "url": "https://www.adzuna.com.mx/details/5862280406"
+  },
+  {
+   "titulo": "Técnico en mantenimiento a maquinas de bebidas Femsa Andatti",
+   "empresa": "CAFFENIO",
+   "ubicacion": "Atenco, Estado de México",
+   "habilidades_tecnicas": [
+    "Mantenimiento electromecánico"
+   ],
+   "habilidades_blandas": [
+    "Resolución de problemas"
+   ],
+   "salario_min": 16000,
+   "salario_max": 16000,
+   "fecha_publicacion": "2026-08-30",
+   "fuente": "Adzuna",
+   "url": "https://www.adzuna.com.mx/details/5862340376"
+  },
+  {
+   "titulo": "Cajero Sucursal Bancaria",
+   "empresa": "Banco Azteca",
+   "ubicacion": "Cazones de Herrera, Veracruz",
+   "habilidades_tecnicas": [
+    "(inferida del título)"
+   ],
+   "habilidades_blandas": [
+    "Responsabilidad"
+   ],
+   "salario_min": 8481,
+   "salario_max": 8481,
+   "fecha_publicacion": "2026-08-30",
+   "fuente": "Adzuna",
+   "url": "https://www.adzuna.com.mx/details/5862340579"
+  },
+  {
+   "titulo": "Gruista",
+   "empresa": "Conalum",
+   "ubicacion": "México",
+   "habilidades_tecnicas": [
+    "(inferida del título)"
+   ],
+   "habilidades_blandas": [
+    "Responsabilidad"
+   ],
+   "salario_min": null,
+   "salario_max": null,
+   "fecha_publicacion": "2026-08-30",
+   "fuente": "Adzuna",
+   "url": "https://www.adzuna.com.mx/details/5862272377"
+  },
+  {
+   "titulo": "Operador de Prensa Senior (Flexografía / Conversión)",
+   "empresa": "Zebra Technologies",
+   "ubicacion": "México",
+   "habilidades_tecnicas": [
+    "Operación de línea de producción"
+   ],
+   "habilidades_blandas": [
+    "Trabajo en equipo"
+   ],
+   "salario_min": null,
+   "salario_max": null,
+   "fecha_publicacion": "2026-08-30",
+   "fuente": "Adzuna",
+   "url": "https://www.adzuna.com.mx/details/5862295479"
+  },
+  {
+   "titulo": "Técnico Electromecánico II",
+   "empresa": "Kimberly-Clark",
+   "ubicacion": "Nogales, Sonora",
+   "habilidades_tecnicas": [
+    "Mantenimiento electromecánico"
+   ],
+   "habilidades_blandas": [
+    "Resolución de problemas"
+   ],
+   "salario_min": null,
+   "salario_max": null,
+   "fecha_publicacion": "2026-08-30",
+   "fuente": "Adzuna",
+   "url": "https://www.adzuna.com.mx/details/5862285683"
+  },
+  {
+   "titulo": "Auxiliar de producción",
+   "empresa": "Farmacos Darovi",
+   "ubicacion": "México",
+   "habilidades_tecnicas": [
+    "Operación de línea de producción"
+   ],
+   "habilidades_blandas": [
+    "Trabajo en equipo"
+   ],
+   "salario_min": null,
+   "salario_max": null,
+   "fecha_publicacion": "2026-08-30",
+   "fuente": "Adzuna",
+   "url": "https://www.adzuna.com.mx/details/5862284505"
+  },
+  {
+   "titulo": "Vendedor de Maquinaria Agricola",
+   "empresa": "Dimasur",
+   "ubicacion": "México",
+   "habilidades_tecnicas": [
+    "Ventas técnicas"
+   ],
+   "habilidades_blandas": [
+    "Negociación"
+   ],
+   "salario_min": null,
+   "salario_max": null,
+   "fecha_publicacion": "2026-08-30",
+   "fuente": "Adzuna",
+   "url": "https://www.adzuna.com.mx/details/5862283917"
+  },
+  {
+   "titulo": "Personal de Mantenimiento",
+   "empresa": "Operadora De Hospitales Angeles Sa De Cv",
+   "ubicacion": "México",
+   "habilidades_tecnicas": [
+    "Mantenimiento electromecánico"
+   ],
+   "habilidades_blandas": [
+    "Resolución de problemas"
+   ],
+   "salario_min": null,
+   "salario_max": null,
+   "fecha_publicacion": "2026-08-30",
+   "fuente": "Adzuna",
+   "url": "https://www.adzuna.com.mx/details/5862282458"
+  },
+  {
+   "titulo": "Soporte Tecnico Sistemas",
+   "empresa": "Dimasur",
+   "ubicacion": "México",
+   "habilidades_tecnicas": [
+    "(inferida del título)"
+   ],
+   "habilidades_blandas": [
+    "Responsabilidad"
+   ],
+   "salario_min": null,
+   "salario_max": null,
+   "fecha_publicacion": "2026-08-30",
+   "fuente": "Adzuna",
+   "url": "https://www.adzuna.com.mx/details/5862274672"
+  },
+  {
+   "titulo": "Enfermero general - Cediasa",
+   "empresa": "Operadora De Hospitales Angeles Sa De Cv",
+   "ubicacion": "México",
+   "habilidades_tecnicas": [
+    "(inferida del título)"
+   ],
+   "habilidades_blandas": [
+    "Responsabilidad"
+   ],
+   "salario_min": null,
+   "salario_max": null,
+   "fecha_publicacion": "2026-08-30",
+   "fuente": "Adzuna",
+   "url": "https://www.adzuna.com.mx/details/5862274351"
+  },
+  {
+   "titulo": "Service Technician II - Inst",
+   "empresa": "Ecolab",
+   "ubicacion": "México",
+   "habilidades_tecnicas": [
+    "(inferida del título)"
+   ],
+   "habilidades_blandas": [
+    "Responsabilidad"
+   ],
+   "salario_min": null,
+   "salario_max": null,
+   "fecha_publicacion": "2026-08-30",
+   "fuente": "Adzuna",
+   "url": "https://www.adzuna.com.mx/details/5862273913"
+  },
+  {
+   "titulo": "Técnico reparación de electrodomésticos - Electromecánico",
+   "empresa": "Grupo Truper",
+   "ubicacion": "México",
+   "habilidades_tecnicas": [
+    "Mantenimiento electromecánico"
+   ],
+   "habilidades_blandas": [
+    "Resolución de problemas"
+   ],
+   "salario_min": 12000,
+   "salario_max": 12001,
+   "fecha_publicacion": "2026-08-30",
+   "fuente": "Adzuna",
+   "url": "https://www.adzuna.com.mx/details/5862273153"
+  },
+  {
+   "titulo": "Vendedor piso y Vendedores de Bingo - Vendedores",
+   "empresa": "BigBola Casinos",
+   "ubicacion": "México",
+   "habilidades_tecnicas": [
+    "Ventas técnicas"
+   ],
+   "habilidades_blandas": [
+    "Negociación"
+   ],
+   "salario_min": null,
+   "salario_max": null,
+   "fecha_publicacion": "2026-08-30",
+   "fuente": "Adzuna",
+   "url": "https://www.adzuna.com.mx/details/5862286504"
+  },
+  {
+   "titulo": "Técnico de Mantenimiento Ha Acoxpa - Mantenimiento",
+   "empresa": "Operadora De Hospitales Angeles Sa De Cv",
+   "ubicacion": "México",
+   "habilidades_tecnicas": [
+    "Mantenimiento electromecánico"
+   ],
+   "habilidades_blandas": [
+    "Resolución de problemas"
+   ],
+   "salario_min": 10500,
+   "salario_max": 11000,
+   "fecha_publicacion": "2026-08-29",
+   "fuente": "Adzuna",
+   "url": "https://www.adzuna.com.mx/details/5861237979"
+  },
+  {
+   "titulo": "Ayudante CNC",
+   "empresa": "Cummins",
+   "ubicacion": "Ciénega de Flores, Nuevo León",
+   "habilidades_tecnicas": [
+    "Soldadura y maquinado CNC"
+   ],
+   "habilidades_blandas": [
+    "Atención al detalle"
+   ],
+   "salario_min": null,
+   "salario_max": null,
+   "fecha_publicacion": "2026-08-29",
+   "fuente": "Adzuna",
+   "url": "https://www.adzuna.com.mx/details/5861221631"
+  },
+  {
+   "titulo": "Gruista",
+   "empresa": "Conalum",
+   "ubicacion": "San Pedro Tlaquepaque, Jalisco",
+   "habilidades_tecnicas": [
+    "(inferida del título)"
+   ],
+   "habilidades_blandas": [
+    "Responsabilidad"
+   ],
+   "salario_min": 14200,
+   "salario_max": 14200,
+   "fecha_publicacion": "2026-08-29",
+   "fuente": "Adzuna",
+   "url": "https://www.adzuna.com.mx/details/5861339572"
+  },
+  {
+   "titulo": "Ingeniero de Diseño",
+   "empresa": "Elastotec, S.A de C.V.",
+   "ubicacion": "Naucalpan de Juárez, Estado de México",
+   "habilidades_tecnicas": [
+    "Ingeniería de manufactura"
+   ],
+   "habilidades_blandas": [
+    "Resolución de problemas"
+   ],
+   "salario_min": 15000,
+   "salario_max": 15000,
+   "fecha_publicacion": "2026-08-29",
+   "fuente": "Adzuna",
+   "url": "https://www.adzuna.com.mx/details/5861339435"
+  },
+  {
+   "titulo": "Operador de cortadora CNC",
+   "empresa": "COMAU AUTOMATIZACION S de RL de CV",
+   "ubicacion": "Cuautitlán Izcalli, Estado de México",
+   "habilidades_tecnicas": [
+    "Soldadura y maquinado CNC"
+   ],
+   "habilidades_blandas": [
+    "Atención al detalle"
+   ],
+   "salario_min": 13000,
+   "salario_max": 13000,
+   "fecha_publicacion": "2026-08-29",
+   "fuente": "Adzuna",
+   "url": "https://www.adzuna.com.mx/details/5861339408"
+  },
+  {
+   "titulo": "Ingeniero diseño Ing Jr de Diseño",
+   "empresa": "GTI Soluciones",
+   "ubicacion": "Querétaro",
+   "habilidades_tecnicas": [
+    "Ingeniería de manufactura"
+   ],
+   "habilidades_blandas": [
+    "Resolución de problemas"
+   ],
+   "salario_min": 10000,
+   "salario_max": 10000,
+   "fecha_publicacion": "2026-08-29",
+   "fuente": "Adzuna",
+   "url": "https://www.adzuna.com.mx/details/5861339185"
+  },
+  {
+   "titulo": "Analista de seguridad e higiene Con experiencia",
+   "empresa": "TEDM MAQUINADOS",
+   "ubicacion": "León, Guanajuato",
+   "habilidades_tecnicas": [
+    "(inferida del título)"
+   ],
+   "habilidades_blandas": [
+    "Responsabilidad"
+   ],
+   "salario_min": null,
+   "salario_max": null,
+   "fecha_publicacion": "2026-08-29",
+   "fuente": "Adzuna",
+   "url": "https://www.adzuna.com.mx/details/5861339110"
+  },
+  {
+   "titulo": "Operador CNC Sin Experiencia Aprende un Oficio",
+   "empresa": "Manufacturas Pueblo Viejo Industrial S.A. de C.V.",
+   "ubicacion": "Guadalajara, Jalisco",
+   "habilidades_tecnicas": [
+    "Soldadura y maquinado CNC"
+   ],
+   "habilidades_blandas": [
+    "Atención al detalle"
+   ],
+   "salario_min": null,
+   "salario_max": null,
+   "fecha_publicacion": "2026-08-29",
+   "fuente": "Adzuna",
+   "url": "https://www.adzuna.com.mx/details/5861338767"
+  },
+  {
+   "titulo": "Soldador pailero",
+   "empresa": "KAUFMANN",
+   "ubicacion": "Centro, Tabasco",
+   "habilidades_tecnicas": [
+    "Soldadura y maquinado CNC"
+   ],
+   "habilidades_blandas": [
+    "Atención al detalle"
+   ],
+   "salario_min": 16000,
+   "salario_max": 16000,
+   "fecha_publicacion": "2026-08-29",
+   "fuente": "Adzuna",
+   "url": "https://www.adzuna.com.mx/details/5861338327"
+  },
+  {
+   "titulo": "Técnico de servicios",
+   "empresa": "ASYSOPORTE EMPRESARIAL",
+   "ubicacion": "Zapopan, Jalisco",
+   "habilidades_tecnicas": [
+    "(inferida del título)"
+   ],
+   "habilidades_blandas": [
+    "Responsabilidad"
+   ],
+   "salario_min": 18000,
+   "salario_max": 18000,
+   "fecha_publicacion": "2026-08-29",
+   "fuente": "Adzuna",
+   "url": "https://www.adzuna.com.mx/details/5861336040"
+  },
+  {
+   "titulo": "Capitán",
+   "empresa": "Grupo AFAL",
+   "ubicacion": "México",
+   "habilidades_tecnicas": [
+    "(inferida del título)"
+   ],
+   "habilidades_blandas": [
+    "Responsabilidad"
+   ],
+   "salario_min": null,
+   "salario_max": null,
+   "fecha_publicacion": "2026-08-29",
+   "fuente": "Adzuna",
+   "url": "https://www.adzuna.com.mx/details/5861236967"
+  },
+  {
+   "titulo": "Maquinista",
+   "empresa": "Archer Daniels Midland",
+   "ubicacion": "México",
+   "habilidades_tecnicas": [
+    "(inferida del título)"
+   ],
+   "habilidades_blandas": [
+    "Responsabilidad"
+   ],
+   "salario_min": null,
+   "salario_max": null,
+   "fecha_publicacion": "2026-08-29",
+   "fuente": "Adzuna",
+   "url": "https://www.adzuna.com.mx/details/5861233927"
+  },
+  {
+   "titulo": "Mold maker A",
+   "empresa": "Becton Dickinson Medical Devices",
+   "ubicacion": "México",
+   "habilidades_tecnicas": [
+    "(inferida del título)"
+   ],
+   "habilidades_blandas": [
+    "Responsabilidad"
+   ],
+   "salario_min": null,
+   "salario_max": null,
+   "fecha_publicacion": "2026-08-29",
+   "fuente": "Adzuna",
+   "url": "https://www.adzuna.com.mx/details/5861233850"
+  },
+  {
+   "titulo": "Mac",
+   "empresa": "Logrand",
+   "ubicacion": "Monterrey, Nuevo León",
+   "habilidades_tecnicas": [
+    "(inferida del título)"
+   ],
+   "habilidades_blandas": [
+    "Responsabilidad"
+   ],
+   "salario_min": null,
+   "salario_max": null,
+   "fecha_publicacion": "2026-08-29",
+   "fuente": "Adzuna",
+   "url": "https://www.adzuna.com.mx/details/5861231777"
+  },
+  {
+   "titulo": "Field Service Engineer TMX MT",
+   "empresa": "TRUMPF",
+   "ubicacion": "Apodaca, Nuevo León",
+   "habilidades_tecnicas": [
+    "Ingeniería de manufactura"
+   ],
+   "habilidades_blandas": [
+    "Resolución de problemas"
+   ],
+   "salario_min": null,
+   "salario_max": null,
+   "fecha_publicacion": "2026-08-29",
+   "fuente": "Adzuna",
+   "url": "https://www.adzuna.com.mx/details/5861231368"
+  },
+  {
+   "titulo": "Especialista en mantenimiento B",
+   "empresa": "Atmus",
+   "ubicacion": "San Luis Potosí, México",
+   "habilidades_tecnicas": [
+    "Mantenimiento electromecánico"
+   ],
+   "habilidades_blandas": [
+    "Resolución de problemas"
+   ],
+   "salario_min": null,
+   "salario_max": null,
+   "fecha_publicacion": "2026-08-29",
+   "fuente": "Adzuna",
+   "url": "https://www.adzuna.com.mx/details/5861228722"
+  },
+  {
+   "titulo": "Costurero/a Ajustes y Composturas",
+   "empresa": "Si Ocean",
+   "ubicacion": "México",
+   "habilidades_tecnicas": [
+    "(inferida del título)"
+   ],
+   "habilidades_blandas": [
+    "Responsabilidad"
+   ],
+   "salario_min": null,
+   "salario_max": null,
+   "fecha_publicacion": "2026-08-29",
+   "fuente": "Adzuna",
+   "url": "https://www.adzuna.com.mx/details/5861228320"
+  },
+  {
+   "titulo": "Asesor Comercial Kalisch Acero - Ciudad Obregon",
+   "empresa": "Kalisch Acero",
+   "ubicacion": "México",
+   "habilidades_tecnicas": [
+    "(inferida del título)"
+   ],
+   "habilidades_blandas": [
+    "Responsabilidad"
+   ],
+   "salario_min": 21000,
+   "salario_max": 30000,
+   "fecha_publicacion": "2026-08-29",
+   "fuente": "Adzuna",
+   "url": "https://www.adzuna.com.mx/details/5861223028"
+  },
+  {
+   "titulo": "Técnico Mantenimiento - Nuevo León,Monterrey",
+   "empresa": "Hunter Douglas",
+   "ubicacion": "Monterrey, Nuevo León",
+   "habilidades_tecnicas": [
+    "Mantenimiento electromecánico"
+   ],
+   "habilidades_blandas": [
+    "Resolución de problemas"
+   ],
+   "salario_min": null,
+   "salario_max": null,
+   "fecha_publicacion": "2026-08-29",
+   "fuente": "Adzuna",
+   "url": "https://www.adzuna.com.mx/details/5861222806"
+  },
+  {
+   "titulo": "Tecnico Electromecanico - Técnico Electromecánico",
+   "empresa": "GEPP",
+   "ubicacion": "México",
+   "habilidades_tecnicas": [
+    "Mantenimiento electromecánico"
+   ],
+   "habilidades_blandas": [
+    "Resolución de problemas"
+   ],
+   "salario_min": null,
+   "salario_max": null,
+   "fecha_publicacion": "2026-08-29",
+   "fuente": "Adzuna",
+   "url": "https://www.adzuna.com.mx/details/5861222518"
+  },
+  {
+   "titulo": "Electromecánico en Maquinado CNC",
+   "empresa": "Frenos y Mecanismos, SA de CV.",
+   "ubicacion": "Querétaro",
+   "habilidades_tecnicas": [
+    "maquinado CNC",
+    "electromecánica"
+   ],
+   "habilidades_blandas": [
+    "Atención al detalle"
+   ],
+   "salario_min": 25000,
+   "salario_max": 28000,
+   "fecha_publicacion": "2026-08-31",
+   "fuente": "OCC",
+   "url": "https://www.occ.com.mx/empleo/oferta/21317217"
+  },
+  {
+   "titulo": "TÉCNICO DE CALIDAD DE PROCESOS FUNDICIÓN",
+   "empresa": "Human Quality",
+   "ubicacion": "Ciénega de Flores, Nuevo León",
+   "habilidades_tecnicas": [
+    "calidad de procesos",
+    "fundición"
+   ],
+   "habilidades_blandas": [
+    "Resolución de problemas"
+   ],
+   "salario_min": 18000,
+   "salario_max": 20000,
+   "fecha_publicacion": "2026-08-30",
+   "fuente": "OCC",
+   "url": "https://www.occ.com.mx/empleo/oferta/21311463"
+  },
+  {
+   "titulo": "Ingeniero de procesos de pintura",
+   "empresa": "TENMFG DE MEXICO S DE RL DE CV",
+   "ubicacion": "Nuevo León",
+   "habilidades_tecnicas": [
+    "Ingeniería de manufactura"
+   ],
+   "habilidades_blandas": [
+    "Resolución de problemas"
+   ],
+   "salario_min": 50000,
+   "salario_max": 60000,
+   "fecha_publicacion": "2026-08-25",
+   "fuente": "OCC",
+   "url": "https://www.occ.com.mx/empleo/oferta/21316559/"
+  },
+  {
+   "titulo": "Ingeniero de Procesos y Costos de Manufactura| Mobiliario y Metalmecánica",
+   "empresa": "ZEGOVIA RH SA DE CV",
+   "ubicacion": "Lerma, Estado de México",
+   "habilidades_tecnicas": [
+    "procesos de manufactura",
+    "costos",
+    "metalmecánica"
+   ],
+   "habilidades_blandas": [
+    "Resolución de problemas"
+   ],
+   "salario_min": 30000,
+   "salario_max": 40000,
+   "fecha_publicacion": "2026-08-25",
+   "fuente": "OCC",
+   "url": "https://www.occ.com.mx/empleo/oferta/21310296"
+  },
+  {
+   "titulo": "Ayudante general producción",
+   "empresa": "Refrigeración Ojeda",
+   "ubicacion": "Iztacalco, Ciudad de México",
+   "habilidades_tecnicas": [
+    "Operación de línea de producción"
+   ],
+   "habilidades_blandas": [
+    "Trabajo en equipo"
+   ],
+   "salario_min": 9600,
+   "salario_max": 11400,
+   "fecha_publicacion": "2026-08-25",
+   "fuente": "OCC",
+   "url": "https://www.occ.com.mx/empleo/oferta/21308259/"
+  },
+  {
+   "titulo": "Auditor de Calidad",
+   "empresa": "BYRNE ELECTRICAL SPECIALISTS MEXICO, S. DE R.L. DE C.V.",
+   "ubicacion": "Tlalpan, Ciudad de México",
+   "habilidades_tecnicas": [
+    "Control de calidad / ISO"
+   ],
+   "habilidades_blandas": [
+    "Atención al detalle"
+   ],
+   "salario_min": 15000,
+   "salario_max": 18000,
+   "fecha_publicacion": "2026-08-25",
+   "fuente": "OCC",
+   "url": "https://www.occ.com.mx/empleo/oferta/21316228/"
+  },
+  {
+   "titulo": "Representante de Ventas con Auto Propio en Campeche - Comisiones sin límite",
+   "empresa": "Wurth México",
+   "ubicacion": "Campeche, Campeche",
+   "habilidades_tecnicas": [
+    "Ventas técnicas"
+   ],
+   "habilidades_blandas": [
+    "Negociación"
+   ],
+   "salario_min": 15000,
+   "salario_max": 20000,
+   "fecha_publicacion": "2026-08-25",
+   "fuente": "OCC",
+   "url": "https://www.occ.com.mx/empleo/oferta/21316457/"
+  },
+  {
+   "titulo": "Asistente administrativo",
+   "empresa": "JAITER SA DE CV",
+   "ubicacion": "General Escobedo, Nuevo León",
+   "habilidades_tecnicas": [
+    "Administración"
+   ],
+   "habilidades_blandas": [
+    "Organización"
+   ],
+   "salario_min": 12000,
+   "salario_max": 16000,
+   "fecha_publicacion": "2026-08-25",
+   "fuente": "OCC",
+   "url": "https://www.occ.com.mx/empleo/oferta/21309999/"
+  },
+  {
+   "titulo": "Inspector de Piso",
+   "empresa": "JAITER SA DE CV",
+   "ubicacion": "General Escobedo, Nuevo León",
+   "habilidades_tecnicas": [
+    "(inferida del título)"
+   ],
+   "habilidades_blandas": [
+    "Responsabilidad"
+   ],
+   "salario_min": 11000,
+   "salario_max": 12000,
+   "fecha_publicacion": "2026-08-25",
+   "fuente": "OCC",
+   "url": "https://www.occ.com.mx/empleo/oferta/21310111/"
+  },
+  {
+   "titulo": "Gerente de Compras - industria metalmecánica",
+   "empresa": "TRIARC TANK / TATSA",
+   "ubicacion": "Huehuetoca, Estado de México",
+   "habilidades_tecnicas": [
+    "Gestión de planta"
+   ],
+   "habilidades_blandas": [
+    "Liderazgo"
+   ],
+   "salario_min": 80000,
+   "salario_max": 90000,
+   "fecha_publicacion": "2026-08-25",
+   "fuente": "OCC",
+   "url": "https://www.occ.com.mx/empleo/oferta/21307570/"
+  },
+  {
+   "titulo": "Supervisor de Metalmecánica",
+   "empresa": "Impulsora Tlaxcalteca",
+   "ubicacion": "Papalotla de Xicohténcatl, Tlaxcala",
+   "habilidades_tecnicas": [
+    "(inferida del título)"
+   ],
+   "habilidades_blandas": [
+    "Responsabilidad"
+   ],
+   "salario_min": null,
+   "salario_max": null,
+   "fecha_publicacion": "2026-08-25",
+   "fuente": "OCC",
+   "url": "https://www.occ.com.mx/empleo/oferta/21307666/"
+  },
+  {
+   "titulo": "Soldador Industrial",
+   "empresa": "HERKEL RECUBRIMIENTOS",
+   "ubicacion": "Tlalpan, CDMX",
+   "habilidades_tecnicas": [
+    "Soldadura y maquinado CNC"
+   ],
+   "habilidades_blandas": [
+    "Atención al detalle"
+   ],
+   "salario_min": null,
+   "salario_max": null,
+   "fecha_publicacion": "2026-08-31",
+   "fuente": "Indeed",
+   "url": "https://to.indeed.com/aal7p99wwz24"
+  },
+  {
+   "titulo": "Soldador Microalambre",
+   "empresa": "TLTERMINALS",
+   "ubicacion": "Monterrey Centro, N. L.",
+   "habilidades_tecnicas": [
+    "Soldadura y maquinado CNC"
+   ],
+   "habilidades_blandas": [
+    "Atención al detalle"
+   ],
+   "salario_min": null,
+   "salario_max": null,
+   "fecha_publicacion": "2026-08-31",
+   "fuente": "Indeed",
+   "url": "https://to.indeed.com/aah8plktlrql"
+  },
+  {
+   "titulo": "Soldador industrial",
+   "empresa": "HERKEL RECUBRIMIENTOS",
+   "ubicacion": "Tlalpan, CDMX",
+   "habilidades_tecnicas": [
+    "soldadura industrial"
+   ],
+   "habilidades_blandas": [
+    "Atención al detalle"
+   ],
+   "salario_min": null,
+   "salario_max": null,
+   "fecha_publicacion": "2026-08-31",
+   "fuente": "Indeed",
+   "url": "https://to.indeed.com/aargkzcjcgxm"
+  }
+ ],
+ "vacantes_detalle_nota": "Generado programáticamente (2026-08-31) por etapa4_sector_json.py sobre 856 vacantes verificadas (vacantes_metalmecanica_verificadas_auto.csv). Todos los conteos son exactos (pandas, sin estimaciones). Salario normalizado a MXN mensual (Adzuna >90,000/año se dividió entre 12). vacantes_con_habilidades cuenta solo habilidades EXPLÍCITAS en el CSV fuente. Muestra vacantes_detalle: filtro de recencia Adzuna<=10d / Indeed<=15d / OCC<=20d desde hoy, muestreo proporcional por fuente, máx. 60; habilidades faltantes inferidas por categoría de puesto."
+}
