@@ -1,69 +1,65 @@
 {
  "nombre": "Gestión y Administración",
- "vacantes_verificadas": 254,
- "vacantes_descartadas": 20,
+ "vacantes_verificadas": 355,
+ "vacantes_descartadas": 132,
  "vacantes_con_habilidades": 0,
  "pct_con_habilidades": 0.0,
  "fuentes": {
-  "OCC": 130,
-  "Adzuna": 121,
-  "Indeed": 3
+  "Adzuna": 176,
+  "OCC": 168,
+  "Indeed": 11
  },
  "categorias_puesto": [
   {
    "categoria": "Administración",
-   "vacantes": 120,
-   "pct": 47.2
+   "vacantes": 146,
+   "pct": 41.1
   },
   {
    "categoria": "Gestión de Proyectos",
-   "vacantes": 116,
-   "pct": 45.7
+   "vacantes": 142,
+   "pct": 40.0
   },
   {
    "categoria": "Otro",
-   "vacantes": 15,
-   "pct": 5.9
+   "vacantes": 62,
+   "pct": 17.5
+  },
+  {
+   "categoria": "Finanzas y Contabilidad",
+   "vacantes": 3,
+   "pct": 0.8
   },
   {
    "categoria": "Tecnologías de la Información",
    "vacantes": 2,
-   "pct": 0.8
-  },
-  {
-   "categoria": "Finanzas y Contabilidad",
-   "vacantes": 1,
-   "pct": 0.4
+   "pct": 0.6
   }
  ],
  "habilidades_tecnicas": [
   {
    "skill": "gestión administrativa",
-   "menciones": 124
+   "menciones": 154
   },
   {
    "skill": "gestión de proyectos",
-   "menciones": 69
+   "menciones": 76
   },
   {
    "skill": "finanzas / control presupuestal",
-   "menciones": 19
+   "menciones": 32
   },
   {
    "skill": "sistemas / erp",
-   "menciones": 5
+   "menciones": 9
   },
   {
    "skill": "contabilidad",
-   "menciones": 3
-  },
-  {
-   "skill": "logística y cadena de suministro",
-   "menciones": 1
+   "menciones": 7
   },
   {
    "skill": "certificaciones pmp / agile",
-   "menciones": 1
+   "menciones": 2
   },
   {
    "skill": "auditoría y normatividad",
@@ -73,24 +69,32 @@
  "habilidades_blandas": [
   {
    "skill": "liderazgo",
-   "menciones": 162
+   "menciones": 161
+  },
+  {
+   "skill": "coordinación de equipos",
+   "menciones": 14
   },
   {
    "skill": "comunicación bilingüe",
    "menciones": 8
   },
   {
-   "skill": "coordinación de equipos",
-   "menciones": 8
-  },
-  {
    "skill": "atención al detalle / control",
-   "menciones": 3
+   "menciones": 5
   }
  ],
  "top_empresas": [
   {
+   "empresa": "Aliat Universidades",
+   "vacantes": 10
+  },
+  {
    "empresa": "Talisis",
+   "vacantes": 6
+  },
+  {
+   "empresa": "Grupo Salinas",
    "vacantes": 6
   },
   {
@@ -98,105 +102,97 @@
    "vacantes": 4
   },
   {
-   "empresa": "Grupo Fame",
+   "empresa": "CA MEXICO S DE RL",
    "vacantes": 4
   },
   {
-   "empresa": "Adecco",
-   "vacantes": 3
+   "empresa": "C&A Mexico S De Rl",
+   "vacantes": 4
+  },
+  {
+   "empresa": "Grupo Fame",
+   "vacantes": 4
   },
   {
    "empresa": "MAVI DE OCCIDENTE SA DE CV",
    "vacantes": 3
   },
   {
-   "empresa": "Grupo Salinas",
+   "empresa": "Adecco",
    "vacantes": 3
   },
   {
-   "empresa": "Aliat Universidades",
+   "empresa": "Farmacias del Ahorro",
    "vacantes": 3
   },
   {
-   "empresa": "Stefanini LATAM",
-   "vacantes": 2
+   "empresa": "Hospital Moscati De Queretaro",
+   "vacantes": 3
   },
   {
-   "empresa": "PERSONAL CORDILLERA DE LOS ANDES",
-   "vacantes": 2
+   "empresa": "Salud Digna",
+   "vacantes": 3
   },
   {
-   "empresa": "Cerraco Mex S.A. de C.V.",
-   "vacantes": 2
+   "empresa": "CONSULTORIA EN INTERNET ERGO SUM",
+   "vacantes": 3
   },
   {
-   "empresa": "C&A México S de RL",
-   "vacantes": 2
-  },
-  {
-   "empresa": "OPERADORA DE HOSPITALES ANGELES SA. DE CV.",
-   "vacantes": 2
-  },
-  {
-   "empresa": "Compañía Integra Soluciones",
-   "vacantes": 2
-  },
-  {
-   "empresa": "TIENDAS TRES B",
-   "vacantes": 2
+   "empresa": "PRESERVE SYSTEMS SC",
+   "vacantes": 3
   }
  ],
  "cobertura_geografica": {
   "top_estados": [
    {
     "estado": "Ciudad de México",
-    "vacantes": 79
+    "vacantes": 107
    },
    {
     "estado": "Jalisco",
-    "vacantes": 23
+    "vacantes": 35
    },
    {
     "estado": "Nuevo León",
-    "vacantes": 22
+    "vacantes": 32
    },
    {
     "estado": "Estado de México",
-    "vacantes": 19
+    "vacantes": 22
    },
    {
     "estado": "Querétaro",
-    "vacantes": 11
+    "vacantes": 14
    },
    {
     "estado": "Guanajuato",
     "vacantes": 11
    },
    {
-    "estado": "Puebla",
-    "vacantes": 7
-   },
-   {
-    "estado": "Yucatán",
-    "vacantes": 7
-   },
-   {
     "estado": "Quintana Roo",
-    "vacantes": 6
+    "vacantes": 9
    },
    {
-    "estado": "Baja California",
-    "vacantes": 6
+    "estado": "Puebla",
+    "vacantes": 5
+   },
+   {
+    "estado": "Hidalgo",
+    "vacantes": 5
+   },
+   {
+    "estado": "Chihuahua",
+    "vacantes": 5
    }
   ],
-  "estados_unicos": 25
+  "estados_unicos": 28
  },
  "salario": {
-  "vacantes_con_dato": 117,
-  "pct_con_dato": 46.1,
-  "mediana_mensual_mxn": 32500,
-  "p25_mensual_mxn": 22000,
-  "p75_mensual_mxn": 47500
+  "vacantes_con_dato": 183,
+  "pct_con_dato": 51.5,
+  "mediana_mensual_mxn": 27500,
+  "p25_mensual_mxn": 16749,
+  "p75_mensual_mxn": 45000
  },
  "evolucion_semanal": [
   {
@@ -205,7 +201,7 @@
   },
   {
    "semana": "15 Jun",
-   "vacantes": 2
+   "vacantes": 1
   },
   {
    "semana": "22 Jun",
@@ -213,15 +209,15 @@
   },
   {
    "semana": "29 Jun",
-   "vacantes": 3
+   "vacantes": 2
   },
   {
    "semana": "06 Jul",
-   "vacantes": 4
+   "vacantes": 2
   },
   {
    "semana": "13 Jul",
-   "vacantes": 4
+   "vacantes": 1
   },
   {
    "semana": "20 Jul",
@@ -229,32 +225,132 @@
   },
   {
    "semana": "27 Jul",
-   "vacantes": 12
+   "vacantes": 8
   },
   {
    "semana": "03 Ago",
-   "vacantes": 80
+   "vacantes": 64
   },
   {
    "semana": "10 Ago",
-   "vacantes": 54
+   "vacantes": 43
   },
   {
    "semana": "17 Ago",
-   "vacantes": 61
+   "vacantes": 58
   },
   {
    "semana": "24 Ago",
-   "vacantes": 23
+   "vacantes": 148
+  },
+  {
+   "semana": "31 Ago",
+   "vacantes": 17
   }
  ],
- "total_empresas_unicas": 186,
- "ultima_semana_vacantes": 23,
+ "total_empresas_unicas": 275,
+ "ultima_semana_vacantes": 17,
  "vacantes_detalle": [
   {
-   "titulo": "PROJECT MANAGER Industrial Automation & Machinery",
-   "empresa": "AMD MAQUINARIA SA DE CV",
-   "ubicacion": "Querétaro",
+   "titulo": "Project Manager Salesforce",
+   "empresa": "PRESERVE SYSTEMS SC",
+   "ubicacion": "Miguel Hidalgo, Ciudad de México",
+   "habilidades_tecnicas": [
+    "Gestión de proyectos"
+   ],
+   "habilidades_blandas": [
+    "Liderazgo"
+   ],
+   "salario_min": 60000,
+   "salario_max": 75000,
+   "fecha_publicacion": "2026-08-31",
+   "fuente": "OCC",
+   "url": "https://www.occ.com.mx/empleo/oferta/21316641"
+  },
+  {
+   "titulo": "Administración",
+   "empresa": "SMASH MARKETING EVENTOS",
+   "ubicacion": "Coyoacán, Ciudad de México",
+   "habilidades_tecnicas": [
+    "Gestión administrativa y operativa"
+   ],
+   "habilidades_blandas": [
+    "Coordinación de equipos"
+   ],
+   "salario_min": 9460,
+   "salario_max": 9460,
+   "fecha_publicacion": "2026-08-31",
+   "fuente": "OCC",
+   "url": "https://www.occ.com.mx/empleo/oferta/21316666"
+  },
+  {
+   "titulo": "Practicante de Administración de Activos",
+   "empresa": "Red Acero",
+   "ubicacion": "Monterrey, Nuevo León",
+   "habilidades_tecnicas": [
+    "Gestión administrativa y operativa"
+   ],
+   "habilidades_blandas": [
+    "Coordinación de equipos"
+   ],
+   "salario_min": null,
+   "salario_max": null,
+   "fecha_publicacion": "2026-08-31",
+   "fuente": "OCC",
+   "url": "https://www.occ.com.mx/empleo/oferta/21306851"
+  },
+  {
+   "titulo": "Encargado de contabilidad y administración",
+   "empresa": "ROUTES PROYECTOS SOSTENIBLES",
+   "ubicacion": "Oaxaca de Juárez, Oaxaca",
+   "habilidades_tecnicas": [
+    "Gestión administrativa y operativa"
+   ],
+   "habilidades_blandas": [
+    "Coordinación de equipos"
+   ],
+   "salario_min": 16999,
+   "salario_max": 17000,
+   "fecha_publicacion": "2026-08-31",
+   "fuente": "OCC",
+   "url": "https://www.occ.com.mx/empleo/oferta/21316582"
+  },
+  {
+   "titulo": "Recepción, Atención al cliente y Administración",
+   "empresa": "Desarrollo en Competencia Laboral Ikal S.C.",
+   "ubicacion": "Álvaro Obregón, Ciudad de México",
+   "habilidades_tecnicas": [
+    "Gestión administrativa y operativa"
+   ],
+   "habilidades_blandas": [
+    "Coordinación de equipos"
+   ],
+   "salario_min": 9000,
+   "salario_max": 10000,
+   "fecha_publicacion": "2026-08-31",
+   "fuente": "OCC",
+   "url": "https://www.occ.com.mx/empleo/oferta/21316504"
+  },
+  {
+   "titulo": "Project Manager (MuleSoft)",
+   "empresa": "PRESERVE SYSTEMS SC",
+   "ubicacion": "Ciudad de México",
+   "habilidades_tecnicas": [
+    "Gestión de proyectos"
+   ],
+   "habilidades_blandas": [
+    "Liderazgo"
+   ],
+   "salario_min": 70000,
+   "salario_max": 75000,
+   "fecha_publicacion": "2026-08-31",
+   "fuente": "OCC",
+   "url": "https://www.occ.com.mx/empleo/oferta/21316590"
+  },
+  {
+   "titulo": "Project manager",
+   "empresa": "Data Warden S.A. de C.V.",
+   "ubicacion": "Naucalpan de Juárez, Estado de México",
    "habilidades_tecnicas": [
     "Gestión de proyectos"
    ],
@@ -263,13 +359,237 @@
    ],
    "salario_min": null,
    "salario_max": null,
-   "fecha_publicacion": "2026-08-25",
+   "fecha_publicacion": "2026-08-31",
    "fuente": "OCC",
-   "url": "https://www.occ.com.mx/empleo/oferta/21299460-project-manager-industrial-automation-machinery/"
+   "url": "https://www.occ.com.mx/empleo/oferta/21316814"
   },
   {
-   "titulo": "Project manager de Arquitectura y Retail",
-   "empresa": "PARKS MANTENIMIENTO",
+   "titulo": "Project Manager (PM) de Sistemas Core, SAP & Legacy",
+   "empresa": "CONSULTORIA EN INTERNET ERGO SUM",
+   "ubicacion": "Ciudad de México",
+   "habilidades_tecnicas": [
+    "Gestión de proyectos"
+   ],
+   "habilidades_blandas": [
+    "Liderazgo"
+   ],
+   "salario_min": 70000,
+   "salario_max": 75000,
+   "fecha_publicacion": "2026-08-31",
+   "fuente": "OCC",
+   "url": "https://www.occ.com.mx/empleo/oferta/21316820"
+  },
+  {
+   "titulo": "practicante administración mabe CELAYA",
+   "empresa": "CONTROLADORA MABE",
+   "ubicacion": "Celaya, Guanajuato",
+   "habilidades_tecnicas": [
+    "Gestión administrativa y operativa"
+   ],
+   "habilidades_blandas": [
+    "Coordinación de equipos"
+   ],
+   "salario_min": 6000,
+   "salario_max": 6000,
+   "fecha_publicacion": "2026-08-31",
+   "fuente": "OCC",
+   "url": "https://www.occ.com.mx/empleo/oferta/21307225"
+  },
+  {
+   "titulo": "Project Manager",
+   "empresa": "AUTYCOM",
+   "ubicacion": "Monterrey, Nuevo León",
+   "habilidades_tecnicas": [
+    "Gestión de proyectos"
+   ],
+   "habilidades_blandas": [
+    "Liderazgo"
+   ],
+   "salario_min": 26000,
+   "salario_max": 29500,
+   "fecha_publicacion": "2026-08-31",
+   "fuente": "OCC",
+   "url": "https://www.occ.com.mx/empleo/oferta/21316981"
+  },
+  {
+   "titulo": "Project Manager (PM) - Soluciones Salesforce & Canales Digitales",
+   "empresa": "CONSULTORIA EN INTERNET ERGO SUM",
+   "ubicacion": "Ciudad de México",
+   "habilidades_tecnicas": [
+    "Gestión de proyectos"
+   ],
+   "habilidades_blandas": [
+    "Liderazgo"
+   ],
+   "salario_min": 70000,
+   "salario_max": 75000,
+   "fecha_publicacion": "2026-08-31",
+   "fuente": "OCC",
+   "url": "https://www.occ.com.mx/empleo/oferta/21316809"
+  },
+  {
+   "titulo": "Project Manager (PM) de Integración & Cloud",
+   "empresa": "CONSULTORIA EN INTERNET ERGO SUM",
+   "ubicacion": "Ciudad de México",
+   "habilidades_tecnicas": [
+    "Gestión de proyectos"
+   ],
+   "habilidades_blandas": [
+    "Liderazgo"
+   ],
+   "salario_min": 70000,
+   "salario_max": 75000,
+   "fecha_publicacion": "2026-08-31",
+   "fuente": "OCC",
+   "url": "https://www.occ.com.mx/empleo/oferta/21316532"
+  },
+  {
+   "titulo": "Project Manager SAP",
+   "empresa": "PRESERVE SYSTEMS SC",
+   "ubicacion": "Ciudad de México",
+   "habilidades_tecnicas": [
+    "Gestión de proyectos"
+   ],
+   "habilidades_blandas": [
+    "Liderazgo"
+   ],
+   "salario_min": 70000,
+   "salario_max": 75000,
+   "fecha_publicacion": "2026-08-31",
+   "fuente": "OCC",
+   "url": "https://www.occ.com.mx/empleo/oferta/21316601"
+  },
+  {
+   "titulo": "GERENTE DE PROYECTOS Y APERTURAS",
+   "empresa": "S S GLOBAL, SA DE CV",
+   "ubicacion": "Monterrey, Nuevo León",
+   "habilidades_tecnicas": [
+    "Gestión de proyectos"
+   ],
+   "habilidades_blandas": [
+    "Liderazgo"
+   ],
+   "salario_min": 40000,
+   "salario_max": 45000,
+   "fecha_publicacion": "2026-08-31",
+   "fuente": "OCC",
+   "url": "https://www.occ.com.mx/empleo/oferta/21316241"
+  },
+  {
+   "titulo": "Project Manager TI Junior | Scrum Master Jr | Ingles B2",
+   "empresa": "Corus Consulting",
+   "ubicacion": "Álvaro Obregón, Ciudad de México",
+   "habilidades_tecnicas": [
+    "Gestión de proyectos"
+   ],
+   "habilidades_blandas": [
+    "Liderazgo"
+   ],
+   "salario_min": null,
+   "salario_max": null,
+   "fecha_publicacion": "2026-08-31",
+   "fuente": "OCC",
+   "url": "https://www.occ.com.mx/empleo/oferta/21317219"
+  },
+  {
+   "titulo": "Administración",
+   "empresa": "Ms residenciales",
+   "ubicacion": "San Pedro Tlaquepaque, Jalisco",
+   "habilidades_tecnicas": [
+    "Gestión administrativa y operativa"
+   ],
+   "habilidades_blandas": [
+    "Coordinación de equipos"
+   ],
+   "salario_min": 12000,
+   "salario_max": 15000,
+   "fecha_publicacion": "2026-08-30",
+   "fuente": "OCC",
+   "url": "https://www.occ.com.mx/empleo/oferta/21306714"
+  },
+  {
+   "titulo": "Becario Ingeniería Industrial, Administración de Negocios:",
+   "empresa": "SERVICIOS INTEGRALES EVENPLAN SC",
+   "ubicacion": "Montemorelos, Nuevo León",
+   "habilidades_tecnicas": [
+    "Gestión administrativa y operativa"
+   ],
+   "habilidades_blandas": [
+    "Coordinación de equipos"
+   ],
+   "salario_min": 8000,
+   "salario_max": 8000,
+   "fecha_publicacion": "2026-08-30",
+   "fuente": "OCC",
+   "url": "https://www.occ.com.mx/empleo/oferta/21316127"
+  },
+  {
+   "titulo": "AUXILIAR COMERCIAL, DE ADMINISTRACION Y COBRANZA",
+   "empresa": "CONSTRUCTOR MONTE CARLO S.A. DE C.V.",
+   "ubicacion": "Jalisco",
+   "habilidades_tecnicas": [
+    "Gestión de proyectos"
+   ],
+   "habilidades_blandas": [
+    "Liderazgo"
+   ],
+   "salario_min": 12000,
+   "salario_max": 15000,
+   "fecha_publicacion": "2026-08-29",
+   "fuente": "OCC",
+   "url": "https://www.occ.com.mx/empleo/oferta/21306608"
+  },
+  {
+   "titulo": "Recién egresados - Administración",
+   "empresa": "Grupo Tenerife",
+   "ubicacion": "Zapopan, Jalisco",
+   "habilidades_tecnicas": [
+    "Gestión administrativa y operativa"
+   ],
+   "habilidades_blandas": [
+    "Coordinación de equipos"
+   ],
+   "salario_min": null,
+   "salario_max": null,
+   "fecha_publicacion": "2026-08-29",
+   "fuente": "OCC",
+   "url": "https://www.occ.com.mx/empleo/oferta/21315902"
+  },
+  {
+   "titulo": "Practicante administración",
+   "empresa": "CONTROLADORA MABE",
+   "ubicacion": "Querétaro, Querétaro",
+   "habilidades_tecnicas": [
+    "Gestión administrativa y operativa"
+   ],
+   "habilidades_blandas": [
+    "Coordinación de equipos"
+   ],
+   "salario_min": 7500,
+   "salario_max": 7500,
+   "fecha_publicacion": "2026-08-29",
+   "fuente": "OCC",
+   "url": "https://www.occ.com.mx/empleo/oferta/21313196"
+  },
+  {
+   "titulo": "Asistente/a Administración Escolar",
+   "empresa": "Universidad Tecnológica de México",
+   "ubicacion": "San Nicolás de los Garza, Nuevo León",
+   "habilidades_tecnicas": [
+    "Gestión administrativa y operativa"
+   ],
+   "habilidades_blandas": [
+    "Coordinación de equipos"
+   ],
+   "salario_min": 13000,
+   "salario_max": 13500,
+   "fecha_publicacion": "2026-08-29",
+   "fuente": "OCC",
+   "url": "https://www.occ.com.mx/empleo/oferta/21315986"
+  },
+  {
+   "titulo": "It project manager Jr (Inglés conversacional)",
+   "empresa": "Corus Consulting",
    "ubicacion": "Ciudad de México",
    "habilidades_tecnicas": [
     "Gestión de proyectos"
@@ -279,14 +599,62 @@
    ],
    "salario_min": null,
    "salario_max": null,
-   "fecha_publicacion": "2026-08-25",
+   "fecha_publicacion": "2026-08-28",
    "fuente": "OCC",
-   "url": "https://www.occ.com.mx/empleo/oferta/21300324-project-manager-de-arquitectura-retail/"
+   "url": "https://www.occ.com.mx/empleo/oferta/21315077"
   },
   {
-   "titulo": "PROJECT MANAGER",
-   "empresa": "BOJAY ELECTRONICS",
-   "ubicacion": "Jalisco",
+   "titulo": "Project manager",
+   "empresa": "SANVER FORTE SA DE CV",
+   "ubicacion": "Poza Rica de Hidalgo, Veracruz",
+   "habilidades_tecnicas": [
+    "Gestión de proyectos"
+   ],
+   "habilidades_blandas": [
+    "Liderazgo"
+   ],
+   "salario_min": 18000,
+   "salario_max": 23000,
+   "fecha_publicacion": "2026-08-28",
+   "fuente": "OCC",
+   "url": "https://www.occ.com.mx/empleo/oferta/21314333"
+  },
+  {
+   "titulo": "Project manager",
+   "empresa": "SANVER FORTE SA DE CV",
+   "ubicacion": "Tampico, Tamaulipas",
+   "habilidades_tecnicas": [
+    "Gestión de proyectos"
+   ],
+   "habilidades_blandas": [
+    "Liderazgo"
+   ],
+   "salario_min": 18000,
+   "salario_max": 23000,
+   "fecha_publicacion": "2026-08-28",
+   "fuente": "OCC",
+   "url": "https://www.occ.com.mx/empleo/oferta/21315636"
+  },
+  {
+   "titulo": "Project Manager - Inglés avanzado",
+   "empresa": "Corus Consulting",
+   "ubicacion": "Ciudad de México",
+   "habilidades_tecnicas": [
+    "Gestión de proyectos"
+   ],
+   "habilidades_blandas": [
+    "Liderazgo"
+   ],
+   "salario_min": 20000,
+   "salario_max": 25000,
+   "fecha_publicacion": "2026-08-28",
+   "fuente": "OCC",
+   "url": "https://www.occ.com.mx/empleo/oferta/21314648"
+  },
+  {
+   "titulo": "Project Manager",
+   "empresa": "BA Solutions SA de CV",
+   "ubicacion": "Benito Juárez, Ciudad de México",
    "habilidades_tecnicas": [
     "Gestión de proyectos"
    ],
@@ -295,13 +663,125 @@
    ],
    "salario_min": null,
    "salario_max": null,
-   "fecha_publicacion": "2026-08-25",
+   "fecha_publicacion": "2026-08-28",
    "fuente": "OCC",
-   "url": "https://www.occ.com.mx/empleo/oferta/21299309-project-manager/"
+   "url": "https://www.occ.com.mx/empleo/oferta/21314881"
   },
   {
-   "titulo": "Gerente administrativo",
-   "empresa": "DELI MARKET POR FERBIS SA DE CV",
+   "titulo": "COORDINADOR(A) DE ADMINISTRACIÓN MÉDICA Y FINANZAS",
+   "empresa": "ELEMENTRH EMPRESARIAL SA DE CV",
+   "ubicacion": "Jalisco",
+   "habilidades_tecnicas": [
+    "Gestión administrativa y operativa"
+   ],
+   "habilidades_blandas": [
+    "Coordinación de equipos"
+   ],
+   "salario_min": null,
+   "salario_max": null,
+   "fecha_publicacion": "2026-08-28",
+   "fuente": "OCC",
+   "url": "https://www.occ.com.mx/empleo/oferta/21314404"
+  },
+  {
+   "titulo": "Coordinador de administraciòn y cobranza",
+   "empresa": "Sales Force Operations",
+   "ubicacion": "Ciudad de México",
+   "habilidades_tecnicas": [
+    "Gestión de proyectos"
+   ],
+   "habilidades_blandas": [
+    "Liderazgo"
+   ],
+   "salario_min": 25000,
+   "salario_max": 30000,
+   "fecha_publicacion": "2026-08-28",
+   "fuente": "OCC",
+   "url": "https://www.occ.com.mx/empleo/oferta/21314869"
+  },
+  {
+   "titulo": "Egresado Trainne Administración",
+   "empresa": "Mota-Engil Mexico, SAPI de CV",
+   "ubicacion": "Miguel Hidalgo, Ciudad de México",
+   "habilidades_tecnicas": [
+    "Gestión administrativa y operativa"
+   ],
+   "habilidades_blandas": [
+    "Coordinación de equipos"
+   ],
+   "salario_min": 16000,
+   "salario_max": 19000,
+   "fecha_publicacion": "2026-08-27",
+   "fuente": "OCC",
+   "url": "https://www.occ.com.mx/empleo/oferta/21313816"
+  },
+  {
+   "titulo": "Project Manager",
+   "empresa": "Valeo Sistemas Electricos SA de CV",
+   "ubicacion": "San Luis Potosí",
+   "habilidades_tecnicas": [
+    "Gestión de proyectos"
+   ],
+   "habilidades_blandas": [
+    "Liderazgo"
+   ],
+   "salario_min": null,
+   "salario_max": null,
+   "fecha_publicacion": "2026-08-27",
+   "fuente": "OCC",
+   "url": "https://www.occ.com.mx/empleo/oferta/21313746"
+  },
+  {
+   "titulo": "Gerente de Administración y Finanzas",
+   "empresa": "Megacable",
+   "ubicacion": "Azcapotzalco, Ciudad de México",
+   "habilidades_tecnicas": [
+    "Gestión administrativa y operativa"
+   ],
+   "habilidades_blandas": [
+    "Coordinación de equipos"
+   ],
+   "salario_min": 40000,
+   "salario_max": 45000,
+   "fecha_publicacion": "2026-08-27",
+   "fuente": "OCC",
+   "url": "https://www.occ.com.mx/empleo/oferta/21314282"
+  },
+  {
+   "titulo": "Commercial Admin Implant",
+   "empresa": "MSTAR INNOVATION",
+   "ubicacion": "Monterrey, Nuevo León",
+   "habilidades_tecnicas": [
+    "(inferida del título)"
+   ],
+   "habilidades_blandas": [
+    "Responsabilidad"
+   ],
+   "salario_min": 15000,
+   "salario_max": 15000,
+   "fecha_publicacion": "2026-08-27",
+   "fuente": "OCC",
+   "url": "https://www.occ.com.mx/empleo/oferta/21304251"
+  },
+  {
+   "titulo": "Becario de Actuaría, Administración, Ingenieria Industrial / Medio tiempo",
+   "empresa": "SERVICIOS INTEGRALES EVENPLAN SC",
+   "ubicacion": "San Pedro Garza García, Nuevo León",
+   "habilidades_tecnicas": [
+    "Gestión administrativa y operativa"
+   ],
+   "habilidades_blandas": [
+    "Coordinación de equipos"
+   ],
+   "salario_min": 8000,
+   "salario_max": 8000,
+   "fecha_publicacion": "2026-08-27",
+   "fuente": "OCC",
+   "url": "https://www.occ.com.mx/empleo/oferta/21303572"
+  },
+  {
+   "titulo": "Administración Comercial jr",
+   "empresa": "ROVE ASOCIADOS, AGENTE DE SEGUROS Y DE FIANZAS",
    "ubicacion": "Mexicali, Baja California",
    "habilidades_tecnicas": [
     "Gestión administrativa y operativa"
@@ -309,128 +789,16 @@
    "habilidades_blandas": [
     "Coordinación de equipos"
    ],
-   "salario_min": 30000,
-   "salario_max": 35000,
-   "fecha_publicacion": "2026-08-25",
-   "fuente": "OCC",
-   "url": "https://www.occ.com.mx/empleo/oferta/21300756-gerente-administrativo/"
-  },
-  {
-   "titulo": "Project Manager- Bilingue",
-   "empresa": "OPERADORA DE HOSPITALES ANGELES SA. DE CV.",
-   "ubicacion": "Ciudad de México",
-   "habilidades_tecnicas": [
-    "Gestión de proyectos"
-   ],
-   "habilidades_blandas": [
-    "Liderazgo"
-   ],
-   "salario_min": 17000,
-   "salario_max": 20000,
-   "fecha_publicacion": "2026-08-24",
-   "fuente": "OCC",
-   "url": "https://www.occ.com.mx/empleo/oferta/21303566-project-manager-bilingue/"
-  },
-  {
-   "titulo": "Project manager senior",
-   "empresa": "INTERNACIONAL DE SISTEMAS",
-   "ubicacion": "Ciudad de México",
-   "habilidades_tecnicas": [
-    "Gestión de proyectos"
-   ],
-   "habilidades_blandas": [
-    "Liderazgo"
-   ],
-   "salario_min": 40000,
-   "salario_max": 45000,
-   "fecha_publicacion": "2026-08-24",
-   "fuente": "OCC",
-   "url": "https://www.occ.com.mx/empleo/oferta/21298891-project-manager-senior/"
-  },
-  {
-   "titulo": "Jefe Administrativo de Obra Construcción",
-   "empresa": "PERSONAL CORDILLERA DE LOS ANDES",
-   "ubicacion": "Tizayuca, Hidalgo",
-   "habilidades_tecnicas": [
-    "Gestión de proyectos"
-   ],
-   "habilidades_blandas": [
-    "Liderazgo"
-   ],
    "salario_min": null,
    "salario_max": null,
-   "fecha_publicacion": "2026-08-24",
+   "fecha_publicacion": "2026-08-27",
    "fuente": "OCC",
-   "url": "https://www.occ.com.mx/empleo/oferta/21299100-jefe-administrativo-de-obra-construccion/"
+   "url": "https://www.occ.com.mx/empleo/oferta/21303784"
   },
   {
-   "titulo": "IT Project Manager End User & Collaboration Transformation",
-   "empresa": "Adecco",
-   "ubicacion": "Zapopan, Jalisco",
-   "habilidades_tecnicas": [
-    "Gestión de proyectos"
-   ],
-   "habilidades_blandas": [
-    "Liderazgo"
-   ],
-   "salario_min": 90000,
-   "salario_max": 90000,
-   "fecha_publicacion": "2026-08-24",
-   "fuente": "OCC",
-   "url": "https://www.occ.com.mx/empleo/oferta/21308673-it-project-manager-end-user-collaboration-transformation/"
-  },
-  {
-   "titulo": "PROJECT MANAGER CONSTRUCCIÓN",
-   "empresa": "Adecco",
-   "ubicacion": "Veracruz, Veracruz",
-   "habilidades_tecnicas": [
-    "Gestión de proyectos"
-   ],
-   "habilidades_blandas": [
-    "Liderazgo"
-   ],
-   "salario_min": null,
-   "salario_max": null,
-   "fecha_publicacion": "2026-08-24",
-   "fuente": "OCC",
-   "url": "https://www.occ.com.mx/empleo/oferta/21299173-project-manager-construccion/"
-  },
-  {
-   "titulo": "Gerente administrativo",
-   "empresa": "SEÑALIZA SOLUCIONES VIALES E INDUSTRIALES",
-   "ubicacion": "Monterrey, Nuevo León",
-   "habilidades_tecnicas": [
-    "Gestión administrativa y operativa"
-   ],
-   "habilidades_blandas": [
-    "Coordinación de equipos"
-   ],
-   "salario_min": 25000,
-   "salario_max": 30000,
-   "fecha_publicacion": "2026-08-24",
-   "fuente": "OCC",
-   "url": "https://www.occ.com.mx/empleo/oferta/21307494-gerente-administrativo/"
-  },
-  {
-   "titulo": "Project Manager - Desarrollo Inmobiliario",
-   "empresa": "Grupo UBK",
-   "ubicacion": "Ciudad de México",
-   "habilidades_tecnicas": [
-    "Gestión de proyectos"
-   ],
-   "habilidades_blandas": [
-    "Liderazgo"
-   ],
-   "salario_min": null,
-   "salario_max": null,
-   "fecha_publicacion": "2026-08-24",
-   "fuente": "OCC",
-   "url": "https://www.occ.com.mx/empleo/oferta/21308122-project-manager-desarrollo-inmobiliario/"
-  },
-  {
-   "titulo": "Gerente administrativo y operativo",
-   "empresa": "Farmacias del Ahorro, S.A.",
-   "ubicacion": "Tijuana, Baja California",
+   "titulo": "Gerente Administrativo Especialidad Oncología",
+   "empresa": "Hospital Moscati De Queretaro",
+   "ubicacion": "México",
    "habilidades_tecnicas": [
     "Gestión administrativa y operativa"
    ],
@@ -439,620 +807,44 @@
    ],
    "salario_min": null,
    "salario_max": null,
-   "fecha_publicacion": "2026-08-24",
-   "fuente": "OCC",
-   "url": "https://www.occ.com.mx/empleo/oferta/21307890-gerente-administrativo-y-operativo/"
+   "fecha_publicacion": "2026-08-31",
+   "fuente": "Adzuna",
+   "url": "https://www.adzuna.com.mx/details/5862987709"
   },
   {
-   "titulo": "Gerente administración y Operación",
-   "empresa": "IMPULZO GOZNE",
-   "ubicacion": "Querétaro, Querétaro",
-   "habilidades_tecnicas": [
-    "Gestión administrativa y operativa"
-   ],
-   "habilidades_blandas": [
-    "Coordinación de equipos"
-   ],
-   "salario_min": 30000,
-   "salario_max": 33000,
-   "fecha_publicacion": "2026-08-24",
-   "fuente": "OCC",
-   "url": "https://www.occ.com.mx/empleo/oferta/21308246-gerente-administracion-y-operacion/"
-  },
-  {
-   "titulo": "Gerente Administrativo Hotel",
-   "empresa": "LUZ GRACIELA HERNANDEZ GOMEZ",
-   "ubicacion": "León, Guanajuato",
-   "habilidades_tecnicas": [
-    "Gestión administrativa y operativa"
-   ],
-   "habilidades_blandas": [
-    "Coordinación de equipos"
-   ],
-   "salario_min": 30000,
-   "salario_max": 30000,
-   "fecha_publicacion": "2026-08-24",
-   "fuente": "OCC",
-   "url": "https://www.occ.com.mx/empleo/oferta/21297600-gerente-administrativo-hotel/"
-  },
-  {
-   "titulo": "Coordinador de Proyectos",
-   "empresa": "BETTERWARE DE MEXICO",
-   "ubicacion": "Guadalajara, Jalisco",
-   "habilidades_tecnicas": [
-    "Gestión de proyectos"
-   ],
-   "habilidades_blandas": [
-    "Liderazgo"
-   ],
-   "salario_min": null,
-   "salario_max": null,
-   "fecha_publicacion": "2026-08-24",
-   "fuente": "OCC",
-   "url": "https://www.occ.com.mx/empleo/oferta/21298012-coordinador-de-proyectos/"
-  },
-  {
-   "titulo": "Contralor",
-   "empresa": "TALENTEX RH",
-   "ubicacion": "Culiacán, Sinaloa",
+   "titulo": "Product Owner Manager (Ciudad de México, Cuauhtémoc)",
+   "empresa": "BBVA",
+   "ubicacion": "Cuauhtémoc, Ciudad de México",
    "habilidades_tecnicas": [
     "(inferida del título)"
    ],
    "habilidades_blandas": [
     "Responsabilidad"
    ],
-   "salario_min": 50000,
-   "salario_max": 60000,
-   "fecha_publicacion": "2026-08-24",
-   "fuente": "OCC",
-   "url": "https://www.occ.com.mx/empleo/oferta/21307093-contralor/"
-  },
-  {
-   "titulo": "Gerente de proyecto de construcción",
-   "empresa": "CODCE",
-   "ubicacion": "El Marqués, Querétaro",
-   "habilidades_tecnicas": [
-    "Gestión de proyectos"
-   ],
-   "habilidades_blandas": [
-    "Liderazgo"
-   ],
-   "salario_min": 25000,
-   "salario_max": 30000,
-   "fecha_publicacion": "2026-08-24",
-   "fuente": "OCC",
-   "url": "https://www.occ.com.mx/empleo/oferta/21299033-gerente-de-proyecto-de-construccion/"
-  },
-  {
-   "titulo": "Gerente administración y finanzas",
-   "empresa": "Pullsale Btl SA de CV",
-   "ubicacion": "Guadalajara, Jalisco",
-   "habilidades_tecnicas": [
-    "Gestión administrativa y operativa"
-   ],
-   "habilidades_blandas": [
-    "Coordinación de equipos"
-   ],
-   "salario_min": 50000,
-   "salario_max": 50000,
-   "fecha_publicacion": "2026-08-24",
-   "fuente": "OCC",
-   "url": "https://www.occ.com.mx/empleo/oferta/21306852-gerente-administracion-y-finanzas/"
-  },
-  {
-   "titulo": "Gerente de Proyectos de Transformación Organizacional (Consultor)",
-   "empresa": "GPCMX",
-   "ubicacion": "Monterrey, Nuevo León",
-   "habilidades_tecnicas": [
-    "Gestión de proyectos"
-   ],
-   "habilidades_blandas": [
-    "Liderazgo"
-   ],
-   "salario_min": 55000,
-   "salario_max": 60000,
-   "fecha_publicacion": "2026-08-24",
-   "fuente": "OCC",
-   "url": "https://www.occ.com.mx/empleo/oferta/21308177-gerente-de-proyectos-de-transformacion-organizacional-consultor/"
-  },
-  {
-   "titulo": "PROJECT MANAGER SAP SENIOR PROCESOS E INTEGRACIÓN FUNCIONAL",
-   "empresa": "Compañía Integra Soluciones",
-   "ubicacion": "Monterrey, Nuevo León",
-   "habilidades_tecnicas": [
-    "Gestión de proyectos"
-   ],
-   "habilidades_blandas": [
-    "Liderazgo"
-   ],
-   "salario_min": 60000,
-   "salario_max": 70000,
-   "fecha_publicacion": "2026-08-24",
-   "fuente": "OCC",
-   "url": "https://www.occ.com.mx/empleo/oferta/21307265-project-manager-sap-senior-procesos-e-integracion-funcional/"
-  },
-  {
-   "titulo": "Gerente de Administración, Finanzas y Operaciones",
-   "empresa": "MDN SPORTS R. DE R.L. DE C.V.",
-   "ubicacion": "Jalisco",
-   "habilidades_tecnicas": [
-    "Gestión administrativa y operativa"
-   ],
-   "habilidades_blandas": [
-    "Coordinación de equipos"
-   ],
-   "salario_min": 30000,
-   "salario_max": 40000,
-   "fecha_publicacion": "2026-08-24",
-   "fuente": "OCC",
-   "url": "https://www.occ.com.mx/empleo/oferta/21307006-gerente-de-administracion-finanzas-y-operaciones-administrador-general/"
-  },
-  {
-   "titulo": "PROJECT MANAGER SAP SENIOR DATOS MAESTROS",
-   "empresa": "Compañía Integra Soluciones",
-   "ubicacion": "Monterrey, Nuevo León",
-   "habilidades_tecnicas": [
-    "Gestión de proyectos"
-   ],
-   "habilidades_blandas": [
-    "Liderazgo"
-   ],
-   "salario_min": 60000,
-   "salario_max": 70000,
-   "fecha_publicacion": "2026-08-24",
-   "fuente": "OCC",
-   "url": "https://www.occ.com.mx/empleo/oferta/21307138-project-manager-sap-senior-datos-maestros/"
-  },
-  {
-   "titulo": "Administrative Manager",
-   "empresa": "PRODENSA SERVICIOS DE CONSULTORIA, S.A.P.I. DE C.V.",
-   "ubicacion": "Tijuana, Baja California",
-   "habilidades_tecnicas": [
-    "Gestión administrativa y operativa"
-   ],
-   "habilidades_blandas": [
-    "Coordinación de equipos"
-   ],
    "salario_min": null,
    "salario_max": null,
-   "fecha_publicacion": "2026-08-22",
-   "fuente": "OCC",
-   "url": "https://www.occ.com.mx/empleo/oferta/21304320-administrative-manager/"
-  },
-  {
-   "titulo": "Gerente administrativo de inmuebles",
-   "empresa": "MAVI DE OCCIDENTE SA DE CV",
-   "ubicacion": "Guadalajara, Jalisco",
-   "habilidades_tecnicas": [
-    "Gestión administrativa y operativa"
-   ],
-   "habilidades_blandas": [
-    "Coordinación de equipos"
-   ],
-   "salario_min": 37000,
-   "salario_max": 42000,
-   "fecha_publicacion": "2026-08-22",
-   "fuente": "OCC",
-   "url": "https://www.occ.com.mx/empleo/oferta/21306553-gerente-administrativo-de-inmuebles/"
-  },
-  {
-   "titulo": "Gerente de proyectos",
-   "empresa": "INDUSTRIAS DINAMEK S.A. DE C.V.",
-   "ubicacion": "Saltillo, Coahuila",
-   "habilidades_tecnicas": [
-    "Gestión de proyectos"
-   ],
-   "habilidades_blandas": [
-    "Liderazgo"
-   ],
-   "salario_min": 45000,
-   "salario_max": 45000,
-   "fecha_publicacion": "2026-08-21",
-   "fuente": "OCC",
-   "url": "https://www.occ.com.mx/empleo/oferta/21295429-gerente-de-proyectos/"
-  },
-  {
-   "titulo": "Project Manager IA",
-   "empresa": "SEGURITECH PRIVADA CAPITAL HUMANO SA DE CV",
-   "ubicacion": "Miguel Hidalgo, Ciudad de México",
-   "habilidades_tecnicas": [
-    "Gestión de proyectos"
-   ],
-   "habilidades_blandas": [
-    "Liderazgo"
-   ],
-   "salario_min": null,
-   "salario_max": null,
-   "fecha_publicacion": "2026-08-21",
-   "fuente": "OCC",
-   "url": "https://www.occ.com.mx/empleo/oferta/21305230-project-manager-ia/"
-  },
-  {
-   "titulo": "Project Manager Sr. Gestión de Proyectos y Cumplimiento",
-   "empresa": "Novitech SA de CV",
-   "ubicacion": "Ciudad de México",
-   "habilidades_tecnicas": [
-    "Gestión de proyectos"
-   ],
-   "habilidades_blandas": [
-    "Liderazgo"
-   ],
-   "salario_min": 35000,
-   "salario_max": 40000,
-   "fecha_publicacion": "2026-08-21",
-   "fuente": "OCC",
-   "url": "https://www.occ.com.mx/empleo/oferta/21296676-project-manager-sr-gestion-de-proyectos-y-cumplimiento/"
-  },
-  {
-   "titulo": "Project Manager (Construcción)",
-   "empresa": "UNIDAD DE SERVICIOS COMPARTIDOS GIGANTE SA DE CV",
-   "ubicacion": "Miguel Hidalgo, Ciudad de México",
-   "habilidades_tecnicas": [
-    "Gestión de proyectos"
-   ],
-   "habilidades_blandas": [
-    "Liderazgo"
-   ],
-   "salario_min": 40000,
-   "salario_max": 50000,
-   "fecha_publicacion": "2026-08-21",
-   "fuente": "OCC",
-   "url": "https://www.occ.com.mx/empleo/oferta/21295402-project-manager-construccion/"
-  },
-  {
-   "titulo": "Gerente Administrativo y Operativo Transporte",
-   "empresa": "Grupo UDA",
-   "ubicacion": "Naucalpan de Juárez, Estado de México",
-   "habilidades_tecnicas": [
-    "Gestión administrativa y operativa"
-   ],
-   "habilidades_blandas": [
-    "Coordinación de equipos"
-   ],
-   "salario_min": 50000,
-   "salario_max": 60000,
-   "fecha_publicacion": "2026-08-21",
-   "fuente": "OCC",
-   "url": "https://www.occ.com.mx/empleo/oferta/21295836-gerente-administrativo-y-operativo-indispensable-experiencia-en-transporte/"
-  },
-  {
-   "titulo": "PM TI con experiencia en sector Seguros y bancario",
-   "empresa": "INDRA SISTEMAS MEXICO",
-   "ubicacion": "Miguel Hidalgo, Ciudad de México",
-   "habilidades_tecnicas": [
-    "Sistemas / ERP"
-   ],
-   "habilidades_blandas": [
-    "Resolución de problemas"
-   ],
-   "salario_min": 20000,
-   "salario_max": 23000,
-   "fecha_publicacion": "2026-08-21",
-   "fuente": "OCC",
-   "url": "https://www.occ.com.mx/empleo/oferta/21305954-pm-ti-con-experiencia-en-sector-seguros-y-bancario/"
-  },
-  {
-   "titulo": "Project Manager",
-   "empresa": "DISRUPTING",
-   "ubicacion": "Ciudad de México",
-   "habilidades_tecnicas": [
-    "Gestión de proyectos"
-   ],
-   "habilidades_blandas": [
-    "Liderazgo"
-   ],
-   "salario_min": 45000,
-   "salario_max": 50000,
-   "fecha_publicacion": "2026-08-21",
-   "fuente": "OCC",
-   "url": "https://www.occ.com.mx/empleo/oferta/21305561-project-manager/"
-  },
-  {
-   "titulo": "Project Manager Infraestructura Tecnológica",
-   "empresa": "Sictel Soluciones TI, S.A. de C.V.",
-   "ubicacion": "Pachuca de Soto, Hidalgo",
-   "habilidades_tecnicas": [
-    "Gestión de proyectos"
-   ],
-   "habilidades_blandas": [
-    "Liderazgo"
-   ],
-   "salario_min": 28000,
-   "salario_max": 32000,
-   "fecha_publicacion": "2026-08-21",
-   "fuente": "OCC",
-   "url": "https://www.occ.com.mx/empleo/oferta/21295963-project-manager-infraestructura-tecnologica/"
-  },
-  {
-   "titulo": "Gerente administración y finanzas",
-   "empresa": "Wermar Pharmaceuticals SA de CV",
-   "ubicacion": "Benito Juárez, Ciudad de México",
-   "habilidades_tecnicas": [
-    "Gestión administrativa y operativa"
-   ],
-   "habilidades_blandas": [
-    "Coordinación de equipos"
-   ],
-   "salario_min": null,
-   "salario_max": null,
-   "fecha_publicacion": "2026-08-21",
-   "fuente": "OCC",
-   "url": "https://www.occ.com.mx/empleo/oferta/21305051-gerente-administracion-y-finanzas/"
-  },
-  {
-   "titulo": "Country manager/Gerente de administración y ventas",
-   "empresa": "MOLINA GAULAND & ZEITGEIST",
-   "ubicacion": "Querétaro, Querétaro",
-   "habilidades_tecnicas": [
-    "Gestión administrativa y operativa"
-   ],
-   "habilidades_blandas": [
-    "Coordinación de equipos"
-   ],
-   "salario_min": 85000,
-   "salario_max": 90000,
-   "fecha_publicacion": "2026-08-21",
-   "fuente": "OCC",
-   "url": "https://www.occ.com.mx/empleo/oferta/21306000-country-manager-gerente-de-administracion-y-ventas/"
-  },
-  {
-   "titulo": "PROJECT MANAGER (BILINGÜE)",
-   "empresa": "Hitss",
-   "ubicacion": "Ciudad de México",
-   "habilidades_tecnicas": [
-    "Gestión de proyectos"
-   ],
-   "habilidades_blandas": [
-    "Liderazgo"
-   ],
-   "salario_min": 68000,
-   "salario_max": 68000,
-   "fecha_publicacion": "2026-08-21",
-   "fuente": "OCC",
-   "url": "https://www.occ.com.mx/empleo/oferta/21306264-project-manager-bilingue/"
-  },
-  {
-   "titulo": "Gerente administrativo",
-   "empresa": "FARMACIA VETERINARIA AMATEPEC",
-   "ubicacion": "Toluca, Estado de México",
-   "habilidades_tecnicas": [
-    "Gestión administrativa y operativa"
-   ],
-   "habilidades_blandas": [
-    "Coordinación de equipos"
-   ],
-   "salario_min": null,
-   "salario_max": null,
-   "fecha_publicacion": "2026-08-21",
-   "fuente": "OCC",
-   "url": "https://www.occ.com.mx/empleo/oferta/21305012-gerente-administrativo/"
-  },
-  {
-   "titulo": "Project manager jr - Construccion",
-   "empresa": "SIPROVI SA de CV",
-   "ubicacion": "Veracruz, Veracruz",
-   "habilidades_tecnicas": [
-    "Gestión de proyectos"
-   ],
-   "habilidades_blandas": [
-    "Liderazgo"
-   ],
-   "salario_min": null,
-   "salario_max": null,
-   "fecha_publicacion": "2026-08-20",
-   "fuente": "OCC",
-   "url": "https://www.occ.com.mx/empleo/oferta/21295011-project-manager-jr-cosntruccion/"
-  },
-  {
-   "titulo": "Project Manager TI",
-   "empresa": "KODE IT",
-   "ubicacion": "Coyoacán, Ciudad de México",
-   "habilidades_tecnicas": [
-    "Gestión de proyectos"
-   ],
-   "habilidades_blandas": [
-    "Liderazgo"
-   ],
-   "salario_min": 30000,
-   "salario_max": 35000,
-   "fecha_publicacion": "2026-08-20",
-   "fuente": "OCC",
-   "url": "https://www.occ.com.mx/empleo/oferta/21303303-project-manager-ti/"
-  },
-  {
-   "titulo": "Project Manager",
-   "empresa": "Valeo Sistemas Electricos SA de CV",
-   "ubicacion": "Querétaro",
-   "habilidades_tecnicas": [
-    "Gestión de proyectos"
-   ],
-   "habilidades_blandas": [
-    "Liderazgo"
-   ],
-   "salario_min": null,
-   "salario_max": null,
-   "fecha_publicacion": "2026-08-20",
-   "fuente": "OCC",
-   "url": "https://www.occ.com.mx/empleo/oferta/21303594-project-manager/"
-  },
-  {
-   "titulo": "Gerente de proyectos y construcción",
-   "empresa": "ASEC INVERSIONES",
-   "ubicacion": "Chihuahua, Chihuahua",
-   "habilidades_tecnicas": [
-    "Gestión de proyectos"
-   ],
-   "habilidades_blandas": [
-    "Liderazgo"
-   ],
-   "salario_min": 35000,
-   "salario_max": 45000,
-   "fecha_publicacion": "2026-08-20",
-   "fuente": "OCC",
-   "url": "https://www.occ.com.mx/empleo/oferta/21304684-gerente-de-proyectos-y-construccion/"
-  },
-  {
-   "titulo": "Gerente de Administración, Finanzas y Contraloría",
-   "empresa": "MFISA",
-   "ubicacion": "Estado de México",
-   "habilidades_tecnicas": [
-    "Gestión administrativa y operativa"
-   ],
-   "habilidades_blandas": [
-    "Coordinación de equipos"
-   ],
-   "salario_min": 70000,
-   "salario_max": 80000,
-   "fecha_publicacion": "2026-08-20",
-   "fuente": "OCC",
-   "url": "https://www.occ.com.mx/empleo/oferta/21303837-gerente-de-administracion-finanzas-y-contraloria/"
-  },
-  {
-   "titulo": "Project Manager",
-   "empresa": "GREEN MARKET DECO",
-   "ubicacion": "San Pedro Garza García, Nuevo León",
-   "habilidades_tecnicas": [
-    "Gestión de proyectos"
-   ],
-   "habilidades_blandas": [
-    "Liderazgo"
-   ],
-   "salario_min": 30000,
-   "salario_max": 32000,
-   "fecha_publicacion": "2026-08-20",
-   "fuente": "OCC",
-   "url": "https://www.occ.com.mx/empleo/oferta/21305154-project-manager/"
-  },
-  {
-   "titulo": "Project manager jr",
-   "empresa": "OPERADORA DE ESTACIONAMIENTOS VIALES SA DE CV",
-   "ubicacion": "Ciudad de México",
-   "habilidades_tecnicas": [
-    "Gestión de proyectos"
-   ],
-   "habilidades_blandas": [
-    "Liderazgo"
-   ],
-   "salario_min": 25000,
-   "salario_max": 35000,
-   "fecha_publicacion": "2026-08-20",
-   "fuente": "OCC",
-   "url": "https://www.occ.com.mx/empleo/oferta/21304789-project-manager-jr/"
-  },
-  {
-   "titulo": "Gerente de proyectos",
-   "empresa": "Zinc Nacional",
-   "ubicacion": "El Carmen, Nuevo León",
-   "habilidades_tecnicas": [
-    "Gestión de proyectos"
-   ],
-   "habilidades_blandas": [
-    "Liderazgo"
-   ],
-   "salario_min": 80000,
-   "salario_max": 90000,
-   "fecha_publicacion": "2026-08-20",
-   "fuente": "OCC",
-   "url": "https://www.occ.com.mx/empleo/oferta/21303609-gerente-de-proyectos/"
-  },
-  {
-   "titulo": "Project Manager Ssr- Manufactura",
-   "empresa": "Monterrey IT Cluster",
-   "ubicacion": "García, Nuevo León",
-   "habilidades_tecnicas": [
-    "Gestión de proyectos"
-   ],
-   "habilidades_blandas": [
-    "Liderazgo"
-   ],
-   "salario_min": 40000,
-   "salario_max": 50000,
-   "fecha_publicacion": "2026-08-20",
-   "fuente": "OCC",
-   "url": "https://www.occ.com.mx/empleo/oferta/21299679-project-manager-ssr-manufactura/"
-  },
-  {
-   "titulo": "Project Manager Preconstruccion",
-   "empresa": "ESTIMPAC",
-   "ubicacion": "Monterrey, Nuevo León",
-   "habilidades_tecnicas": [
-    "Gestión de proyectos"
-   ],
-   "habilidades_blandas": [
-    "Liderazgo"
-   ],
-   "salario_min": 35000,
-   "salario_max": 40000,
-   "fecha_publicacion": "2026-08-20",
-   "fuente": "OCC",
-   "url": "https://www.occ.com.mx/empleo/oferta/21303747-project-manager-preconstruccion/"
-  },
-  {
-   "titulo": "Gerente administrativo",
-   "empresa": "Smart Solutions",
-   "ubicacion": "Cuajimalpa de Morelos, Ciudad de México",
-   "habilidades_tecnicas": [
-    "Gestión administrativa y operativa"
-   ],
-   "habilidades_blandas": [
-    "Coordinación de equipos"
-   ],
-   "salario_min": 55000,
-   "salario_max": 55000,
-   "fecha_publicacion": "2026-08-23",
+   "fecha_publicacion": "2026-08-30",
    "fuente": "Adzuna",
-   "url": "https://www.adzuna.com.mx/details/5853760533"
+   "url": "https://www.adzuna.com.mx/details/5862279192"
   },
   {
-   "titulo": "Gerente de Proyecto Excelencia Operacional",
-   "empresa": "Brinks",
+   "titulo": "Ejecutiva de Gestión y Seguimiento",
+   "empresa": "Nohau Capital Humano",
    "ubicacion": "México",
    "habilidades_tecnicas": [
-    "Gestión de proyectos"
+    "(inferida del título)"
    ],
    "habilidades_blandas": [
-    "Liderazgo"
+    "Responsabilidad"
    ],
-   "salario_min": null,
-   "salario_max": null,
-   "fecha_publicacion": "2026-08-22",
+   "salario_min": 15000,
+   "salario_max": 18000,
+   "fecha_publicacion": "2026-08-30",
    "fuente": "Adzuna",
-   "url": "https://www.adzuna.com.mx/details/5852588014"
+   "url": "https://www.adzuna.com.mx/details/5862279633"
   },
   {
-   "titulo": "Gerente Administrativo de Asociacion Civil",
-   "empresa": "MRS DESARROLLADORES",
-   "ubicacion": "León, Guanajuato",
-   "habilidades_tecnicas": [
-    "Gestión administrativa y operativa"
-   ],
-   "habilidades_blandas": [
-    "Coordinación de equipos"
-   ],
-   "salario_min": null,
-   "salario_max": null,
-   "fecha_publicacion": "2026-08-22",
-   "fuente": "Adzuna",
-   "url": "https://www.adzuna.com.mx/details/5852693277"
-  },
-  {
-   "titulo": "PROJECT DIRECTOR FFCC",
-   "empresa": "Multinacional",
-   "ubicacion": "México",
-   "habilidades_tecnicas": [
-    "Gestión de proyectos"
-   ],
-   "habilidades_blandas": [
-    "Liderazgo"
-   ],
-   "salario_min": null,
-   "salario_max": null,
-   "fecha_publicacion": "2026-08-22",
-   "fuente": "Adzuna",
-   "url": "https://www.adzuna.com.mx/details/5852317458"
-  },
-  {
-   "titulo": "Responsable Administrativo Tiendas",
+   "titulo": "Responsable Administrativo - cya parque delta",
    "empresa": "C&A Mexico S De Rl",
    "ubicacion": "México",
    "habilidades_tecnicas": [
@@ -1063,45 +855,61 @@
    ],
    "salario_min": null,
    "salario_max": null,
-   "fecha_publicacion": "2026-08-22",
+   "fecha_publicacion": "2026-08-30",
    "fuente": "Adzuna",
-   "url": "https://www.adzuna.com.mx/details/5852586477"
+   "url": "https://www.adzuna.com.mx/details/5862284088"
   },
   {
-   "titulo": "Project Manager TI Desarrollo de Software PHP",
-   "empresa": "MEDICAL LIFE",
-   "ubicacion": "Miguel Hidalgo, Ciudad de México",
+   "titulo": "Auxiliar administrativo/a - Crédito y Cobranza",
+   "empresa": "Refaccionaria Rogelio",
+   "ubicacion": "México",
    "habilidades_tecnicas": [
     "Gestión de proyectos"
    ],
    "habilidades_blandas": [
     "Liderazgo"
    ],
-   "salario_min": null,
-   "salario_max": null,
-   "fecha_publicacion": "2026-08-21",
+   "salario_min": 10000,
+   "salario_max": 11000,
+   "fecha_publicacion": "2026-08-30",
    "fuente": "Adzuna",
-   "url": "https://www.adzuna.com.mx/details/5851319612"
+   "url": "https://www.adzuna.com.mx/details/5862285446"
   },
   {
-   "titulo": "Director de proyectos y ventas",
-   "empresa": "TVH",
-   "ubicacion": "Cuautitlán Izcalli, Estado de México",
+   "titulo": "Head Hunter Jr (reclutador) - 3pl",
+   "empresa": "Dicka Logistics",
+   "ubicacion": "México",
    "habilidades_tecnicas": [
     "(inferida del título)"
    ],
    "habilidades_blandas": [
     "Responsabilidad"
    ],
-   "salario_min": null,
-   "salario_max": null,
-   "fecha_publicacion": "2026-08-21",
+   "salario_min": 14000,
+   "salario_max": 15000,
+   "fecha_publicacion": "2026-08-30",
    "fuente": "Adzuna",
-   "url": "https://www.adzuna.com.mx/details/5850849265"
+   "url": "https://www.adzuna.com.mx/details/5862286299"
   },
   {
-   "titulo": "Director de Proyectos Restauranteros .",
-   "empresa": "Mentory Grupo Consultor Turstico",
+   "titulo": "Gerente de Proyecto de Construcción - Planeación y Control de Obra",
+   "empresa": "WorkPlay",
+   "ubicacion": "México",
+   "habilidades_tecnicas": [
+    "Gestión de proyectos"
+   ],
+   "habilidades_blandas": [
+    "Liderazgo"
+   ],
+   "salario_min": 25000,
+   "salario_max": 35000,
+   "fecha_publicacion": "2026-08-30",
+   "fuente": "Adzuna",
+   "url": "https://www.adzuna.com.mx/details/5862290839"
+  },
+  {
+   "titulo": "Asistente de gerencia",
+   "empresa": "Empacadora Murgati",
    "ubicacion": "México",
    "habilidades_tecnicas": [
     "(inferida del título)"
@@ -1111,46 +919,62 @@
    ],
    "salario_min": null,
    "salario_max": null,
-   "fecha_publicacion": "2026-08-21",
+   "fecha_publicacion": "2026-08-30",
    "fuente": "Adzuna",
-   "url": "https://www.adzuna.com.mx/details/5850701242"
+   "url": "https://www.adzuna.com.mx/details/5862292171"
   },
   {
-   "titulo": "Gerente de Proyectos Electricos",
-   "empresa": "Quintana Ingenieros",
-   "ubicacion": "Querétaro",
+   "titulo": "Generalista de Recursos Humanos",
+   "empresa": "C&A Mexico S De Rl",
+   "ubicacion": "México",
    "habilidades_tecnicas": [
-    "Gestión de proyectos"
+    "(inferida del título)"
    ],
    "habilidades_blandas": [
-    "Liderazgo"
+    "Responsabilidad"
+   ],
+   "salario_min": 15000,
+   "salario_max": 16000,
+   "fecha_publicacion": "2026-08-30",
+   "fuente": "Adzuna",
+   "url": "https://www.adzuna.com.mx/details/5862293523"
+  },
+  {
+   "titulo": "Ingeniero Senior Colaboración y Salas Videoconferencia",
+   "empresa": "BePrime",
+   "ubicacion": "San Pedro Garza García, Nuevo León",
+   "habilidades_tecnicas": [
+    "(inferida del título)"
+   ],
+   "habilidades_blandas": [
+    "Responsabilidad"
+   ],
+   "salario_min": 60000,
+   "salario_max": 60000,
+   "fecha_publicacion": "2026-08-30",
+   "fuente": "Adzuna",
+   "url": "https://www.adzuna.com.mx/details/5862339899"
+  },
+  {
+   "titulo": "Gerente Administrativo Especialidad Oncología",
+   "empresa": "Hospital Moscati De Queretaro",
+   "ubicacion": "Querétaro",
+   "habilidades_tecnicas": [
+    "Gestión administrativa y operativa"
+   ],
+   "habilidades_blandas": [
+    "Coordinación de equipos"
    ],
    "salario_min": null,
    "salario_max": null,
-   "fecha_publicacion": "2026-08-21",
+   "fecha_publicacion": "2026-08-30",
    "fuente": "Adzuna",
-   "url": "https://www.adzuna.com.mx/details/5851317727"
+   "url": "https://www.adzuna.com.mx/details/5862340106"
   },
   {
    "titulo": "Gerente administrativo",
-   "empresa": "Talink",
-   "ubicacion": "Zapopan, Jalisco",
-   "habilidades_tecnicas": [
-    "Gestión administrativa y operativa"
-   ],
-   "habilidades_blandas": [
-    "Coordinación de equipos"
-   ],
-   "salario_min": 35000,
-   "salario_max": 35000,
-   "fecha_publicacion": "2026-08-21",
-   "fuente": "Adzuna",
-   "url": "https://www.adzuna.com.mx/details/5851311002"
-  },
-  {
-   "titulo": "Gerente Administrativo Zona",
-   "empresa": "Banco Santander",
-   "ubicacion": "México",
+   "empresa": "Club de Golf Bellavista",
+   "ubicacion": "Atizapán de Zaragoza, Estado de México",
    "habilidades_tecnicas": [
     "Gestión administrativa y operativa"
    ],
@@ -1159,14 +983,158 @@
    ],
    "salario_min": null,
    "salario_max": null,
-   "fecha_publicacion": "2026-08-20",
+   "fecha_publicacion": "2026-08-29",
    "fuente": "Adzuna",
-   "url": "https://www.adzuna.com.mx/details/5849688927"
+   "url": "https://www.adzuna.com.mx/details/5861339084"
   },
   {
-   "titulo": "Project Director Coordinador de proyectos",
-   "empresa": "JC ZAMORA",
-   "ubicacion": "León, Guanajuato",
+   "titulo": "Gerente de proyectos (instalación de gas)",
+   "empresa": "Reclutando Valor",
+   "ubicacion": "México",
+   "habilidades_tecnicas": [
+    "Gestión de proyectos"
+   ],
+   "habilidades_blandas": [
+    "Liderazgo"
+   ],
+   "salario_min": 25000,
+   "salario_max": 30000,
+   "fecha_publicacion": "2026-08-29",
+   "fuente": "Adzuna",
+   "url": "https://www.adzuna.com.mx/details/5861223636"
+  },
+  {
+   "titulo": "Executive Assistant",
+   "empresa": "Chubb",
+   "ubicacion": "México",
+   "habilidades_tecnicas": [
+    "(inferida del título)"
+   ],
+   "habilidades_blandas": [
+    "Responsabilidad"
+   ],
+   "salario_min": null,
+   "salario_max": null,
+   "fecha_publicacion": "2026-08-29",
+   "fuente": "Adzuna",
+   "url": "https://www.adzuna.com.mx/details/5861234418"
+  },
+  {
+   "titulo": "Facilitador Mejora Continua",
+   "empresa": "Farmacias del Ahorro",
+   "ubicacion": "Santa Catarina, Nuevo León",
+   "habilidades_tecnicas": [
+    "(inferida del título)"
+   ],
+   "habilidades_blandas": [
+    "Responsabilidad"
+   ],
+   "salario_min": null,
+   "salario_max": null,
+   "fecha_publicacion": "2026-08-29",
+   "fuente": "Adzuna",
+   "url": "https://www.adzuna.com.mx/details/5861238827"
+  },
+  {
+   "titulo": "Asistente de gerencia",
+   "empresa": "Empacadora Murgati",
+   "ubicacion": "Tlaxcoapan, Hidalgo",
+   "habilidades_tecnicas": [
+    "(inferida del título)"
+   ],
+   "habilidades_blandas": [
+    "Responsabilidad"
+   ],
+   "salario_min": 12700,
+   "salario_max": 12700,
+   "fecha_publicacion": "2026-08-29",
+   "fuente": "Adzuna",
+   "url": "https://www.adzuna.com.mx/details/5861331817"
+  },
+  {
+   "titulo": "Administrador Gerente Residente en condominio experiencia en condominio",
+   "empresa": "Cerio Administracion de Inmuebles",
+   "ubicacion": "Benito Juárez, Quintana Roo",
+   "habilidades_tecnicas": [
+    "Gestión administrativa y operativa"
+   ],
+   "habilidades_blandas": [
+    "Coordinación de equipos"
+   ],
+   "salario_min": 20000,
+   "salario_max": 20000,
+   "fecha_publicacion": "2026-08-29",
+   "fuente": "Adzuna",
+   "url": "https://www.adzuna.com.mx/details/5861339016"
+  },
+  {
+   "titulo": "Analista de costos MEP (Playa del Carmen)",
+   "empresa": "Grupo Salinas",
+   "ubicacion": "México",
+   "habilidades_tecnicas": [
+    "(inferida del título)"
+   ],
+   "habilidades_blandas": [
+    "Responsabilidad"
+   ],
+   "salario_min": null,
+   "salario_max": null,
+   "fecha_publicacion": "2026-08-29",
+   "fuente": "Adzuna",
+   "url": "https://www.adzuna.com.mx/details/5861238612"
+  },
+  {
+   "titulo": "Reclutador de Personal Reclutamiento y Selección",
+   "empresa": "BODEGAS MEGA PRECIO",
+   "ubicacion": "Oaxaca de Juárez, Oaxaca",
+   "habilidades_tecnicas": [
+    "(inferida del título)"
+   ],
+   "habilidades_blandas": [
+    "Responsabilidad"
+   ],
+   "salario_min": 12000,
+   "salario_max": 12000,
+   "fecha_publicacion": "2026-08-29",
+   "fuente": "Adzuna",
+   "url": "https://www.adzuna.com.mx/details/5861339313"
+  },
+  {
+   "titulo": "Responsable Administrativo cya parque delta",
+   "empresa": "CA MEXICO S DE RL",
+   "ubicacion": "Benito Juárez, Ciudad de México",
+   "habilidades_tecnicas": [
+    "Gestión administrativa y operativa"
+   ],
+   "habilidades_blandas": [
+    "Coordinación de equipos"
+   ],
+   "salario_min": 15000,
+   "salario_max": 15000,
+   "fecha_publicacion": "2026-08-29",
+   "fuente": "Adzuna",
+   "url": "https://www.adzuna.com.mx/details/5861341008"
+  },
+  {
+   "titulo": "Gerente Administrativo",
+   "empresa": "GRUPO PRS",
+   "ubicacion": "Culiacán, Sinaloa",
+   "habilidades_tecnicas": [
+    "Gestión administrativa y operativa"
+   ],
+   "habilidades_blandas": [
+    "Coordinación de equipos"
+   ],
+   "salario_min": 18000,
+   "salario_max": 18000,
+   "fecha_publicacion": "2026-08-29",
+   "fuente": "Adzuna",
+   "url": "https://www.adzuna.com.mx/details/5861341567"
+  },
+  {
+   "titulo": "Gerente de proyectos rubro médico",
+   "empresa": "Innovación Médica y Tecnológica",
+   "ubicacion": "Zapopan, Jalisco",
    "habilidades_tecnicas": [
     "Gestión de proyectos"
    ],
@@ -1175,30 +1143,46 @@
    ],
    "salario_min": 40000,
    "salario_max": 40000,
-   "fecha_publicacion": "2026-08-20",
+   "fecha_publicacion": "2026-08-29",
    "fuente": "Adzuna",
-   "url": "https://www.adzuna.com.mx/details/5849820173"
+   "url": "https://www.adzuna.com.mx/details/5861341041"
   },
   {
-   "titulo": "Gerente administrativo Corporativo",
-   "empresa": "CGS CONSULTORES",
-   "ubicacion": "Torreón, Coahuila de Zaragoza",
+   "titulo": "Auxiliar administrativo a Crédito y Cobranza",
+   "empresa": "Refaccionaria Rogelio, S.A. de C.V.",
+   "ubicacion": "Tampico, Tamaulipas",
    "habilidades_tecnicas": [
-    "Gestión administrativa y operativa"
+    "Gestión de proyectos"
    ],
    "habilidades_blandas": [
-    "Coordinación de equipos"
+    "Liderazgo"
    ],
-   "salario_min": 50000,
-   "salario_max": 50000,
-   "fecha_publicacion": "2026-08-20",
+   "salario_min": 10000,
+   "salario_max": 10000,
+   "fecha_publicacion": "2026-08-29",
    "fuente": "Adzuna",
-   "url": "https://www.adzuna.com.mx/details/5849821670"
+   "url": "https://www.adzuna.com.mx/details/5861339338"
   },
   {
-   "titulo": "Gerente de Administración - Administración y Finanzas",
-   "empresa": "Talisis",
-   "ubicacion": "México",
+   "titulo": "Ejecutiva de Gestión y Seguimiento",
+   "empresa": "Nohau Capital Humano",
+   "ubicacion": "San Pedro Tlaquepaque, Jalisco",
+   "habilidades_tecnicas": [
+    "(inferida del título)"
+   ],
+   "habilidades_blandas": [
+    "Responsabilidad"
+   ],
+   "salario_min": 15000,
+   "salario_max": 15000,
+   "fecha_publicacion": "2026-08-29",
+   "fuente": "Adzuna",
+   "url": "https://www.adzuna.com.mx/details/5861339558"
+  },
+  {
+   "titulo": "Gerente Administrativo y Financiero",
+   "empresa": "dermastudio",
+   "ubicacion": "Santa Fe Cuajimalpa, CDMX",
    "habilidades_tecnicas": [
     "Gestión administrativa y operativa"
    ],
@@ -1207,10 +1191,26 @@
    ],
    "salario_min": null,
    "salario_max": null,
-   "fecha_publicacion": "2026-08-20",
-   "fuente": "Adzuna",
-   "url": "https://www.adzuna.com.mx/details/5849697692"
+   "fecha_publicacion": "2026-08-31",
+   "fuente": "Indeed",
+   "url": "https://to.indeed.com/aapy2zb6x69g"
+  },
+  {
+   "titulo": "Gerente de proyectos",
+   "empresa": "Innovacion Medica y Tecnologica",
+   "ubicacion": "Zapopan, Jal.",
+   "habilidades_tecnicas": [
+    "Gestión de proyectos"
+   ],
+   "habilidades_blandas": [
+    "Liderazgo"
+   ],
+   "salario_min": null,
+   "salario_max": null,
+   "fecha_publicacion": "2026-08-29",
+   "fuente": "Indeed",
+   "url": "https://to.indeed.com/aatb4mkx77c4"
   }
  ],
- "vacantes_detalle_nota": "Generado programáticamente (2026-08-28) por etapa4_sector_json.py sobre 254 vacantes verificadas (vacantes_gestion_2026-08-14.csv, vacantes_gestion_verificadas_auto.csv, vacantes_gestion_pendientes.csv). Todos los conteos son exactos (pandas, sin estimaciones). Salario normalizado a MXN mensual (Adzuna >90,000/año se dividió entre 12). vacantes_con_habilidades cuenta solo habilidades EXPLÍCITAS en el CSV fuente. Muestra vacantes_detalle: filtro de recencia Adzuna<=10d / Indeed<=15d / OCC<=20d desde hoy, muestreo proporcional por fuente, máx. 60; habilidades faltantes inferidas por categoría de puesto."
+ "vacantes_detalle_nota": "Generado programáticamente (2026-08-31) por etapa4_sector_json.py sobre 355 vacantes verificadas (vacantes_gestion_verificadas_auto.csv). Todos los conteos son exactos (pandas, sin estimaciones). Salario normalizado a MXN mensual (Adzuna >90,000/año se dividió entre 12). vacantes_con_habilidades cuenta solo habilidades EXPLÍCITAS en el CSV fuente. Muestra vacantes_detalle: filtro de recencia Adzuna<=10d / Indeed<=15d / OCC<=20d desde hoy, muestreo proporcional por fuente, máx. 60; habilidades faltantes inferidas por categoría de puesto."
 }
