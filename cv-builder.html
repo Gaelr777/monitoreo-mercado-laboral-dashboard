@@ -1,0 +1,926 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Constructor de CV — Club de Mentes Brillantes</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --azul:#b89a57; --azul-osc:#8b7440; --naranja:#c2703d; --verde:#4f8f5b; --rojo:#b5483f;
+  --hero-bg:#faf8f2; --hero-bg2:#f3efe5; --hero-sub:#5a5346; --hero-line:rgba(31,31,28,.1);
+  --accent:#b89a57; --gold-light:#d0b06a;
+  --gris-bg:#faf8f2; --gris-borde:#e7ddc9; --texto:#1f1f1c; --texto-suave:#6b6459;
+  --font-serif:'Cormorant Garamond',Georgia,'Times New Roman',serif;
+  --font-sans:'Source Sans 3',ui-sans-serif,system-ui,-apple-system,'Segoe UI',sans-serif;
+  --sombra:rgba(53,42,21,.1) 0px 10px 25px 0px;
+}
+*{box-sizing:border-box;}
+body{margin:0;background:#fff;color:var(--texto);font-family:var(--font-sans);line-height:1.55;}
+.wrap{max-width:1000px;margin:0 auto;padding:0 20px 80px;}
+
+/* ---------- header ---------- */
+.topbar{background:var(--hero-bg);border-bottom:1px solid var(--hero-line);}
+.topbar-in{max-width:1000px;margin:0 auto;padding:14px 20px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;}
+.topbar a{color:var(--azul-osc);text-decoration:none;font-weight:600;font-size:.9rem;}
+.topbar a:hover{text-decoration:underline;}
+.hero{background:linear-gradient(160deg,var(--hero-bg),var(--hero-bg2));padding:44px 0 40px;border-bottom:1px solid var(--hero-line);}
+.hero-in{max-width:1000px;margin:0 auto;padding:0 20px;}
+.eyebrow{font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--azul-osc);font-weight:700;margin-bottom:10px;}
+h1{font-family:var(--font-serif);font-size:2.6rem;line-height:1.1;margin:0 0 14px;font-weight:600;}
+.hero p{color:var(--hero-sub);max-width:660px;margin:0;font-size:1.02rem;}
+
+/* ---------- layout ---------- */
+h2{font-family:var(--font-serif);font-size:1.7rem;font-weight:600;margin:0 0 6px;}
+h3{font-size:1rem;font-weight:700;margin:0 0 8px;color:var(--azul-osc);}
+.step{margin-top:38px;padding-top:30px;border-top:1px solid var(--gris-borde);}
+.step:first-of-type{border-top:none;}
+.step-badge{display:inline-block;background:var(--azul);color:#fff;font-size:.68rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:5px 12px;border-radius:999px;margin-bottom:12px;}
+.card{background:var(--gris-bg);border:1px solid var(--gris-borde);border-radius:12px;padding:20px;margin-bottom:16px;}
+.note{font-size:.84rem;color:var(--texto-suave);margin:6px 0 0;}
+.hint{background:#fdfaf1;border-left:3px solid var(--gold-light);border-radius:0 8px 8px 0;padding:12px 14px;font-size:.85rem;color:var(--hero-sub);margin:10px 0;}
+.hint strong{color:var(--azul-osc);}
+.hint ul{margin:6px 0 0 18px;padding:0;}
+.hint li{margin-bottom:4px;}
+.warn{background:#fdf4f2;border-left:3px solid var(--rojo);border-radius:0 8px 8px 0;padding:12px 14px;font-size:.85rem;margin:10px 0;}
+.ok{background:#f2f8f3;border-left:3px solid var(--verde);border-radius:0 8px 8px 0;padding:12px 14px;font-size:.85rem;margin:10px 0;}
+
+/* ---------- forms ---------- */
+label{display:block;font-weight:600;font-size:.86rem;margin:14px 0 5px;}
+label .opt{font-weight:400;color:var(--texto-suave);font-size:.8rem;}
+input[type=text],input[type=email],input[type=tel],input[type=url],select,textarea{
+  width:100%;padding:9px 11px;border:1px solid var(--gris-borde);border-radius:8px;
+  font-family:var(--font-sans);font-size:.92rem;background:#fff;color:var(--texto);
+}
+input:focus,select:focus,textarea:focus{outline:2px solid var(--gold-light);outline-offset:1px;border-color:var(--gold-light);}
+textarea{min-height:74px;resize:vertical;}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:0 16px;}
+.grid3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:0 16px;}
+@media(max-width:640px){.grid2,.grid3{grid-template-columns:1fr;}}
+button{font-family:var(--font-sans);font-size:.9rem;font-weight:600;cursor:pointer;border-radius:8px;padding:10px 18px;border:none;background:var(--azul);color:#fff;}
+button:hover{background:var(--azul-osc);}
+button:disabled{opacity:.55;cursor:not-allowed;}
+button.secondary{background:#fff;color:var(--azul-osc);border:1px solid var(--gris-borde);}
+button.secondary:hover{background:var(--gris-bg);}
+button.small{padding:6px 12px;font-size:.82rem;}
+button.danger{background:#fff;color:var(--rojo);border:1px solid #e7cdc9;}
+.btnrow{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px;}
+
+.bloque{border:1px solid var(--gris-borde);border-radius:10px;padding:16px;margin-bottom:14px;background:#fff;}
+.bloque-head{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:4px;}
+.bloque-head strong{font-size:.9rem;color:var(--azul-osc);}
+.counter{font-size:.78rem;color:var(--texto-suave);text-align:right;margin-top:3px;}
+.counter.bad{color:var(--rojo);font-weight:600;}
+.counter.good{color:var(--verde);font-weight:600;}
+
+/* ---------- skills chips ---------- */
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px;}
+.chip{display:inline-flex;align-items:center;gap:6px;border:1px solid var(--gris-borde);background:#fff;
+  border-radius:999px;padding:6px 13px;font-size:.84rem;cursor:pointer;user-select:none;transition:.12s;}
+.chip:hover{border-color:var(--gold-light);}
+.chip input{margin:0;cursor:pointer;}
+.chip.on{background:#f7f1e2;border-color:var(--azul);font-weight:600;color:var(--azul-osc);}
+.chip .m{font-size:.72rem;color:var(--texto-suave);}
+.chip.on .m{color:var(--azul-osc);}
+
+/* ---------- checklist ---------- */
+.check{list-style:none;margin:10px 0 0;padding:0;}
+.check li{padding:7px 0 7px 26px;position:relative;font-size:.87rem;border-bottom:1px dashed var(--gris-borde);}
+.check li:last-child{border-bottom:none;}
+.check li::before{position:absolute;left:0;top:7px;font-weight:700;}
+.check li.pass::before{content:"✓";color:var(--verde);}
+.check li.fail::before{content:"!";color:var(--naranja);}
+.check li.crit::before{content:"×";color:var(--rojo);}
+.score{font-family:var(--font-serif);font-size:3rem;font-weight:700;color:var(--azul);line-height:1;}
+
+/* ---------- preview ---------- */
+#previewBox{border:1px solid var(--gris-borde);border-radius:10px;background:#fff;padding:0;overflow:hidden;}
+#cvPaper{padding:48px 54px;font-family:Arial,Helvetica,sans-serif;font-size:10.5pt;line-height:1.42;color:#000;}
+#cvPaper h1.cvname{font-family:Arial,Helvetica,sans-serif;font-size:19pt;font-weight:700;margin:0 0 3px;letter-spacing:.2px;}
+#cvPaper .cvtitle{font-size:11.5pt;font-weight:700;color:#333;margin-bottom:5px;}
+#cvPaper .cvcontact{font-size:9.5pt;color:#333;margin-bottom:14px;}
+#cvPaper h2.cvsec{font-size:11pt;font-weight:700;text-transform:uppercase;letter-spacing:.6px;
+  border-bottom:1px solid #000;padding-bottom:2px;margin:16px 0 8px;font-family:Arial,Helvetica,sans-serif;}
+#cvPaper .cvrole{font-weight:700;font-size:10.5pt;margin-bottom:1px;}
+#cvPaper .cvmeta{font-size:9.5pt;color:#444;margin-bottom:4px;}
+#cvPaper ul.cvb{margin:0 0 11px;padding-left:17px;}
+#cvPaper ul.cvb li{margin-bottom:3px;}
+#cvPaper .cvskills{margin-bottom:10px;}
+.paper-hint{background:var(--gris-bg);border-bottom:1px solid var(--gris-borde);padding:10px 16px;font-size:.8rem;color:var(--texto-suave);}
+
+/* ---------- print = PDF ---------- */
+@media print{
+  body{background:#fff;}
+  .topbar,.hero,.step,.paper-hint,.noprint{display:none !important;}
+  .wrap{max-width:none;padding:0;}
+  #previewBox{border:none;border-radius:0;}
+  #cvPaper{padding:0;font-size:10.5pt;}
+  @page{size:Letter;margin:16mm 15mm;}
+  #cvPaper .cvblock{break-inside:avoid;page-break-inside:avoid;}
+  #cvPaper h2.cvsec{break-after:avoid;page-break-after:avoid;}
+}
+</style>
+</head>
+<body>
+
+<div class="topbar"><div class="topbar-in">
+  <a href="index.html">← Analizar mi CV frente al mercado</a>
+  <a href="https://www.clubmentesbrillantes.com.mx/index.html">Club de Mentes Brillantes</a>
+</div></div>
+
+<div class="hero"><div class="hero-in">
+  <div class="eyebrow">Constructor de CV orientado al mercado</div>
+  <h1>Arma un CV que los filtros automáticos sí puedan leer</h1>
+  <p>Llena cada apartado con lo que <strong>tú realmente hiciste</strong>. Cada campo te dice qué información
+  espera un reclutador y cómo escribirla para que los sistemas ATS la interpreten bien. Al final revisamos
+  tu CV y te decimos qué mejorar — nunca inventamos experiencia que no tengas.</p>
+</div></div>
+
+<div class="wrap">
+
+<!-- ============ PASO 1: SECTOR ============ -->
+<section class="step">
+  <div class="step-badge">Paso 1</div>
+  <h2>¿A qué sector va dirigido tu CV?</h2>
+  <p class="note">Un mismo CV no sirve igual para todos los sectores. Al elegir uno, te mostramos las habilidades
+  que más piden las vacantes reales de ese sector, para que sepas cuáles conviene resaltar — si de verdad las tienes.</p>
+
+  <div class="card">
+    <div class="grid2">
+      <div>
+        <label for="sector">Sector</label>
+        <select id="sector"><option value="">Cargando sectores…</option></select>
+      </div>
+      <div>
+        <label for="puestoObjetivo">Puesto al que aspiras <span class="opt">(escribe el título tal como aparece en las vacantes)</span></label>
+        <input type="text" id="puestoObjetivo" placeholder="Ej. Ejecutivo de ventas junior">
+        <div class="note" id="catSugeridas"></div>
+      </div>
+    </div>
+    <div class="hint">
+      <strong>Por qué importa:</strong> los ATS comparan tu CV contra el texto de la vacante. Usar el mismo título
+      de puesto que usa la empresa, y no un título interno o creativo, es de los ajustes que más sube tu coincidencia.
+    </div>
+  </div>
+</section>
+
+<!-- ============ PASO 2: DATOS ============ -->
+<section class="step">
+  <div class="step-badge">Paso 2</div>
+  <h2>Datos de contacto</h2>
+  <p class="note">Van hasta arriba, en texto normal. Nunca dentro de un encabezado, imagen o cuadro de texto:
+  ahí es donde más ATS pierden la información.</p>
+
+  <div class="card">
+    <div class="grid2">
+      <div><label for="nombre">Nombre completo</label><input type="text" id="nombre" placeholder="Ej. Ana López Martínez"></div>
+      <div><label for="tel">Teléfono</label><input type="tel" id="tel" placeholder="Ej. 55 1234 5678"></div>
+      <div><label for="email">Correo electrónico</label><input type="email" id="email" placeholder="Ej. ana.lopez@correo.com">
+        <div class="note">Usa un correo sobrio con tu nombre. Evita apodos o correos de la escuela que vayas a perder.</div></div>
+      <div><label for="ciudad">Ciudad y estado</label><input type="text" id="ciudad" placeholder="Ej. Guadalajara, Jalisco"></div>
+      <div><label for="linkedin">LinkedIn <span class="opt">(opcional)</span></label><input type="url" id="linkedin" placeholder="linkedin.com/in/tuusuario"></div>
+      <div><label for="portafolio">Portafolio o GitHub <span class="opt">(opcional)</span></label><input type="url" id="portafolio" placeholder="github.com/tuusuario"></div>
+    </div>
+    <div class="warn">
+      <strong>No incluyas:</strong> foto, edad, fecha de nacimiento, CURP, RFC, estado civil, ni tu dirección exacta.
+      No aportan nada a la decisión, ocupan espacio y en varios países se consideran una fuente de sesgo.
+      La foto además rompe el parseo de muchos ATS.
+    </div>
+  </div>
+</section>
+
+<!-- ============ PASO 3: PERFIL ============ -->
+<section class="step">
+  <div class="step-badge">Paso 3</div>
+  <h2>Perfil profesional</h2>
+  <p class="note">De 2 a 4 líneas, hasta arriba del CV. Es la parte que más peso tiene: los ATS y los reclutadores
+  le dan prioridad a lo que aparece en las primeras líneas.</p>
+
+  <div class="card">
+    <label for="perfil">Tu perfil en 2–4 líneas</label>
+    <textarea id="perfil" data-min="220" data-max="600" placeholder="Ej. Licenciada en Administración con 2 años de experiencia en atención a clientes B2C en el sector retail. Manejo de CRM y punto de venta, con historial de cumplimiento de metas mensuales de venta. Busco integrarme como ejecutiva de ventas junior en una empresa con plan de desarrollo comercial."></textarea>
+    <div class="counter" id="c_perfil"></div>
+    <div class="hint">
+      <strong>Fórmula que funciona:</strong>
+      <ul>
+        <li>Quién eres profesionalmente (carrera o rol) + años de experiencia reales.</li>
+        <li>2 o 3 cosas concretas que sabes hacer, con las palabras que usan las vacantes del sector.</li>
+        <li>Qué buscas ahora, alineado al puesto que pusiste arriba.</li>
+      </ul>
+      <strong>Si eres recién egresado:</strong> cambia "años de experiencia" por tu formación, prácticas o proyectos.
+      No escribas "sin experiencia" — describe lo que sí has hecho.
+    </div>
+    <div class="warn">
+      Evita frases vacías del tipo "persona proactiva, responsable y con ganas de aprender".
+      No dicen nada verificable y ocupan el espacio más valioso del CV.
+    </div>
+  </div>
+</section>
+
+<!-- ============ PASO 4: EXPERIENCIA ============ -->
+<section class="step">
+  <div class="step-badge">Paso 4</div>
+  <h2>Experiencia</h2>
+  <p class="note">De lo más reciente a lo más antiguo. Si aún no has tenido un empleo formal, aquí van tus
+  prácticas profesionales, servicio social, proyectos escolares aplicados, voluntariado o negocio propio:
+  todo eso cuenta y se describe igual.</p>
+
+  <div class="hint">
+    <strong>Cómo escribir cada logro (método STAR comprimido en una línea):</strong>
+    <ul>
+      <li><strong>Verbo de acción</strong> en pasado: coordiné, implementé, reduje, capacité, atendí, diseñé…</li>
+      <li><strong>Qué hiciste</strong> exactamente y con qué herramienta o proceso.</li>
+      <li><strong>Resultado medible</strong>: cuánto, cuántos, en cuánto tiempo, en qué porcentaje.</li>
+    </ul>
+    <em>En vez de:</em> "Responsable de atención a clientes."<br>
+    <em>Escribe:</em> "Atendí un promedio de 40 clientes diarios en piso de venta, sosteniendo 95% de encuestas de satisfacción positivas durante 6 meses."
+  </div>
+  <div class="warn">
+    <strong>Sobre los números:</strong> usa solo cifras que puedas sostener en una entrevista. Si no llevabas
+    una métrica formal, sirve una cantidad honesta y verificable: número de personas atendidas, tamaño del equipo,
+    número de reportes que entregabas, frecuencia. <strong>Nunca inventes un porcentaje.</strong>
+  </div>
+
+  <div id="expList"></div>
+  <button class="secondary" onclick="addExp()">+ Agregar experiencia</button>
+</section>
+
+<!-- ============ PASO 5: EDUCACIÓN ============ -->
+<section class="step">
+  <div class="step-badge">Paso 5</div>
+  <h2>Educación</h2>
+  <p class="note">Si eres recién egresado o tienes menos de 2 años de experiencia, esta sección va
+  <strong>antes</strong> que la de experiencia — el sistema lo acomoda solo según lo que captures.</p>
+  <div id="eduList"></div>
+  <button class="secondary" onclick="addEdu()">+ Agregar formación</button>
+
+  <div class="hint" style="margin-top:14px;">
+    <strong>Si todavía no te titulas:</strong> escribe el estatus real ("Pasante", "100% de créditos", "En curso, egreso previsto 2027").
+    Es información legítima y los reclutadores la esperan. No pongas "Titulada" si no lo estás.
+  </div>
+</section>
+
+<!-- ============ PASO 6: HABILIDADES ============ -->
+<section class="step">
+  <div class="step-badge">Paso 6</div>
+  <h2>Habilidades</h2>
+  <p class="note">Abajo están las habilidades que más aparecen en las vacantes verificadas del sector que elegiste,
+  ordenadas por número de menciones reales.</p>
+
+  <div class="warn">
+    <strong>Marca únicamente las que de verdad manejas.</strong> Una habilidad marcada es una habilidad que te van a
+    preguntar en la entrevista o poner a prueba. Las que no marques no se pierden: te las mostramos al final
+    como tu brecha a cerrar, con los cursos del sector.
+  </div>
+
+  <div class="card">
+    <h3>Habilidades técnicas más pedidas en el sector</h3>
+    <div class="chips" id="chipsTec"><span class="note">Elige un sector arriba para verlas.</span></div>
+
+    <h3 style="margin-top:22px;">Habilidades blandas más pedidas en el sector</h3>
+    <div class="chips" id="chipsBlandas"></div>
+
+    <label for="habExtra" style="margin-top:22px;">Otras habilidades que tengas y no estén en la lista <span class="opt">(sepáralas con comas)</span></label>
+    <input type="text" id="habExtra" placeholder="Ej. Excel avanzado, SAP, manejo de montacargas">
+
+    <div class="hint">
+      <strong>Truco de ATS:</strong> cuando una habilidad tenga sigla, escribe las dos formas —
+      "Search Engine Optimization (SEO)", "Enterprise Resource Planning (ERP)". El filtro puede estar
+      buscando cualquiera de las dos y así coincides con ambas.
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>Idiomas</h3>
+    <div id="idiomaList"></div>
+    <button class="secondary small" onclick="addIdioma()">+ Agregar idioma</button>
+    <div class="note" style="margin-top:8px;">Usa niveles claros: Básico / Intermedio / Avanzado / Nativo.
+    Si tienes constancia (TOEFL, IELTS), agrégala en certificaciones con su puntaje.</div>
+  </div>
+
+  <div class="card">
+    <h3>Certificaciones y cursos <span class="opt" style="font-weight:400;">(opcional)</span></h3>
+    <div id="certList"></div>
+    <button class="secondary small" onclick="addCert()">+ Agregar certificación</button>
+  </div>
+</section>
+
+<!-- ============ PASO 7: REVISIÓN ============ -->
+<section class="step">
+  <div class="step-badge">Paso 7</div>
+  <h2>Revisión antes de descargar</h2>
+
+  <div class="card">
+    <div style="display:flex;align-items:center;gap:20px;flex-wrap:wrap;">
+      <div style="text-align:center;">
+        <div class="score" id="scoreNum">—</div>
+        <div class="note" style="margin:0;">de 100</div>
+      </div>
+      <div style="flex:1;min-width:240px;">
+        <h3 style="margin-bottom:2px;">Revisión automática de formato ATS</h3>
+        <p class="note" style="margin:0;">Se actualiza sola mientras escribes. Revisa estructura, longitud y
+        uso de datos medibles — no juzga el contenido de tu experiencia.</p>
+      </div>
+    </div>
+    <ul class="check" id="checklist"></ul>
+  </div>
+
+  <div class="card">
+    <h3>Revisión con IA <span class="opt" style="font-weight:400;">— recomendaciones, no reescritura</span></h3>
+    <p class="note">Manda tu CV a revisión y te devolvemos observaciones concretas por sección, orientadas al sector
+    que elegiste. <strong>La IA no escribe tu CV ni agrega experiencia:</strong> solo señala qué falta precisar,
+    qué está redactado como tarea en vez de logro, y qué preguntas deberías responderte para mejorarlo tú mismo.</p>
+    <div class="note">Tu información se envía a un servicio propio del proyecto que usa el modelo de Anthropic (Claude)
+    únicamente para generar esas observaciones. No se guarda ni se comparte con terceros distintos a ese servicio.
+    Todo lo que capturas se queda además en tu navegador, no en un servidor.</div>
+    <div class="btnrow">
+      <button id="btnIA" onclick="revisarConIA()">Revisar mi CV con IA →</button>
+    </div>
+    <div id="iaOut"></div>
+  </div>
+</section>
+
+<!-- ============ PASO 8: RESULTADO ============ -->
+<section class="step noprint">
+  <div class="step-badge">Paso 8</div>
+  <h2>Tu CV</h2>
+  <p class="note">Formato de una sola columna, tipografía estándar, sin tablas ni gráficos — que es
+  exactamente lo que mejor leen los filtros automáticos.</p>
+  <div class="btnrow">
+    <button onclick="window.print()">Descargar como PDF</button>
+    <button class="secondary" onclick="descargarTxt()">Descargar versión de texto plano</button>
+    <button class="secondary" onclick="guardar(true)">Guardar borrador</button>
+    <button class="danger" onclick="limpiarTodo()">Borrar todo</button>
+  </div>
+  <div class="note">Para el PDF: en el diálogo de impresión elige <strong>"Guardar como PDF"</strong> y deja los
+  márgenes predeterminados. La versión de texto plano sirve para pegarla en formularios que piden capturar
+  el CV campo por campo.</div>
+</section>
+
+<div id="previewBox" style="margin-top:22px;">
+  <div class="paper-hint noprint">Vista previa — así se verá tu PDF</div>
+  <div id="cvPaper"></div>
+</div>
+
+</div><!-- /wrap -->
+
+<script>
+/* =======================================================================
+   Constructor de CV — Club de Mentes Brillantes
+   Reglas de redacción derivadas de la investigación de mejores prácticas
+   ATS / STAR aplicada al mercado laboral mexicano.
+   ======================================================================= */
+
+const CV_ANALYSIS_ENDPOINT = 'https://cv-analisis.gael-ramav.workers.dev';
+const REVISAR_CV_ENDPOINT  = CV_ANALYSIS_ENDPOINT + '/revisar-cv';
+const LS_KEY = 'cmb_cv_builder_v1';
+
+let SECTORES = [];
+let SECTOR_DATA = null;
+
+/* ---------------- verbos de acción (para la revisión local) ------------- */
+const VERBOS = ['logr','alcanc','super','coordin','lider','dirig','gestion','administr','implement','desarroll',
+'dise','cre','construy','automatiz','optimiz','reduj','increment','aument','mejor','capacit','entren','formul',
+'atend','resolv','negoci','vend','cerr','analiz','evalu','audit','document','planific','organiz','ejecut',
+'supervis','control','verific','valid','present','elabor','redact','coloc','instal','repar','oper','manten',
+'program','integr','migr','configur','levant','proces','clasific','consolid','impuls','establec','apoy',
+'colabor','particip','asist','registr','actualiz','recib','entreg','distribuy','conduj','surt',
+'cumpl','gener','obtuv','consegu','impart','traduj','recopil','depur','estandariz','digitaliz','inspeccion',
+'cotiz','factur','concili','prospect','fideliz','asesor','acompañ','realic','llev','manej','us','apliqu'];
+
+/* ---------------- utilidades ---------------- */
+const $ = id => document.getElementById(id);
+const esc = s => String(s==null?'':s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const norm = s => String(s||'').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g,'');
+const tieneNumero = s => /\d/.test(String(s||''));
+const empiezaConVerbo = s => {
+  const p = norm(s).trim().split(/\s+/)[0] || '';
+  return VERBOS.some(v => p.startsWith(norm(v)));
+};
+
+/* ---------------- carga de sectores ---------------- */
+async function cargarSectores(){
+  try{
+    const r = await fetch('manifest.json', {cache:'no-store'});
+    const m = await r.json();
+    SECTORES = m.sectores || [];
+  }catch(e){
+    SECTORES = [
+      {key:'automotriz',nombre:'Automotriz'},{key:'turismo',nombre:'Turismo'},
+      {key:'gestion',nombre:'Gestión y Administración'},{key:'ventas',nombre:'Ventas'},
+      {key:'finanzas',nombre:'Finanzas'},{key:'logistica',nombre:'Logística'},
+      {key:'legal',nombre:'Legal'},{key:'metalmecanica',nombre:'Metalmecánica'},{key:'ti',nombre:'TI'}
+    ];
+  }
+  const sel = $('sector');
+  sel.innerHTML = '<option value="">— Elige un sector —</option>' +
+    SECTORES.map(s=>'<option value="'+esc(s.key)+'">'+esc(s.nombre)+'</option>').join('');
+  const st = leer();
+  if(st && st.sector){ sel.value = st.sector; cargarDatosSector(st.sector); }
+}
+
+async function cargarDatosSector(key){
+  if(!key){ SECTOR_DATA=null; pintarChips(); return; }
+  try{
+    const r = await fetch('data/sector_'+key+'.json', {cache:'no-store'});
+    SECTOR_DATA = await r.json();
+  }catch(e){ SECTOR_DATA = null; }
+  pintarChips();
+  pintarCategorias();
+}
+
+function pintarCategorias(){
+  const box = $('catSugeridas');
+  if(!SECTOR_DATA || !Array.isArray(SECTOR_DATA.categorias_puesto)){ box.textContent=''; return; }
+  const top = SECTOR_DATA.categorias_puesto.slice(0,4).map(c=>c.categoria).join(' · ');
+  box.innerHTML = 'Los puestos más publicados en este sector: <strong>'+esc(top)+'</strong>';
+}
+
+function pintarChips(){
+  const st = leer() || {};
+  const marcadas = new Set([...(st.habTec||[]), ...(st.habBlandas||[])]);
+  const render = (arr, cont, grupo) => {
+    const el = $(cont);
+    if(!arr || !arr.length){ el.innerHTML = '<span class="note">Elige un sector arriba para ver las habilidades.</span>'; return; }
+    el.innerHTML = arr.slice(0,18).map(h=>{
+      const on = marcadas.has(h.skill) ? ' on' : '';
+      const ck = marcadas.has(h.skill) ? ' checked' : '';
+      return '<label class="chip'+on+'" data-g="'+grupo+'">'
+        + '<input type="checkbox" value="'+esc(h.skill)+'"'+ck+' onchange="toggleChip(this)">'
+        + esc(h.skill) + ' <span class="m">'+h.menciones+'</span></label>';
+    }).join('');
+  };
+  render(SECTOR_DATA && SECTOR_DATA.habilidades_tecnicas, 'chipsTec', 'tec');
+  render(SECTOR_DATA && SECTOR_DATA.habilidades_blandas, 'chipsBlandas', 'blandas');
+}
+
+function toggleChip(inp){
+  inp.closest('.chip').classList.toggle('on', inp.checked);
+  actualizar();
+}
+
+/* ---------------- bloques repetibles ---------------- */
+function addExp(data){
+  data = data || {};
+  const i = Date.now() + Math.random();
+  const div = document.createElement('div');
+  div.className = 'bloque exp';
+  div.innerHTML =
+    '<div class="bloque-head"><strong>Experiencia</strong>'
+    + '<button class="danger small" onclick="this.closest(\'.bloque\').remove();actualizar()">Quitar</button></div>'
+    + '<div class="grid2">'
+    + '<div><label>Puesto</label><input type="text" class="e-puesto" placeholder="Ej. Asesor de ventas" value="'+esc(data.puesto)+'"></div>'
+    + '<div><label>Empresa u organización</label><input type="text" class="e-empresa" placeholder="Ej. Grupo Comercial del Bajío" value="'+esc(data.empresa)+'"></div>'
+    + '</div><div class="grid3">'
+    + '<div><label>Ciudad</label><input type="text" class="e-lugar" placeholder="Ej. León, Gto." value="'+esc(data.lugar)+'"></div>'
+    + '<div><label>Desde <span class="opt">(mes año)</span></label><input type="text" class="e-desde" placeholder="Ej. Ene 2024" value="'+esc(data.desde)+'"></div>'
+    + '<div><label>Hasta</label><input type="text" class="e-hasta" placeholder="Ej. Actual" value="'+esc(data.hasta)+'"></div>'
+    + '</div>'
+    + '<label>Logros y responsabilidades <span class="opt">(uno por línea, empieza con verbo en pasado)</span></label>'
+    + '<textarea class="e-bullets" data-min="80" placeholder="Atendí en promedio 40 clientes diarios en piso de venta&#10;Capacité a 3 compañeros nuevos en el uso del punto de venta&#10;Cumplí la meta mensual de venta durante 8 de 12 meses">'+esc(data.bullets)+'</textarea>'
+    + '<div class="counter b-fb"></div>';
+  $('expList').appendChild(div);
+  div.querySelectorAll('input,textarea').forEach(el=>el.addEventListener('input', actualizar));
+  actualizar();
+}
+
+function addEdu(data){
+  data = data || {};
+  const div = document.createElement('div');
+  div.className = 'bloque edu';
+  div.innerHTML =
+    '<div class="bloque-head"><strong>Formación</strong>'
+    + '<button class="danger small" onclick="this.closest(\'.bloque\').remove();actualizar()">Quitar</button></div>'
+    + '<div class="grid2">'
+    + '<div><label>Carrera o programa</label><input type="text" class="ed-carrera" placeholder="Ej. Licenciatura en Administración" value="'+esc(data.carrera)+'"></div>'
+    + '<div><label>Institución</label><input type="text" class="ed-inst" placeholder="Ej. Universidad de Guanajuato" value="'+esc(data.inst)+'"></div>'
+    + '</div><div class="grid3">'
+    + '<div><label>Ciudad</label><input type="text" class="ed-lugar" placeholder="Ej. León, Gto." value="'+esc(data.lugar)+'"></div>'
+    + '<div><label>Año de egreso o previsto</label><input type="text" class="ed-anio" placeholder="Ej. 2026" value="'+esc(data.anio)+'"></div>'
+    + '<div><label>Estatus</label><input type="text" class="ed-estatus" placeholder="Ej. Titulada / Pasante / En curso" value="'+esc(data.estatus)+'"></div>'
+    + '</div>'
+    + '<label>Proyectos o materias relevantes <span class="opt">(opcional, útil si tienes poca experiencia)</span></label>'
+    + '<textarea class="ed-extra" placeholder="Ej. Proyecto final: rediseño del proceso de inventario de una PyME local, presentado ante el dueño del negocio">'+esc(data.extra)+'</textarea>';
+  $('eduList').appendChild(div);
+  div.querySelectorAll('input,textarea').forEach(el=>el.addEventListener('input', actualizar));
+  actualizar();
+}
+
+function addIdioma(data){
+  data = data || {};
+  const div = document.createElement('div');
+  div.className = 'bloque idioma';
+  div.style.padding = '12px';
+  div.innerHTML = '<div class="grid3" style="align-items:end;">'
+    + '<div><label>Idioma</label><input type="text" class="i-nombre" placeholder="Ej. Inglés" value="'+esc(data.nombre)+'"></div>'
+    + '<div><label>Nivel</label><select class="i-nivel">'
+    + ['','Básico','Intermedio','Avanzado','Nativo'].map(n=>'<option'+(data.nivel===n?' selected':'')+'>'+n+'</option>').join('')
+    + '</select></div>'
+    + '<div><button class="danger small" onclick="this.closest(\'.bloque\').remove();actualizar()">Quitar</button></div>'
+    + '</div>';
+  $('idiomaList').appendChild(div);
+  div.querySelectorAll('input,select').forEach(el=>el.addEventListener('input', actualizar));
+  actualizar();
+}
+
+function addCert(data){
+  data = data || {};
+  const div = document.createElement('div');
+  div.className = 'bloque cert';
+  div.style.padding = '12px';
+  div.innerHTML = '<div class="grid3" style="align-items:end;">'
+    + '<div><label>Nombre</label><input type="text" class="ce-nombre" placeholder="Ej. Excel Avanzado" value="'+esc(data.nombre)+'"></div>'
+    + '<div><label>Institución</label><input type="text" class="ce-inst" placeholder="Ej. Coursera" value="'+esc(data.inst)+'"></div>'
+    + '<div style="display:flex;gap:8px;align-items:end;">'
+    + '<div style="flex:1;"><label>Año</label><input type="text" class="ce-anio" placeholder="2025" value="'+esc(data.anio)+'"></div>'
+    + '<button class="danger small" onclick="this.closest(\'.bloque\').remove();actualizar()">Quitar</button></div>'
+    + '</div>';
+  $('certList').appendChild(div);
+  div.querySelectorAll('input').forEach(el=>el.addEventListener('input', actualizar));
+  actualizar();
+}
+
+/* ---------------- recolección de estado ---------------- */
+function recolectar(){
+  const st = {
+    sector: $('sector').value,
+    puestoObjetivo: $('puestoObjetivo').value.trim(),
+    nombre: $('nombre').value.trim(),
+    tel: $('tel').value.trim(),
+    email: $('email').value.trim(),
+    ciudad: $('ciudad').value.trim(),
+    linkedin: $('linkedin').value.trim(),
+    portafolio: $('portafolio').value.trim(),
+    perfil: $('perfil').value.trim(),
+    habExtra: $('habExtra').value.trim(),
+    exp: [], edu: [], idiomas: [], certs: [], habTec: [], habBlandas: []
+  };
+  document.querySelectorAll('#expList .bloque').forEach(b=>{
+    st.exp.push({
+      puesto:b.querySelector('.e-puesto').value.trim(),
+      empresa:b.querySelector('.e-empresa').value.trim(),
+      lugar:b.querySelector('.e-lugar').value.trim(),
+      desde:b.querySelector('.e-desde').value.trim(),
+      hasta:b.querySelector('.e-hasta').value.trim(),
+      bullets:b.querySelector('.e-bullets').value
+    });
+  });
+  document.querySelectorAll('#eduList .bloque').forEach(b=>{
+    st.edu.push({
+      carrera:b.querySelector('.ed-carrera').value.trim(),
+      inst:b.querySelector('.ed-inst').value.trim(),
+      lugar:b.querySelector('.ed-lugar').value.trim(),
+      anio:b.querySelector('.ed-anio').value.trim(),
+      estatus:b.querySelector('.ed-estatus').value.trim(),
+      extra:b.querySelector('.ed-extra').value.trim()
+    });
+  });
+  document.querySelectorAll('#idiomaList .bloque').forEach(b=>{
+    st.idiomas.push({nombre:b.querySelector('.i-nombre').value.trim(), nivel:b.querySelector('.i-nivel').value});
+  });
+  document.querySelectorAll('#certList .bloque').forEach(b=>{
+    st.certs.push({nombre:b.querySelector('.ce-nombre').value.trim(), inst:b.querySelector('.ce-inst').value.trim(), anio:b.querySelector('.ce-anio').value.trim()});
+  });
+  document.querySelectorAll('#chipsTec input:checked').forEach(i=>st.habTec.push(i.value));
+  document.querySelectorAll('#chipsBlandas input:checked').forEach(i=>st.habBlandas.push(i.value));
+  return st;
+}
+
+/* ---------------- persistencia ---------------- */
+function guardar(avisar){
+  try{
+    localStorage.setItem(LS_KEY, JSON.stringify(recolectar()));
+    if(avisar) alert('Borrador guardado en este navegador.');
+  }catch(e){ if(avisar) alert('No se pudo guardar en este navegador.'); }
+}
+function leer(){
+  try{ return JSON.parse(localStorage.getItem(LS_KEY) || 'null'); }catch(e){ return null; }
+}
+function limpiarTodo(){
+  if(!confirm('Esto borra todo lo que has capturado en este navegador. ¿Continuar?')) return;
+  try{ localStorage.removeItem(LS_KEY); }catch(e){}
+  location.reload();
+}
+function restaurar(){
+  const st = leer();
+  if(!st) { addExp(); addEdu(); addIdioma(); return; }
+  ['puestoObjetivo','nombre','tel','email','ciudad','linkedin','portafolio','perfil','habExtra']
+    .forEach(k=>{ if($(k) && st[k]) $(k).value = st[k]; });
+  (st.exp && st.exp.length ? st.exp : [{}]).forEach(addExp);
+  (st.edu && st.edu.length ? st.edu : [{}]).forEach(addEdu);
+  (st.idiomas && st.idiomas.length ? st.idiomas : [{}]).forEach(addIdioma);
+  (st.certs||[]).forEach(addCert);
+}
+
+/* ---------------- revisión local (sin IA) ---------------- */
+function revisionLocal(st){
+  const r = [];
+  const add = (nivel, txt) => r.push({nivel, txt});
+
+  // contacto
+  const contactoOk = st.nombre && st.email && st.tel && st.ciudad;
+  add(contactoOk?'pass':'crit', contactoOk
+    ? 'Datos de contacto completos y en texto plano, como los espera un ATS.'
+    : 'Faltan datos de contacto (nombre, correo, teléfono y ciudad son los mínimos).');
+
+  // sector
+  add(st.sector?'pass':'fail', st.sector
+    ? 'CV orientado a un sector específico.'
+    : 'No has elegido sector: el CV queda genérico y pierde coincidencia con las vacantes.');
+
+  add(st.puestoObjetivo?'pass':'fail', st.puestoObjetivo
+    ? 'Tienes un puesto objetivo declarado.'
+    : 'Falta el puesto al que aspiras. Úsalo tal como aparece en las vacantes.');
+
+  // perfil
+  const lp = st.perfil.length;
+  if(!lp) add('crit','No has escrito el perfil profesional. Es la sección con más peso del CV.');
+  else if(lp < 180) add('fail','Tu perfil es muy corto ('+lp+' caracteres). Apunta a entre 220 y 600.');
+  else if(lp > 700) add('fail','Tu perfil es demasiado largo ('+lp+' caracteres). Recórtalo a 4 líneas máximo.');
+  else add('pass','Perfil profesional con extensión adecuada.');
+
+  const clichés = ['proactiv','responsable','ganas de aprender','trabajo bajo presion','dinamic','entusiast'];
+  const perfN = norm(st.perfil);
+  const halladas = clichés.filter(c=>perfN.includes(norm(c)));
+  if(halladas.length) add('fail','Tu perfil usa frases genéricas ('+halladas.join(', ')+'). Cámbialas por algo verificable.');
+
+  // experiencia
+  const bullets = [];
+  st.exp.forEach(e => (e.bullets||'').split('\n').map(s=>s.trim()).filter(Boolean).forEach(b=>bullets.push(b)));
+  if(!bullets.length) add('crit','No has capturado ningún logro. Aunque no tengas empleo formal, agrega prácticas, servicio social o proyectos.');
+  else{
+    const conNum = bullets.filter(tieneNumero).length;
+    const pct = Math.round(conNum/bullets.length*100);
+    if(pct >= 50) add('pass', pct+'% de tus logros incluyen un dato medible. Excelente.');
+    else if(pct > 0) add('fail','Solo '+pct+'% de tus logros tienen un dato medible ('+conNum+' de '+bullets.length+'). Agrega cantidades honestas: personas atendidas, tamaño de equipo, frecuencia.');
+    else add('crit','Ninguno de tus logros incluye una cifra. Los CV con logros cuantificados reciben notoriamente más respuestas.');
+
+    const conVerbo = bullets.filter(empiezaConVerbo).length;
+    if(conVerbo === bullets.length) add('pass','Todos tus logros empiezan con un verbo de acción.');
+    else add('fail', (bullets.length-conVerbo)+' de tus '+bullets.length+' logros no empiezan con verbo de acción en pasado (coordiné, implementé, reduje…).');
+
+    const largos = bullets.filter(b=>b.length>230).length;
+    if(largos) add('fail', largos+' de tus logros son muy largos. Cada uno debe caber en 1 o 2 líneas.');
+    else add('pass','Tus logros tienen una extensión leíble.');
+  }
+
+  // educación
+  add(st.edu.some(e=>e.carrera && e.inst) ? 'pass':'crit',
+    st.edu.some(e=>e.carrera && e.inst) ? 'Formación académica capturada.' : 'Falta tu formación académica.');
+
+  // habilidades
+  const totalHab = st.habTec.length + st.habBlandas.length + (st.habExtra? st.habExtra.split(',').filter(s=>s.trim()).length : 0);
+  if(totalHab === 0) add('crit','No has marcado ninguna habilidad. Es la sección que los ATS cruzan de forma más directa.');
+  else if(totalHab < 6) add('fail','Solo tienes '+totalHab+' habilidades. Si dominas más de las que aparecen en la lista del sector, márcalas.');
+  else if(totalHab > 24) add('fail','Tienes '+totalHab+' habilidades: son demasiadas y diluyen las importantes. Deja las más relevantes al puesto.');
+  else add('pass', totalHab+' habilidades declaradas — buen balance.');
+
+  if(st.sector && SECTOR_DATA && st.habTec.length){
+    const top5 = (SECTOR_DATA.habilidades_tecnicas||[]).slice(0,5).map(h=>h.skill);
+    const coinc = top5.filter(s=>st.habTec.includes(s));
+    if(coinc.length) add('pass','Coincides con '+coinc.length+' de las 5 habilidades técnicas más pedidas del sector.');
+    else add('fail','No marcaste ninguna de las 5 habilidades técnicas más pedidas del sector. Si alguna la tienes, márcala; si no, aparecerá como tu brecha a cerrar.');
+  }
+
+  // longitud total
+  const palabras = textoPlano(st).split(/\s+/).filter(Boolean).length;
+  if(palabras > 900) add('fail','Tu CV está quedando largo (~'+palabras+' palabras). Apunta a 1 página si tienes menos de 10 años de experiencia, 2 como máximo.');
+  else if(palabras > 120) add('pass','Extensión total adecuada (~'+palabras+' palabras).');
+
+  return r;
+}
+
+function pintarChecklist(res){
+  const ul = $('checklist');
+  ul.innerHTML = res.map(x=>'<li class="'+x.nivel+'">'+esc(x.txt)+'</li>').join('');
+  const total = res.length || 1;
+  const pts = res.reduce((a,x)=>a + (x.nivel==='pass'?1: x.nivel==='fail'?0.4:0), 0);
+  const score = Math.round(pts/total*100);
+  $('scoreNum').textContent = score;
+  $('scoreNum').style.color = score>=75 ? 'var(--verde)' : score>=45 ? 'var(--naranja)' : 'var(--rojo)';
+}
+
+/* ---------------- render del CV ---------------- */
+function ordenSecciones(st){
+  // Con poca experiencia, educación va antes que experiencia (práctica estándar
+  // para recién egresados en México y en guías ATS internacionales).
+  const bullets = st.exp.reduce((a,e)=>a + (e.bullets||'').split('\n').filter(s=>s.trim()).length, 0);
+  const conExp = st.exp.filter(e=>e.puesto && e.empresa).length;
+  return (conExp >= 2 && bullets >= 4) ? ['exp','edu'] : ['edu','exp'];
+}
+
+function renderCV(st){
+  const p = [];
+  const contacto = [st.tel, st.email, st.ciudad, st.linkedin, st.portafolio].filter(Boolean).join('  |  ');
+  p.push('<h1 class="cvname">'+esc(st.nombre || 'Tu nombre')+'</h1>');
+  if(st.puestoObjetivo) p.push('<div class="cvtitle">'+esc(st.puestoObjetivo)+'</div>');
+  p.push('<div class="cvcontact">'+esc(contacto)+'</div>');
+
+  if(st.perfil){
+    p.push('<div class="cvblock"><h2 class="cvsec">Perfil profesional</h2><p style="margin:0 0 10px;">'+esc(st.perfil)+'</p></div>');
+  }
+
+  const secExp = () => {
+    const con = st.exp.filter(e=>e.puesto || e.empresa);
+    if(!con.length) return '';
+    let h = '<h2 class="cvsec">Experiencia</h2>';
+    con.forEach(e=>{
+      const per = [e.desde, e.hasta].filter(Boolean).join(' – ');
+      const meta = [e.empresa, e.lugar, per].filter(Boolean).join('  |  ');
+      const bs = (e.bullets||'').split('\n').map(s=>s.trim()).filter(Boolean);
+      h += '<div class="cvblock"><div class="cvrole">'+esc(e.puesto)+'</div>'
+        + '<div class="cvmeta">'+esc(meta)+'</div>'
+        + (bs.length ? '<ul class="cvb">'+bs.map(b=>'<li>'+esc(b)+'</li>').join('')+'</ul>' : '')
+        + '</div>';
+    });
+    return h;
+  };
+
+  const secEdu = () => {
+    const con = st.edu.filter(e=>e.carrera || e.inst);
+    if(!con.length) return '';
+    let h = '<h2 class="cvsec">Educación</h2>';
+    con.forEach(e=>{
+      const meta = [e.inst, e.lugar, e.anio, e.estatus].filter(Boolean).join('  |  ');
+      h += '<div class="cvblock"><div class="cvrole">'+esc(e.carrera)+'</div>'
+        + '<div class="cvmeta">'+esc(meta)+'</div>'
+        + (e.extra ? '<ul class="cvb"><li>'+esc(e.extra)+'</li></ul>' : '')
+        + '</div>';
+    });
+    return h;
+  };
+
+  ordenSecciones(st).forEach(s => p.push(s==='exp' ? secExp() : secEdu()));
+
+  const extras = st.habExtra ? st.habExtra.split(',').map(s=>s.trim()).filter(Boolean) : [];
+  const tec = st.habTec.concat(extras);
+  if(tec.length || st.habBlandas.length){
+    let h = '<div class="cvblock"><h2 class="cvsec">Habilidades</h2>';
+    if(tec.length) h += '<div class="cvskills"><strong>Técnicas:</strong> '+esc(tec.join(' · '))+'</div>';
+    if(st.habBlandas.length) h += '<div class="cvskills"><strong>Profesionales:</strong> '+esc(st.habBlandas.join(' · '))+'</div>';
+    p.push(h+'</div>');
+  }
+
+  const idi = st.idiomas.filter(i=>i.nombre);
+  if(idi.length){
+    p.push('<div class="cvblock"><h2 class="cvsec">Idiomas</h2><div class="cvskills">'
+      + esc(idi.map(i=>i.nombre + (i.nivel? ' — '+i.nivel : '')).join('  |  ')) + '</div></div>');
+  }
+
+  const ce = st.certs.filter(c=>c.nombre);
+  if(ce.length){
+    p.push('<div class="cvblock"><h2 class="cvsec">Certificaciones</h2><ul class="cvb">'
+      + ce.map(c=>'<li>'+esc([c.nombre, c.inst, c.anio].filter(Boolean).join(' — '))+'</li>').join('')
+      + '</ul></div>');
+  }
+
+  $('cvPaper').innerHTML = p.join('');
+}
+
+function textoPlano(st){
+  const L = [];
+  L.push(st.nombre||''); if(st.puestoObjetivo) L.push(st.puestoObjetivo);
+  L.push([st.tel,st.email,st.ciudad,st.linkedin,st.portafolio].filter(Boolean).join(' | '));
+  if(st.perfil){ L.push('','PERFIL PROFESIONAL', st.perfil); }
+  ordenSecciones(st).forEach(s=>{
+    if(s==='exp'){
+      const con = st.exp.filter(e=>e.puesto||e.empresa);
+      if(con.length){ L.push('','EXPERIENCIA');
+        con.forEach(e=>{
+          L.push(e.puesto||'');
+          L.push([e.empresa,e.lugar,[e.desde,e.hasta].filter(Boolean).join(' - ')].filter(Boolean).join(' | '));
+          (e.bullets||'').split('\n').map(x=>x.trim()).filter(Boolean).forEach(b=>L.push('- '+b));
+          L.push('');
+        });
+      }
+    }else{
+      const con = st.edu.filter(e=>e.carrera||e.inst);
+      if(con.length){ L.push('','EDUCACION');
+        con.forEach(e=>{
+          L.push(e.carrera||'');
+          L.push([e.inst,e.lugar,e.anio,e.estatus].filter(Boolean).join(' | '));
+          if(e.extra) L.push('- '+e.extra);
+          L.push('');
+        });
+      }
+    }
+  });
+  const extras = st.habExtra ? st.habExtra.split(',').map(s=>s.trim()).filter(Boolean) : [];
+  const tec = st.habTec.concat(extras);
+  if(tec.length || st.habBlandas.length){
+    L.push('','HABILIDADES');
+    if(tec.length) L.push('Tecnicas: '+tec.join(', '));
+    if(st.habBlandas.length) L.push('Profesionales: '+st.habBlandas.join(', '));
+  }
+  const idi = st.idiomas.filter(i=>i.nombre);
+  if(idi.length){ L.push('','IDIOMAS', idi.map(i=>i.nombre+(i.nivel?' - '+i.nivel:'')).join(', ')); }
+  const ce = st.certs.filter(c=>c.nombre);
+  if(ce.length){ L.push('','CERTIFICACIONES'); ce.forEach(c=>L.push('- '+[c.nombre,c.inst,c.anio].filter(Boolean).join(' - '))); }
+  return L.join('\n');
+}
+
+function descargarTxt(){
+  const st = recolectar();
+  const blob = new Blob([textoPlano(st)], {type:'text/plain;charset=utf-8'});
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = 'CV_' + (st.nombre||'sin_nombre').replace(/\s+/g,'_') + '.txt';
+  a.click(); URL.revokeObjectURL(a.href);
+}
+
+/* ---------------- contadores en vivo ---------------- */
+function contadores(){
+  const t = $('perfil');
+  const n = t.value.trim().length;
+  const c = $('c_perfil');
+  const min = +t.dataset.min, max = +t.dataset.max;
+  c.textContent = n + ' caracteres (recomendado ' + min + '–' + max + ')';
+  c.className = 'counter ' + (n===0 ? '' : (n>=min && n<=max ? 'good' : 'bad'));
+
+  document.querySelectorAll('#expList .bloque').forEach(b=>{
+    const ta = b.querySelector('.e-bullets');
+    const fb = b.querySelector('.b-fb');
+    const bs = ta.value.split('\n').map(s=>s.trim()).filter(Boolean);
+    if(!bs.length){ fb.textContent = 'Agrega de 3 a 5 logros, uno por línea.'; fb.className='counter'; return; }
+    const num = bs.filter(tieneNumero).length, vb = bs.filter(empiezaConVerbo).length;
+    const ok = num >= Math.ceil(bs.length/2) && vb === bs.length && bs.length >= 3;
+    fb.textContent = bs.length + ' logros · ' + num + ' con dato medible · ' + vb + ' empiezan con verbo de acción';
+    fb.className = 'counter ' + (ok ? 'good' : 'bad');
+  });
+}
+
+/* ---------------- ciclo principal ---------------- */
+let tGuardar = null;
+function actualizar(){
+  const st = recolectar();
+  contadores();
+  renderCV(st);
+  pintarChecklist(revisionLocal(st));
+  clearTimeout(tGuardar);
+  tGuardar = setTimeout(()=>guardar(false), 600);
+}
+
+/* ---------------- revisión con IA ---------------- */
+async function revisarConIA(){
+  const st = recolectar();
+  const btn = $('btnIA'), out = $('iaOut');
+  if(!st.sector){ out.innerHTML = '<div class="warn" style="margin-top:12px;">Elige primero un sector en el Paso 1.</div>'; return; }
+  if(!st.perfil && !st.exp.some(e=>e.bullets && e.bullets.trim())){
+    out.innerHTML = '<div class="warn" style="margin-top:12px;">Captura al menos tu perfil o un logro antes de mandarlo a revisión.</div>'; return;
+  }
+  btn.disabled = true; btn.textContent = 'Revisando…';
+  out.innerHTML = '<p class="note">Analizando tu CV frente a las vacantes del sector…</p>';
+  try{
+    const resp = await fetch(REVISAR_CV_ENDPOINT, {
+      method:'POST', headers:{'content-type':'application/json'},
+      body: JSON.stringify({
+        modo: 'solo_recomendaciones',
+        sector: st.sector,
+        sectorNombre: (SECTORES.find(s=>s.key===st.sector)||{}).nombre || st.sector,
+        puestoObjetivo: st.puestoObjetivo,
+        cvEstructurado: st,
+        cvTexto: textoPlano(st),
+        habilidadesSector: {
+          tecnicas: (SECTOR_DATA && SECTOR_DATA.habilidades_tecnicas || []).slice(0,15),
+          blandas: (SECTOR_DATA && SECTOR_DATA.habilidades_blandas || []).slice(0,10)
+        }
+      })
+    });
+    if(!resp.ok) throw new Error('el servicio respondió ' + resp.status);
+    const data = await resp.json();
+    if(!data || !Array.isArray(data.recomendaciones)) throw new Error('formato inesperado');
+    let h = '<div class="ok" style="margin-top:14px;"><strong>Revisión lista.</strong> '
+      + 'Estas observaciones se basan únicamente en lo que tú capturaste — aplica solo las que correspondan a tu experiencia real.</div>';
+    h += data.recomendaciones.map(r=>
+      '<div class="card" style="margin-top:12px;">'
+      + '<h3 style="margin-bottom:6px;">'+esc(r.seccion||'Observación')+'</h3>'
+      + '<p style="margin:0 0 8px;font-size:.9rem;">'+esc(r.observacion||'')+'</p>'
+      + (r.pregunta ? '<div class="hint" style="margin:0;"><strong>Pregúntate:</strong> '+esc(r.pregunta)+'</div>' : '')
+      + '</div>').join('');
+    if(data.brechaSector && data.brechaSector.length){
+      h += '<div class="card" style="margin-top:12px;"><h3>Habilidades del sector que no aparecen en tu CV</h3>'
+        + '<p class="note" style="margin-top:0;">No las agregues si no las tienes. Úsalas como plan de formación — '
+        + 'en la <a href="index.html">página de análisis</a> puedes ver cursos para cerrarlas.</p>'
+        + '<div class="chips">' + data.brechaSector.map(s=>'<span class="chip">'+esc(s)+'</span>').join('') + '</div></div>';
+    }
+    out.innerHTML = h;
+  }catch(err){
+    out.innerHTML = '<div class="warn" style="margin-top:12px;">No se pudo completar la revisión con IA ('
+      + esc(err.message) + '). La revisión automática de formato del recuadro de arriba sigue funcionando '
+      + 'y cubre los puntos de estructura y datos medibles.</div>';
+  }finally{
+    btn.disabled = false; btn.textContent = 'Revisar mi CV con IA →';
+  }
+}
+
+/* ---------------- arranque ---------------- */
+$('sector').addEventListener('change', e => { cargarDatosSector(e.target.value); actualizar(); });
+['puestoObjetivo','nombre','tel','email','ciudad','linkedin','portafolio','perfil','habExtra']
+  .forEach(k => $(k).addEventListener('input', actualizar));
+
+cargarSectores().then(()=>{ restaurar(); actualizar(); });
+</script>
+</body>
+</html>
